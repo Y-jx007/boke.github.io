@@ -1,0 +1,743 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    
+
+    <title>格林函数 | </title>
+    <meta name="author" content="邯郸学步">
+    
+    <meta name="description" content="$\quad\\$
+格林函数$\quad\\$
+&amp;amp;emsp;&amp;amp;emsp;泊松方程
+$$\Delta u&amp;#x3D;f(\boldsymbol{r})\qquad\boldsymbol{r}\in T$$
+&amp;amp;emsp;&amp;amp;emsp;格林公式
+$$\iint_\Sigma ">
+    
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:title" content="格林函数"/>
+    <meta property="og:site_name" content="邯郸学步"/>
+
+    
+    <meta property="og:image" content=""/>
+    
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="alternate" href="/atom.xml" title="邯郸学步" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/lib/materialize.min.css">
+    <link rel="stylesheet" href="/css/lib/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
+    
+        <link rel="stylesheet" href="/css/lib/another-theme.css" type="text/css">
+    
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+    <img src="/weixin_favicon.png" style="position: absolute; left: -9999px; opacity: 0; filter: alpha(opacity=0);">
+
+    <nav class="brown lighten-2">
+    <div class="nav-wrapper">
+        <a href="#" data-activates="main-menu" class="button-collapse">
+            <i class="fa fa-navicon"></i>
+        </a>
+        <div class="">
+            <a href="/" class="brand-logo hide-on-med-and-down">邯郸学步</a>
+            <ul class="right hide-on-med-and-down">
+                
+                    <li>
+                        <a class="menu-home " href="/" >
+                            <i class="fa fa-home "></i>
+                            
+                            首页
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-archive " href="/archives" >
+                            <i class="fa fa-archive "></i>
+                            
+                            归档
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                            <i class="fa fa-bookmark "></i>
+                            
+                            分类
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-about " href="/about" >
+                            <i class="fa fa-user "></i>
+                            
+                            关于
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-search modal-trigger " href="#search" >
+                            <i class="fa fa-search "></i>
+                            
+                            搜索
+                        </a>
+                    </li>
+                
+            </ul>
+            <div>
+    <ul class="side-nav brown lighten-2" id="main-menu">
+        
+        <li class="side-user">
+            <div class="row">
+                <div class="col s4 no-padding">
+                    <img class="avatar-image circle responsive-img" src="/favicon.png" alt="User Avatar">
+                </div>
+                <div class="info col s8 valign-wrapper no-padding">
+                    <div class="valign">
+                        <p class="name">邯郸学步</p>
+                        <p class="desc">笔记</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        
+
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-home " href="/" >
+                    <i class="fa fa-home "></i>
+                    
+                    首页
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-archive " href="/archives" >
+                    <i class="fa fa-archive "></i>
+                    
+                    归档
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                    <i class="fa fa-bookmark "></i>
+                    
+                    分类
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-about " href="/about" >
+                    <i class="fa fa-user "></i>
+                    
+                    关于
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-search modal-trigger " href="#search" >
+                    <i class="fa fa-search "></i>
+                    
+                    搜索
+                </a>
+            </li>
+        
+    </ul>
+
+    <ul class="side-nav brown lighten-2" id="category-menu">
+    
+
+            
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/算法/">
+                    算法 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/其他/">
+                    其他 <span class="right">13 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/复变函数/">
+                    复变函数 <span class="right">6 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/Suvrat-Raju/">
+                    Suvrat-Raju <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/微分几何/">
+                    微分几何 <span class="right">8 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/力学/">
+                    力学 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/数理方程/">
+                    数理方程 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/PiTP/">
+                    PiTP <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/离散数学/">
+                    离散数学 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/光学/">
+                    光学 <span class="right">6 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/线性代数/">
+                    线性代数 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/固体物理/">
+                    固体物理 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/电动力学/">
+                    电动力学 <span class="right">5 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/相对论/">
+                    相对论 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/张量分析/">
+                    张量分析 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/概率论/">
+                    概率论 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/群论/">
+                    群论 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/热力学/">
+                    热力学 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/原子物理/">
+                    原子物理 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/统计物理/">
+                    统计物理 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/抽象代数/">
+                    抽象代数 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/量子力学/">
+                    量子力学 <span class="right">4 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/数学分析/">
+                    数学分析 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+    </ul>
+</div>
+
+        </div>
+    </div>
+</nav>
+
+<div id="search" class="modal search-modal">
+    <div class="row">
+        <div class="input-field col s12">
+              <input id="search-input" type="text">
+              <label for="search-input">搜索</label>
+        </div>
+
+    </div>
+    <div id="search-result" class="search-result col s12">
+
+    </div>
+</div>
+
+
+    <main>
+        <div class="container main-container">
+    <nav class="page-nav hide-on-small-only">
+    <div class="nav-wrapper brown lighten-2">
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+    
+    
+    <a class="breadcrumb" href="/categories/数理方程/">数理方程</a>
+
+
+        
+
+        
+    </div>
+</nav>
+
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>格林函数</h1>
+    
+
+
+            </div>
+            <time class="brown-link-context" datetime="2022-05-18T04:37:17.000Z"><a href="/2022/05/18/%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0/">2022-05-18</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+
+            <div class="toc brown-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0"><span class="section table-of-contents-text">格林函数</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E7%94%B5%E5%83%8F%E6%B3%95"><span class="section table-of-contents-text">电像法</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E5%90%AB%E6%97%B6%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0"><span class="section table-of-contents-text">含时格林函数</span></a></li></ol>
+</div>
+
+
+            <div class="entry brown-link-context">
+                <p>$\quad\\$</p>
+<h3 id="格林函数"><a href="#格林函数" class="headerlink" title="格林函数"></a><center><strong>格林函数</strong></center></h3><p>$\quad\\$</p>
+<p>&amp;emsp;&amp;emsp;泊松方程</p>
+<p>$$\Delta u&#x3D;f(\boldsymbol{r})\qquad\boldsymbol{r}\in T$$</p>
+<p>&amp;emsp;&amp;emsp;格林公式</p>
+<p>$$\iint_\Sigma u\nabla v\cdot\dd\boldsymbol{S}&#x3D;\iiint_T \nabla\cdot(u\nabla v)\dd V\\&#x3D;\iiint_T u\Delta v\dd V+\iiint_T \nabla u\cdot\nabla v\dd V\\<br>\quad\\<br>\iint_\Sigma v\nabla u\cdot\dd\boldsymbol{S}&#x3D;\iiint_T \nabla\cdot(v\nabla u)\dd V\\&#x3D;\iiint_T v\Delta u\dd V+\iiint_T \nabla v\cdot\nabla u\dd V\\<br>\quad\\<br>\iint_\Sigma\left(u\frac{\partial v}{\partial n}-v\frac{\partial u}{\partial n}\right)\dd S&#x3D;\iiint_T (u\Delta v-v\Delta u)\dd V$$</p>
+<p>&amp;emsp;&amp;emsp;取$v$为单位强度点源产生的势场，即</p>
+<p>$$\Delta v(\boldsymbol{r},\boldsymbol{r_0})&#x3D;\delta(\boldsymbol{r}-\boldsymbol{r_0})$$</p>
+<p>&amp;emsp;&amp;emsp;在$T\backslash B(\boldsymbol{r_0},\varepsilon\to 0)$应用格林公式</p>
+<p>$$\iint_{\Sigma-S_\varepsilon}\left(u\frac{\partial v}{\partial n}-v\frac{\partial u}{\partial n}\right)\dd S&#x3D;\iiint_{T-B_\varepsilon} (u\Delta v-v\Delta u)\dd V\\<br>\quad\\<br>\iint_{\Sigma}\left(u\frac{\partial v}{\partial n}-v\frac{\partial u}{\partial n}\right)\dd S-\oint_{S_\varepsilon}\left(u\frac{1}{4\pi\varepsilon^2}+\frac{1}{4\pi\varepsilon}\frac{\partial u}{\partial n}\right)\varepsilon^2\dd\Omega\\&#x3D;-\iiint_{T-B_\varepsilon}vf\dd V$$</p>
+<blockquote>
+<p>$$u(\boldsymbol{r_0})&#x3D;\iiint_{T}v(\boldsymbol{r},\boldsymbol{r_0})f(\boldsymbol{r})\dd V-\iint_{\Sigma}\left[v(\boldsymbol{r},\boldsymbol{r_0})\frac{\partial u(\boldsymbol{r})}{\partial n}-u(\boldsymbol{r})\frac{\partial v(\boldsymbol{r},\boldsymbol{r_0})}{\partial n}\right]\dd S\quad$$</p>
+</blockquote>
+<p>$\quad\\$</p>
+<p>&amp;emsp;&amp;emsp;边界条件</p>
+<p>$$\left[\alpha\frac{\partial u}{\partial n}+\beta u\right]_\Sigma&#x3D;\varphi(M)$$</p>
+<p>&amp;emsp;&amp;emsp;再令$v$满足齐次边界条件</p>
+<p>$$\left[\alpha\frac{\partial v}{\partial n}+\beta v\right]_\Sigma&#x3D;0$$</p>
+<p>&amp;emsp;&amp;emsp;称$v$为<font face="微软雅黑"><strong>格林函数</strong></font>，记为$G(\boldsymbol{r},\boldsymbol{r_0})$</p>
+<p>&amp;emsp;&amp;emsp;第一类边界条件$u|_\Sigma&#x3D;\varphi,G|_\Sigma&#x3D;0$</p>
+<p>$$u(\boldsymbol{r_0})&#x3D;\iiint_{T}G(\boldsymbol{r},\boldsymbol{r_0})f(\boldsymbol{r})\dd V+\iint_{\Sigma}\varphi(\boldsymbol{r})\frac{\partial G(\boldsymbol{r},\boldsymbol{r_0})}{\partial n}\dd S\quad$$</p>
+<p>&amp;emsp;&amp;emsp;第三类边界条件$\displaystyle\left[\alpha\frac{\partial u}{\partial n}+\beta u\right]_\Sigma&#x3D;\varphi,\left[\alpha\frac{\partial G}{\partial n}+\beta G\right]_\Sigma&#x3D;0$</p>
+<p>$$u(\boldsymbol{r_0})&#x3D;\iiint_{T}G(\boldsymbol{r},\boldsymbol{r_0})f(\boldsymbol{r})\dd V-\frac{1}{\alpha}\iint_{\Sigma}G(\boldsymbol{r},\boldsymbol{r_0})\varphi(\boldsymbol{r})\dd S\quad$$</p>
+<p>&amp;emsp;&amp;emsp;第二类边界条件$\displaystyle\frac{\partial u}{\partial n}&#x3D;\varphi,\frac{\partial G}{\partial n}&#x3D;0$</p>
+<p>&amp;emsp;&amp;emsp;引入推广的格林函数</p>
+<p>$$\Delta G&#x3D;\delta(\boldsymbol{r}-\boldsymbol{r_0})-\frac{1}{V_T}$$</p>
+<p>$$u(\boldsymbol{r_0})&#x3D;\iiint_{T}G(\boldsymbol{r},\boldsymbol{r_0})f(\boldsymbol{r})\dd V-\iint_{\Sigma}G(\boldsymbol{r},\boldsymbol{r_0})\frac{\partial\varphi(\boldsymbol{r})}{\partial n}\dd S\quad$$</p>
+<p>&amp;emsp;&amp;emsp;下证格林函数具有对称性，以$u&#x3D;G(\boldsymbol{r},\boldsymbol{r_1})$，$v&#x3D;G(\boldsymbol{r},\boldsymbol{r_2})$代入格林公式</p>
+<p>$$\iint_{\Sigma-S_{\varepsilon 1}-S_{\varepsilon 2}}\left(u\frac{\partial v}{\partial n}-v\frac{\partial u}{\partial n}\right)\dd S&#x3D;\iiint_{T-B_{\varepsilon 1}-B_{\varepsilon 2}} (u\Delta v-v\Delta u)\dd V\\<br>\quad\\<br>\iint_{S_{\varepsilon 1}}\left(u\frac{\partial v}{\partial n}-v\frac{\partial u}{\partial n}\right)\dd S+\iint_{S_{\varepsilon 2}}\left(u\frac{\partial v}{\partial n}-v\frac{\partial u}{\partial n}\right)\dd S&#x3D;0\\<br>\quad\\<br>v(\boldsymbol{r_1})&#x3D;u(\boldsymbol{r_2})\Leftrightarrow G(\boldsymbol{r_1},\boldsymbol{r_2})&#x3D;G(\boldsymbol{r_2},\boldsymbol{r_1})$$</p>
+<p>&amp;emsp;&amp;emsp;三类边界条件下解的积分表达式分别成为</p>
+<p>$$u(\boldsymbol{r})&#x3D;\iiint_{T_0}G(\boldsymbol{r},\boldsymbol{r_0})f(\boldsymbol{r_0})\dd V_0+\iint_{\Sigma_0}\varphi(\boldsymbol{r_0})\frac{\partial G(\boldsymbol{r},\boldsymbol{r_0})}{\partial n_0}\dd S_0\\<br>\quad\\<br>u(\boldsymbol{r})&#x3D;\iiint_{T_0}G(\boldsymbol{r},\boldsymbol{r_0})f(\boldsymbol{r_0})\dd V_0-\iint_{\Sigma_0}G(\boldsymbol{r},\boldsymbol{r_0})\frac{\partial\varphi(\boldsymbol{r_0})}{\partial n_0}\dd S_0\\<br>\quad\\<br>u(\boldsymbol{r})&#x3D;\iiint_{T_0}G(\boldsymbol{r},\boldsymbol{r_0})f(\boldsymbol{r_0})\dd V_0-\frac{1}{\alpha}\iint_{\Sigma_0}G(\boldsymbol{r},\boldsymbol{r_0})\varphi(\boldsymbol{r_0})\dd S_0\\$$</p>
+<p>$\quad\\$</p>
+<h3 id="电像法"><a href="#电像法" class="headerlink" title="电像法"></a><center><strong>电像法</strong></center></h3><p>$\quad\\$</p>
+<p>&amp;emsp;&amp;emsp;称无界区域格林函数解为<font face="微软雅黑"><strong>基本解</strong></font>，记为$G_0$，也就是带$-\varepsilon$电量的点电荷产生的电势，一般解$G&#x3D;G_0+G_1$，二维与三维基本解分别为</p>
+<p>$$G_0(\boldsymbol{r},\boldsymbol{r_0})&#x3D;-\frac{1}{2\pi}\ln\frac{C}{|\boldsymbol{r}-\boldsymbol{r_0}|}\\<br>\quad\\<br>G_0(\boldsymbol{r},\boldsymbol{r_0})&#x3D;-\frac{1}{4\pi}\frac{1}{|\boldsymbol{r}-\boldsymbol{r_0}|}$$</p>
+<p>&amp;emsp;&amp;emsp;得到$G_0$后，$G_1$满足拉普拉斯方程$\Delta G_1&#x3D;0$，可由分离变数等方法求得级数解，当区域边界比较规则时，$G_1$可以等效为点电荷产生的电势，这些点电荷称为产生$G_0$的$\boldsymbol{r_0}$处点电荷的<font face="微软雅黑"><strong>电像</strong></font>，以下列出第一边界条件$u|_\Sigma&#x3D;f$下几种边界的电像，格林函数以及拉普拉斯方程$\Delta u&#x3D;0$的积分形式的解</p>
+<p>&amp;emsp;&amp;emsp;$r&#x3D;R$的圆环电像</p>
+<p>$$\boldsymbol{r_像}&#x3D;\frac{R^2}{r_0^2}\boldsymbol{r_0}\qquad q_像&#x3D;\varepsilon\\<br>\quad\\<br>G&#x3D;-\frac{1}{2\pi}\ln\frac{1}{|\boldsymbol{r}-\boldsymbol{r_0}|}+\frac{1}{2\pi}\ln\frac{\displaystyle\frac{R}{r_0}}{\left|\boldsymbol{r}-\displaystyle\frac{R^2}{r_0^2}\boldsymbol{r_0}\right|}\\<br>\quad\\<br>u(r,\varphi)&#x3D;\frac{1}{2\pi}\int_{0}^{2\pi}\frac{R^2-r^2}{R^2-2 R r\cos(\varphi-\varphi_0)+r^2}f(Re^{i\varphi_0})\dd\varphi_0&#x3D;f(re^{i\varphi})$$</p>
+<p>&amp;emsp;&amp;emsp;$y&#x3D;0$的直线电像</p>
+<p>$$(x_像,y_像)&#x3D;(x_0,-y_0)\qquad q_像&#x3D;\varepsilon\\<br>\quad\\<br>G&#x3D;-\frac{1}{2\pi}\ln\frac{1}{|\boldsymbol{r}-(x_0,y_0)|}+\ln\frac{1}{2\pi}\frac{1}{\left|\boldsymbol{r}-(x_0,-y_0)\right|}\\<br>\quad\\<br>u(x,y)&#x3D;\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{y}{(x-x_0)^2+y^2}f(x_0)\dd x_0$$</p>
+<p>&amp;emsp;&amp;emsp;$r&#x3D;R$的球面电像</p>
+<p>$$\boldsymbol{r_像}&#x3D;\frac{R^2}{r_0^2}\boldsymbol{r_0}\qquad q_像&#x3D;\frac{R}{r_0}\varepsilon\\<br>\quad\\<br>G&#x3D;-\frac{1}{4\pi}\frac{1}{|\boldsymbol{r}-\boldsymbol{r_0}|}+\frac{R}{r_0}\frac{1}{4\pi}\frac{1}{\left|\boldsymbol{r}-\displaystyle\frac{R^2}{r_0^2}\boldsymbol{r_0}\right|}\\<br>\quad\\<br>u(r,\theta,\varphi)&#x3D;\frac{R}{4\pi}\int_0^\pi\int_0^{2\pi}\frac{R^2-r^2}{(R^2-2Rr\cos{\Theta}+r^2)^{\frac{3}{2}}}f(\theta_0,\varphi_0)\sin{\theta_0}\dd\theta_0\dd\varphi_0\\<br>\quad\\<br>\cos\Theta&#x3D;\cos\theta\cos\theta_0+\sin\theta\sin\theta_0\cos(\varphi-\varphi_0)$$</p>
+<p>&amp;emsp;&amp;emsp;$z&#x3D;0$的平面电像</p>
+<p>$$(x_像,y_像,z_像)&#x3D;(x_0,y_0,-z_0)\qquad q_像&#x3D;\varepsilon\\<br>\quad\\<br>G&#x3D;-\frac{1}{4\pi}\frac{1}{|\boldsymbol{r}-(x_0,y_0,z_0)|}+\frac{1}{4\pi}\frac{1}{\left|\boldsymbol{r}-(x_0,y_0,-z_0)\right|}\\<br>\quad\\<br>u(x,y,z)&#x3D;\frac{1}{2\pi}\int_{-\infty}^\infty\int_{-\infty}^\infty\frac{z}{[(x-x_0)^2+(y-y_0)^2+z^2]^{\frac{3}{2}}}f(x_0,y_0)\dd x_0\dd y_0$$</p>
+<p>$\quad\\$</p>
+<h3 id="含时格林函数"><a href="#含时格林函数" class="headerlink" title="含时格林函数"></a><center><strong>含时格林函数</strong></center></h3><p>$\quad\\$</p>
+<p>&amp;emsp;&amp;emsp;振动定解问题</p>
+<p>$$u_{tt}-a^2\Delta u&#x3D;f(\boldsymbol{r},t)\\<br>\quad\\<br>\left.\left(\alpha\frac{\partial u}{\partial n}+\beta u\right)\right|_\Sigma&#x3D;\theta(M,t)\\<br>\quad\\<br>u|_{t&#x3D;0}&#x3D;\varphi(\boldsymbol{r})\qquad u_t|_{t&#x3D;0}&#x3D;\psi(\boldsymbol{r})$$</p>
+<p>&amp;emsp;&amp;emsp;分解作用力</p>
+<p>$$f(\boldsymbol{r},t)&#x3D;\iiint_T\int_t f(\boldsymbol{r_0},\tau)\delta(\boldsymbol{r}-\boldsymbol{r_0})\delta(t-\tau)\dd V_0\dd \tau$$</p>
+<p>&amp;emsp;&amp;emsp;引入格林函数，记$G(\boldsymbol{r},t;\boldsymbol{r_0},t_0)$为点位脉冲点力引起的振动，要求其满足齐次边界条件</p>
+<p>$$G_{tt}-a^2\Delta G&#x3D;\delta(\boldsymbol{r}-\boldsymbol{r_0})\delta(t-t_0)\\<br>\quad\\<br>\left.\left(\alpha\frac{\partial G}{\partial n}+\beta G\right)\right|_\Sigma&#x3D;0\\<br>\quad\\<br>G|_{t&#x3D;0}&#x3D;0\qquad G_t|_{t&#x3D;0}&#x3D;0$$</p>
+<p>&amp;emsp;&amp;emsp;下证格林函数具有对称性$G(\boldsymbol{r_1},t_1;\boldsymbol{r_2},t_2)&#x3D;G(\boldsymbol{r_2},-t_2;\boldsymbol{r_1},-t_1)$，<br>分别记$G(\boldsymbol{r},t;\boldsymbol{r_1},t_1)&#x3D;G(\boldsymbol{r},-t;\boldsymbol{r_2},-t_2)$为$u,v$，由格林公式</p>
+<p>$$\iiint_T\int_{-\infty}^{t’}[(u_{tt}-a^2\Delta u)v-(v_{tt}-a^2\Delta v)u]\dd V\dd t\\<br>&#x3D;\iiint_T(u_tv-v_tu)|_{-\infty}^{t’}\dd V+a^2\int_{-\infty}^{t’}\left[\iint_\Sigma\left(u\frac{\partial v}{\partial n}-v\frac{\partial u}{\partial n}\right)\dd S\right]\dd t\\<br>\quad\\<br>v(\boldsymbol{r_1},t_1)-u(\boldsymbol{r_2},t_2)&#x3D;0$$</p>
+
+                
+<p class="brown-link-context">
+    <a href="/2022/05/19/%E7%9B%B8%E5%8F%98%E4%B8%8E%E4%B8%B4%E7%95%8C%E7%8E%B0%E8%B1%A1/" rel="next" title="相变与临界现象">
+    上一篇：相变与临界现象
+  </a>
+</p>
+
+
+
+<p class="brown-link-context">
+    <a href="/2022/04/25/%E4%BA%8C%E9%98%B6%E5%B8%B8%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E7%BA%A7%E6%95%B0%E8%A7%A3/" rel="next" title="二阶常微分方程级数解">
+    下一篇：二阶常微分方程级数解
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+</div>
+
+        <div class="fixed-action-btn float-sitemap">
+    <a class="btn-floating btn-large brown lighten-2">
+      <i class="fa fa-caret-square-o-up"></i>
+    </a>
+    <ul>
+      <li><a class="btn-return-top btn-floating waves-effect brown lighten-2" title="回到顶部"><i class="fa fa-arrow-circle-o-up"></i></a></li>
+      <li><a class="btn-floating waves-effect button-collapse brown lighten-2"  data-activates="main-menu" title="菜单"><i class="fa fa-navicon"></i></a></li>
+    </ul>
+  </div>
+
+    </main>
+    
+    <noscript>
+    <div class="noscript">
+        <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+    </div>
+</noscript>
+<div class="noscript">
+    <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+</div>
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+
+<script>
+    (function($) {
+        $(document).ready(function() {
+            // 隐藏禁用javascript（针对微信内置浏览器）的提示
+            $('.noscript').hide();
+
+            // 图片缩放效果
+            var $imgs = $('img').not('.slider-image').not('.avatar-image').not('.carousel-image').not('.card-cover-image').not('.qrcode');
+
+            // 给图片加上点击放大效果（materialbox插件）
+            $imgs.addClass('materialboxed').each(function(i, el) {
+                $(this).attr('data-caption', $(this).attr('alt') || ' ');
+            }).materialbox();
+
+            // 优化表格的显示
+            $('table').each(function() {
+                var $table = $(this);
+                // 除去多行代码的情况
+                if ($table.find('pre').length == 0) {
+                    $table.addClass('responsive-table striped bordered');
+                }
+            });
+
+            // 首页幻灯片
+            $('.slider').slider({indicators: true, full_width: true, interval: 8000});
+
+            $(".button-collapse").sideNav();
+            $(".category-menu").sideNav();
+
+            // 针对gallery post
+            $('.carousel').carousel({full_width: true});
+            $('.carousel-control.prev').click(function() {
+                $('.carousel').carousel('prev');
+            });
+            $('.carousel-control.next').click(function() {
+                $('.carousel').carousel('next');
+            });
+
+            // 文章目录
+            $('article').not('.simple-article').find('h1').add('h2').add('h3').add('h4').add('h5').add('h6').scrollSpy();
+
+            // 目录随屏幕滚动（防止目录过长越过footer）
+            var $toc = $('.toc');
+            var scrollTargetTop = 0;
+            $(window).scroll(function() {
+                var $activeLink = $toc.find('a.active.section');
+                if ($(window).scrollTop() < 100) {
+                    scrollTargetTop = 0;
+                } else {
+                    if ($activeLink[0]) {
+                        scrollTargetTop = $activeLink.offset().top - $toc.offset().top;
+                    }
+                }
+                $toc.css('top', '-' + scrollTargetTop + 'px');
+            });
+
+            // 修正文章目录的left-border颜色
+            var color = $('.table-of-contents-text').css('color');
+            $('.table-of-contents-link').css('border-left-color', color);
+
+            // 针对移动端做的优化：FAB按钮点击一下收回
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                $('.fixed-action-btn').addClass('click-to-toggle');
+            }
+            // 回到顶部
+            $('.btn-return-top').click(function() {
+                $('body, html').animate({
+                    scrollTop: 0
+                }, 500);
+            });
+
+            // 重置读书页面的Tab标签页的颜色
+            $('li.tab a').hover(function() {
+                $(this).toggleClass('text-lighten-4');
+            });
+            $('.indicator').addClass('brown lighten-2');
+
+            
+            // 添加new标签
+            $('').append('<span class="new badge brown lighten-2"></span>');
+            
+
+            // 搜索功能
+            $('.modal-trigger').leanModal({
+                // 打开搜索框时自动聚焦
+                ready: function() {
+                    if ($('#search').is(":visible")) {
+                        $('#search-input').focus();
+                    }
+                }
+            });
+            var searchXml = "search.xml";
+            if (searchXml.length == 0) {
+             	searchXml = "search.xml";
+            }
+            var searchPath = "/" + searchXml;
+            initSearch(searchPath, 'search-input', 'search-result');
+        });
+
+        // 初始化搜索与匹配函数
+        var initSearch = function(path, search_id, content_id) {
+            'use strict';
+            $.ajax({
+                url: path,
+                dataType: "xml",
+                success: function(xmlResponse) {
+                    // get the contents from search data
+                    var datas = $("entry", xmlResponse).map(function() {
+                        return {
+                            title: $("title", this).text(),
+                            content: $("content", this).text(),
+                            url: $("url", this).text()
+                        };
+                    }).get();
+                    var $input = document.getElementById(search_id);
+                    var $resultContent = document.getElementById(content_id);
+                    $input.addEventListener('input', function() {
+                        var str = '<ul class=\"search-result-list\">';
+                        var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                        $resultContent.innerHTML = "";
+                        if (this.value.trim().length <= 0) {
+                            return;
+                        }
+                        // perform local searching
+                        datas.forEach(function(data) {
+                            var isMatch = true;
+                            var content_index = [];
+                            var data_title = data.title.trim().toLowerCase();
+                            var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                            var data_url = data.url;
+                            var index_title = -1;
+                            var index_content = -1;
+                            var first_occur = -1;
+                            // only match artiles with not empty titles and contents
+                            if (data_title != '' && data_content != '') {
+                                keywords.forEach(function(keyword, i) {
+                                    index_title = data_title.indexOf(keyword);
+                                    index_content = data_content.indexOf(keyword);
+                                    if (index_title < 0 && index_content < 0) {
+                                        isMatch = false;
+                                    } else {
+                                        if (index_content < 0) {
+                                            index_content = 0;
+                                        }
+                                        if (i == 0) {
+                                            first_occur = index_content;
+                                        }
+                                    }
+                                });
+                            }
+                            // show search results
+                            if (isMatch) {
+                                keywords.forEach(function(keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    data_title = data_title.replace(regS, "<span class=\"search-keyword brown lighten-2\">" + keyword + "</span>");
+                                });
+
+                                str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                                var content = data.content.trim().replace(/<[^>]+>/g, "");
+                                if (first_occur >= 0) {
+                                    // cut out 100 characters
+                                    var start = first_occur - 20;
+                                    var end = first_occur + 80;
+                                    if (start < 0) {
+                                        start = 0;
+                                    }
+                                    if (start == 0) {
+                                        end = 100;
+                                    }
+                                    if (end > content.length) {
+                                        end = content.length;
+                                    }
+                                    var match_content = content.substring(start, end);
+                                    // highlight all keywords
+                                    keywords.forEach(function(keyword) {
+                                        var regS = new RegExp(keyword, "gi");
+                                        match_content = match_content.replace(regS, "<span class=\"search-keyword brown lighten-2\">" + keyword + "</span>");
+                                    });
+
+                                    str += "<p class=\"search-result\">..." + match_content + "...</p>"
+                                }
+                                str += "</li>";
+                            }
+                        });
+                        str += "</ul>";
+                        $resultContent.innerHTML = str;
+                    });
+                }
+            });
+        }
+    })(jQuery);
+</script>
+
+
+<script src="/js/prettify.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("pre").addClass("prettyprint");
+        prettyPrint();
+    });
+</script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["[Contrib]/physics/physics.js"],
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+});
+</script>
+
+<script type="text/javascript" async
+  src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+</body>
+</html>

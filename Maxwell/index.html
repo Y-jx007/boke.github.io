@@ -1,0 +1,930 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    
+
+    <title></title>
+    <meta name="author" content="邯郸学步">
+    
+    <meta name="description" content="麦克斯韦分布律
+  
+    .背景class {
+      position: relative;
+      display: inline-block;
+      width: 400px;
+      height: 400px;
+      background: #bbdefb;
+ ">
+    
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    
+    <meta property="og:site_name" content="邯郸学步"/>
+
+    
+    <meta property="og:image" content=""/>
+    
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="alternate" href="/atom.xml" title="邯郸学步" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/lib/materialize.min.css">
+    <link rel="stylesheet" href="/css/lib/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
+    
+        <link rel="stylesheet" href="/css/lib/another-theme.css" type="text/css">
+    
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+    <img src="/weixin_favicon.png" style="position: absolute; left: -9999px; opacity: 0; filter: alpha(opacity=0);">
+
+    <nav class="brown lighten-2">
+    <div class="nav-wrapper">
+        <a href="#" data-activates="main-menu" class="button-collapse">
+            <i class="fa fa-navicon"></i>
+        </a>
+        <div class="">
+            <a href="/" class="brand-logo hide-on-med-and-down">邯郸学步</a>
+            <ul class="right hide-on-med-and-down">
+                
+                    <li>
+                        <a class="menu-home " href="/" >
+                            <i class="fa fa-home "></i>
+                            
+                            首页
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-archive " href="/archives" >
+                            <i class="fa fa-archive "></i>
+                            
+                            归档
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                            <i class="fa fa-bookmark "></i>
+                            
+                            分类
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-about " href="/about" >
+                            <i class="fa fa-user "></i>
+                            
+                            关于
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-search modal-trigger " href="#search" >
+                            <i class="fa fa-search "></i>
+                            
+                            搜索
+                        </a>
+                    </li>
+                
+            </ul>
+            <div>
+    <ul class="side-nav brown lighten-2" id="main-menu">
+        
+        <li class="side-user">
+            <div class="row">
+                <div class="col s4 no-padding">
+                    <img class="avatar-image circle responsive-img" src="/favicon.png" alt="User Avatar">
+                </div>
+                <div class="info col s8 valign-wrapper no-padding">
+                    <div class="valign">
+                        <p class="name">邯郸学步</p>
+                        <p class="desc">笔记</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        
+
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-home " href="/" >
+                    <i class="fa fa-home "></i>
+                    
+                    首页
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-archive " href="/archives" >
+                    <i class="fa fa-archive "></i>
+                    
+                    归档
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                    <i class="fa fa-bookmark "></i>
+                    
+                    分类
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-about " href="/about" >
+                    <i class="fa fa-user "></i>
+                    
+                    关于
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-search modal-trigger " href="#search" >
+                    <i class="fa fa-search "></i>
+                    
+                    搜索
+                </a>
+            </li>
+        
+    </ul>
+
+    <ul class="side-nav brown lighten-2" id="category-menu">
+    
+
+            
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/算法/">
+                    算法 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/其他/">
+                    其他 <span class="right">13 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/复变函数/">
+                    复变函数 <span class="right">6 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/Suvrat-Raju/">
+                    Suvrat-Raju <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/微分几何/">
+                    微分几何 <span class="right">8 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/力学/">
+                    力学 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/数理方程/">
+                    数理方程 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/PiTP/">
+                    PiTP <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/离散数学/">
+                    离散数学 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/光学/">
+                    光学 <span class="right">6 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/线性代数/">
+                    线性代数 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/固体物理/">
+                    固体物理 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/电动力学/">
+                    电动力学 <span class="right">5 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/相对论/">
+                    相对论 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/张量分析/">
+                    张量分析 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/概率论/">
+                    概率论 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/群论/">
+                    群论 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/热力学/">
+                    热力学 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/原子物理/">
+                    原子物理 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/统计物理/">
+                    统计物理 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/抽象代数/">
+                    抽象代数 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/量子力学/">
+                    量子力学 <span class="right">4 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/数学分析/">
+                    数学分析 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+    </ul>
+</div>
+
+        </div>
+    </div>
+</nav>
+
+<div id="search" class="modal search-modal">
+    <div class="row">
+        <div class="input-field col s12">
+              <input id="search-input" type="text">
+              <label for="search-input">搜索</label>
+        </div>
+
+    </div>
+    <div id="search-result" class="search-result col s12">
+
+    </div>
+</div>
+
+
+    <main>
+        <div class="container main-container">
+    <nav class="page-nav hide-on-small-only">
+    <div class="nav-wrapper brown lighten-2">
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+
+        
+
+        
+    </div>
+</nav>
+
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>无题</h1>
+    
+
+
+            </div>
+            <time class="brown-link-context" datetime="2022-10-31T14:38:17.757Z"><a href="/Maxwell/index.html">2022-10-31</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+
+            <div class="toc brown-link-context hide-on-med-and-down">
+    
+</div>
+
+
+            <div class="entry brown-link-context">
+                <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>麦克斯韦分布律</title>
+  <style type="text/css">
+    .背景class {
+      position: relative;
+      display: inline-block;
+      width: 400px;
+      height: 400px;
+      background: #bbdefb;
+      margin: 40px auto;
+    }
+    .粒子class{
+      background: #ffeb3b;
+      width: 3px;
+      height: 3px;
+      border-radius: 3px;
+    }
+    .分布条class{
+      background: #ffeb3b;
+    }
+    .横轴class{
+      background: #000000;
+      width: 420px;
+      height: 2px;
+    }
+    .纵轴class{
+      background: #000000;
+      width: 2px;
+      height: 420px;
+    }
+    .曲线点class{
+      background: #000000;
+      width: 2px;
+      height: 2px;}
+    .输入框class{
+      width: 60px;
+      height: 20px;
+      border-radius:5px;
+      border:2px solid;
+    }
+  </style>
+  <script src="jquery.js"></script>
+  <script type="text/javascript" 
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML-full"></script>
+</head>
+<body>
+  &emsp;
+  <div></div>
+  &emsp;&emsp;&emsp;<font face="Simsun" style="left:60px">相对方均根速率(<10)：</font>
+  <input class="输入框class" style="left:60px" id="相对速度id" value='3' onkeydown="开始(event)"></input>
+  &emsp;<font face="Simsun" style="left:60px">粒子数(<20000)：</font>
+  <input class="输入框class" style="left:60px" id="粒子数id" value='2000' onkeydown="开始(event)"></input>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<a>`f(v)=\frac{M}{RT}\text{exp}(-\frac{Mv^2}{2RT})v`</a>
+  <div></div>
+  <div class="背景class" id='盒子id' style="left:60px"></div>
+  <div class="背景class" id='分布id' style="left:150px"></div>
+  <script type="text/javascript">
+    var 盒子=document.getElementById('盒子id')
+    var 分布=document.getElementById('分布id')
+
+    var 标识1=document.createElement('a')
+    标识1.text='`v_{ \\text{rms}}`'
+    标识1.style.position='absolute'
+    标识1.style.left=90+'px'
+    标识1.style.top=400+'px'
+
+    var 标识2=document.createElement('a')
+    标识2.text='`O`'
+    标识2.style.position='absolute'
+    标识2.style.left=-20+'px'
+    标识2.style.top=400+'px'
+
+    var 标识3=document.createElement('a')
+    标识3.text='`v`'
+    标识3.style.position='absolute'
+    标识3.style.left=400+'px'
+    标识3.style.top=400+'px'
+
+    var 标识4=document.createElement('a')
+    标识4.text='`f(v)`'
+    标识4.style.position='absolute'
+    标识4.style.left=-50+'px'
+    标识4.style.top=-20+'px'
+
+    var 标识5=document.createElement('div')
+    标识5.style.position='absolute'
+    标识5.style.backgroundColor='#000000'
+    标识5.style.width=2+'px'
+    标识5.style.height=5+'px'
+    标识5.style.left=100+'px'
+    标识5.style.top=400+'px'
+
+    var 标识6=document.createElement('div')
+    标识6.style.position='absolute'
+    标识6.style.backgroundColor='#000000'
+    标识6.style.width=2+'px'
+    标识6.style.height=5+'px'
+    标识6.style.left=200+'px'
+    标识6.style.top=400+'px'
+
+    var 标识7=document.createElement('div')
+    标识7.style.position='absolute'
+    标识7.style.backgroundColor='#000000'
+    标识7.style.width=2+'px'
+    标识7.style.height=5+'px'
+    标识7.style.left=300+'px'
+    标识7.style.top=400+'px'
+
+    var 横轴=document.createElement('div')
+    横轴.style.position='absolute'
+    横轴.className='横轴class'
+    横轴.style.left=-2+'px'
+    横轴.style.top=400+'px'
+
+    var 纵轴=document.createElement('div')
+    纵轴.style.position='absolute'
+    纵轴.className='纵轴class'
+    纵轴.style.left=-2+'px'
+    纵轴.style.top=-18+'px'
+
+    分布.appendChild(标识1)
+    分布.appendChild(标识2)
+    分布.appendChild(标识3)
+    分布.appendChild(标识4)
+    分布.appendChild(标识5)
+    分布.appendChild(标识6)
+    分布.appendChild(标识7)
+    分布.appendChild(横轴)
+    分布.appendChild(纵轴)
+
+    function clamp(x1,x2,x){
+      if(x<x1){x=x1+0.01}
+      if(x>x2){x=x2-0.01}
+      return x
+    }
+    function 粒子运动(N,v){
+        this.xy=[]
+        this.v=[]
+        this.N=N
+        this.average_v=v
+        this.distribution=[]
+        this.bar=[]
+        this.highfac=30
+        this.barnum=200
+        this.curve=[]
+        for(var i=0;i<this.barnum;i++){this.distribution[i]=0}
+        this.初始化=function(){
+            for(var i=0;i<this.N;i++){
+                var 粒子=document.createElement('div')
+                粒子.className='粒子class'
+                粒子.style.position = 'absolute'
+                this.xy.push([397*Math.random(),397*Math.random()])
+                粒子.style.left = this.xy[i][0] + 'px'
+                粒子.style.top  = this.xy[i][1] + 'px'
+                盒子.appendChild(粒子)
+                this.xy[i].flag=粒子
+                var angle=6.28*Math.random()
+                this.v.push([this.average_v*Math.cos(angle),
+                             this.average_v*Math.sin(angle)])
+                this.distribution[Math.min(
+                    Math.round(Math.sqrt(this.v[i][0]**2+this.v[i][1]**2)
+                    /this.average_v*this.barnum/4),this.barnum-1)]+=1}
+            for(var i=0;i<this.barnum;i++){
+                var 分布条=document.createElement('div')
+                分布条.className='分布条class'
+                分布条.style.position = 'absolute'
+                分布条.style.width=400/this.barnum+'px';
+                分布条.style.height =this.distribution[i]/this.N*400 + 'px'
+                分布条.style.left = i*400/this.barnum + 'px'
+                分布条.style.top  = (400-this.distribution[i]/this.N*400) + 'px'
+                分布.appendChild(分布条)
+                this.bar[i]=分布条
+            }
+            for(var i=0;i<1000;i++){
+                var 理论值=document.createElement('div')
+                理论值.className='曲线点class'
+                理论值.style.position = 'absolute'
+                理论值.style.left = i/2.5 + 'px'
+                var m_2kt=1/250**2
+                理论值.style.top  = (400-2*2.5*m_2kt*this.highfac*400**2/this.barnum*Math.E**(-m_2kt*i**2)*i) + 'px'
+                分布.appendChild(理论值)
+                this.curve[i]=理论值
+        }}
+
+        this.运动=function(){
+            for(var i=0;i<this.barnum;i++){
+                this.distribution[i]=0
+                分布.removeChild(this.bar[i])}
+            for(var i=0;i<this.N;i++){
+                盒子.removeChild(this.xy[i].flag)
+                for(var j=i;j<this.N;j++){
+                    if( i!=j && (this.xy[i][0]-this.xy[j][0])**2+(this.xy[i][1]-this.xy[j][1])**2<9){
+                        var xv=(this.v[i][0]-this.v[j][0])*(this.xy[i][0]-this.xy[j][0])+
+                               (this.v[i][1]-this.v[j][1])*(this.xy[i][1]-this.xy[j][1])
+                        var xx=(this.xy[i][0]-this.xy[j][0])**2+(this.xy[i][1]-this.xy[j][1])**2
+                        this.v[i][0]+=xv/xx*(this.xy[j][0]-this.xy[i][0])
+                        this.v[i][1]+=xv/xx*(this.xy[j][1]-this.xy[i][1])
+                        this.v[j][0]+=xv/xx*(this.xy[i][0]-this.xy[j][0])
+                        this.v[j][1]+=xv/xx*(this.xy[i][1]-this.xy[j][1])
+                    }
+                }
+                this.xy[i][0]+=this.v[i][0]
+                this.xy[i][1]+=this.v[i][1]
+                if(this.xy[i][0]>397 || this.xy[i][0]<0){
+                  this.v[i][0]=-this.v[i][0]
+                  this.xy[i][0]=clamp(0,397,this.xy[i][0])}
+                if(this.xy[i][1]>397 || this.xy[i][1]<0){
+                  this.v[i][1]=-this.v[i][1]
+                  this.xy[i][1]=clamp(0,397,this.xy[i][1])}
+                var 粒子=document.createElement('div')
+                粒子.className='粒子class'
+                粒子.style.position = 'absolute'//不能删
+                粒子.style.left = this.xy[i][0] + 'px'
+                粒子.style.top  = this.xy[i][1] + 'px'
+                盒子.appendChild(粒子)
+                this.xy[i].flag=粒子
+                this.distribution[Math.min(
+                    Math.round(Math.sqrt(this.v[i][0]**2+this.v[i][1]**2)
+                    /this.average_v*this.barnum/4),this.barnum-1)]+=1}
+            for(var i=0;i<this.barnum;i++){
+                var 分布条=document.createElement('div')
+                分布条.className='分布条class'
+                分布条.style.position = 'absolute'
+                分布条.style.width=400/this.barnum+'px';
+                分布条.style.height =this.distribution[i]/this.N*400*this.highfac + 'px'
+                分布条.style.left = i*400/this.barnum + 'px'
+                分布条.style.top  = (400-this.distribution[i]/this.N*400*this.highfac) + 'px'
+                分布.appendChild(分布条)
+                this.bar[i]=分布条
+                }
+            for(var i=0;i<1000;i++){
+                分布.removeChild(this.curve[i])
+                var 理论值=document.createElement('div')
+                理论值.className='曲线点class'
+                理论值.style.position = 'absolute'
+                理论值.style.left = i/2.5 + 'px'
+                var m_2kt=1/250**2
+                理论值.style.top  = (400-2*2.5*m_2kt*this.highfac*400**2/this.barnum*Math.E**(-m_2kt*i**2)*i) + 'px'
+                分布.appendChild(理论值)
+                this.curve[i]=理论值}}}
+      
+      function 开始(e){
+
+        var event=window.event || e
+        if(event.keyCode==13){
+        粒子运动=new 粒子运动(document.getElementById("粒子数id").value,
+                            document.getElementById("相对速度id").value)
+        粒子运动.初始化()
+          setInterval(function(){粒子运动.运动();},5)}}
+  </script>
+</body>
+</html>
+                
+
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+</div>
+
+        <div class="fixed-action-btn float-sitemap">
+    <a class="btn-floating btn-large brown lighten-2">
+      <i class="fa fa-caret-square-o-up"></i>
+    </a>
+    <ul>
+      <li><a class="btn-return-top btn-floating waves-effect brown lighten-2" title="回到顶部"><i class="fa fa-arrow-circle-o-up"></i></a></li>
+      <li><a class="btn-floating waves-effect button-collapse brown lighten-2"  data-activates="main-menu" title="菜单"><i class="fa fa-navicon"></i></a></li>
+    </ul>
+  </div>
+
+    </main>
+    
+    <noscript>
+    <div class="noscript">
+        <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+    </div>
+</noscript>
+<div class="noscript">
+    <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+</div>
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+
+<script>
+    (function($) {
+        $(document).ready(function() {
+            // 隐藏禁用javascript（针对微信内置浏览器）的提示
+            $('.noscript').hide();
+
+            // 图片缩放效果
+            var $imgs = $('img').not('.slider-image').not('.avatar-image').not('.carousel-image').not('.card-cover-image').not('.qrcode');
+
+            // 给图片加上点击放大效果（materialbox插件）
+            $imgs.addClass('materialboxed').each(function(i, el) {
+                $(this).attr('data-caption', $(this).attr('alt') || ' ');
+            }).materialbox();
+
+            // 优化表格的显示
+            $('table').each(function() {
+                var $table = $(this);
+                // 除去多行代码的情况
+                if ($table.find('pre').length == 0) {
+                    $table.addClass('responsive-table striped bordered');
+                }
+            });
+
+            // 首页幻灯片
+            $('.slider').slider({indicators: true, full_width: true, interval: 8000});
+
+            $(".button-collapse").sideNav();
+            $(".category-menu").sideNav();
+
+            // 针对gallery post
+            $('.carousel').carousel({full_width: true});
+            $('.carousel-control.prev').click(function() {
+                $('.carousel').carousel('prev');
+            });
+            $('.carousel-control.next').click(function() {
+                $('.carousel').carousel('next');
+            });
+
+            // 文章目录
+            $('article').not('.simple-article').find('h1').add('h2').add('h3').add('h4').add('h5').add('h6').scrollSpy();
+
+            // 目录随屏幕滚动（防止目录过长越过footer）
+            var $toc = $('.toc');
+            var scrollTargetTop = 0;
+            $(window).scroll(function() {
+                var $activeLink = $toc.find('a.active.section');
+                if ($(window).scrollTop() < 100) {
+                    scrollTargetTop = 0;
+                } else {
+                    if ($activeLink[0]) {
+                        scrollTargetTop = $activeLink.offset().top - $toc.offset().top;
+                    }
+                }
+                $toc.css('top', '-' + scrollTargetTop + 'px');
+            });
+
+            // 修正文章目录的left-border颜色
+            var color = $('.table-of-contents-text').css('color');
+            $('.table-of-contents-link').css('border-left-color', color);
+
+            // 针对移动端做的优化：FAB按钮点击一下收回
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                $('.fixed-action-btn').addClass('click-to-toggle');
+            }
+            // 回到顶部
+            $('.btn-return-top').click(function() {
+                $('body, html').animate({
+                    scrollTop: 0
+                }, 500);
+            });
+
+            // 重置读书页面的Tab标签页的颜色
+            $('li.tab a').hover(function() {
+                $(this).toggleClass('text-lighten-4');
+            });
+            $('.indicator').addClass('brown lighten-2');
+
+            
+            // 添加new标签
+            $('').append('<span class="new badge brown lighten-2"></span>');
+            
+
+            // 搜索功能
+            $('.modal-trigger').leanModal({
+                // 打开搜索框时自动聚焦
+                ready: function() {
+                    if ($('#search').is(":visible")) {
+                        $('#search-input').focus();
+                    }
+                }
+            });
+            var searchXml = "search.xml";
+            if (searchXml.length == 0) {
+             	searchXml = "search.xml";
+            }
+            var searchPath = "/" + searchXml;
+            initSearch(searchPath, 'search-input', 'search-result');
+        });
+
+        // 初始化搜索与匹配函数
+        var initSearch = function(path, search_id, content_id) {
+            'use strict';
+            $.ajax({
+                url: path,
+                dataType: "xml",
+                success: function(xmlResponse) {
+                    // get the contents from search data
+                    var datas = $("entry", xmlResponse).map(function() {
+                        return {
+                            title: $("title", this).text(),
+                            content: $("content", this).text(),
+                            url: $("url", this).text()
+                        };
+                    }).get();
+                    var $input = document.getElementById(search_id);
+                    var $resultContent = document.getElementById(content_id);
+                    $input.addEventListener('input', function() {
+                        var str = '<ul class=\"search-result-list\">';
+                        var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                        $resultContent.innerHTML = "";
+                        if (this.value.trim().length <= 0) {
+                            return;
+                        }
+                        // perform local searching
+                        datas.forEach(function(data) {
+                            var isMatch = true;
+                            var content_index = [];
+                            var data_title = data.title.trim().toLowerCase();
+                            var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                            var data_url = data.url;
+                            var index_title = -1;
+                            var index_content = -1;
+                            var first_occur = -1;
+                            // only match artiles with not empty titles and contents
+                            if (data_title != '' && data_content != '') {
+                                keywords.forEach(function(keyword, i) {
+                                    index_title = data_title.indexOf(keyword);
+                                    index_content = data_content.indexOf(keyword);
+                                    if (index_title < 0 && index_content < 0) {
+                                        isMatch = false;
+                                    } else {
+                                        if (index_content < 0) {
+                                            index_content = 0;
+                                        }
+                                        if (i == 0) {
+                                            first_occur = index_content;
+                                        }
+                                    }
+                                });
+                            }
+                            // show search results
+                            if (isMatch) {
+                                keywords.forEach(function(keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    data_title = data_title.replace(regS, "<span class=\"search-keyword brown lighten-2\">" + keyword + "</span>");
+                                });
+
+                                str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                                var content = data.content.trim().replace(/<[^>]+>/g, "");
+                                if (first_occur >= 0) {
+                                    // cut out 100 characters
+                                    var start = first_occur - 20;
+                                    var end = first_occur + 80;
+                                    if (start < 0) {
+                                        start = 0;
+                                    }
+                                    if (start == 0) {
+                                        end = 100;
+                                    }
+                                    if (end > content.length) {
+                                        end = content.length;
+                                    }
+                                    var match_content = content.substring(start, end);
+                                    // highlight all keywords
+                                    keywords.forEach(function(keyword) {
+                                        var regS = new RegExp(keyword, "gi");
+                                        match_content = match_content.replace(regS, "<span class=\"search-keyword brown lighten-2\">" + keyword + "</span>");
+                                    });
+
+                                    str += "<p class=\"search-result\">..." + match_content + "...</p>"
+                                }
+                                str += "</li>";
+                            }
+                        });
+                        str += "</ul>";
+                        $resultContent.innerHTML = str;
+                    });
+                }
+            });
+        }
+    })(jQuery);
+</script>
+
+
+<script src="/js/prettify.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("pre").addClass("prettyprint");
+        prettyPrint();
+    });
+</script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["[Contrib]/physics/physics.js"],
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+});
+</script>
+
+<script type="text/javascript" async
+  src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+</body>
+</html>

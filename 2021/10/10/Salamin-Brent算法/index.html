@@ -1,0 +1,928 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    
+
+    <title>Salamin-Brent算法 | </title>
+    <meta name="author" content="邯郸学步">
+    
+    <meta name="description" content="$\qquad$Arithmetic-Geometric Mean:给定两个正数$a$和$b$$,\ $且有$0&amp;lt;b&amp;lt;a.\;$令$a_0&amp;#x3D;a,\ b_0&amp;#x3D;b,\ $并按照递推公式
+
+$$a_n&amp;#x3D;\frac{a_{n-1}+b_{n-1}}{2},\;b_n">
+    
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:title" content="Salamin-Brent算法"/>
+    <meta property="og:site_name" content="邯郸学步"/>
+
+    
+    <meta property="og:image" content=""/>
+    
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="alternate" href="/atom.xml" title="邯郸学步" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/lib/materialize.min.css">
+    <link rel="stylesheet" href="/css/lib/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
+    
+        <link rel="stylesheet" href="/css/lib/another-theme.css" type="text/css">
+    
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+    <img src="/weixin_favicon.png" style="position: absolute; left: -9999px; opacity: 0; filter: alpha(opacity=0);">
+
+    <nav class="brown lighten-2">
+    <div class="nav-wrapper">
+        <a href="#" data-activates="main-menu" class="button-collapse">
+            <i class="fa fa-navicon"></i>
+        </a>
+        <div class="">
+            <a href="/" class="brand-logo hide-on-med-and-down">邯郸学步</a>
+            <ul class="right hide-on-med-and-down">
+                
+                    <li>
+                        <a class="menu-home " href="/" >
+                            <i class="fa fa-home "></i>
+                            
+                            首页
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-archive " href="/archives" >
+                            <i class="fa fa-archive "></i>
+                            
+                            归档
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                            <i class="fa fa-bookmark "></i>
+                            
+                            分类
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-about " href="/about" >
+                            <i class="fa fa-user "></i>
+                            
+                            关于
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-search modal-trigger " href="#search" >
+                            <i class="fa fa-search "></i>
+                            
+                            搜索
+                        </a>
+                    </li>
+                
+            </ul>
+            <div>
+    <ul class="side-nav brown lighten-2" id="main-menu">
+        
+        <li class="side-user">
+            <div class="row">
+                <div class="col s4 no-padding">
+                    <img class="avatar-image circle responsive-img" src="/favicon.png" alt="User Avatar">
+                </div>
+                <div class="info col s8 valign-wrapper no-padding">
+                    <div class="valign">
+                        <p class="name">邯郸学步</p>
+                        <p class="desc">笔记</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        
+
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-home " href="/" >
+                    <i class="fa fa-home "></i>
+                    
+                    首页
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-archive " href="/archives" >
+                    <i class="fa fa-archive "></i>
+                    
+                    归档
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                    <i class="fa fa-bookmark "></i>
+                    
+                    分类
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-about " href="/about" >
+                    <i class="fa fa-user "></i>
+                    
+                    关于
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-search modal-trigger " href="#search" >
+                    <i class="fa fa-search "></i>
+                    
+                    搜索
+                </a>
+            </li>
+        
+    </ul>
+
+    <ul class="side-nav brown lighten-2" id="category-menu">
+    
+
+            
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/算法/">
+                    算法 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/其他/">
+                    其他 <span class="right">13 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/复变函数/">
+                    复变函数 <span class="right">6 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/Suvrat-Raju/">
+                    Suvrat-Raju <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/微分几何/">
+                    微分几何 <span class="right">8 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/力学/">
+                    力学 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/数理方程/">
+                    数理方程 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/PiTP/">
+                    PiTP <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/离散数学/">
+                    离散数学 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/光学/">
+                    光学 <span class="right">6 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/线性代数/">
+                    线性代数 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/固体物理/">
+                    固体物理 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/电动力学/">
+                    电动力学 <span class="right">5 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/相对论/">
+                    相对论 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/张量分析/">
+                    张量分析 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/概率论/">
+                    概率论 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/群论/">
+                    群论 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/热力学/">
+                    热力学 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/原子物理/">
+                    原子物理 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/统计物理/">
+                    统计物理 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/抽象代数/">
+                    抽象代数 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/量子力学/">
+                    量子力学 <span class="right">4 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/数学分析/">
+                    数学分析 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+    </ul>
+</div>
+
+        </div>
+    </div>
+</nav>
+
+<div id="search" class="modal search-modal">
+    <div class="row">
+        <div class="input-field col s12">
+              <input id="search-input" type="text">
+              <label for="search-input">搜索</label>
+        </div>
+
+    </div>
+    <div id="search-result" class="search-result col s12">
+
+    </div>
+</div>
+
+
+    <main>
+        <div class="container main-container">
+    <nav class="page-nav hide-on-small-only">
+    <div class="nav-wrapper brown lighten-2">
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+    
+    
+    <a class="breadcrumb" href="/categories/算法/">算法</a>
+
+
+        
+
+        
+    </div>
+</nav>
+
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>Salamin-Brent算法</h1>
+    
+
+
+            </div>
+            <time class="brown-link-context" datetime="2021-10-10T01:06:31.000Z"><a href="/2021/10/10/Salamin-Brent%E7%AE%97%E6%B3%95/">2021-10-10</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
+        
+            <a href="/tags/pi/" class="chip green lighten-1">$\pi$</a>
+        
+            <a href="/tags/AGM/" class="chip green lighten-1">AGM</a>
+        
+            <a href="/tags/Elliptic-Integrals/" class="chip green lighten-1">Elliptic Integrals</a>
+        
+    </div>
+
+
+            <div class="toc brown-link-context hide-on-med-and-down">
+    
+</div>
+
+
+            <div class="entry brown-link-context">
+                <p>$\qquad$<font face="微软雅黑"><strong>Arithmetic-Geometric Mean</strong></font>:给定两个正数$a$和$b$$,\ $且有$0&lt;b&lt;a.\;$令$a_0&#x3D;a,\ b_0&#x3D;b,\ $并按照递推公式</p>
+<blockquote>
+<p>$$<br>a_n&#x3D;\frac{a_{n-1}+b_{n-1}}{2},\;<br>b_n&#x3D;\sqrt{a_{n-1}b_{n-1}},\;<br>n\in \mathbb{N_+}<br>$$</p>
+</blockquote>
+<p>定义数列$\{a_n\}$和$\{b_n\}.\;$证明这两个数列收敛于同一个极限$,\ $此极限称为$a$与$b$的算术几何平均值$,\ $且其具有解析表达式</p>
+<blockquote>
+<p>$$AGM(a,b)&#x3D;\frac{\pi}{2I(a,b)}\\<br>\quad\\<br>其中\;I(a,b)&#x3D;\int^{\frac{\pi}{2}}_{0}\frac{\text{d}x}{\sqrt{a^2\cos^2{x}+b^2\sin^2{x}}}$$</p>
+</blockquote>
+<details>
+<summary><font color=#8076a3><strong><answer>$\nabla$证</answer><strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+$$
+使用数学归纳法\\\\
+\quad\\\\
+a_0>b_0\\\\
+\quad\\\\
+a_n^2-b_n^2=(\frac{a_{n-1}-b_{n-1}}{2})^2>0\\\\
+\quad\\\\
+则有 b = b_0 < b_1 < b_2 < \cdots < b_n < a_n < \cdots < a_2 < a_1 < a_0 = a\\\\
+\quad\\\\
+\{a_n\}与\{b_n\}单调有界，设其极限分别为A与B\\\\
+\quad\\\\
+由递推式a_n=\frac{a_{n-1}+b_{n-1}}{2}有A=\frac{A+B}{2}\\\\
+\quad\\\\
+即\{a_n\}与\{b_n\}收敛于同一极限A=B，设其为AGM(a,b)\\\\
+\quad\\\\
+\text{Gauss}在14岁(1791年)时求出其解析表达式为\\\\
+\quad\\\\
+AGM(a,b)=\frac{\pi}{2I(a,b)},其中I(a,b)=\int^{\frac{\pi}{2}}_{0}\frac{\text{d}x}{\sqrt{a^2\cos^2{x}+b^2\sin^2{x}}}\\\\
+\quad\\\\
+主要思路是证明I(a,b)=I(a_1,b_1),不断迭代,由I函数的连续性得\\\\
+\quad\\\\
+I=\lim \limits_{n \to \infty}I(a_n,b_n)=I(AGM,AGM)=\int^{\frac{\pi}{2}}_{0}\frac{\text{d}x}{AGM}=\frac{\pi}{2AGM}\\\\
+\quad\\\\
+他首先引进变量x',使得\sin{x'}=\frac{2a\sin{x}}{a+b+(a-b)\sin^2{x}}\\\\
+\quad\\\\
+\text{Gauss then asserts}\\\\
+\quad\\\\
+``\text{after the development has been made correctly, it will be seen}"\\\\
+\quad\\\\
+\text{that} \quad \frac{\text{d}x}{\sqrt{a^2\cos^2{x}+b^2\sin^2{x}}}=\frac{\text{d}x'}{\sqrt{a_1^2\cos^2{x'}+b_1^2\sin^2{x'}}}\\\\
+\quad\\\\
+除了\text{Gauss}的方法，不妨试下\text{D.J. Newmann}的代换
+\quad\\\\
+t=b\tan{x},t'=\frac{1}{2}(t-\frac{b_1^2}{t})\\\\
+\quad\\\\
+则\text{d}x=\frac{\cos^2{x}\text{d}t}{b},\text{d}t=\frac{2t^2\text{d}t'}{t^2+b_1^2}\\\\
+\quad\\\\
+\begin{aligned}
+I(a,b)&=\int^{+\infty}_{0}\frac{\cos^2{x}\text{d}t}{b\sqrt{a^2\cos^2{x}+b^2\sin^2{x}}}\\\\
+&=\int^{+\infty}_{0}\frac{\text{d}t}{\sqrt{\frac{b^2}{\cos^2{x}}(a^2+b^2\tan^2{x})}}\\\\
+&=\int^{+\infty}_{0}\frac{\text{d}t}{\sqrt{(b^2+t^2)(a^2+t^2)}}\\\\
+&=\int^{+\infty}_{-\infty}\frac{2t^2\text{d}t'}{(t^2+b_1^2)\sqrt{b_1^4+(4a_1^2-2b_1^2)t^2+t^4}}\\\\
+&=\int^{+\infty}_{-\infty}\frac{\text{d}t'}{\frac{t^2+b_1^2}{t}\sqrt{[b_1^4+(4a_1^2-2b_1^2)t^2+t^4]/4t^2}}\\\\
+&=\int^{+\infty}_{-\infty}\frac{\text{d}t'}{2\sqrt{(a_1^2+t'^2)(b_1^2+t'^2)}}\\\\
+&=I(a_1,b_1)\\\\
+\end{aligned}
+$$
+</bockquote>
+</details>
+$\qquad\\\\$
+
+<p>$\qquad$<font face="微软雅黑"><strong>Landen变换</strong></font>:先引进如下两个完全椭圆积分</p>
+<blockquote>
+$$
+K(k)=\int^{\frac{\pi}{2}}_{0}\frac{\text{d}x}{\sqrt{1-k^2\sin^2{x}}},\;
+E(k)=\int^{\frac{\pi}{2}}_{0}\sqrt{1-k^2\sin^2{x}}\;\text{d}x\\\\
+\quad\\\\
+当k^2+k'^2=1时\\\\
+\quad\\\\
+K'(k)=K(k'),\;E'(k)=E(k')为另外两个椭圆积分\\\\
+\quad\\\\
+这些椭圆积分的对称形式可写为\\\\
+\quad\\\\
+I(a,b)=\int^{\frac{\pi}{2}}_{0}\frac{\text{d}x}{\sqrt{a^2\cos^2{x}+b^2\sin^2{x}}}\\\\
+\quad\\\\
+J(a,b)=\int^{\frac{\pi}{2}}_{0}\sqrt{a^2\cos^2{x}+b^2\sin^2{x}}\;\text{d}x\\\\
+\quad\\\\
+很明显\;I(a,b)=\frac{K'(\frac{b}{a})}{a},\;J(a,b)=aE'(\frac{b}{a})\\\\
+\quad\\\\
+进行\text{Landen}变换可得到如下的式子\\\\
+\quad\\\\
+I(a_n,b_n)=I(a_{n+1},b_{n+1})\\\\
+\quad\\\\
+J(a_n,b_n)=2J(a_{n+1},b_{n+1})-a_n b_n I(a_{n+1},b_{n+1})\\\\
+$$
+</blockquote>
+
+<details>
+<summary><font color=#8076a3><strong><answer>$\nabla$证</answer><strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+$$
+第一个式子在算术几何平均值中已经证过\\\\
+\quad\\\\
+J(a,b)关于a与b的对称性是显然的\\\\
+\quad\\\\
+这样第二个式子同样可以运用\text{D.J. Newmann}的代换得出\\\\
+\quad\\\\
+t=b\tan{x},t'=\frac{1}{2}(t-\frac{b_1^2}{t})\\\\
+\quad\\\\
+\begin{aligned}
+J(a,b)&=\int^{\frac{\pi}{2}}_{0}\sqrt{a^2\cos^2{x}+b^2\sin^2{x}}\;\text{d}x\\\\
+&=\int^{+\infty}_{0}\frac{\sqrt{(a^2+t^2)(b^2+t^2)}}{(b+\frac{t^2}{b})^2}\;\text{d}t\\\\
+&=\int^{+\infty}_{-\infty}\frac{\sqrt{(a^2+t^2)(b^2+t^2)}}{(b+\frac{t^2}{b})^2}\times\frac{2t^2}{b_1^2+t^2}\;\text{d}t'\\\\
+&=\int^{+\infty}_{-\infty}\frac{(b_1^2+t^2)\sqrt{(a^2+t^2)(b^2+t^2)}}{2t^2(b_1+\frac{t'^2}{b_1})^2}\times[\frac{2t^2(b_1+\frac{t'^2}{b_1})}{(b_1^2+t^2)(b+\frac{t^2}{b})}]^2\;\text{d}t'\\\\
+&[注意到\; b_1^2+t'^2=\frac{(b_1^2+t^2)^2}{4t^2},\;a_1^2+t'^2=\frac{(a^2+t^2)(b^2+t^2)}{4t^2}]\\\\
+&=\int^{+\infty}_{-\infty}\frac{2\sqrt{(a_1^2+t'^2)(b_1^2+t'^2)}}{(b_1+\frac{t'^2}{b_1})^2}\times
+\frac{t^2(b_1+\frac{t'^2}{b_1})^2}{(b_1^2+t'^2)(b+\frac{t^2}{b})^2}\;\text{d}t'\\\\
+&=\int^{+\infty}_{-\infty}\frac{2\sqrt{(a_1^2+t'^2)(b_1^2+t'^2)}}{(b_1+\frac{t'^2}{b_1})^2}\times
+\frac{b^2t^2(b_1+\frac{t'^2}{b_1})^2(a^2+t^2)}{4t^2(b_1^2+t'^2)(a_1^2+t'^2)(b^2+t^2)}\;\text{d}t'\\\\
+&=\int^{+\infty}_{-\infty}\frac{2\sqrt{(a_1^2+t'^2)(b_1^2+t'^2)}}{(b_1+\frac{t'^2}{b_1})^2}\times
+\frac{ab(b_1+\frac{t'^2}{b_1})^2}{4(a_1^2+t'^2)(b_1^2+t'^2)}\times
+\frac{b(a^2+t^2)}{a(b^2+t^2)}\;\text{d}t'\\\\
+&=\int^{+\infty}_{-\infty}\frac{2\sqrt{(a_1^2+t'^2)(b_1^2+t'^2)}}{(b_1+\frac{t'^2}{b_1})^2}\times
+\frac{ab(b_1+\frac{t'^2}{b_1})^2}{4(a_1^2+t'^2)(b_1^2+t'^2)}\\\\
+&\times[-1+\frac{(a+b)ab+(a+b)t^2}{a(b^2+t^2)}]\;\text{d}t'\\\\
+&=-abI(a_1,b_1)+\int^{+\infty}_{-\infty}\frac{2\sqrt{(a_1^2+t'^2)(b_1^2+t'^2)}}{(b_1+\frac{t'^2}{b_1})^2}\times
+\frac{b_1^2+t'^2}{4(a_1^2+t'^2)}\\\\
+&\times\frac{(a+b)ab+(a+b)t^2}{a(b^2+t^2)}]\;\text{d}t'\\\\
+&=-abI(a_1,b_1)+\int^{+\infty}_{-\infty}\frac{\sqrt{(a_1^2+t'^2)(b_1^2+t'^2)}}{(b_1+\frac{t'^2}{b_1})^2}\times
+\frac{a_1(b_1^2+t^2)(b_1^2+t'^2)}{a(b^2+t^2)(a_1^2+t'^2)}\;\text{d}t'\\\\
+&[利用J(a,b)关于a与b的对称性,由于t是t'与b_1的函数,故无需改变]\\\\
+&=-abI(a_1,b_1)+\int^{+\infty}_{-\infty}\frac{\sqrt{(a_1^2+t'^2)(b_1^2+t'^2)}}{(b_1+\frac{t'^2}{b_1})^2}\times
+\frac{a_1(b_1^2+t^2)(b_1^2+t'^2)}{(a_1^2+t'^2)}\\\\
+&\times[\frac{1}{2a{(b^2+t^2)}}+\frac{1}{2b(a^2+t^2)}]\;\text{d}t'\\\\
+&=-abI(a_1,b_1)+\int^{+\infty}_{-\infty}\frac{\sqrt{(a_1^2+t'^2)(b_1^2+t'^2)}}{(b_1+\frac{t'^2}{b_1})^2}\times
+\frac{a_1^2(b_1^2+t'^2)^2}{b_1^2(a_1^2+t'^2)^2}\;\text{d}t'\\\\
+&=-abI(a_1,b_1)+\int^{+\infty}_{-\infty}\frac{\sqrt{(a_1^2+t'^2)(b_1^2+t'^2)}}{(a_1+\frac{t'^2}{a_1})^2}\;\text{d}t'\\\\
+&[利用J(a_1,b_1)关于a_1与b_1的对称性]\\\\
+&=2J(a_1,b_1)-abI(a_1,b_1)\\\\
+\end{aligned}
+$$
+</blockquote>
+</details>
+
+<blockquote>
+<p>$$<br>于是I(a,b)&#x3D;\frac{\pi}{2AGM(a,b)}\\<br>\quad\\<br>\begin{aligned}<br>J(a,b)&amp;&#x3D;2J(a_1,b_1)-abI(a,b)\\<br>\quad\\<br>&amp;&#x3D;2J(a_1,b_1)+(a^2-2a_1^2+2a_1^2-a^2-b_1^2)I(a,b)\\<br>\quad\\<br>\end{aligned}<br>\quad\\<br>\Downarrow\\<br>\begin{aligned}<br>J(a,b)-a^2I(a,b)&amp;&#x3D;2(J(a_1,b_1)-a_1^2I(a_1,b_1))-\frac{a^2-b^2}{2}I(a,b)\\<br>\quad\\<br>&amp;&#x3D;\lim\limits_{n \to \infty}[2^n(J(a_n,b_n)-a_n^2I(a_n,b_n))]\\<br>\quad\\<br>&amp;-\lim\limits_{n \to \infty}[\sum\limits_{i&#x3D;0}^{n-1}2^i\frac{a_i^2-b_i^2}{2}I(a_i,b_i)]\\<br>\quad\\<br>&amp;&#x3D;\lim \limits_{n \to \infty}\int_{0}^{2^{n-1}\pi}\sqrt{a_n^2\cos^2{x}+b_n^2\sin^2{x}}\;\text{d}x\\<br>\quad\\<br>&amp;-\lim \limits_{n \to \infty}\int_{0}^{2^{n-1}\pi}\frac{a_n^2}{\sqrt{a_n^2\cos^2{x}+b_n^2\sin^2{x}}}\;\text{d}x\\<br>\quad\\<br>&amp;-\lim\limits_{n \to \infty}[\sum\limits_{i&#x3D;0}^{n-1}2^i\frac{a_i^2-b_i^2}{2}I(a_i,b_i)]\\<br>\quad\\<br>&amp;&#x3D;\int_{0}^{+\infty}(AGM-AGM)\;\text{d}x\\<br>\quad\\<br>&amp;-\sum\limits_{i&#x3D;0}^{\infty}2^i\frac{a_i^2-b_i^2}{2}I(a_i,b_i)\\<br>\quad\\<br>&amp;&#x3D;-\sum\limits_{i&#x3D;0}^{\infty}2^i\frac{a_i^2-b_i^2}{2}I(a_i,b_i)\\<br>\quad\\<br>\end{aligned}<br>\quad\\<br>故J(a,b)&#x3D;[a^2-\frac{1}{2}\sum\limits_{i&#x3D;0}^{\infty}2^i(a_i^2-b_i^2)]I(a,b)<br>$$</p>
+</blockquote>
+<p>$\qquad$<font face="微软雅黑"><strong>Legendre关系</strong></font>:对于上述两种完全椭圆积分成立等式</p>
+<blockquote>
+<p>$$<br>K(k)E’(k)+K’(k)E(k)-K(k)K’(k)&#x3D;\frac{\pi}{2}<br>$$</p>
+</blockquote>
+<details>
+<summary><font color=#8076a3><strong><answer>$\nabla$证</answer><strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+$$
+\begin{aligned}
+令P(k)&=K(k)E'(k)+K'(k)E(k)-K(k)K'(k)\\\\
+&=\int_{0}^{\frac{\pi}{2}}\frac{\text{d}x}{\sqrt{1-k^2\sin^2{x}}}\int_{0}^{\frac{\pi}{2}}\sqrt{1-(1-k^2)\sin^2{x}}\;\text{d}x\\\\
+&+\int_{0}^{\frac{\pi}{2}}\frac{\text{d}x}{\sqrt{1-(1-k^2)\sin^2{x}}}\int_{0}^{\frac{\pi}{2}}\sqrt{1-k^2\sin^2{x}}\;\text{d}x\\\\
+&-\int_{0}^{\frac{\pi}{2}}\frac{\text{d}x}{\sqrt{1-k^2\sin^2{x}}}\int_{0}^{\frac{\pi}{2}}\frac{\text{d}x}{\sqrt{1-(1-k^2)\sin^2{x}}}\\\\
+\end{aligned}
+\quad\\\\
+易得P(0)=P(1)=\frac{\pi}{2}\\\
+\quad\\\\
+只需\frac{\text{d}P}{\text{d}k}=0即可证明等式成立\\\\
+\quad\\\\
+\begin{aligned}
+又\frac{\text{d}K}{\text{d}k}&=\int_{0}^{\frac{\pi}{2}}\frac{k\sin^2{x}\text{d}x}{\sqrt{1-k^2\sin^2{x}}^3}\\\\
+&=\int_{0}^{\frac{\pi}{2}}\frac{(k\sin^2{x}-\frac{1}{k}+\frac{1}{k})\text{d}x}{\sqrt{1-k^2\sin^2{x}}^3}\\\\
+&=-\frac{1}{k}K+\frac{1}{k}\int_{0}^{\frac{\pi}{2}}\frac{\text{d}x}{\sqrt{1-k^2\sin^2{x}}^3}\\\\
+&[泰勒展开，逐项积分]\\\\
+&=-\frac{1}{k}K+\frac{\pi}{2k}[1+3(\frac{1}{2})^2k^2+5(\frac{1\cdot3}{2\cdot4})^2k^4+\cdots]\\\\
+&=-\frac{1}{k}K+\frac{\pi}{2k}[1+\frac{1\cdot3}{1}(\frac{1}{2})^2k^2+\frac{3\cdot5}{3}(\frac{1\cdot3}{2\cdot4})^2k^4+\cdots]\\\\
+&=-\frac{1}{k}K+\frac{\pi}{2kk'^2}[1+\frac{1\cdot3-2\cdot2}{1}(\frac{1}{2})^2k^2+\frac{3\cdot5-4\cdot4}{3}(\frac{1\cdot3}{2\cdot4})^2k^4+\cdots]\\\\
+&=\frac{1}{kk'^2}E-\frac{1}{k}K\\\\
+\end{aligned}
+\quad\\\\
+\begin{aligned}
+\frac{\text{d}E}{\text{d}k}&=-\int_{0}^{\frac{\pi}{2}}\frac{k\sin^2{x}\text{d}x}{\sqrt{1-k^2\sin^2{x}}}\\\\
+&=-\int_{0}^{\frac{\pi}{2}}\frac{(k\sin^2{x}-\frac{1}{k}+\frac{1}{k})\text{d}x}{\sqrt{1-k^2\sin^2{x}}}\\\\
+&=\frac{1}{k}E-\frac{1}{k}K\\\\
+\end{aligned}
+\quad\\\\
+由对称性\\\\
+\quad\\\\
+\begin{aligned}
+\frac{\text{d}K'}{\text{d}k}&=\frac{\text{d}K'}{\text{d}k'}\frac{\text{d}k'}{\text{d}k}\\\\
+&=(\frac{1}{k'k^2}E'-\frac{1}{k'}K')(-\frac{k}{k'})\\\\
+&=-\frac{1}{kk'^2}E'+\frac{k}{k'^2}K'\\\\
+\end{aligned}
+\quad\\\\
+\begin{aligned}
+\frac{\text{d}E'}{\text{d}k}&=\frac{\text{d}E'}{\text{d}k'}\frac{\text{d}k'}{\text{d}k}\\\\
+&=(\frac{1}{k'}E'-\frac{1}{k'}K')(-\frac{k}{k'})\\\\
+&=-\frac{k}{k'^2}E'+\frac{k}{k'^2}K'\\\\
+\end{aligned}
+\quad\\\\
+\begin{aligned}
+于是\frac{\text{d}P}{\text{d}k}&=\frac{\text{d}K}{\text{d}k}E'+K\frac{\text{d}E'}{\text{d}k}+
+\frac{\text{d}K'}{\text{d}k}E+K'\frac{\text{d}E}{\text{d}k}-\frac{\text{d}K'}{\text{d}k}K-K'\frac{\text{d}K}{\text{d}k}\\\\
+&=(\frac{1}{kk'^2}E-\frac{1}{k}K)E'+K(-\frac{k}{k'^2}E'+\frac{k}{k'^2}K')+(-\frac{1}{kk'^2}E'+\frac{k}{k'^2}K')E\\\\
+&+K'(\frac{1}{k}E-\frac{1}{k}K)-(-\frac{1}{kk'^2}E'+\frac{k}{k'^2}K')K-K'(\frac{1}{kk'^2}E-\frac{1}{k}K)\\\\
+&=(\frac{1}{kk'^2}-\frac{1}{kk'^2})EE'+(\frac{k}{k'^2}-\frac{1}{k}-\frac{k}{k'^2}+\frac{1}{k})KK'\\\\
+&+(\frac{k}{k'^2}+\frac{1}{k}-\frac{1}{kk'^2})EK'+(-\frac{1}{k}-\frac{k}{k'^2}+\frac{1}{kk'^2})KE'\\\\
+&=0
+\end{aligned}
+$$
+</blockquote>
+
+</details>
+$\qquad\\\\$
+
+<p>$\qquad$<font face="微软雅黑"><strong>$\pi$的表达式</strong></font>:令$k&#x3D;\frac{a}{b}$、$k’&#x3D;\frac{a’}{b’},$将勒让德关系中的$E$、$K$用$I$、$J$代换可得</p>
+<blockquote>
+<p>$$<br>\frac{a’}{a}I(a’,b’)J(a,b)+\frac{a}{a’}I(a,b)J(a’,b’)-aa’I(a,b)I(a’,b’)&#x3D;\frac{\pi}{2}\\<br>\quad\\<br>再将\text{Landen}变换得出的以下两个式子代入\\<br>\quad\\<br>I(a,b)&#x3D;\frac{\pi}{2AGM(a,b)}\\<br>\quad\\<br>J(a,b)&#x3D;[a^2-\frac{1}{2}\sum\limits_{i&#x3D;0}^{\infty}2^i(a_i^2-b_i^2)]I(a,b)\\<br>\quad\\<br>可得<br>\quad\\<br>\begin{aligned}<br>&amp;\frac{a’}{a}[a^2-\frac{1}{2}\sum\limits_{i&#x3D;0}^{\infty}2^i(a_i^2-b_i^2)]\frac{1}{2AGM(a,b)AGM(a’,b’)}+\\<br>\quad\\<br>&amp;\frac{a}{a’}[a’^2-\frac{1}{2}\sum\limits_{i&#x3D;0}^{\infty}2^i(a_{i}’^2-b_{i}’^2)]\frac{1}{2AGM(a,b)AGM(a’,b’)}-\\<br>\quad\\<br>&amp;aa’\frac{1}{2AGM(a,b)AGM(a’,b’)}\\<br>\quad\\<br>&amp;&#x3D;\frac{1}{\pi}\\<br>\end{aligned}<br>\quad\\<br>若令a&#x3D;a’&#x3D;1,\\<br>\quad\\<br>b&#x3D;k,\;b’&#x3D;k’,\\<br>\quad\\<br>a_i^2-b_i^2&#x3D;c_i^2,\;a_{i}’^2-b_{i}’&#x3D;c_{i}’^2则有\\<br>\quad\\<br>\pi&#x3D;\frac{4AGM(1,k)AGM(1,k’)}{1-\sum\limits_{i&#x3D;1}^{\infty}2^i(c_{i}^2+c_{i}’^2)}\\<br>\quad\\<br>进一步令k&#x3D;k’&#x3D;\frac{1}{\sqrt{2}}则有\\<br>\quad\\<br>\pi&#x3D;\frac{4[AGM(1,\frac{1}{\sqrt{2}})]^2}{1-\sum\limits_{i&#x3D;1}^{\infty}2^{i+1}c_{i}^2}<br>$$</p>
+</blockquote>
+<p>$\qquad$<font face="微软雅黑"><strong>Salamin-Brent算法</strong></font>:令$a_0&#x3D;1,\ b_0&#x3D;\frac{1}{\sqrt{2}},\ s_0&#x3D;\frac{1}{2},\ $并用递推公式</p>
+<blockquote>
+<font size=4>
+$$
+\begin{aligned}
+&a_n=\frac{a_{n-1}+b_{n-1}}{2},\\\\
+&b_n=\sqrt{a_{n-1}b_{n-1}},\\\\
+&s_n=s_{n-1}-2^n(a_n^2-b_n^2),\\\\
+&p_n=\frac{2a_n^2}{s_n}
+\end{aligned}
+$$
+</font>
+</blockquote>
+<p>作迭代$,\ $则$\{p_n\}$收敛于$\pi,\ $这是上文$\pi$表达式的直接结果</p>
+<p>$\qquad$<font face="微软雅黑"><strong>误差分析</strong></font>:至此得出了Salamin-Brent算法$,\ $但还需确定该算法中$\pi$的收敛速度$,\ $虽然上文中$\pi$的表达式对任意复数$k$成立$,\ $以下仅就$k$为实数的情况讨论(ToDo)</p>
+<blockquote>
+<p>$$<br>记a,b第n次与a’,b’第n’迭代的结果为\pi_{nn’}&#x3D;\frac{4a_n a_{n’}’}{1-\sum\limits_{i&#x3D;1}^{n}2^{i}c_{i}^2-\sum\limits_{i&#x3D;1}^{n’}2^{i}c_{i}’^2}\\<br>\quad\\<br>引入辅助量\overline\pi_{nn’}&#x3D;\frac{4AGM(1,k)AGM(1,k’)}{1-\sum\limits_{i&#x3D;1}^{n}2^{i}c_{i}^2-\sum\limits_{i&#x3D;1}^{n’}2^{i}c_{i}’^2}\\<br>\quad\\<br>我们需要找出误差上界e_{nn’}与\overline e_{nn’}使得\\<br>\quad\\<br>0&lt;\pi-\overline\pi_{nn’}&lt;e_{nn’}\\<br>\quad\\<br>0&lt;\pi_{nn’}-\overline\pi_{nn’}&lt;\overline e_{nn’}\\<br>\quad\\<br>\overline e_{nn’}&lt;e_{nn’}\\<br>\quad\\<br>由以上三式即可得出|\pi-\pi_{nn’}|&lt;e_{nn’}\\<br>\quad\\<br>\begin{aligned}<br>&amp;\qquad\qquad\qquad\qquad首先计算\pi-\overline\pi_{nn’}\\<br>\quad\\<br>&amp;&#x3D;\frac{4AGM(1,k)AGM(1,k’)}{1-\sum\limits_{i&#x3D;1}^{\infty}2^i(c_{i}^2+c_{i}’^2)}-\frac{4AGM(1,k)AGM(1,k’)}{1-\sum\limits_{i&#x3D;1}^{n}2^{i}c_{i}^2-\sum\limits_{i&#x3D;1}^{n’}2^{i}c_{i}’^2}\\<br>\quad\\<br>&amp;[由不等式\frac{1}{x}-\frac{1}{x+y}&lt;\frac{y}{x^2}有]\\<br>\quad\\<br>&amp;&lt;4AGM(1,k)AGM(1,k’)\frac{\sum\limits_{i&#x3D;n+1}^{\infty}2^{i}c_{i}^2+\sum\limits_{i&#x3D;n’+1}^{\infty}2^{i}c_{i}’^2}<br>{[1-\sum\limits_{i&#x3D;1}^{\infty}2^i(c_{i}^2+c_{i}’^2)]^2}\\<br>\quad\\<br>&amp;&#x3D;\frac{\pi^2}{4AGM(1,k)AGM(1,k’)}(\sum\limits_{i&#x3D;n+1}^{\infty}2^{i}c_{i}^2+\sum\limits_{i&#x3D;n’+1}^{\infty}2^{i}c_{i}’^2)\\<br>\quad\\<br>&amp;[由c_i&#x3D;\frac{a_{i-1}-b_{i-1}}{2},c_i^2&#x3D;4a_{i+1}c_{i+1}有]\\<br>\quad\\<br>&amp;&#x3D;\frac{\pi^2}{2AGM(1,k)AGM(1,k’)}(\sum\limits_{i&#x3D;n+2}^{\infty}2^{i}a_{i}c_{i}+\sum\limits_{i&#x3D;n’+2}^{\infty}2^{i}a_{i}’c_{i}’)\\<br>\quad\\<br>\end{aligned}<br>\quad\\<br>于是可记e_{nn’}&#x3D;\frac{\pi^2}{2AGM(1,k)AGM(1,k’)}(\sum\limits_{i&#x3D;n+2}^{\infty}2^{i}a_{i}c_{i}+\sum\limits_{i&#x3D;n’+2}^{\infty}2^{i}a_{i}’c_{i}’)\\<br>\quad\\<br>接下来计算\pi_{nn’}-\overline\pi_{nn’}\\<br>\quad\\<br>\begin{aligned}<br>&amp;&#x3D;\frac{4a_n a_{n’}’}{1-\sum\limits_{i&#x3D;1}^{n}2^{i}c_{i}^2-\sum\limits_{i&#x3D;1}^{n’}2^{i}c_{i}’^2}-<br>\frac{4AGM(1,k)AGM(1,k’)}{1-\sum\limits_{i&#x3D;1}^{n}2^{i}c_{i}^2-\sum\limits_{i&#x3D;1}^{n’}2^{i}c_{i}’^2}\\<br>\quad\\<br>&amp;&lt;\frac{4}{1-\sum\limits_{i&#x3D;1}^{\infty}2^i(c_{i}^2+c_{i}’^2)}(a_{n}’a_{n’}’-AGM(1,k)AGM(1,k’))\\<br>\quad\\<br>&amp;&#x3D;\frac{\pi}{AGM(1,k)AGM(1,k’)}(a_{n}’a_{n’}’-AGM(1,k)AGM(1,k’))\\<br>\quad\\<br>&amp;&#x3D;<br>\end{aligned}<br>$$</p>
+</blockquote>
+<p>$\qquad$<font face="微软雅黑"><strong>参考与引用来源</strong></font>:</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.jstor.org/stable/2005327">Computation of $\pi$ Using Arithmetic-Geometric Mean</a><br><a target="_blank" rel="noopener" href="https://book4you.org/book/16564912/32cfa7">Methods of Mathematical Physics最后一节</a><br><a target="_blank" rel="noopener" href="https://link.springer.com/article/10.1007/BF02839214">From Lintearia to Lemniscate II:Gauss and Landen’s Work</a><br><a target="_blank" rel="noopener" href="https://book4you.org/book/925729/6ccaba">Elliptic Integrals78~80面</a><br><a target="_blank" rel="noopener" href="https://link.springer.com/content/pdf/10.1007%2F978-1-4612-0967-6_32.pdf">The Legendre Relation for Elliptic Integrals</a><br><a target="_blank" rel="noopener" href="https://link.springer.com/article/10.1007/BF03024340">The Quest for Pi</a><br>谢惠民第二版上册29与267面</p>
+</blockquote>
+
+                
+<p class="brown-link-context">
+    <a href="/2021/11/04/Fourier/" rel="next" title="FFT">
+    上一篇：FFT
+  </a>
+</p>
+
+
+
+<p class="brown-link-context">
+    <a href="/2021/10/10/Style/" rel="next" title="MarkDown语法">
+    下一篇：MarkDown语法
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+</div>
+
+        <div class="fixed-action-btn float-sitemap">
+    <a class="btn-floating btn-large brown lighten-2">
+      <i class="fa fa-caret-square-o-up"></i>
+    </a>
+    <ul>
+      <li><a class="btn-return-top btn-floating waves-effect brown lighten-2" title="回到顶部"><i class="fa fa-arrow-circle-o-up"></i></a></li>
+      <li><a class="btn-floating waves-effect button-collapse brown lighten-2"  data-activates="main-menu" title="菜单"><i class="fa fa-navicon"></i></a></li>
+    </ul>
+  </div>
+
+    </main>
+    
+    <noscript>
+    <div class="noscript">
+        <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+    </div>
+</noscript>
+<div class="noscript">
+    <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+</div>
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+
+<script>
+    (function($) {
+        $(document).ready(function() {
+            // 隐藏禁用javascript（针对微信内置浏览器）的提示
+            $('.noscript').hide();
+
+            // 图片缩放效果
+            var $imgs = $('img').not('.slider-image').not('.avatar-image').not('.carousel-image').not('.card-cover-image').not('.qrcode');
+
+            // 给图片加上点击放大效果（materialbox插件）
+            $imgs.addClass('materialboxed').each(function(i, el) {
+                $(this).attr('data-caption', $(this).attr('alt') || ' ');
+            }).materialbox();
+
+            // 优化表格的显示
+            $('table').each(function() {
+                var $table = $(this);
+                // 除去多行代码的情况
+                if ($table.find('pre').length == 0) {
+                    $table.addClass('responsive-table striped bordered');
+                }
+            });
+
+            // 首页幻灯片
+            $('.slider').slider({indicators: true, full_width: true, interval: 8000});
+
+            $(".button-collapse").sideNav();
+            $(".category-menu").sideNav();
+
+            // 针对gallery post
+            $('.carousel').carousel({full_width: true});
+            $('.carousel-control.prev').click(function() {
+                $('.carousel').carousel('prev');
+            });
+            $('.carousel-control.next').click(function() {
+                $('.carousel').carousel('next');
+            });
+
+            // 文章目录
+            $('article').not('.simple-article').find('h1').add('h2').add('h3').add('h4').add('h5').add('h6').scrollSpy();
+
+            // 目录随屏幕滚动（防止目录过长越过footer）
+            var $toc = $('.toc');
+            var scrollTargetTop = 0;
+            $(window).scroll(function() {
+                var $activeLink = $toc.find('a.active.section');
+                if ($(window).scrollTop() < 100) {
+                    scrollTargetTop = 0;
+                } else {
+                    if ($activeLink[0]) {
+                        scrollTargetTop = $activeLink.offset().top - $toc.offset().top;
+                    }
+                }
+                $toc.css('top', '-' + scrollTargetTop + 'px');
+            });
+
+            // 修正文章目录的left-border颜色
+            var color = $('.table-of-contents-text').css('color');
+            $('.table-of-contents-link').css('border-left-color', color);
+
+            // 针对移动端做的优化：FAB按钮点击一下收回
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                $('.fixed-action-btn').addClass('click-to-toggle');
+            }
+            // 回到顶部
+            $('.btn-return-top').click(function() {
+                $('body, html').animate({
+                    scrollTop: 0
+                }, 500);
+            });
+
+            // 重置读书页面的Tab标签页的颜色
+            $('li.tab a').hover(function() {
+                $(this).toggleClass('text-lighten-4');
+            });
+            $('.indicator').addClass('brown lighten-2');
+
+            
+            // 添加new标签
+            $('').append('<span class="new badge brown lighten-2"></span>');
+            
+
+            // 搜索功能
+            $('.modal-trigger').leanModal({
+                // 打开搜索框时自动聚焦
+                ready: function() {
+                    if ($('#search').is(":visible")) {
+                        $('#search-input').focus();
+                    }
+                }
+            });
+            var searchXml = "search.xml";
+            if (searchXml.length == 0) {
+             	searchXml = "search.xml";
+            }
+            var searchPath = "/" + searchXml;
+            initSearch(searchPath, 'search-input', 'search-result');
+        });
+
+        // 初始化搜索与匹配函数
+        var initSearch = function(path, search_id, content_id) {
+            'use strict';
+            $.ajax({
+                url: path,
+                dataType: "xml",
+                success: function(xmlResponse) {
+                    // get the contents from search data
+                    var datas = $("entry", xmlResponse).map(function() {
+                        return {
+                            title: $("title", this).text(),
+                            content: $("content", this).text(),
+                            url: $("url", this).text()
+                        };
+                    }).get();
+                    var $input = document.getElementById(search_id);
+                    var $resultContent = document.getElementById(content_id);
+                    $input.addEventListener('input', function() {
+                        var str = '<ul class=\"search-result-list\">';
+                        var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                        $resultContent.innerHTML = "";
+                        if (this.value.trim().length <= 0) {
+                            return;
+                        }
+                        // perform local searching
+                        datas.forEach(function(data) {
+                            var isMatch = true;
+                            var content_index = [];
+                            var data_title = data.title.trim().toLowerCase();
+                            var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                            var data_url = data.url;
+                            var index_title = -1;
+                            var index_content = -1;
+                            var first_occur = -1;
+                            // only match artiles with not empty titles and contents
+                            if (data_title != '' && data_content != '') {
+                                keywords.forEach(function(keyword, i) {
+                                    index_title = data_title.indexOf(keyword);
+                                    index_content = data_content.indexOf(keyword);
+                                    if (index_title < 0 && index_content < 0) {
+                                        isMatch = false;
+                                    } else {
+                                        if (index_content < 0) {
+                                            index_content = 0;
+                                        }
+                                        if (i == 0) {
+                                            first_occur = index_content;
+                                        }
+                                    }
+                                });
+                            }
+                            // show search results
+                            if (isMatch) {
+                                keywords.forEach(function(keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    data_title = data_title.replace(regS, "<span class=\"search-keyword brown lighten-2\">" + keyword + "</span>");
+                                });
+
+                                str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                                var content = data.content.trim().replace(/<[^>]+>/g, "");
+                                if (first_occur >= 0) {
+                                    // cut out 100 characters
+                                    var start = first_occur - 20;
+                                    var end = first_occur + 80;
+                                    if (start < 0) {
+                                        start = 0;
+                                    }
+                                    if (start == 0) {
+                                        end = 100;
+                                    }
+                                    if (end > content.length) {
+                                        end = content.length;
+                                    }
+                                    var match_content = content.substring(start, end);
+                                    // highlight all keywords
+                                    keywords.forEach(function(keyword) {
+                                        var regS = new RegExp(keyword, "gi");
+                                        match_content = match_content.replace(regS, "<span class=\"search-keyword brown lighten-2\">" + keyword + "</span>");
+                                    });
+
+                                    str += "<p class=\"search-result\">..." + match_content + "...</p>"
+                                }
+                                str += "</li>";
+                            }
+                        });
+                        str += "</ul>";
+                        $resultContent.innerHTML = str;
+                    });
+                }
+            });
+        }
+    })(jQuery);
+</script>
+
+
+<script src="/js/prettify.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("pre").addClass("prettyprint");
+        prettyPrint();
+    });
+</script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["[Contrib]/physics/physics.js"],
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+});
+</script>
+
+<script type="text/javascript" async
+  src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+</body>
+</html>

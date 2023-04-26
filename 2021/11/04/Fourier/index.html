@@ -1,0 +1,778 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    
+
+    <title>FFT | </title>
+    <meta name="author" content="邯郸学步">
+    
+    <meta name="description" content="Discrete Fourier Transform(DFT)对于一个二维周期函数$f(x,y)$，比如一张大小为$M\times N$并延拓到整个平面的灰度图，其离散傅里叶变换公式如下
+
+$$正变换\quad g(u,v)&amp;#x3D;\frac{1}{\sqrt{MN}}\sum\limits_{">
+    
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:title" content="FFT"/>
+    <meta property="og:site_name" content="邯郸学步"/>
+
+    
+    <meta property="og:image" content=""/>
+    
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="alternate" href="/atom.xml" title="邯郸学步" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/lib/materialize.min.css">
+    <link rel="stylesheet" href="/css/lib/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
+    
+        <link rel="stylesheet" href="/css/lib/another-theme.css" type="text/css">
+    
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+    <img src="/weixin_favicon.png" style="position: absolute; left: -9999px; opacity: 0; filter: alpha(opacity=0);">
+
+    <nav class="brown lighten-2">
+    <div class="nav-wrapper">
+        <a href="#" data-activates="main-menu" class="button-collapse">
+            <i class="fa fa-navicon"></i>
+        </a>
+        <div class="">
+            <a href="/" class="brand-logo hide-on-med-and-down">邯郸学步</a>
+            <ul class="right hide-on-med-and-down">
+                
+                    <li>
+                        <a class="menu-home " href="/" >
+                            <i class="fa fa-home "></i>
+                            
+                            首页
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-archive " href="/archives" >
+                            <i class="fa fa-archive "></i>
+                            
+                            归档
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                            <i class="fa fa-bookmark "></i>
+                            
+                            分类
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-about " href="/about" >
+                            <i class="fa fa-user "></i>
+                            
+                            关于
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-search modal-trigger " href="#search" >
+                            <i class="fa fa-search "></i>
+                            
+                            搜索
+                        </a>
+                    </li>
+                
+            </ul>
+            <div>
+    <ul class="side-nav brown lighten-2" id="main-menu">
+        
+        <li class="side-user">
+            <div class="row">
+                <div class="col s4 no-padding">
+                    <img class="avatar-image circle responsive-img" src="/favicon.png" alt="User Avatar">
+                </div>
+                <div class="info col s8 valign-wrapper no-padding">
+                    <div class="valign">
+                        <p class="name">邯郸学步</p>
+                        <p class="desc">笔记</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        
+
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-home " href="/" >
+                    <i class="fa fa-home "></i>
+                    
+                    首页
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-archive " href="/archives" >
+                    <i class="fa fa-archive "></i>
+                    
+                    归档
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                    <i class="fa fa-bookmark "></i>
+                    
+                    分类
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-about " href="/about" >
+                    <i class="fa fa-user "></i>
+                    
+                    关于
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-search modal-trigger " href="#search" >
+                    <i class="fa fa-search "></i>
+                    
+                    搜索
+                </a>
+            </li>
+        
+    </ul>
+
+    <ul class="side-nav brown lighten-2" id="category-menu">
+    
+
+            
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/算法/">
+                    算法 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/其他/">
+                    其他 <span class="right">13 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/复变函数/">
+                    复变函数 <span class="right">6 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/Suvrat-Raju/">
+                    Suvrat-Raju <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/微分几何/">
+                    微分几何 <span class="right">8 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/力学/">
+                    力学 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/数理方程/">
+                    数理方程 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/PiTP/">
+                    PiTP <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/离散数学/">
+                    离散数学 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/光学/">
+                    光学 <span class="right">6 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/线性代数/">
+                    线性代数 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/固体物理/">
+                    固体物理 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/电动力学/">
+                    电动力学 <span class="right">5 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/相对论/">
+                    相对论 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/张量分析/">
+                    张量分析 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/概率论/">
+                    概率论 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/群论/">
+                    群论 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/热力学/">
+                    热力学 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/原子物理/">
+                    原子物理 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/统计物理/">
+                    统计物理 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/抽象代数/">
+                    抽象代数 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/量子力学/">
+                    量子力学 <span class="right">4 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/数学分析/">
+                    数学分析 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+    </ul>
+</div>
+
+        </div>
+    </div>
+</nav>
+
+<div id="search" class="modal search-modal">
+    <div class="row">
+        <div class="input-field col s12">
+              <input id="search-input" type="text">
+              <label for="search-input">搜索</label>
+        </div>
+
+    </div>
+    <div id="search-result" class="search-result col s12">
+
+    </div>
+</div>
+
+
+    <main>
+        <div class="container main-container">
+    <nav class="page-nav hide-on-small-only">
+    <div class="nav-wrapper brown lighten-2">
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+    
+    
+    <a class="breadcrumb" href="/categories/算法/">算法</a>
+
+
+        
+
+        
+    </div>
+</nav>
+
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>FFT</h1>
+    
+
+
+            </div>
+            <time class="brown-link-context" datetime="2021-11-04T13:15:13.000Z"><a href="/2021/11/04/Fourier/">2021-11-04</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
+        
+            <a href="/tags/Fourier/" class="chip green lighten-1">Fourier</a>
+        
+    </div>
+
+
+            <div class="toc brown-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#Discrete-Fourier-Transform-DFT"><span class="section table-of-contents-text">Discrete Fourier Transform(DFT)</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#Fast-Fourier-Transform-FFT"><span class="section table-of-contents-text">Fast Fourier Transform(FFT)</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E5%8F%82%E8%80%83%E4%B8%8E%E5%BC%95%E7%94%A8%E6%9D%A5%E6%BA%90"><span class="section table-of-contents-text">参考与引用来源</span></a></li></ol>
+</div>
+
+
+            <div class="entry brown-link-context">
+                <h3 id="Discrete-Fourier-Transform-DFT"><a href="#Discrete-Fourier-Transform-DFT" class="headerlink" title="Discrete Fourier Transform(DFT)"></a><center><strong>Discrete Fourier Transform(DFT)</strong></center></h3><p>对于一个二维周期函数$f(x,y)$，比如一张大小为$M\times N$并延拓到整个平面的灰度图，其离散傅里叶变换公式如下</p>
+<blockquote>
+<p>$$正变换\quad g(u,v)&#x3D;\frac{1}{\sqrt{MN}}\sum\limits_{x&#x3D;0}^{M-1}\sum\limits_{y&#x3D;0}^{N-1}f(x,y)e^{-2\pi i(\frac{x u}{M}+\frac{y v}{N})}\\<br>\quad\\<br>逆变换\quad f(x,y)&#x3D;\frac{1}{\sqrt{MN}}\sum\limits_{u&#x3D;0}^{M-1}\sum\limits_{v&#x3D;0}^{N-1}g(u,v)e^{+2\pi i(\frac{x u}{M}+\frac{y v}{N})}<br>$$</p>
+</blockquote>
+<p>下面是对一张$400\times400$的图片按照定义进行离散傅里叶变换再进行逆变换得到的图案<br><img src="https://gitee.com/yjx-007/gallery/raw/master/TrueDFT.png"></p>
+<p>这样虽然能够还原最初的形状，但是计算的时间复杂度是$O(N^4)$，随着$N$增大计算耗时迅速增加，也会带来更大的舍入误差。</p>
+<h3 id="Fast-Fourier-Transform-FFT"><a href="#Fast-Fourier-Transform-FFT" class="headerlink" title="Fast Fourier Transform(FFT)"></a><center><strong>Fast Fourier Transform(FFT)</strong></center></h3><p>如上所见，按照定义来进行离散傅里叶变换很不划算，在实际应用起不到太大的作用，这于是催生了许多高效的离散傅里叶变换算法，统称为快速傅里叶变换，最早的一种基于单位根与多项式性质实现的<strong>FFT</strong>，称为<strong>Cooley-Tukey算法</strong>，如下只介绍<strong>2-FFT</strong>亦即只适用于$M$为2的幂情况下的<strong>FFT</strong></p>
+<p><strong><center>Cooley-Tukey算法</center></strong></p>
+<p>首先考虑一维的离散傅里叶变换，为简便起见，令其系数为1</p>
+<blockquote>
+<p>$$g(u)&#x3D;\sum\limits_{x&#x3D;0}^{M-1}f(x)e^{-2\pi i \frac{xu}{M}}$$</p>
+</blockquote>
+<p>用$W_M$来表示$M$次单位根，即$e^{-\frac{2\pi i}{M}}$，容易得到如下性质</p>
+<blockquote>
+<p>$$1.周期性\quad W_M^{k+M}&#x3D;W_M^k\\<br>\quad\\<br>2.对称性\quad W_M^{k+\frac{M}{2}}&#x3D;-W_M^k\\<br>\quad\\<br>3.可约性\quad W_M^{mk}&#x3D;W_{\frac{M}{m}}^k<br>$$</p>
+</blockquote>
+<p>将$g$用单位根来表示</p>
+<blockquote>
+<p>$$g(u)&#x3D;\sum\limits_{x&#x3D;0}^{M-1}f(x)W_{M}^{xu}$$</p>
+</blockquote>
+<p>接下来的变换就是<strong>FFT</strong>的核心思想：将长序列化为短序列的和。对$g$进行一次如下的奇偶拆分</p>
+<blockquote>
+<p>$$\begin{aligned}g(u)&amp;&#x3D;\sum\limits_{x&#x3D;2t}^{M-1}f(x)W_{M}^{xu}+\sum\limits_{x&#x3D;2t+1}^{M-1}f(x)W_{M}^{xu}\\<br>\quad\\<br>&amp;&#x3D;\sum\limits_{t&#x3D;0}^{\frac{M}{2}-1}f(2t)W_{\frac{M}{2}}^{tu}+W_{M}^{u}\sum\limits_{t&#x3D;0}^{\frac{M}{2}-1}f(2t+1)W_{\frac{M}{2}}^{tu}\\<br>\quad\\<br>&amp;&#x3D;g_{even}(u)+W_{M}^{u}g_{odd}(u)<br>\end{aligned}<br>$$</p>
+</blockquote>
+<p>因为应用了可约性，周期变为原来的一半，这样我们只能算出$u$序列中前一半的值，这时我们便可利用单位根的周期性与对称性，进行如下操作，让所有的$u$都有相对应的变换</p>
+<blockquote>
+<p>$$<br>g(u)&#x3D;g_{even}(u)+W_{M}^{u}g_{odd}(u)\\<br>\quad\\<br>g(u+\frac{M}{2})&#x3D;g_{even}(u)-W_{M}^{u}g_{odd}(u)<br>$$</p>
+</blockquote>
+<p>于是我们将序列长度为$M$的变换拆成了两个长度为$\frac{M}{2}$的变换，由主定理可知其时间复杂度为$O(Mlog(M))$，如此迭代下去，最终可以让每个<strong>DFT</strong>的序列长度为1，<strong>DFT</strong>即其本身，我们只需确定最后一层$x$序列的顺序即可。观察上面的奇偶拆分，如果初始$x$序列中某个位置的二进制末位为零，则将此位置对应的元素移动到前一半序列中，亦即二进制首位变为零，如果倒数第二位又为零，则将其移动到前四分之一序列中，亦即二进制第二位变为零，不难发现，最终的$x$序列中各元素编号即为初始的$x$序列中对应元素编号的二进制反转，这样我们就能由最后一层$x$反推出第一层$x$的傅里叶变换。按照这个思路，我们就可以写出如下一维<strong>FFT</strong>与<strong>IFFT</strong>的python代码，为保证对称性，在<strong>FFT</strong>之前加上一个系数$\frac{1}{\sqrt{M}}$</p>
+<pre>
+
+def ib(i, N):   #二进制反转
+    return int(
+            ('0' * (len(str(bin(N - 1))) - len(str(bin(i))))
+            +str(bin(i))[2::])
+            [::-1], 2)  
+
+def W(N, k):    #单位根
+    return complex(np.cos(2 * PI * k / N), -np.sin(2 * PI * k / N))
+
+def FFT(f):
+    N = len(f)
+    g = [0] * N
+    for i in range(N):
+        g[ib(i, N)] = f[i]
+    for i in range(int(np.log2(N))):    #遍历每层
+        L = [0] * N
+        n = 1 << i
+        m = N >> (i + 1)
+        for j in range(m):  #遍历每块
+            for k in range(n):  #遍历各块中的元素
+                L[j * n * 2 +k] = g[j * n * 2 + k] + W(2 * n, k) * g[j * n * 2 + k + n]
+                L[j * n * 2 + k +n] = g[j * n * 2 + k] - W(2 * n, k) * g[j * n * 2 + k + n]
+        g = L
+    return np.array(g)/np.sqrt(N)
+
+def IFFT(f):
+    G=np.conjugate(f)   #取共轭
+    return np.conjugate(FFT(G)) #再次取共轭
+</pre>
+
+<p>实现了一维的<strong>FFT</strong>，二维以及更高维的<strong>FFT</strong>也就可以分解为许多一维FFT的复合</p>
+<blockquote>
+<p>$$g(u)&#x3D;FFT(f)&#x3D;\frac{1}{\sqrt{M}}\sum\limits_{x&#x3D;0}^{M-1}f(x)e^{-2\pi i \frac{xu}{M}}\\<br>\quad\\<br>f(x)&#x3D;IFFT(g)&#x3D;\overline{FFT(\bar{g})}\\<br>\quad\\<br>\begin{aligned}\quad g(u,v)&amp;&#x3D;FFT2(f)&#x3D;\frac{1}{\sqrt{MN}}\sum\limits_{x&#x3D;0}^{M-1}\sum\limits_{y&#x3D;0}^{N-1}f(x,y)e^{-2\pi i(\frac{x u}{M}+\frac{y v}{N})}\\<br>\quad\\<br>&amp;&#x3D;\frac{1}{\sqrt{M}}\sum\limits_{x&#x3D;0}^{M-1}(\frac{1}{\sqrt{N}}\sum\limits_{y&#x3D;0}^{N-1}f(x,y)e^{-2\pi i \frac{y v}{N}})e^{-2\pi i \frac{x u}{M}}\\<br>\quad\\<br>&amp;&#x3D;FFT_y(FFT_x(f))\\<br>\end{aligned}\\<br>\quad\\<br>f(x,y)&#x3D;IFFT2(g)&#x3D;\overline{FFT2(\bar{g})}<br>$$</p>
+</blockquote>
+<p>写出<strong>FFT2</strong>的python代码如下</p>
+<pre>
+def FFT2(f):
+    M,N=len(f),len(f[0])
+    G=np.empty(dtype=complex,shape=(M,N))
+    for j in range(M):
+        G[j]=FFT(f[j])
+    G=G.T
+    for i in range(N):
+        G[i]=FFT(G[i])
+    return G.T
+
+def IFFT2(f):
+    G=np.conjugate(f)
+    return np.conjugate(FFT2(G))
+</pre>
+
+<p>利用<strong>FFT2</strong>可以去除图像中特定空间频率的成分，以下是对图像分别进行高通滤波与低通滤波所得到的结果<br><img src="https://gitee.com/yjx-007/gallery/raw/master/HandL.png"><br>还可以达到将铁栅栏变成玻璃栅栏的效果<br><img src="https://gitee.com/yjx-007/gallery/raw/master/nobar.png"></p>
+<h3 id="参考与引用来源"><a href="#参考与引用来源" class="headerlink" title="参考与引用来源"></a><strong><center>参考与引用来源</center></strong></h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Y7411W73U?from=search&seid=18165376153017556357&spm_id_from=333.337.0.0">鹤翔万里高中做的视频</a><br><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2">维基百科</a></p>
+</blockquote>
+
+                
+<p class="brown-link-context">
+    <a href="/2021/11/08/Noether%E5%AE%9A%E7%90%86/" rel="next" title="Noether定理">
+    上一篇：Noether定理
+  </a>
+</p>
+
+
+
+<p class="brown-link-context">
+    <a href="/2021/10/10/Salamin-Brent%E7%AE%97%E6%B3%95/" rel="next" title="Salamin-Brent算法">
+    下一篇：Salamin-Brent算法
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+</div>
+
+        <div class="fixed-action-btn float-sitemap">
+    <a class="btn-floating btn-large brown lighten-2">
+      <i class="fa fa-caret-square-o-up"></i>
+    </a>
+    <ul>
+      <li><a class="btn-return-top btn-floating waves-effect brown lighten-2" title="回到顶部"><i class="fa fa-arrow-circle-o-up"></i></a></li>
+      <li><a class="btn-floating waves-effect button-collapse brown lighten-2"  data-activates="main-menu" title="菜单"><i class="fa fa-navicon"></i></a></li>
+    </ul>
+  </div>
+
+    </main>
+    
+    <noscript>
+    <div class="noscript">
+        <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+    </div>
+</noscript>
+<div class="noscript">
+    <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+</div>
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+
+<script>
+    (function($) {
+        $(document).ready(function() {
+            // 隐藏禁用javascript（针对微信内置浏览器）的提示
+            $('.noscript').hide();
+
+            // 图片缩放效果
+            var $imgs = $('img').not('.slider-image').not('.avatar-image').not('.carousel-image').not('.card-cover-image').not('.qrcode');
+
+            // 给图片加上点击放大效果（materialbox插件）
+            $imgs.addClass('materialboxed').each(function(i, el) {
+                $(this).attr('data-caption', $(this).attr('alt') || ' ');
+            }).materialbox();
+
+            // 优化表格的显示
+            $('table').each(function() {
+                var $table = $(this);
+                // 除去多行代码的情况
+                if ($table.find('pre').length == 0) {
+                    $table.addClass('responsive-table striped bordered');
+                }
+            });
+
+            // 首页幻灯片
+            $('.slider').slider({indicators: true, full_width: true, interval: 8000});
+
+            $(".button-collapse").sideNav();
+            $(".category-menu").sideNav();
+
+            // 针对gallery post
+            $('.carousel').carousel({full_width: true});
+            $('.carousel-control.prev').click(function() {
+                $('.carousel').carousel('prev');
+            });
+            $('.carousel-control.next').click(function() {
+                $('.carousel').carousel('next');
+            });
+
+            // 文章目录
+            $('article').not('.simple-article').find('h1').add('h2').add('h3').add('h4').add('h5').add('h6').scrollSpy();
+
+            // 目录随屏幕滚动（防止目录过长越过footer）
+            var $toc = $('.toc');
+            var scrollTargetTop = 0;
+            $(window).scroll(function() {
+                var $activeLink = $toc.find('a.active.section');
+                if ($(window).scrollTop() < 100) {
+                    scrollTargetTop = 0;
+                } else {
+                    if ($activeLink[0]) {
+                        scrollTargetTop = $activeLink.offset().top - $toc.offset().top;
+                    }
+                }
+                $toc.css('top', '-' + scrollTargetTop + 'px');
+            });
+
+            // 修正文章目录的left-border颜色
+            var color = $('.table-of-contents-text').css('color');
+            $('.table-of-contents-link').css('border-left-color', color);
+
+            // 针对移动端做的优化：FAB按钮点击一下收回
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                $('.fixed-action-btn').addClass('click-to-toggle');
+            }
+            // 回到顶部
+            $('.btn-return-top').click(function() {
+                $('body, html').animate({
+                    scrollTop: 0
+                }, 500);
+            });
+
+            // 重置读书页面的Tab标签页的颜色
+            $('li.tab a').hover(function() {
+                $(this).toggleClass('text-lighten-4');
+            });
+            $('.indicator').addClass('brown lighten-2');
+
+            
+            // 添加new标签
+            $('').append('<span class="new badge brown lighten-2"></span>');
+            
+
+            // 搜索功能
+            $('.modal-trigger').leanModal({
+                // 打开搜索框时自动聚焦
+                ready: function() {
+                    if ($('#search').is(":visible")) {
+                        $('#search-input').focus();
+                    }
+                }
+            });
+            var searchXml = "search.xml";
+            if (searchXml.length == 0) {
+             	searchXml = "search.xml";
+            }
+            var searchPath = "/" + searchXml;
+            initSearch(searchPath, 'search-input', 'search-result');
+        });
+
+        // 初始化搜索与匹配函数
+        var initSearch = function(path, search_id, content_id) {
+            'use strict';
+            $.ajax({
+                url: path,
+                dataType: "xml",
+                success: function(xmlResponse) {
+                    // get the contents from search data
+                    var datas = $("entry", xmlResponse).map(function() {
+                        return {
+                            title: $("title", this).text(),
+                            content: $("content", this).text(),
+                            url: $("url", this).text()
+                        };
+                    }).get();
+                    var $input = document.getElementById(search_id);
+                    var $resultContent = document.getElementById(content_id);
+                    $input.addEventListener('input', function() {
+                        var str = '<ul class=\"search-result-list\">';
+                        var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                        $resultContent.innerHTML = "";
+                        if (this.value.trim().length <= 0) {
+                            return;
+                        }
+                        // perform local searching
+                        datas.forEach(function(data) {
+                            var isMatch = true;
+                            var content_index = [];
+                            var data_title = data.title.trim().toLowerCase();
+                            var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                            var data_url = data.url;
+                            var index_title = -1;
+                            var index_content = -1;
+                            var first_occur = -1;
+                            // only match artiles with not empty titles and contents
+                            if (data_title != '' && data_content != '') {
+                                keywords.forEach(function(keyword, i) {
+                                    index_title = data_title.indexOf(keyword);
+                                    index_content = data_content.indexOf(keyword);
+                                    if (index_title < 0 && index_content < 0) {
+                                        isMatch = false;
+                                    } else {
+                                        if (index_content < 0) {
+                                            index_content = 0;
+                                        }
+                                        if (i == 0) {
+                                            first_occur = index_content;
+                                        }
+                                    }
+                                });
+                            }
+                            // show search results
+                            if (isMatch) {
+                                keywords.forEach(function(keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    data_title = data_title.replace(regS, "<span class=\"search-keyword brown lighten-2\">" + keyword + "</span>");
+                                });
+
+                                str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                                var content = data.content.trim().replace(/<[^>]+>/g, "");
+                                if (first_occur >= 0) {
+                                    // cut out 100 characters
+                                    var start = first_occur - 20;
+                                    var end = first_occur + 80;
+                                    if (start < 0) {
+                                        start = 0;
+                                    }
+                                    if (start == 0) {
+                                        end = 100;
+                                    }
+                                    if (end > content.length) {
+                                        end = content.length;
+                                    }
+                                    var match_content = content.substring(start, end);
+                                    // highlight all keywords
+                                    keywords.forEach(function(keyword) {
+                                        var regS = new RegExp(keyword, "gi");
+                                        match_content = match_content.replace(regS, "<span class=\"search-keyword brown lighten-2\">" + keyword + "</span>");
+                                    });
+
+                                    str += "<p class=\"search-result\">..." + match_content + "...</p>"
+                                }
+                                str += "</li>";
+                            }
+                        });
+                        str += "</ul>";
+                        $resultContent.innerHTML = str;
+                    });
+                }
+            });
+        }
+    })(jQuery);
+</script>
+
+
+<script src="/js/prettify.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("pre").addClass("prettyprint");
+        prettyPrint();
+    });
+</script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["[Contrib]/physics/physics.js"],
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+});
+</script>
+
+<script type="text/javascript" async
+  src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+</body>
+</html>
