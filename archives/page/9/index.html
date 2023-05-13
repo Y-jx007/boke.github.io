@@ -1,560 +1,701 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!DOCTYPE HTML>
+<html>
 <head>
-  <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=true"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'true');
-</script>
-<!-- End Google Analytics -->
+    
 
+    <title>第 9 页 | 归档 | </title>
+    <meta name="author" content="蜘蛛">
+    
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+    
+    <meta property="og:site_name" content="蜘蛛"/>
 
-<!-- Baidu Analytics -->
-<script>
-  var _hmt = _hmt || [];
-  (function() {
-    var hm = document.createElement("script");
-    hm.src = "https://hm.baidu.com/hm.js?true";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(hm, s);
-  })();
-</script>
-<!-- End Baidu Analytics -->
+    
+    <meta property="og:image" content=""/>
+    
 
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="alternate" href="/atom.xml" title="蜘蛛" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/lib/materialize.min.css">
+    <link rel="stylesheet" href="/css/lib/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-  <meta name="author" content="蜘蛛">
-
-
-
-
-
-<title>归档 | 蜘蛛</title>
-
-
-
-<link rel="icon" href="/favicon.png">
-
-
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/nprogress/nprogress.css">
-
-
-
-<script src="/lib/jquery.min.js"></script>
-
-
-<script src="/lib/iconify-icon.min.js"></script>
-
-
-<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-<script>
-  tailwind.config = {
-    darkMode: "class",
-  };
-</script>
-
-
-<script src="/lib/nprogress/nprogress.js"></script>
-
-<script>
-  $(document).ready(() => {
-    NProgress.configure({
-      showSpinner: false,
-    });
-    NProgress.start();
-    $("#nprogress .bar").css({
-      background: "#de7441",
-    });
-    $("#nprogress .peg").css({
-      "box-shadow": "0 0 2px #de7441, 0 0 4px #de7441",
-    });
-    $("#nprogress .spinner-icon").css({
-      "border-top-color": "#de7441",
-      "border-left-color": "#de7441",
-    });
-    setTimeout(function () {
-      NProgress.done();
-      $(".fade").removeClass("out");
-    }, 800);
-  });
-</script>
-
-<script>
-  (function () {
-    const prefersDark =
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const setting = localStorage.getItem("hexo-color-scheme") || "auto";
-    if (setting === "dark" || (prefersDark && setting !== "light"))
-      document.documentElement.classList.toggle("dark", true);
-    let isDark = document.documentElement.classList.contains("dark");
-  })();
-
-  $(document).ready(function () {
-    // init icon
-    const prefersDark =
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const isDark = document.documentElement.classList.contains("dark");
-    $("#theme-icon").attr("icon", isDark ? "ri:moon-line" : "ri:sun-line");
-
-    function toggleGiscusTheme() {
-      const isDark = document.documentElement.classList.contains("dark");
-      const giscusFrame = document.querySelector("iframe.giscus-frame");
-      if (giscusFrame) {
-        giscusFrame.contentWindow.postMessage(
-          {
-            giscus: {
-              setConfig: {
-                theme: isDark ? "dark" : "light",
-              },
-            },
-          },
-          "https://giscus.app"
-        );
-      }
-    }
-
-
-    // toggle dark mode
-    function toggleDark() {
-      let isDark = document.documentElement.classList.contains("dark");
-      isDark = !isDark;
-      const setting = localStorage.getItem("hexo-color-scheme") || "auto";
-      document.documentElement.classList.toggle("dark", isDark);
-      $("#theme-icon").attr("icon", isDark ? "ri:moon-line" : "ri:sun-line");
-      if (prefersDark === isDark) {
-        localStorage.setItem("hexo-color-scheme", "auto");
-      } else {
-        localStorage.setItem("hexo-color-scheme", isDark ? "dark" : "light");
-      }
-      toggleGiscusTheme();
-    }
-    $("#toggle-dark").click(toggleDark);
-    // listen dark mode change
-    window
-      .matchMedia("(prefers-color-scheme: dark)")
-      .addEventListener("change", (e) => {
-        const setting = localStorage.getItem("hexo-color-scheme") || "auto";
-        if (setting === "auto") {
-          document.documentElement.classList.toggle("dark", e.matches);
-          $("#theme-icon").attr(
-            "icon",
-            e.matches ? "ri:moon-line" : "ri:sun-line"
-          );
-          toggleGiscusTheme();
-        }
-      });
-  });
-</script>
-
-
-
-
+    
+        <link rel="stylesheet" href="/css/lib/another-theme.css" type="text/css">
+    
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <meta name="generator" content="Hexo 6.3.0"></head>
-<body class="font-sans bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-200">
-  <header class="fixed w-full px-5 py-1 z-10 backdrop-blur-xl backdrop-saturate-150 border-b border-black/5">
-  <div class="max-auto">
-    <nav class="flex items-center text-base">
-      <a href="/" class="group">
-        <h2 class="font-medium tracking-tighterp text-l p-2">
-          <img class="w-5 mr-2 inline-block transition-transform group-hover:rotate-[30deg]" id="logo" src="/images/logo.svg" alt="蜘蛛" />
-          蜘蛛
-        </h2>
-      </a>
-      <div id="header-title" class="opacity-0 md:ml-2 md:mt-[0.1rem] text-xs font-medium whitespace-nowrap overflow-hidden overflow-ellipsis">
-        
-      </div>
-      <div class="flex-1"></div>
-      <div class="flex items-center gap-3">
-        
-          <a class="hidden sm:flex" href="/archives">Posts</a>
-        
-          <a class="hidden sm:flex" href="/categories">Categories</a>
-        
-        
-          
-            <a class="w-5 h-5 hidden sm:flex" title="Github" target="_blank" rel="noopener" href="https://github.com/Y-jx007">
-              <iconify-icon width="20" icon="ri:github-line"></iconify-icon>
-            </a>
-          
-        
-        <a class="w-5 h-5" title="toggle theme" id="toggle-dark">
-          <iconify-icon width="20" icon="" id="theme-icon"></iconify-icon>
+
+
+<body>
+    <img src="/weixin_favicon.png" style="position: absolute; left: -9999px; opacity: 0; filter: alpha(opacity=0);">
+
+    <nav class="brown lighten-2">
+    <div class="nav-wrapper">
+        <a href="#" data-activates="main-menu" class="button-collapse">
+            <i class="fa fa-navicon"></i>
         </a>
-      </div>
-      <div class="flex items-center justify-center gap-3 ml-3 sm:hidden">
-        <span class="w-5 h-5" aria-hidden="true" role="img" id="open-menu">
-          <iconify-icon width="20" icon="carbon:menu" ></iconify-icon>
-        </span>
-        <span class="w-5 h-5 hidden" aria-hidden="true" role="img" id="close-menu">
-          <iconify-icon  width="20" icon="carbon:close" ></iconify-icon>
-        </span>
-      </div>
-    </nav>
-  </div>
-</header>
-<div id="menu-panel" class="h-0 overflow-hidden sm:hidden fixed left-0 right-0 top-12 bottom-0 z-10">
-  <div id="menu-content" class="relative z-20 bg-white/80 px-6 sm:px-8 py-2 backdrop-blur-xl -translate-y-full transition-transform duration-300">
-    <ul class="nav flex flex-col sm:flex-row text-sm font-medium">
-      
-        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/5 last:border-0 hover:text-main">
-          <a href="/archives" class="flex h-12 sm:h-auto items-center">Posts</a>
+        <div class="">
+            <a href="/" class="brand-logo hide-on-med-and-down">蜘蛛</a>
+            <ul class="right hide-on-med-and-down">
+                
+                    <li>
+                        <a class="menu-home " href="/" >
+                            <i class="fa fa-home "></i>
+                            
+                            首页
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-archive " href="/archives" >
+                            <i class="fa fa-archive "></i>
+                            
+                            归档
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                            <i class="fa fa-bookmark "></i>
+                            
+                            分类
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-about " href="/about" >
+                            <i class="fa fa-user "></i>
+                            
+                            关于
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-search modal-trigger " href="#search" >
+                            <i class="fa fa-search "></i>
+                            
+                            搜索
+                        </a>
+                    </li>
+                
+            </ul>
+            <div>
+    <ul class="side-nav brown lighten-2" id="main-menu">
+        
+        <li class="side-user">
+            <div class="row">
+                <div class="col s4 no-padding">
+                    <img class="avatar-image circle responsive-img" src="/favicon.png" alt="User Avatar">
+                </div>
+                <div class="info col s8 valign-wrapper no-padding">
+                    <div class="valign">
+                        <p class="name">邯郸学步</p>
+                        <p class="desc">笔记</p>
+                    </div>
+                </div>
+            </div>
         </li>
-      
-        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/5 last:border-0 hover:text-main">
-          <a href="/categories" class="flex h-12 sm:h-auto items-center">Categories</a>
-        </li>
-      
+        
+
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-home " href="/" >
+                    <i class="fa fa-home "></i>
+                    
+                    首页
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-archive " href="/archives" >
+                    <i class="fa fa-archive "></i>
+                    
+                    归档
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                    <i class="fa fa-bookmark "></i>
+                    
+                    分类
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-about " href="/about" >
+                    <i class="fa fa-user "></i>
+                    
+                    关于
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-search modal-trigger " href="#search" >
+                    <i class="fa fa-search "></i>
+                    
+                    搜索
+                </a>
+            </li>
+        
+    </ul>
+
+    <ul class="side-nav brown lighten-2" id="category-menu">
+    
+
+            
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/其他/">
+                    其他 <span class="right">13 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/固体物理/">
+                    固体物理 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/Suvrat-Raju/">
+                    Suvrat-Raju <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/复变函数/">
+                    复变函数 <span class="right">6 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/算法/">
+                    算法 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/力学/">
+                    力学 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/微分几何/">
+                    微分几何 <span class="right">9 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/数理方程/">
+                    数理方程 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/离散数学/">
+                    离散数学 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/PiTP/">
+                    PiTP <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/光学/">
+                    光学 <span class="right">6 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/线性代数/">
+                    线性代数 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/电动力学/">
+                    电动力学 <span class="right">5 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/相对论/">
+                    相对论 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/张量分析/">
+                    张量分析 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/概率论/">
+                    概率论 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/热力学/">
+                    热力学 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/群论/">
+                    群论 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/量子力学/">
+                    量子力学 <span class="right">5 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/原子物理/">
+                    原子物理 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/统计物理/">
+                    统计物理 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/抽象代数/">
+                    抽象代数 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/数学分析/">
+                    数学分析 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+    </ul>
+</div>
+
+        </div>
+    </div>
+</nav>
+
+<div id="search" class="modal search-modal">
+    <div class="row">
+        <div class="input-field col s12">
+              <input id="search-input" type="text">
+              <label for="search-input">搜索</label>
+        </div>
+
+    </div>
+    <div id="search-result" class="search-result col s12">
+
+    </div>
+</div>
+
+
+    <main>
+        <div class="container main-container">
+    
+
+<nav class="page-nav hide-on-small-only">
+    <div class="nav-wrapper brown lighten-2">
+        <span class="breadcrumb">当前位置（归档）</span>
+        
+
+        
+    </div>
+</nav>
+
+
+
+    <ul class="collapsible mt-0" data-collapsible="accordion">
+        
+        
+            <li>
+                <div class="collapsible-header active">
+                    <i class="fa fa-archive"></i>2021
+                </div>
+                <div class="collapsible-body">
+                    <div class="collection">
+                        
+                            <a href="/2021/11/30/%E5%B9%B2%E6%B6%89/" class="collection-item grey-text text-darken-1">
+                                <time datetime="2021-11-30T10:38:31.000Z">2021-11-30</time>
+                                <span>&nbsp;&nbsp;&nbsp;</span>
+                                干涉
+                            </a>
+                        
+                            <a href="/2021/11/28/%E6%B6%82%E9%B8%A6/" class="collection-item grey-text text-darken-1">
+                                <time datetime="2021-11-28T02:06:55.000Z">2021-11-28</time>
+                                <span>&nbsp;&nbsp;&nbsp;</span>
+                                涂鸦
+                            </a>
+                        
+                            <a href="/2021/11/24/%E9%83%A8%E5%88%86%E5%81%8F%E6%8C%AF%E7%9A%84%E7%9F%A9%E9%98%B5%E6%96%B9%E6%B3%95/" class="collection-item grey-text text-darken-1">
+                                <time datetime="2021-11-24T14:22:35.000Z">2021-11-24</time>
+                                <span>&nbsp;&nbsp;&nbsp;</span>
+                                偏振的数学描述
+                            </a>
+                        
+                            <a href="/2021/11/23/%E5%85%89%E5%AD%A6%E6%8E%A8%E5%AF%BC%E4%B8%89/" class="collection-item grey-text text-darken-1">
+                                <time datetime="2021-11-23T01:42:44.000Z">2021-11-23</time>
+                                <span>&nbsp;&nbsp;&nbsp;</span>
+                                偏振态、偏振光学元件
+                            </a>
+                        
+                            <a href="/2021/11/22/%E7%9F%A9%E9%98%B5%E7%9A%84%E5%88%86%E8%A7%A3/" class="collection-item grey-text text-darken-1">
+                                <time datetime="2021-11-22T00:32:58.000Z">2021-11-22</time>
+                                <span>&nbsp;&nbsp;&nbsp;</span>
+                                矩阵的分解
+                            </a>
+                        
+                            <a href="/2021/11/20/%E5%93%88%E5%AF%86%E9%A1%BF%E5%8E%9F%E7%90%86/" class="collection-item grey-text text-darken-1">
+                                <time datetime="2021-11-20T14:11:44.000Z">2021-11-20</time>
+                                <span>&nbsp;&nbsp;&nbsp;</span>
+                                哈密顿原理
+                            </a>
+                        
+                            <a href="/2021/11/20/%E6%AD%A3%E5%88%99%E5%8F%98%E6%8D%A2/" class="collection-item grey-text text-darken-1">
+                                <time datetime="2021-11-20T14:06:49.000Z">2021-11-20</time>
+                                <span>&nbsp;&nbsp;&nbsp;</span>
+                                正则变换
+                            </a>
+                        
+                            <a href="/2021/11/20/%E6%B3%8A%E6%9D%BE%E6%8B%AC%E5%8F%B7/" class="collection-item grey-text text-darken-1">
+                                <time datetime="2021-11-20T03:50:37.000Z">2021-11-20</time>
+                                <span>&nbsp;&nbsp;&nbsp;</span>
+                                泊松括号
+                            </a>
+                        
+                            <a href="/2021/11/20/%E6%AC%A7%E6%8B%89-%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E6%96%B9%E7%A8%8B/" class="collection-item grey-text text-darken-1">
+                                <time datetime="2021-11-20T02:08:28.000Z">2021-11-20</time>
+                                <span>&nbsp;&nbsp;&nbsp;</span>
+                                Euler-Lagrange方程
+                            </a>
+                        
+                            <a href="/2021/11/18/%E5%85%89%E5%AD%A6%E6%8E%A8%E5%AF%BC%E4%BA%8C/" class="collection-item grey-text text-darken-1">
+                                <time datetime="2021-11-18T10:22:11.000Z">2021-11-18</time>
+                                <span>&nbsp;&nbsp;&nbsp;</span>
+                                折射反射、菲涅尔方程
+                            </a>
+                        
+                    </div>
+                </div>
+            </li>
+        
+    </ul>
+
+
+</div>
+
+        <div class="fixed-action-btn float-sitemap">
+    <a class="btn-floating btn-large brown lighten-2">
+      <i class="fa fa-caret-square-o-up"></i>
+    </a>
+    <ul>
+      <li><a class="btn-return-top btn-floating waves-effect brown lighten-2" title="回到顶部"><i class="fa fa-arrow-circle-o-up"></i></a></li>
+      <li><a class="btn-floating waves-effect button-collapse brown lighten-2"  data-activates="main-menu" title="菜单"><i class="fa fa-navicon"></i></a></li>
     </ul>
   </div>
-  <div class="mask bg-black/20 absolute inset-0"></div>
+
+    </main>
+    
+    <noscript>
+    <div class="noscript">
+        <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+    </div>
+</noscript>
+<div class="noscript">
+    <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
 </div>
 
-  <main class="p-12">
-    <section class="px-6 max-w-prose mx-auto gap-12 grid grid-cols-1">
-  <div class="flex flex-col h-48 items-center justify-center">
-    <h1 class="site-title text-4xl leading-relaxed">
-      蜘蛛
-    </h1>
-    <p class="text-gray-500 mt-2">
-      
-    </p>
-  </div>
-  
-  
-    
-    
-      <div class="relative pointer-events-none">
-        <span class="text-9xl opacity-10 absolute -left-11 -top-6 font-bold">2021</span>
-      </div>
-    
-    <a href="/2021/11/30/%E5%B9%B2%E6%B6%89/">
-      <header>
-        <h2 class="font-bold text-xl">
-          干涉
-        </h2>
-      </header>
-      <section class="text-gray-400 my-1 text-sm time">
-        <p class="line-clamp-4">
-          
-        </p>
-        <p class="line-clamp-4">
-          11月 30
-          ·
-          8 min
-        </p>
-      </section>
-    </a>
-  
-    
-    
-    <a href="/2021/11/28/%E6%B6%82%E9%B8%A6/">
-      <header>
-        <h2 class="font-bold text-xl">
-          涂鸦
-        </h2>
-      </header>
-      <section class="text-gray-400 my-1 text-sm time">
-        <p class="line-clamp-4">
-          
-        </p>
-        <p class="line-clamp-4">
-          11月 28
-          ·
-          1 min
-        </p>
-      </section>
-    </a>
-  
-    
-    
-    <a href="/2021/11/24/%E9%83%A8%E5%88%86%E5%81%8F%E6%8C%AF%E7%9A%84%E7%9F%A9%E9%98%B5%E6%96%B9%E6%B3%95/">
-      <header>
-        <h2 class="font-bold text-xl">
-          偏振的数学描述
-        </h2>
-      </header>
-      <section class="text-gray-400 my-1 text-sm time">
-        <p class="line-clamp-4">
-          
-        </p>
-        <p class="line-clamp-4">
-          11月 24
-          ·
-          13 min
-        </p>
-      </section>
-    </a>
-  
-    
-    
-    <a href="/2021/11/23/%E5%85%89%E5%AD%A6%E6%8E%A8%E5%AF%BC%E4%B8%89/">
-      <header>
-        <h2 class="font-bold text-xl">
-          偏振态、偏振光学元件
-        </h2>
-      </header>
-      <section class="text-gray-400 my-1 text-sm time">
-        <p class="line-clamp-4">
-          
-        </p>
-        <p class="line-clamp-4">
-          11月 23
-          ·
-          4 min
-        </p>
-      </section>
-    </a>
-  
-    
-    
-    <a href="/2021/11/22/%E7%9F%A9%E9%98%B5%E7%9A%84%E5%88%86%E8%A7%A3/">
-      <header>
-        <h2 class="font-bold text-xl">
-          矩阵的分解
-        </h2>
-      </header>
-      <section class="text-gray-400 my-1 text-sm time">
-        <p class="line-clamp-4">
-          
-        </p>
-        <p class="line-clamp-4">
-          11月 22
-          ·
-          3 min
-        </p>
-      </section>
-    </a>
-  
-    
-    
-    <a href="/2021/11/20/%E5%93%88%E5%AF%86%E9%A1%BF%E5%8E%9F%E7%90%86/">
-      <header>
-        <h2 class="font-bold text-xl">
-          哈密顿原理
-        </h2>
-      </header>
-      <section class="text-gray-400 my-1 text-sm time">
-        <p class="line-clamp-4">
-          
-        </p>
-        <p class="line-clamp-4">
-          11月 20
-          ·
-          5 min
-        </p>
-      </section>
-    </a>
-  
-    
-    
-    <a href="/2021/11/20/%E6%AD%A3%E5%88%99%E5%8F%98%E6%8D%A2/">
-      <header>
-        <h2 class="font-bold text-xl">
-          正则变换
-        </h2>
-      </header>
-      <section class="text-gray-400 my-1 text-sm time">
-        <p class="line-clamp-4">
-          
-        </p>
-        <p class="line-clamp-4">
-          11月 20
-          ·
-          12 min
-        </p>
-      </section>
-    </a>
-  
-    
-    
-    <a href="/2021/11/20/%E6%B3%8A%E6%9D%BE%E6%8B%AC%E5%8F%B7/">
-      <header>
-        <h2 class="font-bold text-xl">
-          泊松括号
-        </h2>
-      </header>
-      <section class="text-gray-400 my-1 text-sm time">
-        <p class="line-clamp-4">
-          
-        </p>
-        <p class="line-clamp-4">
-          11月 20
-          ·
-          4 min
-        </p>
-      </section>
-    </a>
-  
-    
-    
-    <a href="/2021/11/20/%E6%AC%A7%E6%8B%89-%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E6%96%B9%E7%A8%8B/">
-      <header>
-        <h2 class="font-bold text-xl">
-          Euler-Lagrange方程
-        </h2>
-      </header>
-      <section class="text-gray-400 my-1 text-sm time">
-        <p class="line-clamp-4">
-          
-        </p>
-        <p class="line-clamp-4">
-          11月 20
-          ·
-          3 min
-        </p>
-      </section>
-    </a>
-  
-    
-    
-    <a href="/2021/11/18/%E5%85%89%E5%AD%A6%E6%8E%A8%E5%AF%BC%E4%BA%8C/">
-      <header>
-        <h2 class="font-bold text-xl">
-          折射反射、菲涅尔方程
-        </h2>
-      </header>
-      <section class="text-gray-400 my-1 text-sm time">
-        <p class="line-clamp-4">
-          
-        </p>
-        <p class="line-clamp-4">
-          11月 18
-          ·
-          4 min
-        </p>
-      </section>
-    </a>
-  
-</section>
 
-  </main>
-  <footer class="flex flex-col h-40 items-center justify-center text-gray-400 text-sm">
-  <!-- busuanzi -->
-  
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<!-- Busuanzi Analytics -->
-<div class="flex items-center gap-2">
-  <span>Visitor Count</span>
-  <span id="busuanzi_value_site_uv"></span>
-  <span>Totalview</span>
-  <span id="busuanzi_value_site_pv"></span>
-</div>
-<!-- End Busuanzi Analytics -->
-
-
-  <!-- copyright -->
-  <div class="flex items-center gap-2">
-    <span>© 2023</span>
-    <iconify-icon width="18" icon="emojione-monotone:maple-leaf" ></iconify-icon>
-    <a href="https://github.com/xbmlz" target="_blank" rel="noopener noreferrer">xbmlz</a>
-  </div>
-  <!-- powered by -->
-  <div class="flex items-center gap-2">
-    <span>Powered by</span>
-    <a href="https://hexo.io/" target="_blank" rel="noopener noreferrer">Hexo</a>
-    <span>&</span>
-    <a href="https://github.com/xbmlz/hexo-theme-maple" target="_blank" rel="noopener noreferrer">Maple</a>
-  </div>
-
-</footer>
-
-  <iconify-icon class="fixed right-4 bottom-10 z-100 opacity-0" width="24" icon="ion:arrow-up-c" id="go-top"></iconify-icon>
-  
-<script src="/js/main.js"></script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/materialize.min.js"></script>
 
 <script>
-  // load ./logo.svg to canvas
-  // 每次页面加载都执行
-  $(document).ready(function () {
-    const img = $("#logo")[0];
-    // 定义树叶数量
-    const mapleCount = "10";
-    // 定义树叶飘落的速度
-    const speed = "1";
-    // client width
-    const width = document.body.clientWidth;
-    const height = document.body.clientHeight;
-    const canvas = document.createElement("canvas");
-    const ctx = canvas.getContext("2d");
+    (function($) {
+        $(document).ready(function() {
+            // 隐藏禁用javascript（针对微信内置浏览器）的提示
+            $('.noscript').hide();
 
-    const bufferCanvas = document.createElement("canvas");
-    const bufferCtx = bufferCanvas.getContext("2d");
+            // 图片缩放效果
+            var $imgs = $('img').not('.slider-image').not('.avatar-image').not('.carousel-image').not('.card-cover-image').not('.qrcode');
 
-    const dpr = window.devicePixelRatio || 1;
-    const bsr =
-      ctx.webkitBackingStorePixelRatio ||
-      ctx.mozBackingStorePixelRatio ||
-      ctx.msBackingStorePixelRatio ||
-      ctx.oBackingStorePixelRatio ||
-      ctx.backingStorePixelRatio ||
-      1;
-    const dpi = dpr / bsr;
-    bufferCanvas.width = canvas.width = dpi * width;
-    bufferCanvas.height = canvas.height = dpi * height;
-    bufferCtx.imageSmoothingEnabled = true;
-    ctx.imageSmoothingEnabled = true;
-    // 绘制树叶飘落
-    const drawMaple = (ctx, x, y, scale) => {
-      ctx.save();
-      ctx.translate(x, y);
-      ctx.scale(scale, scale);
-      ctx.drawImage(bufferCanvas, -img.width / 2, -img.height / 2);
-      ctx.restore();
-    };
-    // 在内存中绘制树叶
-    bufferCtx.drawImage(img, 0, 0, img.width, img.height);
-    // 定义树叶的位置
-    const maples = Array.from({ length: mapleCount }).map(() => {
-      const x = Math.random() * canvas.width;
-      const y = Math.random() * canvas.height;
-      const scale = Math.random() * 0.5 + 0.5;
-      const offset = Math.random() * 2 - 1;
-      return {
-        x,
-        y,
-        scale,
-        speed: speed * scale,
-        offset: offset,
-      };
-    });
-    // 定义树叶的动画
-    const play = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      maples.forEach((maple) => {
-        drawMaple(ctx, maple.x, maple.y, maple.scale);
-        maple.y += maple.speed;
-        maple.x += maple.offset;
-        if (maple.y > canvas.height) {
-          maple.y = 0;
+            // 给图片加上点击放大效果（materialbox插件）
+            $imgs.addClass('materialboxed').each(function(i, el) {
+                $(this).attr('data-caption', $(this).attr('alt') || ' ');
+            }).materialbox();
+
+            // 优化表格的显示
+            $('table').each(function() {
+                var $table = $(this);
+                // 除去多行代码的情况
+                if ($table.find('pre').length == 0) {
+                    $table.addClass('responsive-table striped bordered');
+                }
+            });
+
+            // 首页幻灯片
+            $('.slider').slider({indicators: true, full_width: true, interval: 8000});
+
+            $(".button-collapse").sideNav();
+            $(".category-menu").sideNav();
+
+            // 针对gallery post
+            $('.carousel').carousel({full_width: true});
+            $('.carousel-control.prev').click(function() {
+                $('.carousel').carousel('prev');
+            });
+            $('.carousel-control.next').click(function() {
+                $('.carousel').carousel('next');
+            });
+
+            // 文章目录
+            $('article').not('.simple-article').find('h1').add('h2').add('h3').add('h4').add('h5').add('h6').scrollSpy();
+
+            // 目录随屏幕滚动（防止目录过长越过footer）
+            var $toc = $('.toc');
+            var scrollTargetTop = 0;
+            $(window).scroll(function() {
+                var $activeLink = $toc.find('a.active.section');
+                if ($(window).scrollTop() < 100) {
+                    scrollTargetTop = 0;
+                } else {
+                    if ($activeLink[0]) {
+                        scrollTargetTop = $activeLink.offset().top - $toc.offset().top;
+                    }
+                }
+                $toc.css('top', '-' + scrollTargetTop + 'px');
+            });
+
+            // 修正文章目录的left-border颜色
+            var color = $('.table-of-contents-text').css('color');
+            $('.table-of-contents-link').css('border-left-color', color);
+
+            // 针对移动端做的优化：FAB按钮点击一下收回
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                $('.fixed-action-btn').addClass('click-to-toggle');
+            }
+            // 回到顶部
+            $('.btn-return-top').click(function() {
+                $('body, html').animate({
+                    scrollTop: 0
+                }, 500);
+            });
+
+            // 重置读书页面的Tab标签页的颜色
+            $('li.tab a').hover(function() {
+                $(this).toggleClass('text-lighten-4');
+            });
+            $('.indicator').addClass('brown lighten-2');
+
+            
+            // 添加new标签
+            $('').append('<span class="new badge brown lighten-2"></span>');
+            
+
+            // 搜索功能
+            $('.modal-trigger').leanModal({
+                // 打开搜索框时自动聚焦
+                ready: function() {
+                    if ($('#search').is(":visible")) {
+                        $('#search-input').focus();
+                    }
+                }
+            });
+            var searchXml = "search.xml";
+            if (searchXml.length == 0) {
+             	searchXml = "search.xml";
+            }
+            var searchPath = "/" + searchXml;
+            initSearch(searchPath, 'search-input', 'search-result');
+        });
+
+        // 初始化搜索与匹配函数
+        var initSearch = function(path, search_id, content_id) {
+            'use strict';
+            $.ajax({
+                url: path,
+                dataType: "xml",
+                success: function(xmlResponse) {
+                    // get the contents from search data
+                    var datas = $("entry", xmlResponse).map(function() {
+                        return {
+                            title: $("title", this).text(),
+                            content: $("content", this).text(),
+                            url: $("url", this).text()
+                        };
+                    }).get();
+                    var $input = document.getElementById(search_id);
+                    var $resultContent = document.getElementById(content_id);
+                    $input.addEventListener('input', function() {
+                        var str = '<ul class=\"search-result-list\">';
+                        var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                        $resultContent.innerHTML = "";
+                        if (this.value.trim().length <= 0) {
+                            return;
+                        }
+                        // perform local searching
+                        datas.forEach(function(data) {
+                            var isMatch = true;
+                            var content_index = [];
+                            var data_title = data.title.trim().toLowerCase();
+                            var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                            var data_url = data.url;
+                            var index_title = -1;
+                            var index_content = -1;
+                            var first_occur = -1;
+                            // only match artiles with not empty titles and contents
+                            if (data_title != '' && data_content != '') {
+                                keywords.forEach(function(keyword, i) {
+                                    index_title = data_title.indexOf(keyword);
+                                    index_content = data_content.indexOf(keyword);
+                                    if (index_title < 0 && index_content < 0) {
+                                        isMatch = false;
+                                    } else {
+                                        if (index_content < 0) {
+                                            index_content = 0;
+                                        }
+                                        if (i == 0) {
+                                            first_occur = index_content;
+                                        }
+                                    }
+                                });
+                            }
+                            // show search results
+                            if (isMatch) {
+                                keywords.forEach(function(keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    data_title = data_title.replace(regS, "<span class=\"search-keyword brown lighten-2\">" + keyword + "</span>");
+                                });
+
+                                str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                                var content = data.content.trim().replace(/<[^>]+>/g, "");
+                                if (first_occur >= 0) {
+                                    // cut out 100 characters
+                                    var start = first_occur - 20;
+                                    var end = first_occur + 80;
+                                    if (start < 0) {
+                                        start = 0;
+                                    }
+                                    if (start == 0) {
+                                        end = 100;
+                                    }
+                                    if (end > content.length) {
+                                        end = content.length;
+                                    }
+                                    var match_content = content.substring(start, end);
+                                    // highlight all keywords
+                                    keywords.forEach(function(keyword) {
+                                        var regS = new RegExp(keyword, "gi");
+                                        match_content = match_content.replace(regS, "<span class=\"search-keyword brown lighten-2\">" + keyword + "</span>");
+                                    });
+
+                                    str += "<p class=\"search-result\">..." + match_content + "...</p>"
+                                }
+                                str += "</li>";
+                            }
+                        });
+                        str += "</ul>";
+                        $resultContent.innerHTML = str;
+                    });
+                }
+            });
         }
-        if (maple.x > canvas.width) {
-          maple.x = 0;
-        }
-      });
-      requestAnimationFrame(play);
-    };
-    requestAnimationFrame(play);
-    // 添加到页面中
-    $("#maple").append(canvas);
-  });
+    })(jQuery);
 </script>
 
 
-  <div class="fixed top-0 bottom-0 left-0 right-0 pointer-events-none -z-1" id="maple"></div>
-</body>
+<script src="/js/prettify.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("pre").addClass("prettyprint");
+        prettyPrint();
+    });
+</script>
 
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Ajax.config.path["Extra"] = "https://my.extra.com/mathjax/extra";
+MathJax.Hub.Config({
+  extensions: ["[Contrib]/physics/physics.js"],
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+});
+</script>
+
+<script type="text/javascript" async
+  src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+</body>
 </html>
