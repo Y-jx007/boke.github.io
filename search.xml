@@ -436,26 +436,6 @@ $$
       </categories>
   </entry>
   <entry>
-    <title>Drude Theory</title>
-    <url>/2023/05/12/Drude%20Theory/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><qg>假设</qg></p>
-<p>$1.$ 电子具有特征散射时间 $\tau$，其在时间$\dd t$内被散射的概率为$\displaystyle\frac{\dd t}{\tau}$</p>
-<p>$2.$ 电子被散射后动量变为零</p>
-<p>$3.$ 在散射间隔之内电子受外部电磁场$\boldsymbol{E}$和$\boldsymbol{B}$影响</p>
-<p>由上述假设有</p>
-<p>$$\boldsymbol{p}(t+\dd t)&#x3D;(1-\dd t&#x2F;\tau)(\boldsymbol{p}(t)+\boldsymbol{F}\dd t)\\<br>\qquad\\<br>\frac{\dd \boldsymbol{p}}{\dd t}&#x3D;\boldsymbol{F}-\frac{\boldsymbol{p}}{\tau}$$</p>
-<p>$\boldsymbol{F}&#x3D;-e(\boldsymbol{E}+\boldsymbol{v}\times\boldsymbol{B})$，在无外场条件下电子动量呈指数衰减$\boldsymbol{p}(t)&#x3D;\boldsymbol{p}_0e^{-t&#x2F;\tau}$</p>
-<p><qg>电场</qg></p>
-<p>稳态下$\displaystyle\frac{\dd\boldsymbol{p}}{\dd t}&#x3D;0$，$\boldsymbol{p}&#x3D;-e\tau\boldsymbol{E}$<br>$\boldsymbol{j}&#x3D;-ne\boldsymbol{v}&#x3D;-ne\boldsymbol{p}&#x2F;m&#x3D;ne^2\tau \boldsymbol{E}&#x2F;m&#x3D;ne^2 \tau\boldsymbol{j}&#x2F;(m\sigma)$<br>电导率$\sigma&#x3D;\displaystyle\frac{ne^2 \tau}{m}$</p>
-<p><qg>电磁场</qg></p>
-<p>稳态下$0&#x3D;-e\boldsymbol{E}+\boldsymbol{j}\times\boldsymbol{B}&#x2F;n+m\boldsymbol{j}&#x2F;(ne\tau)$，<br>$E&#x3D;\displaystyle\frac{1}{ne}\boldsymbol{j}\boldsymbol{B}+\frac{m}{ne^2\tau}\boldsymbol{j}&#x3D;\boldsymbol{\rho}\boldsymbol{j}$，$\boldsymbol{\rho}$为三阶张量<br>$\rho_{xx}&#x3D;\rho_{yy}&#x3D;\rho_{zz}&#x3D;\frac{m}{ne^2\tau}$，$\rho_{xy}&#x3D;-\rho_{yx}&#x3D;\displaystyle\frac{B}{ne}$<br>霍尔系数$\displaystyle R_H&#x3D;\frac{\rho_{yx}}{|B|}&#x3D;-\frac{1}{ne}$</p>
-<p><qg>热传导</qg></p>
-]]></content>
-      <categories>
-        <category>固体物理</category>
-      </categories>
-  </entry>
-  <entry>
     <title>FFT</title>
     <url>/2021/11/04/Fourier/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="Discrete-Fourier-Transform-DFT"><a href="#Discrete-Fourier-Transform-DFT" class="headerlink" title="Discrete Fourier Transform(DFT)"></a><center><strong>Discrete Fourier Transform(DFT)</strong></center></h3><p>对于一个二维周期函数$f(x,y)$，比如一张大小为$M\times N$并延拓到整个平面的灰度图，其离散傅里叶变换公式如下</p>
@@ -553,10 +533,24 @@ def IFFT2(f):
       </tags>
   </entry>
   <entry>
-    <title>Jupyter</title>
-    <url>/2022/04/21/Jupyter/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>0</p>
+    <title>Drude Theory</title>
+    <url>/2023/05/12/Drude%20Theory/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><qg>假设</qg></p>
+<p>$1.$ 电子具有特征散射时间 $\tau$，其在时间$\dd t$内被散射的概率为$\displaystyle\frac{\dd t}{\tau}$</p>
+<p>$2.$ 电子被散射后动量变为零</p>
+<p>$3.$ 在散射间隔之内电子受外部电磁场$\boldsymbol{E}$和$\boldsymbol{B}$影响</p>
+<p>由上述假设有</p>
+<p>$$\boldsymbol{p}(t+\dd t)&#x3D;(1-\dd t&#x2F;\tau)(\boldsymbol{p}(t)+\boldsymbol{F}\dd t)\\<br>\qquad\\<br>\frac{\dd \boldsymbol{p}}{\dd t}&#x3D;\boldsymbol{F}-\frac{\boldsymbol{p}}{\tau}$$</p>
+<p>$\boldsymbol{F}&#x3D;-e(\boldsymbol{E}+\boldsymbol{v}\times\boldsymbol{B})$，在无外场条件下电子动量呈指数衰减$\boldsymbol{p}(t)&#x3D;\boldsymbol{p}_0e^{-t&#x2F;\tau}$</p>
+<p><qg>电场</qg></p>
+<p>稳态下$\displaystyle\frac{\dd\boldsymbol{p}}{\dd t}&#x3D;0$，$\boldsymbol{p}&#x3D;-e\tau\boldsymbol{E}$<br>$\boldsymbol{j}&#x3D;-ne\boldsymbol{v}&#x3D;-ne\boldsymbol{p}&#x2F;m&#x3D;ne^2\tau \boldsymbol{E}&#x2F;m&#x3D;ne^2 \tau\boldsymbol{j}&#x2F;(m\sigma)$<br>电导率$\sigma&#x3D;\displaystyle\frac{ne^2 \tau}{m}$</p>
+<p><qg>电磁场</qg></p>
+<p>稳态下$0&#x3D;-e\boldsymbol{E}+\boldsymbol{j}\times\boldsymbol{B}&#x2F;n+m\boldsymbol{j}&#x2F;(ne\tau)$，<br>$E&#x3D;\displaystyle\frac{1}{ne}\boldsymbol{j}\boldsymbol{B}+\frac{m}{ne^2\tau}\boldsymbol{j}&#x3D;\boldsymbol{\rho}\boldsymbol{j}$，$\boldsymbol{\rho}$为三阶张量<br>$\rho_{xx}&#x3D;\rho_{yy}&#x3D;\rho_{zz}&#x3D;\frac{m}{ne^2\tau}$，$\rho_{xy}&#x3D;-\rho_{yx}&#x3D;\displaystyle\frac{B}{ne}$<br>霍尔系数$\displaystyle R_H&#x3D;\frac{\rho_{yx}}{|B|}&#x3D;-\frac{1}{ne}$</p>
+<p><qg>热传导</qg></p>
 ]]></content>
+      <categories>
+        <category>固体物理</category>
+      </categories>
   </entry>
   <entry>
     <title>Hawking&#39;s original paradox</title>
@@ -566,6 +560,12 @@ def IFFT2(f):
       <categories>
         <category>Suvrat Raju</category>
       </categories>
+  </entry>
+  <entry>
+    <title>Jupyter</title>
+    <url>/2022/04/21/Jupyter/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>0</p>
+]]></content>
   </entry>
   <entry>
     <title>Levi-Civita联络</title>
@@ -1475,21 +1475,6 @@ $$\frac{m(m+2)}{(m!)^21(m+1)2^{2m}}b_0+4\cdot 1!\frac{(m+1)!}{m!}b_{2m+2}+b_{2m}
       </categories>
   </entry>
   <entry>
-    <title>信息导论</title>
-    <url>/2023/04/18/%E4%BF%A1%E6%81%AF%E5%AF%BC%E8%AE%BA/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><qg>Shannon Theory</qg></p>
-<p>接收一串由$a_1,a_2,\cdots,a_k$随机出现，依次排列而成的字符，其中$a_k$出现概率为$p_k$，记此概率分配为$A$，总概率和为$1$，对于足够长的字母个数为$N$的序列，$a_k$出现的次数$\sim p_kN$，对于一个特定序列而言，在所有重排中其出现的次数为</p>
-<p>$$\frac{N!}{\displaystyle\prod_k [(p_kN)!]}\overset{\displaystyle N!\sim \sqrt{2\pi N}\left(\frac{N}{e}\right)^N}{\sim} \frac{1}{\displaystyle\prod_k p_k^{p_k N}}\\<br>\qquad\\<br>&#x3D;2^{NS_A}$$</p>
-<p>其中$\displaystyle S_A&#x3D;-\sum_k p_k\log_2{p_k}$为在概率分配$A$下单字符的<def>Shannon Entropy 信息熵</def></p>
-<p>信息熵满足$S_A\ge 0$，当且仅当某个$p_k&#x3D;1$时等号成立，而由拉格朗日乘数法知所有<br>$p_k&#x3D;1&#x2F;k$时，信息熵取最大值</p>
-<p>对于$N$个字母组成的字符串，其可以被压缩为$NS_A$个$\text{bit}$，若所有字母出现频率相等，$S_A&#x3D;\log_2k$，将$k$进制转换为二进制编码即可做到；若出现频率不相等，则可以通过特殊编码方式，如<qg>Huffman</qg>编码，适当减少出现频率高的字母的编码长度，增加频率低的字母的编码长度来实现；若字母出现不是完全随机，则可以从中提取出有效信息将体积压缩到更小，如$abab\cdots abab&#x3D;Nab$</p>
-<p>由$a、b$组成的字符串中若存在短程有序序列，则其信息熵降低，可以将这些短程序列合并得到更小的压缩体积，这种情况可以与邻近自旋之间存在相互作用的一维自旋链相类比；对于理想气体近似，忽略短程相互作用，若单个字母的信息熵为$S$，则长度为$N$的字符串的熵即为$NS$，注意这只对$N&gt;&gt;1$的情形近似成立</p>
-]]></content>
-      <categories>
-        <category>PiTP</category>
-      </categories>
-  </entry>
-  <entry>
     <title>二项恒等式</title>
     <url>/2021/12/12/%E4%BA%8C%E9%A1%B9%E6%81%92%E7%AD%89%E5%BC%8F/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>$\quad\\$</p>
@@ -1540,6 +1525,21 @@ $$\frac{m(m+2)}{(m!)^21(m+1)2^{2m}}b_0+4\cdot 1!\frac{(m+1)!}{m!}b_{2m+2}+b_{2m}
 ]]></content>
       <categories>
         <category>离散数学</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>信息导论</title>
+    <url>/2023/04/18/%E4%BF%A1%E6%81%AF%E5%AF%BC%E8%AE%BA/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><qg>Shannon Theory</qg></p>
+<p>接收一串由$a_1,a_2,\cdots,a_k$随机出现，依次排列而成的字符，其中$a_k$出现概率为$p_k$，记此概率分配为$A$，总概率和为$1$，对于足够长的字母个数为$N$的序列，$a_k$出现的次数$\sim p_kN$，对于一个特定序列而言，在所有重排中其出现的次数为</p>
+<p>$$\frac{N!}{\displaystyle\prod_k [(p_kN)!]}\overset{\displaystyle N!\sim \sqrt{2\pi N}\left(\frac{N}{e}\right)^N}{\sim} \frac{1}{\displaystyle\prod_k p_k^{p_k N}}\\<br>\qquad\\<br>&#x3D;2^{NS_A}$$</p>
+<p>其中$\displaystyle S_A&#x3D;-\sum_k p_k\log_2{p_k}$为在概率分配$A$下单字符的<def>Shannon Entropy 信息熵</def></p>
+<p>信息熵满足$S_A\ge 0$，当且仅当某个$p_k&#x3D;1$时等号成立，而由拉格朗日乘数法知所有<br>$p_k&#x3D;1&#x2F;k$时，信息熵取最大值</p>
+<p>对于$N$个字母组成的字符串，其可以被压缩为$NS_A$个$\text{bit}$，若所有字母出现频率相等，$S_A&#x3D;\log_2k$，将$k$进制转换为二进制编码即可做到；若出现频率不相等，则可以通过特殊编码方式，如<qg>Huffman</qg>编码，适当减少出现频率高的字母的编码长度，增加频率低的字母的编码长度来实现；若字母出现不是完全随机，则可以从中提取出有效信息将体积压缩到更小，如$abab\cdots abab&#x3D;Nab$</p>
+<p>由$a、b$组成的字符串中若存在短程有序序列，则其信息熵降低，可以将这些短程序列合并得到更小的压缩体积，这种情况可以与邻近自旋之间存在相互作用的一维自旋链相类比；对于理想气体近似，忽略短程相互作用，若单个字母的信息熵为$S$，则长度为$N$的字符串的熵即为$NS$，注意这只对$N&gt;&gt;1$的情形近似成立</p>
+]]></content>
+      <categories>
+        <category>PiTP</category>
       </categories>
   </entry>
   <entry>
@@ -1649,6 +1649,39 @@ $$\frac{m(m+2)}{(m!)^21(m+1)2^{2m}}b_0+4\cdot 1!\frac{(m+1)!}{m!}b_{2m+2}+b_{2m}
       </tags>
   </entry>
   <entry>
+    <title>折射反射、菲涅尔方程</title>
+    <url>/2021/11/18/%E5%85%89%E5%AD%A6%E6%8E%A8%E5%AF%BC%E4%BA%8C/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>$\quad\\$</p>
+<h3 id="反射与折射定律"><a href="#反射与折射定律" class="headerlink" title="反射与折射定律"></a><center><strong>反射与折射定律</strong></center></h3><p>$\quad\\$</p>
+<p>记$n_r&#x3D;\frac{n_t}{n_i}$，$\theta_i$，$\theta_r$和$\theta_t$分别为入射角，反射角和透射角</p>
+<blockquote>
+<p>$$单光子动量\\<br>\quad\\<br>\boldsymbol{p}&#x3D;\hbar \boldsymbol{k}&#x3D;\frac{\hbar\omega}{\boldsymbol{v}}&#x3D;\frac{n\hbar\omega}{\boldsymbol{c}}\propto n\\<br>\quad\\<br>水平方向动量守恒\\<br>\quad\\<br>\left\lbrace\begin{array}&amp;\sin\theta_i&amp;&#x3D;&amp;n_r\sin\theta_t\\<br>\sin\theta_i&amp;&#x3D;&amp;\sin\theta_r<br>\end{array}\right.<br>$$</p>
+</blockquote>
+<p>$\quad\\$</p>
+<h3 id="Fresnel方程"><a href="#Fresnel方程" class="headerlink" title="Fresnel方程"></a><center><strong>Fresnel方程</strong></center></h3><p>$\quad\\$</p>
+<blockquote>
+<p>$$n_r&#x3D;\sqrt{\varepsilon_r\mu_r}\\<br>\quad\\<br>反射折射定律\\<br>\quad\\<br>\theta_i&#x3D;\theta_r\\<br>\quad\\<br>\frac{\sin\theta_i}{\sin\theta_t}&#x3D;n_r\\<br>\quad\\<br>p光边界条件为平行界面E连续,垂直界面D连续\\<br>\quad\\<br>E_i \cos \theta_i &#x3D;E_t \cos \theta_t +E_r \cos \theta_r\\<br>\quad\\<br>D_i \sin \theta_i &#x3D;D_t \sin \theta_t -D_r \sin \theta_r\\<br>\quad\\<br>s光边界条件为平行界面H连续,垂直界面B连续\\<br>\quad\\<br>H_i \cos \theta_i &#x3D;H_t \cos \theta_t +H_r \cos \theta_r\\<br>\quad\\<br>B_i \sin \theta_i &#x3D;B_t \sin \theta_t -B_r \sin \theta_r\\<br>\quad\\<br>可得线性方程组\\<br>\quad\\<br>\left\lbrace\begin{array} &amp;\cos{\theta_t}\; t_p&amp;+\cos{\theta_i}\; r_p&amp; &amp; &amp;&#x3D;&amp;\cos{\theta_i}\\<br>\frac{n_r^2}{\mu_r}\sin\theta_t\; t_p&amp;-\sin\theta_i\; r_p&amp; &amp; &amp;&#x3D;&amp;\sin{\theta_i}\\<br>&amp; &amp;\frac{n_r}{\mu_r}\cos{\theta_t}\; t_s&amp;+\cos{\theta_i}\; r_s&amp;&#x3D;&amp;\cos{\theta_i}\\<br>&amp; &amp;n_r\sin{\theta_t}\; t_s&amp;-\sin{\theta_i}\; r_s&amp;&#x3D;&amp;\sin{\theta_i}\end{array}\right.\\<br>\quad\\<br>解得\\<br>\quad\\<br>\left\lbrace\begin{array}&amp;r_s&amp;&#x3D;&amp;-\frac{\frac{n_r}{\mu_r}\sin \theta_i \cos\theta_t-n_r\sin \theta_t \cos\theta_i}{\frac{n_r}{\mu_r}\sin \theta_i \cos\theta_t+n_r\sin \theta_t \cos\theta_i}\\<br>r_p&amp;&#x3D;&amp;-\frac{\sin \theta_i \cos\theta_t-\frac{n_r^2}{\mu_r}\sin \theta_t \cos\theta_i}{\sin \theta_i \cos\theta_t+\frac{n_r^2}{\mu_r}\sin \theta_t \cos\theta_i}\\<br>t_s&amp;&#x3D;&amp;+\frac{2\sin \theta_i \cos\theta_i}{\frac{n_r}{\mu_r}\sin \theta_i \cos\theta_t+n_r\sin \theta_t \cos\theta_i}\\<br>t_p&amp;&#x3D;&amp;+\frac{2\sin \theta_i \cos\theta_i}{\sin \theta_i \cos\theta_t+\frac{n_r^2}{\mu_r}\sin \theta_t \cos\theta_i}\\<br>\end{array}\right.\\<br>\quad\\<br>若\mu_r&#x3D;1\\<br>\quad\\<br>\left\lbrace\begin{array}&amp;r_s&amp;&#x3D;&amp;-\frac{\sin(\theta_i-\theta_t)}{\sin(\theta_i+\theta_t)}\\<br>r_p&amp;&#x3D;&amp;+\frac{\tan(\theta_i-\theta_t)}{\tan(\theta_i+\theta_t)}\\<br>t_s&amp;&#x3D;&amp;+\frac{2\sin \theta_t \cos\theta_i}{\sin(\theta_i+\theta_t)}\\<br>t_p&amp;&#x3D;&amp;+\frac{2\sin \theta_t \cos\theta_i}{\sin(\theta_i+\theta_t)\cos(\theta_i-\theta_t)}\\<br>\end{array}\right.\\<br>\quad\\<br>若\varepsilon_r&#x3D;1,即\mu_r&#x3D;n_r^2\\<br>\quad\\<br>\left\lbrace\begin{array}&amp;r_s&amp;&#x3D;&amp;+\frac{\tan(\theta_i-\theta_t)}{\tan(\theta_i+\theta_t)}\\<br>r_p&amp;&#x3D;&amp;-\frac{\sin(\theta_i-\theta_t)}{\sin(\theta_i+\theta_t)}\\<br>t_s&amp;&#x3D;&amp;+\frac{2\sin \theta_i \cos\theta_i}{\sin(\theta_i+\theta_t)\cos(\theta_i-\theta_t)}\\<br>t_p&amp;&#x3D;&amp;+\frac{2\sin \theta_i \cos\theta_i}{\sin(\theta_i+\theta_t)}\\<br>\end{array}\right.\\<br>\quad\\<br>$$</p>
+</blockquote>
+<p>$\quad\\$</p>
+<h3 id="全内反射与隐失波"><a href="#全内反射与隐失波" class="headerlink" title="全内反射与隐失波"></a><center><strong>全内反射与隐失波</strong></center></h3><p>$\quad\\$</p>
+<p>由折射定律$\frac{\sin\theta_i}{\sin\theta_t}&#x3D;n_r$有，当光线从光密介质射向光疏介质且入射角大于临界角，即$\sin\theta_i&gt;n_r$时，$\theta_t&#x3D;\frac{\pi}{2}+i\gamma$，$<br>k_t&#x3D;n_r k_i$，$\boldsymbol{k_t}&#x3D;k_{t}\sin\theta_t \hat{x}+k_{t}\cos\theta_t\hat{y}$，光矢垂直界面方向分量为纯虚数，非平面波，即出现所谓隐失波</p>
+<blockquote>
+<p>$$\begin{aligned}E_t&amp;&#x3D;E_{i0}\times[t_p \;or\;t_s]e^{i(\boldsymbol{k_t\cdot r}-\omega t)}\\<br>\quad\\<br>&amp;&#x3D;E_{t0}e^{i(k_t\sin\theta_t x+k_t\cos\theta_t y-\omega t)}\\<br>\quad\\<br>&amp;&#x3D;E_{t0}e^{-\beta y} e^{i(k_i\sin\theta_i x-\omega t)}\end{aligned}\\<br>\quad\\<br>其中\beta&#x3D;k_i\sqrt{\sin^2\theta_i-n_r^2}$$</p>
+</blockquote>
+<p>$\quad\\$</p>
+<h3 id="参考与引用来源"><a href="#参考与引用来源" class="headerlink" title="参考与引用来源"></a><strong><center>参考与引用来源</center></strong></h3><p>$\quad\\$</p>
+<blockquote>
+<p>赫克特光学第五版</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>光学</category>
+      </categories>
+      <tags>
+        <tag>动量守恒</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>偏振态、偏振光学元件</title>
     <url>/2021/11/23/%E5%85%89%E5%AD%A6%E6%8E%A8%E5%AF%BC%E4%B8%89/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>$\quad\\$</p>
@@ -1684,49 +1717,6 @@ $$\frac{m(m+2)}{(m!)^21(m+1)2^{2m}}b_0+4\cdot 1!\frac{(m+1)!}{m!}b_{2m+2}+b_{2m}
       <tags>
         <tag>解析几何</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>折射反射、菲涅尔方程</title>
-    <url>/2021/11/18/%E5%85%89%E5%AD%A6%E6%8E%A8%E5%AF%BC%E4%BA%8C/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>$\quad\\$</p>
-<h3 id="反射与折射定律"><a href="#反射与折射定律" class="headerlink" title="反射与折射定律"></a><center><strong>反射与折射定律</strong></center></h3><p>$\quad\\$</p>
-<p>记$n_r&#x3D;\frac{n_t}{n_i}$，$\theta_i$，$\theta_r$和$\theta_t$分别为入射角，反射角和透射角</p>
-<blockquote>
-<p>$$单光子动量\\<br>\quad\\<br>\boldsymbol{p}&#x3D;\hbar \boldsymbol{k}&#x3D;\frac{\hbar\omega}{\boldsymbol{v}}&#x3D;\frac{n\hbar\omega}{\boldsymbol{c}}\propto n\\<br>\quad\\<br>水平方向动量守恒\\<br>\quad\\<br>\left\lbrace\begin{array}&amp;\sin\theta_i&amp;&#x3D;&amp;n_r\sin\theta_t\\<br>\sin\theta_i&amp;&#x3D;&amp;\sin\theta_r<br>\end{array}\right.<br>$$</p>
-</blockquote>
-<p>$\quad\\$</p>
-<h3 id="Fresnel方程"><a href="#Fresnel方程" class="headerlink" title="Fresnel方程"></a><center><strong>Fresnel方程</strong></center></h3><p>$\quad\\$</p>
-<blockquote>
-<p>$$n_r&#x3D;\sqrt{\varepsilon_r\mu_r}\\<br>\quad\\<br>反射折射定律\\<br>\quad\\<br>\theta_i&#x3D;\theta_r\\<br>\quad\\<br>\frac{\sin\theta_i}{\sin\theta_t}&#x3D;n_r\\<br>\quad\\<br>p光边界条件为平行界面E连续,垂直界面D连续\\<br>\quad\\<br>E_i \cos \theta_i &#x3D;E_t \cos \theta_t +E_r \cos \theta_r\\<br>\quad\\<br>D_i \sin \theta_i &#x3D;D_t \sin \theta_t -D_r \sin \theta_r\\<br>\quad\\<br>s光边界条件为平行界面H连续,垂直界面B连续\\<br>\quad\\<br>H_i \cos \theta_i &#x3D;H_t \cos \theta_t +H_r \cos \theta_r\\<br>\quad\\<br>B_i \sin \theta_i &#x3D;B_t \sin \theta_t -B_r \sin \theta_r\\<br>\quad\\<br>可得线性方程组\\<br>\quad\\<br>\left\lbrace\begin{array} &amp;\cos{\theta_t}\; t_p&amp;+\cos{\theta_i}\; r_p&amp; &amp; &amp;&#x3D;&amp;\cos{\theta_i}\\<br>\frac{n_r^2}{\mu_r}\sin\theta_t\; t_p&amp;-\sin\theta_i\; r_p&amp; &amp; &amp;&#x3D;&amp;\sin{\theta_i}\\<br>&amp; &amp;\frac{n_r}{\mu_r}\cos{\theta_t}\; t_s&amp;+\cos{\theta_i}\; r_s&amp;&#x3D;&amp;\cos{\theta_i}\\<br>&amp; &amp;n_r\sin{\theta_t}\; t_s&amp;-\sin{\theta_i}\; r_s&amp;&#x3D;&amp;\sin{\theta_i}\end{array}\right.\\<br>\quad\\<br>解得\\<br>\quad\\<br>\left\lbrace\begin{array}&amp;r_s&amp;&#x3D;&amp;-\frac{\frac{n_r}{\mu_r}\sin \theta_i \cos\theta_t-n_r\sin \theta_t \cos\theta_i}{\frac{n_r}{\mu_r}\sin \theta_i \cos\theta_t+n_r\sin \theta_t \cos\theta_i}\\<br>r_p&amp;&#x3D;&amp;-\frac{\sin \theta_i \cos\theta_t-\frac{n_r^2}{\mu_r}\sin \theta_t \cos\theta_i}{\sin \theta_i \cos\theta_t+\frac{n_r^2}{\mu_r}\sin \theta_t \cos\theta_i}\\<br>t_s&amp;&#x3D;&amp;+\frac{2\sin \theta_i \cos\theta_i}{\frac{n_r}{\mu_r}\sin \theta_i \cos\theta_t+n_r\sin \theta_t \cos\theta_i}\\<br>t_p&amp;&#x3D;&amp;+\frac{2\sin \theta_i \cos\theta_i}{\sin \theta_i \cos\theta_t+\frac{n_r^2}{\mu_r}\sin \theta_t \cos\theta_i}\\<br>\end{array}\right.\\<br>\quad\\<br>若\mu_r&#x3D;1\\<br>\quad\\<br>\left\lbrace\begin{array}&amp;r_s&amp;&#x3D;&amp;-\frac{\sin(\theta_i-\theta_t)}{\sin(\theta_i+\theta_t)}\\<br>r_p&amp;&#x3D;&amp;+\frac{\tan(\theta_i-\theta_t)}{\tan(\theta_i+\theta_t)}\\<br>t_s&amp;&#x3D;&amp;+\frac{2\sin \theta_t \cos\theta_i}{\sin(\theta_i+\theta_t)}\\<br>t_p&amp;&#x3D;&amp;+\frac{2\sin \theta_t \cos\theta_i}{\sin(\theta_i+\theta_t)\cos(\theta_i-\theta_t)}\\<br>\end{array}\right.\\<br>\quad\\<br>若\varepsilon_r&#x3D;1,即\mu_r&#x3D;n_r^2\\<br>\quad\\<br>\left\lbrace\begin{array}&amp;r_s&amp;&#x3D;&amp;+\frac{\tan(\theta_i-\theta_t)}{\tan(\theta_i+\theta_t)}\\<br>r_p&amp;&#x3D;&amp;-\frac{\sin(\theta_i-\theta_t)}{\sin(\theta_i+\theta_t)}\\<br>t_s&amp;&#x3D;&amp;+\frac{2\sin \theta_i \cos\theta_i}{\sin(\theta_i+\theta_t)\cos(\theta_i-\theta_t)}\\<br>t_p&amp;&#x3D;&amp;+\frac{2\sin \theta_i \cos\theta_i}{\sin(\theta_i+\theta_t)}\\<br>\end{array}\right.\\<br>\quad\\<br>$$</p>
-</blockquote>
-<p>$\quad\\$</p>
-<h3 id="全内反射与隐失波"><a href="#全内反射与隐失波" class="headerlink" title="全内反射与隐失波"></a><center><strong>全内反射与隐失波</strong></center></h3><p>$\quad\\$</p>
-<p>由折射定律$\frac{\sin\theta_i}{\sin\theta_t}&#x3D;n_r$有，当光线从光密介质射向光疏介质且入射角大于临界角，即$\sin\theta_i&gt;n_r$时，$\theta_t&#x3D;\frac{\pi}{2}+i\gamma$，$<br>k_t&#x3D;n_r k_i$，$\boldsymbol{k_t}&#x3D;k_{t}\sin\theta_t \hat{x}+k_{t}\cos\theta_t\hat{y}$，光矢垂直界面方向分量为纯虚数，非平面波，即出现所谓隐失波</p>
-<blockquote>
-<p>$$\begin{aligned}E_t&amp;&#x3D;E_{i0}\times[t_p \;or\;t_s]e^{i(\boldsymbol{k_t\cdot r}-\omega t)}\\<br>\quad\\<br>&amp;&#x3D;E_{t0}e^{i(k_t\sin\theta_t x+k_t\cos\theta_t y-\omega t)}\\<br>\quad\\<br>&amp;&#x3D;E_{t0}e^{-\beta y} e^{i(k_i\sin\theta_i x-\omega t)}\end{aligned}\\<br>\quad\\<br>其中\beta&#x3D;k_i\sqrt{\sin^2\theta_i-n_r^2}$$</p>
-</blockquote>
-<p>$\quad\\$</p>
-<h3 id="参考与引用来源"><a href="#参考与引用来源" class="headerlink" title="参考与引用来源"></a><strong><center>参考与引用来源</center></strong></h3><p>$\quad\\$</p>
-<blockquote>
-<p>赫克特光学第五版</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>光学</category>
-      </categories>
-      <tags>
-        <tag>动量守恒</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>内积空间</title>
-    <url>/2021/12/30/%E5%86%85%E7%A7%AF%E7%A9%BA%E9%97%B4/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>$\quad\\$</p>
-<h3 id="内积的定义"><a href="#内积的定义" class="headerlink" title="内积的定义"></a><center><strong>内积的定义</strong></center></h3><p>$\quad\\$</p>
-]]></content>
-      <categories>
-        <category>线性代数</category>
-      </categories>
   </entry>
   <entry>
     <title>光线追踪</title>
@@ -1848,6 +1838,16 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
 ]]></content>
       <categories>
         <category>其他</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>内积空间</title>
+    <url>/2021/12/30/%E5%86%85%E7%A7%AF%E7%A9%BA%E9%97%B4/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>$\quad\\$</p>
+<h3 id="内积的定义"><a href="#内积的定义" class="headerlink" title="内积的定义"></a><center><strong>内积的定义</strong></center></h3><p>$\quad\\$</p>
+]]></content>
+      <categories>
+        <category>线性代数</category>
       </categories>
   </entry>
   <entry>
@@ -2067,6 +2067,104 @@ $$
       </categories>
   </entry>
   <entry>
+    <title>复变函数例题</title>
+    <url>/2022/02/23/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E4%BE%8B%E9%A2%98/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>$\quad\\$</p>
+<h3 id="不等式"><a href="#不等式" class="headerlink" title="不等式"></a><center><strong>不等式</strong></center></h3><p>$\quad\\$</p>
+<p><font face="微软雅黑" color=#bcaaa4><strong>引理1</strong></font>$\quad$设$V&#x3D;\{v_1,v_2,\cdots,v_n\}$是$m$维空间中的任意$n$个向量组成的集合，则有</p>
+<blockquote>
+<p>$$\left|\sum v_i\right|\le\max\left|\sum_{v_i\in S_u} v_i\right|\qquad S_u&#x3D;\{v:u\cdot v&gt;0\},u\in \mathbb{R}^{m}$$</p>
+</blockquote>
+<details>
+<summary><font color=#8076a3 size=4px><strong><answer>$\nabla$证$\quad\textbf{by Jazengm}$</answer><strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+$$\quad$$
+$$
+设最大值\left|\sum_{v_i\in E\subset V} v_i\right|_{\text{max}}=\left|\sum_{v_i\in S} v_i\right|=|v_M|\\\\
+\quad\\\\
+令u=v_{M}/|v_{M}|\\\\
+\quad\\\\
+\begin{aligned}
+\left|\sum_{v_i\in S} v_i\right|&=\left|\sum_{v_i\in S} v_i\cdot u\right|=\left|\sum_{v_i\in S} v_i\cdot u\right|\\\\
+&=\left|\sum_{v_i\in S\& v_i\cdot u>0} v_i\cdot u+\sum_{v_i\in S\& v_i\cdot u\le 0} v_i\cdot u\right|\\\\
+&\le \max\left\{\sum_{v_i\in S\& v_i\cdot u>0} v_i\cdot u,-\sum_{v_i\in S\& v_i\cdot u\le 0} v_i\cdot u\right\}\\\\
+&\le \max\left\{\sum_{v_i\cdot u>0} v_i\cdot u,-\sum_{v_i\cdot u\le 0} v_i\cdot u\right\}\\\\
+&=\max\left\{\left|\sum_{v_i\cdot u>0} v_i\right|,\left|\sum_{v_i\cdot u\le 0} v_i\right|\right\}\end{aligned}
+$$
+</blockquote>
+</details>
+
+<p>$\quad$</p>
+<p><font face="微软雅黑" color=#ffd111><strong>例1$\quad$<a href="https://zh.art1lib.org/book/21861581/a06b28">$\textbf{Link}$</a><strong></font>$\quad$$z_1,z_2,\cdots,z_n$为任意$n$个复数，证明必有$\{1,2,\cdots,n\}$的子集$S$<br>使得下式成立，且$\displaystyle\frac{1}{\pi}$为最佳上界$\qquad\textbf{by ZX}$</p>
+<blockquote style="border-color:#ffd111">
+$$\displaystyle\left|\sum_{k\in S}z_k\right|\ge \frac{1}{\pi}\sum_{i=1}^{n}|z_k|$$</blockquote>
+
+<details>
+<summary><font color=#ffd111><strong><answer>$\nabla$解</answer><strong></font></summary>
+
+<blockquote style="border-color:#ffd111">
+
+<p>$$<br>令S(\theta)&#x3D;\{z_k:\text{Re}(z_ke^{-i\theta})\ge 0\}，则有\\<br>\quad\\<br>\begin{aligned}f(\theta)&amp;\overset{\text{def}}{&#x3D;}\left|\sum_{z_k\in S(\theta)}z_k\right|<br>&#x3D;\left|\sum_{z_k\in S(\theta)}z_ke^{-i\theta}\right|\\<br>\quad\\<br>&amp;\ge \left|\sum_{z_k\in S(\theta)}\text{Re}(z_ke^{-i\theta})\right|&#x3D;\sum_{z_k\in S(\theta)}|z_k|\cos(\arg{z_k}-\theta)<br>\end{aligned}\\<br>\quad\\<br>\begin{aligned}故\int_{0}^{2\pi}f(\theta)\dd\theta&amp;\ge\int_{0}^{2\pi}\sum_{z_k\in S(\theta)}|z_k|\cos(\arg{z_k}-\theta)\dd\theta\\<br>\quad\\<br>&amp;&#x3D;\sum_{k&#x3D;1}^{n}\int_{\arg{z_k}+\frac{\pi}{2}}^{\arg{z_k}-\frac{\pi}{2}}|z_k|\cos(\arg{z_k}-\theta)\dd\theta\\<br>\quad\\<br>&amp;&#x3D;2\sum_{k&#x3D;1}^{n}|z_k|\\<br>\quad\\<br>\end{aligned}\\<br>\quad\\<br>这说明f(\theta)平均值大于等于\frac{1}{\pi}\sum_{k&#x3D;1}^{n}|z_k|\\<br>\quad\\<br>故必存在\theta^{*}使得\left|\sum_{z_k\in S(\theta^{*})}z_k\right|\ge \frac{1}{\pi}\sum_{i&#x3D;1}^{n}|z_k|\\<br>\quad\\<br>若取z_k&#x3D;\frac{1}{n}e^{i2k\pi&#x2F;n}，S&#x3D;\{1,2,\cdots,\left\lfloor \frac{n}{2}\right\rfloor\}，则\sum_{i&#x3D;1}^{n}|z_k|&#x3D;1\\<br>\quad\\<br>由引理1有\left|\sum z_k\right|_{\text{max}}&#x3D;\left|\sum_{k\in S} z_k\right|&#x3D;\frac{\sin{\left(\left\lfloor \displaystyle\frac{n}{2}\right\rfloor\pi &#x2F;n\right)}}{n\sin{(\pi &#x2F;n)}}\\<br>\quad\\<br>\lim_{n\to \infty}\left|\sum_{k\in S} z_k\right|&#x3D;\frac{1}{\pi}，这说明\frac{1}{\pi}为最佳上界\qquad\square<br>$$</p>
+</blockquote>
+</details>
+
+<p>$\quad$<br><font face="微软雅黑" color=#f8bbd0><strong>注</strong></font>$\quad$角谷静夫(Shizuo Kakutani かくたに しずお)对此有一个几何解释：不妨设$\displaystyle\sum_{k&#x3D;1}^{n}|z_k|&#x3D;1$，将集合中复数的所有可能和在复平面上标出，则其凸包的周长为$2$(先证凸包的边由单个复数构成，再证每个复数恰好出现两次)，其上最远点离原点的距离即为最大模长，易知此模长在凸包为以原点为心的圆时最小，此时$\left|\displaystyle\sum z_k\right|_{\text{max}}&#x3D;\displaystyle\frac{1}{\pi}$，故结论成立</p>
+<p>$\quad$</p>
+<p><font face="微软雅黑" color=#795548><strong>定理1$\quad$<a href="https://www.ams.org/journals/bull/1966-72-04/S0002-9904-1966-11551-3/S0002-9904-1966-11551-3.pdf">$\textbf{Link}$</a></strong></font>$\quad$设$v_1,v_2,\cdots,v_n$为$\mathbb{R}^m$中任意$n$个复数，证明必有<br>$\{1,2,\cdots,n\}$的子集$S$使得下式成立，且式中系数为最佳上界</p>
+<blockquote>
+<p>$$\displaystyle\left|\sum_{i\in S}v_i\right|\ge \displaystyle\frac{\Gamma\left(\displaystyle\frac{m}{2}\right)}{2\sqrt{\pi}\;\Gamma\left(\displaystyle\frac{m+1}{2}\right)}\sum_{i&#x3D;1}^{n}|v_i|$$</blockquote></p>
+</blockquote>
+<details>
+<summary><font color=#8076a3 size=4px><strong><answer>$\nabla$证</answer><strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+$$\quad$$
+$$
+令S(u)=\{v_i:v_i\cdot u\ge 0\}\\\\
+\quad\\\\
+\begin{aligned}f(u)&\overset{\text{def}}{=}\left|\sum_{v_i\in S(u)}v_i\right|
+\ge \left|\sum_{v_i\in S(u)}v_i\cdot \hat{u}\right|\\\\
+&=\sum_{v_i\in S(u)}|v_i|\cos\langle v_i,u\rangle
+\end{aligned}\\\\
+\quad\\\\
+\begin{aligned}故\int_{|u|=1}f(u)\dd\sigma&\ge\int_{|u|=1}\sum_{v_i\in S(u)}|v_i|\cos\langle v_i,u\rangle\dd\sigma\\\\
+&=\sum_{i=1}^{n}\int_{v_i\cdot u>0\&|u|=1}|v_i|\cos\langle v_i,u\rangle\dd\sigma\\\\
+\end{aligned}\\\\
+又\frac{\displaystyle\int_{v_i\cdot u>0\&|u|=1}\cos\langle v_i,u\rangle\dd\sigma}{\displaystyle\int_{|u|=1}\dd\sigma}=\frac{\Gamma\left(\displaystyle\frac{m}{2}\right)}{2\sqrt{\pi}\;\Gamma\left(\displaystyle\frac{m+1}{2}\right)}\\\\
+\quad\\\\
+这说明f(u)平均值大于等于\frac{\Gamma\left(\displaystyle\frac{m}{2}\right)}{2\sqrt{\pi}\;\Gamma\left(\displaystyle\frac{m+1}{2}\right)}\sum_{i=1}^{n}|v_i|\\\\
+\quad\\\\
+故必存在u^{*}使得\left|\sum_{v_i\in S(u^*)}v_i\right|\ge \frac{\Gamma\left(\displaystyle\frac{m}{2}\right)}{2\sqrt{\pi}\;\Gamma\left(\displaystyle\frac{m+1}{2}\right)}\sum_{i=1}^{n}|v_i|\\\\
+\quad\\\\
+将m维球面上按表面积均匀密布长度为\frac{1}{n}的n个向量，令n\to \infty\\\\
+\quad\\\\
+由引理1计算可得最大长度即为不等式中系数，因此其为最佳上界\qquad\square
+$$
+</blockquote>
+</details>
+
+<p>$\quad\\$</p>
+<h3 id="级数"><a href="#级数" class="headerlink" title="级数"></a><center><strong>级数</strong></center></h3><p>$\quad\\$</p>
+<p><font face="微软雅黑" color=#ffd111><strong>例1</strong></font>$\quad$求下列级数之和与其收敛域$\qquad\textbf{by life is physics}$</p>
+<blockquote style="border-color:#ffd111">
+$$\sum\limits_{k_n=0}^{\infty}\cdots\sum\limits_{k_2=0}^{\infty}\sum\limits_{k_1=0}^{\infty}\frac{(k_1+k_2+\cdots+k_n)!}{k_1!k_2!\cdots k_n!}(\frac{z}{n})^{k_1+k_2+\cdots+k_n}$$</blockquote>
+
+<details>
+<summary><font color=#ffd111><strong><answer>$\nabla$解</answer><strong></font></summary>
+
+<blockquote style="border-color:#ffd111">
+
+<p>$$<br>容易看出这是多项式定理，令k_1+k_2+\cdots+k_n&#x3D;N，级数变为\\<br>\qquad\\<br>\sum\limits_{N&#x3D;0}^{\infty}\sum\limits_{\overset{k_1+k_2+\cdots+k_n&#x3D;N}{k_1,k_2,\cdots,k_n\in \mathbb{N}}}\frac{(k_1+k_2+\cdots+k_n)!}{k_1!k_2!\cdots k_n!}(\frac{z}{n})^{k_1+k_2+\cdots+k_n}\\<br>\qquad\\<br>&#x3D;1+z+z^2+\cdots&#x3D;\frac{1}{1-z}\qquad|z|&lt;1\\<br>\qquad\\<br>如果只需要级数之值，这种方法已经足够\\<br>但是由于改变了求和顺序，得出来的收敛域并不正确\\<br>我们仍然要按顺序一层一层求和\\<br>\qquad\\<br>先证明如下引理\\<br>\sum\limits_{k&#x3D;0}^{\infty}\frac{(K+k)!}{K!k!}z^k&#x3D;(1-z)^{-K-1}\qquad |z|&lt;1\\<br>\qquad\\<br>记等式左边为S_K，则有\\<br>(z-1)S_K&#x3D;-\sum\limits_{k&#x3D;-1}^{\infty}\frac{(K-1+k+1)!}{(K-1)!(k+1)!}z^{k+1}&#x3D;-S_{K-1}\\<br>\quad\\<br>(z-1)^KS_K&#x3D;(-1)^KS_0&#x3D;(-1)^K(1-z)^{-1}\qquad |z|&lt;1\\<br>\quad\\<br>即S_K&#x3D;(1-z)^{-K-1}\qquad |z|&lt;1\\<br>\quad\\<br>现在来看原级数\\<br>\sum\limits_{k_n&#x3D;0}^{\infty}\cdots\sum\limits_{k_2&#x3D;0}^{\infty}\sum\limits_{k_1&#x3D;0}^{\infty}\frac{(k_1+k_2+\cdots+k_n)!}{k_1!k_2!\cdots k_n!}(\frac{z}{n})^{k_1+k_2+\cdots+k_n}\\<br>\quad\\<br>&#x3D;\sum\limits_{k_n&#x3D;0}^{\infty}\cdots\sum\limits_{k_3&#x3D;0}^{\infty}\sum\limits_{k_2&#x3D;0}^{\infty}\frac{(k_2+\cdots+k_n)!}{k_2!\cdots k_n!}(\frac{z}{n})^{k_2+\cdots+k_n}\sum\limits_{k_1&#x3D;0}^{\infty}\frac{(k_2+\cdots+k_n+k_1)!}{(k_2+\cdots+k_n)!k_1!}(\frac{z}{n})^{k_1}\\<br>\quad\\<br>&#x3D;\frac{n}{n-z}\sum\limits_{k_n&#x3D;0}^{\infty}\cdots\sum\limits_{k_3&#x3D;0}^{\infty}\sum\limits_{k_2&#x3D;0}^{\infty}\frac{(k_2+\cdots+k_n)!}{k_2!\cdots k_n!}(\frac{z}{n-z})^{k_2+\cdots+k_n}\qquad |z|&lt;n\\<br>\quad\\<br>&#x3D;\frac{n}{n-2z}\sum\limits_{k_n&#x3D;0}^{\infty}\cdots\sum\limits_{k_4&#x3D;0}^{\infty}\sum\limits_{k_3&#x3D;0}^{\infty}\frac{(k_3+\cdots+k_n)!}{k_3!\cdots k_n!}(\frac{z}{n-2z})^{k_3+\cdots+k_n}\qquad |z|&lt;n \&amp; |z|&lt;|n-z|\\<br>\quad\\<br>&#x3D;\cdots\\<br>\quad\\<br>&#x3D;\frac{1}{1-z}\qquad z\in\{w|\quad|w|&lt;|n-kw|,k&#x3D;0,1,2,\cdots,n-1\}\\<br>\quad\\<br>将收敛域化为我们熟悉的圆盘方程\\<br>\left\lbrace\begin{array}{l}|z|&lt;n \quad k&#x3D;0\\\text{Re}(z)&lt;\displaystyle\frac{n}{2}\quad k&#x3D;1\\|z-\displaystyle\frac{nk}{k^2-1}|&gt;\left(\frac{n}{k^2-1}\right)^2\quad k&#x3D;2,3,\cdots,n-1\end{array}\right.\\<br>\quad\\<br>n&#x3D;10时的收敛域形状如下<br>$$</p>
+<img src='https://gitee.com/yjx-007/gallery/raw/master/%E5%A4%9A%E9%A1%B9%E5%BC%8F.png' width='80%' height='80%'>
+</blockquote>
+</details>
+]]></content>
+      <categories>
+        <category>复变函数</category>
+      </categories>
+  </entry>
+  <entry>
     <title>容斥关系</title>
     <url>/2021/12/14/%E5%AE%B9%E6%96%A5%E5%85%B3%E7%B3%BB/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>$\quad\\$</p>
@@ -2187,112 +2285,6 @@ $$
       </categories>
   </entry>
   <entry>
-    <title>复变函数例题</title>
-    <url>/2022/02/23/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E4%BE%8B%E9%A2%98/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>$\quad\\$</p>
-<h3 id="不等式"><a href="#不等式" class="headerlink" title="不等式"></a><center><strong>不等式</strong></center></h3><p>$\quad\\$</p>
-<p><font face="微软雅黑" color=#bcaaa4><strong>引理1</strong></font>$\quad$设$V&#x3D;\{v_1,v_2,\cdots,v_n\}$是$m$维空间中的任意$n$个向量组成的集合，则有</p>
-<blockquote>
-<p>$$\left|\sum v_i\right|\le\max\left|\sum_{v_i\in S_u} v_i\right|\qquad S_u&#x3D;\{v:u\cdot v&gt;0\},u\in \mathbb{R}^{m}$$</p>
-</blockquote>
-<details>
-<summary><font color=#8076a3 size=4px><strong><answer>$\nabla$证$\quad\textbf{by Jazengm}$</answer><strong></font></summary>
-
-<blockquote style="border-color:#8076a3;color:#8076a3">
-$$\quad$$
-$$
-设最大值\left|\sum_{v_i\in E\subset V} v_i\right|_{\text{max}}=\left|\sum_{v_i\in S} v_i\right|=|v_M|\\\\
-\quad\\\\
-令u=v_{M}/|v_{M}|\\\\
-\quad\\\\
-\begin{aligned}
-\left|\sum_{v_i\in S} v_i\right|&=\left|\sum_{v_i\in S} v_i\cdot u\right|=\left|\sum_{v_i\in S} v_i\cdot u\right|\\\\
-&=\left|\sum_{v_i\in S\& v_i\cdot u>0} v_i\cdot u+\sum_{v_i\in S\& v_i\cdot u\le 0} v_i\cdot u\right|\\\\
-&\le \max\left\{\sum_{v_i\in S\& v_i\cdot u>0} v_i\cdot u,-\sum_{v_i\in S\& v_i\cdot u\le 0} v_i\cdot u\right\}\\\\
-&\le \max\left\{\sum_{v_i\cdot u>0} v_i\cdot u,-\sum_{v_i\cdot u\le 0} v_i\cdot u\right\}\\\\
-&=\max\left\{\left|\sum_{v_i\cdot u>0} v_i\right|,\left|\sum_{v_i\cdot u\le 0} v_i\right|\right\}\end{aligned}
-$$
-</blockquote>
-</details>
-
-<p>$\quad$</p>
-<p><font face="微软雅黑" color=#ffd111><strong>例1$\quad$<a href="https://zh.art1lib.org/book/21861581/a06b28">$\textbf{Link}$</a><strong></font>$\quad$$z_1,z_2,\cdots,z_n$为任意$n$个复数，证明必有$\{1,2,\cdots,n\}$的子集$S$<br>使得下式成立，且$\displaystyle\frac{1}{\pi}$为最佳上界$\qquad\textbf{by ZX}$</p>
-<blockquote style="border-color:#ffd111">
-$$\displaystyle\left|\sum_{k\in S}z_k\right|\ge \frac{1}{\pi}\sum_{i=1}^{n}|z_k|$$</blockquote>
-
-<details>
-<summary><font color=#ffd111><strong><answer>$\nabla$解</answer><strong></font></summary>
-
-<blockquote style="border-color:#ffd111">
-
-<p>$$<br>令S(\theta)&#x3D;\{z_k:\text{Re}(z_ke^{-i\theta})\ge 0\}，则有\\<br>\quad\\<br>\begin{aligned}f(\theta)&amp;\overset{\text{def}}{&#x3D;}\left|\sum_{z_k\in S(\theta)}z_k\right|<br>&#x3D;\left|\sum_{z_k\in S(\theta)}z_ke^{-i\theta}\right|\\<br>\quad\\<br>&amp;\ge \left|\sum_{z_k\in S(\theta)}\text{Re}(z_ke^{-i\theta})\right|&#x3D;\sum_{z_k\in S(\theta)}|z_k|\cos(\arg{z_k}-\theta)<br>\end{aligned}\\<br>\quad\\<br>\begin{aligned}故\int_{0}^{2\pi}f(\theta)\dd\theta&amp;\ge\int_{0}^{2\pi}\sum_{z_k\in S(\theta)}|z_k|\cos(\arg{z_k}-\theta)\dd\theta\\<br>\quad\\<br>&amp;&#x3D;\sum_{k&#x3D;1}^{n}\int_{\arg{z_k}+\frac{\pi}{2}}^{\arg{z_k}-\frac{\pi}{2}}|z_k|\cos(\arg{z_k}-\theta)\dd\theta\\<br>\quad\\<br>&amp;&#x3D;2\sum_{k&#x3D;1}^{n}|z_k|\\<br>\quad\\<br>\end{aligned}\\<br>\quad\\<br>这说明f(\theta)平均值大于等于\frac{1}{\pi}\sum_{k&#x3D;1}^{n}|z_k|\\<br>\quad\\<br>故必存在\theta^{*}使得\left|\sum_{z_k\in S(\theta^{*})}z_k\right|\ge \frac{1}{\pi}\sum_{i&#x3D;1}^{n}|z_k|\\<br>\quad\\<br>若取z_k&#x3D;\frac{1}{n}e^{i2k\pi&#x2F;n}，S&#x3D;\{1,2,\cdots,\left\lfloor \frac{n}{2}\right\rfloor\}，则\sum_{i&#x3D;1}^{n}|z_k|&#x3D;1\\<br>\quad\\<br>由引理1有\left|\sum z_k\right|_{\text{max}}&#x3D;\left|\sum_{k\in S} z_k\right|&#x3D;\frac{\sin{\left(\left\lfloor \displaystyle\frac{n}{2}\right\rfloor\pi &#x2F;n\right)}}{n\sin{(\pi &#x2F;n)}}\\<br>\quad\\<br>\lim_{n\to \infty}\left|\sum_{k\in S} z_k\right|&#x3D;\frac{1}{\pi}，这说明\frac{1}{\pi}为最佳上界\qquad\square<br>$$</p>
-</blockquote>
-</details>
-
-<p>$\quad$<br><font face="微软雅黑" color=#f8bbd0><strong>注</strong></font>$\quad$角谷静夫(Shizuo Kakutani かくたに しずお)对此有一个几何解释：不妨设$\displaystyle\sum_{k&#x3D;1}^{n}|z_k|&#x3D;1$，将集合中复数的所有可能和在复平面上标出，则其凸包的周长为$2$(先证凸包的边由单个复数构成，再证每个复数恰好出现两次)，其上最远点离原点的距离即为最大模长，易知此模长在凸包为以原点为心的圆时最小，此时$\left|\displaystyle\sum z_k\right|_{\text{max}}&#x3D;\displaystyle\frac{1}{\pi}$，故结论成立</p>
-<p>$\quad$</p>
-<p><font face="微软雅黑" color=#795548><strong>定理1$\quad$<a href="https://www.ams.org/journals/bull/1966-72-04/S0002-9904-1966-11551-3/S0002-9904-1966-11551-3.pdf">$\textbf{Link}$</a></strong></font>$\quad$设$v_1,v_2,\cdots,v_n$为$\mathbb{R}^m$中任意$n$个复数，证明必有<br>$\{1,2,\cdots,n\}$的子集$S$使得下式成立，且式中系数为最佳上界</p>
-<blockquote>
-<p>$$\displaystyle\left|\sum_{i\in S}v_i\right|\ge \displaystyle\frac{\Gamma\left(\displaystyle\frac{m}{2}\right)}{2\sqrt{\pi}\;\Gamma\left(\displaystyle\frac{m+1}{2}\right)}\sum_{i&#x3D;1}^{n}|v_i|$$</blockquote></p>
-</blockquote>
-<details>
-<summary><font color=#8076a3 size=4px><strong><answer>$\nabla$证</answer><strong></font></summary>
-
-<blockquote style="border-color:#8076a3;color:#8076a3">
-$$\quad$$
-$$
-令S(u)=\{v_i:v_i\cdot u\ge 0\}\\\\
-\quad\\\\
-\begin{aligned}f(u)&\overset{\text{def}}{=}\left|\sum_{v_i\in S(u)}v_i\right|
-\ge \left|\sum_{v_i\in S(u)}v_i\cdot \hat{u}\right|\\\\
-&=\sum_{v_i\in S(u)}|v_i|\cos\langle v_i,u\rangle
-\end{aligned}\\\\
-\quad\\\\
-\begin{aligned}故\int_{|u|=1}f(u)\dd\sigma&\ge\int_{|u|=1}\sum_{v_i\in S(u)}|v_i|\cos\langle v_i,u\rangle\dd\sigma\\\\
-&=\sum_{i=1}^{n}\int_{v_i\cdot u>0\&|u|=1}|v_i|\cos\langle v_i,u\rangle\dd\sigma\\\\
-\end{aligned}\\\\
-又\frac{\displaystyle\int_{v_i\cdot u>0\&|u|=1}\cos\langle v_i,u\rangle\dd\sigma}{\displaystyle\int_{|u|=1}\dd\sigma}=\frac{\Gamma\left(\displaystyle\frac{m}{2}\right)}{2\sqrt{\pi}\;\Gamma\left(\displaystyle\frac{m+1}{2}\right)}\\\\
-\quad\\\\
-这说明f(u)平均值大于等于\frac{\Gamma\left(\displaystyle\frac{m}{2}\right)}{2\sqrt{\pi}\;\Gamma\left(\displaystyle\frac{m+1}{2}\right)}\sum_{i=1}^{n}|v_i|\\\\
-\quad\\\\
-故必存在u^{*}使得\left|\sum_{v_i\in S(u^*)}v_i\right|\ge \frac{\Gamma\left(\displaystyle\frac{m}{2}\right)}{2\sqrt{\pi}\;\Gamma\left(\displaystyle\frac{m+1}{2}\right)}\sum_{i=1}^{n}|v_i|\\\\
-\quad\\\\
-将m维球面上按表面积均匀密布长度为\frac{1}{n}的n个向量，令n\to \infty\\\\
-\quad\\\\
-由引理1计算可得最大长度即为不等式中系数，因此其为最佳上界\qquad\square
-$$
-</blockquote>
-</details>
-
-<p>$\quad\\$</p>
-<h3 id="级数"><a href="#级数" class="headerlink" title="级数"></a><center><strong>级数</strong></center></h3><p>$\quad\\$</p>
-<p><font face="微软雅黑" color=#ffd111><strong>例1</strong></font>$\quad$求下列级数之和与其收敛域$\qquad\textbf{by life is physics}$</p>
-<blockquote style="border-color:#ffd111">
-$$\sum\limits_{k_n=0}^{\infty}\cdots\sum\limits_{k_2=0}^{\infty}\sum\limits_{k_1=0}^{\infty}\frac{(k_1+k_2+\cdots+k_n)!}{k_1!k_2!\cdots k_n!}(\frac{z}{n})^{k_1+k_2+\cdots+k_n}$$</blockquote>
-
-<details>
-<summary><font color=#ffd111><strong><answer>$\nabla$解</answer><strong></font></summary>
-
-<blockquote style="border-color:#ffd111">
-
-<p>$$<br>容易看出这是多项式定理，令k_1+k_2+\cdots+k_n&#x3D;N，级数变为\\<br>\qquad\\<br>\sum\limits_{N&#x3D;0}^{\infty}\sum\limits_{\overset{k_1+k_2+\cdots+k_n&#x3D;N}{k_1,k_2,\cdots,k_n\in \mathbb{N}}}\frac{(k_1+k_2+\cdots+k_n)!}{k_1!k_2!\cdots k_n!}(\frac{z}{n})^{k_1+k_2+\cdots+k_n}\\<br>\qquad\\<br>&#x3D;1+z+z^2+\cdots&#x3D;\frac{1}{1-z}\qquad|z|&lt;1\\<br>\qquad\\<br>如果只需要级数之值，这种方法已经足够\\<br>但是由于改变了求和顺序，得出来的收敛域并不正确\\<br>我们仍然要按顺序一层一层求和\\<br>\qquad\\<br>先证明如下引理\\<br>\sum\limits_{k&#x3D;0}^{\infty}\frac{(K+k)!}{K!k!}z^k&#x3D;(1-z)^{-K-1}\qquad |z|&lt;1\\<br>\qquad\\<br>记等式左边为S_K，则有\\<br>(z-1)S_K&#x3D;-\sum\limits_{k&#x3D;-1}^{\infty}\frac{(K-1+k+1)!}{(K-1)!(k+1)!}z^{k+1}&#x3D;-S_{K-1}\\<br>\quad\\<br>(z-1)^KS_K&#x3D;(-1)^KS_0&#x3D;(-1)^K(1-z)^{-1}\qquad |z|&lt;1\\<br>\quad\\<br>即S_K&#x3D;(1-z)^{-K-1}\qquad |z|&lt;1\\<br>\quad\\<br>现在来看原级数\\<br>\sum\limits_{k_n&#x3D;0}^{\infty}\cdots\sum\limits_{k_2&#x3D;0}^{\infty}\sum\limits_{k_1&#x3D;0}^{\infty}\frac{(k_1+k_2+\cdots+k_n)!}{k_1!k_2!\cdots k_n!}(\frac{z}{n})^{k_1+k_2+\cdots+k_n}\\<br>\quad\\<br>&#x3D;\sum\limits_{k_n&#x3D;0}^{\infty}\cdots\sum\limits_{k_3&#x3D;0}^{\infty}\sum\limits_{k_2&#x3D;0}^{\infty}\frac{(k_2+\cdots+k_n)!}{k_2!\cdots k_n!}(\frac{z}{n})^{k_2+\cdots+k_n}\sum\limits_{k_1&#x3D;0}^{\infty}\frac{(k_2+\cdots+k_n+k_1)!}{(k_2+\cdots+k_n)!k_1!}(\frac{z}{n})^{k_1}\\<br>\quad\\<br>&#x3D;\frac{n}{n-z}\sum\limits_{k_n&#x3D;0}^{\infty}\cdots\sum\limits_{k_3&#x3D;0}^{\infty}\sum\limits_{k_2&#x3D;0}^{\infty}\frac{(k_2+\cdots+k_n)!}{k_2!\cdots k_n!}(\frac{z}{n-z})^{k_2+\cdots+k_n}\qquad |z|&lt;n\\<br>\quad\\<br>&#x3D;\frac{n}{n-2z}\sum\limits_{k_n&#x3D;0}^{\infty}\cdots\sum\limits_{k_4&#x3D;0}^{\infty}\sum\limits_{k_3&#x3D;0}^{\infty}\frac{(k_3+\cdots+k_n)!}{k_3!\cdots k_n!}(\frac{z}{n-2z})^{k_3+\cdots+k_n}\qquad |z|&lt;n \&amp; |z|&lt;|n-z|\\<br>\quad\\<br>&#x3D;\cdots\\<br>\quad\\<br>&#x3D;\frac{1}{1-z}\qquad z\in\{w|\quad|w|&lt;|n-kw|,k&#x3D;0,1,2,\cdots,n-1\}\\<br>\quad\\<br>将收敛域化为我们熟悉的圆盘方程\\<br>\left\lbrace\begin{array}{l}|z|&lt;n \quad k&#x3D;0\\\text{Re}(z)&lt;\displaystyle\frac{n}{2}\quad k&#x3D;1\\|z-\displaystyle\frac{nk}{k^2-1}|&gt;\left(\frac{n}{k^2-1}\right)^2\quad k&#x3D;2,3,\cdots,n-1\end{array}\right.\\<br>\quad\\<br>n&#x3D;10时的收敛域形状如下<br>$$</p>
-<img src='https://gitee.com/yjx-007/gallery/raw/master/%E5%A4%9A%E9%A1%B9%E5%BC%8F.png' width='80%' height='80%'>
-</blockquote>
-</details>
-]]></content>
-      <categories>
-        <category>复变函数</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>广义相对论导论</title>
-    <url>/2023/04/02/%E5%B9%BF%E4%B9%89%E7%9B%B8%E5%AF%B9%E8%AE%BA%E5%AF%BC%E8%AE%BA/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
-      <categories>
-        <category>相对论</category>
-      </categories>
-  </entry>
-  <entry>
     <title>干涉</title>
     <url>/2021/11/30/%E5%B9%B2%E6%B6%89/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>$\quad\\$</p>
@@ -2362,6 +2354,14 @@ $$\sum\limits_{k_n=0}^{\infty}\cdots\sum\limits_{k_2=0}^{\infty}\sum\limits_{k_1
 ]]></content>
       <categories>
         <category>光学</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>广义相对论导论</title>
+    <url>/2023/04/02/%E5%B9%BF%E4%B9%89%E7%9B%B8%E5%AF%B9%E8%AE%BA%E5%AF%BC%E8%AE%BA/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+      <categories>
+        <category>相对论</category>
       </categories>
   </entry>
   <entry>
@@ -2605,6 +2605,17 @@ $$
       </categories>
   </entry>
   <entry>
+    <title>斯特灵数</title>
+    <url>/2021/12/14/%E6%96%AF%E7%89%B9%E7%81%B5%E6%95%B0/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>$\quad\\$</p>
+<h3 id="Stirling-Numbers-of-the-Second-Kind"><a href="#Stirling-Numbers-of-the-Second-Kind" class="headerlink" title="Stirling Numbers of the Second Kind"></a><center><strong>Stirling Numbers of the Second Kind</strong></center></h3><p>$\quad\\$</p>
+<p>记$\left\lbrace\begin{array}&amp;n\\k\end{array}\right\rbrace$为$I_n$的$k$划分个数，称为<strong>第二类斯特灵数</strong>，容易得出以下等式</p>
+]]></content>
+      <categories>
+        <category>离散数学</category>
+      </categories>
+  </entry>
+  <entry>
     <title>数学物理定解</title>
     <url>/2022/04/19/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E5%AE%9A%E8%A7%A3/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>$\quad\\$</p>
@@ -2616,17 +2627,6 @@ $$
 ]]></content>
       <categories>
         <category>数理方程</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>斯特灵数</title>
-    <url>/2021/12/14/%E6%96%AF%E7%89%B9%E7%81%B5%E6%95%B0/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>$\quad\\$</p>
-<h3 id="Stirling-Numbers-of-the-Second-Kind"><a href="#Stirling-Numbers-of-the-Second-Kind" class="headerlink" title="Stirling Numbers of the Second Kind"></a><center><strong>Stirling Numbers of the Second Kind</strong></center></h3><p>$\quad\\$</p>
-<p>记$\left\lbrace\begin{array}&amp;n\\k\end{array}\right\rbrace$为$I_n$的$k$划分个数，称为<strong>第二类斯特灵数</strong>，容易得出以下等式</p>
-]]></content>
-      <categories>
-        <category>离散数学</category>
       </categories>
   </entry>
   <entry>
@@ -2725,111 +2725,6 @@ $$(\nabla_{X,Y}^2B-\nabla_{Y,X}^2B)(\omega^1,\cdots,\omega^k,V_1,\cdots,V_l)\\\\
 ]]></content>
       <categories>
         <category>微分几何</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>条件概率和独立性</title>
-    <url>/2021/12/10/%E6%9D%A1%E4%BB%B6%E6%A6%82%E7%8E%87%E5%92%8C%E7%8B%AC%E7%AB%8B%E6%80%A7/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>$\quad\\$</p>
-<h3 id="条件概率的定义"><a href="#条件概率的定义" class="headerlink" title="条件概率的定义"></a><center><strong>条件概率的定义</strong></center></h3><p>$\quad\\$</p>
-<p>记$P(E|F)$为事件$F$发生的情况下事件$E$发生的<strong>条件概率</strong>，且$P(F)&gt;0$则有</p>
-<blockquote>
-<p>$$P(E|F)&#x3D;\frac{P(EF)}{P(F)}$$</p>
-</blockquote>
-<p>由条件概率的定义易得如下的乘法规则</p>
-<blockquote>
-<p>$$P(EF)&#x3D;P(F)P(E|F)\\<br>\quad\\<br>\small P(E_1E_2\cdots E_n)&#x3D;P(E_1)P(E_2|E_1)P(E_3|E_1E_2)\cdots P(E_n|E_1E_2\cdots E_{n-1})$$</p>
-</blockquote>
-<p>$\quad\\$</p>
-<h3 id="优势比与有利证据"><a href="#优势比与有利证据" class="headerlink" title="优势比与有利证据"></a><center><strong>优势比与有利证据</strong></center></h3><p>$\quad\\$</p>
-<p>定义事件$E$的优势比为</p>
-<blockquote>
-<p>$$\frac{P(E)}{P(E^c)}&#x3D;\frac{P(E)}{1-P(E)}$$</p>
-</blockquote>
-<p>现引入新的证据$F$，在$F$成立的条件下，$E$成立与不成立的条件概率分别为$P(E|F)&#x3D;\frac{P(F|E)P(E)}{P(F)}$和$P(E^c|F)&#x3D;\frac{P(F|E^c)P(E^c)}{P(F)}$引入证据$F$后，$E$的优势比变为</p>
-<blockquote>
-<p>$$\frac{P(E|F)}{P(E^c|F)}&#x3D;\frac{P(F|E)P(E)}{P(F|E^c)P(E^c)}$$</p>
-</blockquote>
-<p>如果引入$F$后的$E$的优势比大于原优势比，则称证据$F$有利于$E$，否则不利于$E$</p>
-<p>$\quad\\$</p>
-<h3 id="贝叶斯公式"><a href="#贝叶斯公式" class="headerlink" title="贝叶斯公式"></a><center><strong>贝叶斯公式</strong></center></h3><p>$\quad\\$</p>
-<p>设$F_i，i&#x3D;1,2,\cdots,n$是一系列互不相容且穷举$(\bigcup\limits_{i&#x3D;1}^{n}F_i&#x3D;S)$的事件，则可得称为<strong>全概率公式</strong>的如下等式</p>
-<blockquote>
-<p>$$P(E)&#x3D;\sum\limits_{i&#x3D;1}^{n}P(EF_i)&#x3D;\sum\limits_{i&#x3D;1}^{n}P(E|F_i)P(F_i)$$</p>
-</blockquote>
-<p>由全概率公式可得如下<strong>贝叶斯公式</strong></p>
-<blockquote>
-<p>$$P(F_i|E)&#x3D;\frac{P(F_iE)}{P(E)}&#x3D;\frac{P(E|F_i)P(F_i)}{\sum\limits_{j&#x3D;1}^{n}P(E|F_j)P(F_j)}$$</p>
-</blockquote>
-<details>
-<summary><font color=#ffd111><strong><answer>$\nabla$例1</answer><strong></font></summary>
-
-<blockquote style="border-color:#ffd111">某种新冠病毒核酸检测试剂对患者检测出阳性的概率为$99.99\%$，对健康者检测出阴性的概率为$99.9\%$，即有$0.1\%$的“伪阳性”结果，若人群的实际患病率为$0.01\%$，现在某人核酸检测结果为阳性，则其患病的概率为多少？</blockquote>
-
-<summary><font color=#ffd111><strong><answer>$\nabla$解</answer><strong></font></summary>
-
-<blockquote style="border-color:#ffd111">
-$$
-\small记患病事件为Ill，健康为Healthy,检测出阳性为+，阴性为-\\\\
-\quad\\\\ \small 则由贝叶斯公式，所求概率为\\\\
-\quad\\\\
-P(Ill|+)=\frac{P(+|Ill)P(Ill)}{P(+|Ill)P(Ill)+P(+|Heathy)P(Healthy)}\\\\ \quad\\\\=\frac{99.99\% \times 0.01\%}{99.99\%\times 0.01\%+0.1\%\times 99.99\%}=\frac{1}{11}\\\\
-$$
-</blockquote>
-</details>
-
-<p>$\quad\\$</p>
-<h3 id="独立事件"><a href="#独立事件" class="headerlink" title="独立事件"></a><center><strong>独立事件</strong></center></h3><p>$\quad\\$</p>
-<p>如果事件$F$的发生不改变事件$E$发生的概率，即$P(E|F)&#x3D;P(E)$，则称事件$E$和$F$独立，此时有</p>
-<blockquote>
-<p>$$P(EF)&#x3D;P(E)P(F)$$</p>
-</blockquote>
-<p>公式关于$E$和$F$对称，即若$E$和$F$独立，则$F$和$E$也独立，当上式成立时称二者是 <strong>独立的(independent)</strong> ，否则是 <strong>相依的(dependent)</strong></p>
-<p>$\quad\\$</p>
-<h3 id="条件概率是概率"><a href="#条件概率是概率" class="headerlink" title="条件概率是概率"></a><center><strong>条件概率是概率</strong></center></h3><p>$\quad\\$</p>
-<p>要说明条件概率$P(\cdot|F)$是概率，只需验证其满足概率的三条公理</p>
-<blockquote>
-<p><strong>非负性</strong><br>$$P(E|F)&#x3D;\frac{P(EF)}{P(F)}\\<br>\quad\\<br>\small 因为P(EF)与P(F)均大于0，且EF\subset F即P(EF)&lt;P(F)，故有\\<br>\quad\\<br>0\leq P(E|F)\leq 1$$<br><strong>归一性</strong><br>$$P(S|F)&#x3D;\frac{P(SF)}{P(F)}&#x3D;\frac{P(F)}{P(F)}&#x3D;1$$<br><strong>可列可加性</strong><br>$$\small 对于一系列不相容的事件E_i\\<br>\quad\\<br>\begin{aligned} \;P(\bigcup\limits_{i&#x3D;1}^{\infty}E_i|F)&amp;&#x3D;P((\bigcup\limits_{i&#x3D;1}^{\infty}E_i)F)&#x2F;P(F)\\<br>&amp;&#x3D;P(\bigcup\limits_{i&#x3D;1}^{\infty}E_iF)&#x2F;P(F)\\<br>&amp;&#x3D;\sum\limits_{i&#x3D;1}^{\infty}P(E_iF)&#x2F;P(F)\\<br>&amp;&#x3D;\sum\limits_{i&#x3D;1}^{\infty}P(E_i|F)\end{aligned}$$</p>
-</blockquote>
-<details>
-<summary><font color=#ffd111><strong><answer>$\nabla$例2</answer><strong></font></summary>
-
-<blockquote style="border-color:#ffd111"><a href="/2021/11/30/%E7%AD%89%E5%8F%AF%E8%83%BD%E7%BB%93%E6%9E%9C%E7%9A%84%E6%A0%B7%E6%9C%AC%E7%A9%BA%E9%97%B4/" title="组合分析与概率论公理">接上次的例题</a>，一字不识的YJX不甘心，蒙了一整天的英语八选八选词填空，求他填对空的平均个数</blockquote>
-
-<summary><font color=#ffd111><strong><answer>$\nabla$解</answer><strong></font></summary>
-
-<blockquote style="border-color:#ffd111">
-$$\small 直接写出一般情况下k个空全填错的概率\\\\
-\quad\\\\
-P(\frac{\bar{k}}{k})=\sum\limits_{i=0}^{k}\frac{(-1)^i}{i!}\\\\
-\quad\\\\
-\small 则共有N个空填错k个空的概率为\\\\
-\quad\\\\
-\begin{aligned}P(\frac{\bar{k}}{N})&=P(\frac{\bar{k}}{k}\frac{N-k}{N})=P(\frac{\bar{k}}{k}|\frac{N-k}{N})P(\frac{N-k}{N})\\\\
-&=P(\frac{\bar{k}}{k})P(\frac{N-k}{N})=P(\frac{\bar{k}}{k})\left(\begin{array}&N\\\\k\end{array}\right)\frac{k!}{N!}\\\\
-&=\frac{\sum\limits_{i=0}^{k}\frac{(-1)^i}{i!}}{(N-k)!}\end{aligned}\\\\
-\quad\\\\
-\small 故填对个数的期望为\\\\
-\quad\\\\
-\begin{aligned}E[X]&=\sum\limits_{k=0}^N\frac{(N-k)\sum\limits_{i=0}^{k}\frac{(-1)^i}{i!}}{(N-k)!}\\\\
-&=\sum\limits_{k=0}^{N-1}\sum\limits_{i=0}^{k}\frac{(-1)^i}{(N-1-k)!i!}\\\\
-&=\sum\limits_{m=0}^{N-1}\sum\limits_{i=0}^{N-1-m}\frac{(-1)^i}{(N-1-(i+m))!i!}\\\\
-&=\sum\limits_{m=0}^{N-2}\frac{(1-1)^{N-1-m}}{(N-1-m)!}+1\\\\
-&=1\qquad \textbf{Solved By YZX}
-\end{aligned}
-$$
-</blockquote>
-</details>
-
-<p>$\quad\\$</p>
-<p>$\quad\\$</p>
-<h3 id="参考与引用来源"><a href="#参考与引用来源" class="headerlink" title="参考与引用来源"></a><strong><center>参考与引用来源</center></strong></h3><p>$\quad\\$</p>
-<blockquote>
-<p>Sheldon M.Ross概率论基础教程第九版</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>概率论</category>
       </categories>
   </entry>
   <entry>
@@ -3067,6 +2962,111 @@ $$
       </categories>
   </entry>
   <entry>
+    <title>条件概率和独立性</title>
+    <url>/2021/12/10/%E6%9D%A1%E4%BB%B6%E6%A6%82%E7%8E%87%E5%92%8C%E7%8B%AC%E7%AB%8B%E6%80%A7/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>$\quad\\$</p>
+<h3 id="条件概率的定义"><a href="#条件概率的定义" class="headerlink" title="条件概率的定义"></a><center><strong>条件概率的定义</strong></center></h3><p>$\quad\\$</p>
+<p>记$P(E|F)$为事件$F$发生的情况下事件$E$发生的<strong>条件概率</strong>，且$P(F)&gt;0$则有</p>
+<blockquote>
+<p>$$P(E|F)&#x3D;\frac{P(EF)}{P(F)}$$</p>
+</blockquote>
+<p>由条件概率的定义易得如下的乘法规则</p>
+<blockquote>
+<p>$$P(EF)&#x3D;P(F)P(E|F)\\<br>\quad\\<br>\small P(E_1E_2\cdots E_n)&#x3D;P(E_1)P(E_2|E_1)P(E_3|E_1E_2)\cdots P(E_n|E_1E_2\cdots E_{n-1})$$</p>
+</blockquote>
+<p>$\quad\\$</p>
+<h3 id="优势比与有利证据"><a href="#优势比与有利证据" class="headerlink" title="优势比与有利证据"></a><center><strong>优势比与有利证据</strong></center></h3><p>$\quad\\$</p>
+<p>定义事件$E$的优势比为</p>
+<blockquote>
+<p>$$\frac{P(E)}{P(E^c)}&#x3D;\frac{P(E)}{1-P(E)}$$</p>
+</blockquote>
+<p>现引入新的证据$F$，在$F$成立的条件下，$E$成立与不成立的条件概率分别为$P(E|F)&#x3D;\frac{P(F|E)P(E)}{P(F)}$和$P(E^c|F)&#x3D;\frac{P(F|E^c)P(E^c)}{P(F)}$引入证据$F$后，$E$的优势比变为</p>
+<blockquote>
+<p>$$\frac{P(E|F)}{P(E^c|F)}&#x3D;\frac{P(F|E)P(E)}{P(F|E^c)P(E^c)}$$</p>
+</blockquote>
+<p>如果引入$F$后的$E$的优势比大于原优势比，则称证据$F$有利于$E$，否则不利于$E$</p>
+<p>$\quad\\$</p>
+<h3 id="贝叶斯公式"><a href="#贝叶斯公式" class="headerlink" title="贝叶斯公式"></a><center><strong>贝叶斯公式</strong></center></h3><p>$\quad\\$</p>
+<p>设$F_i，i&#x3D;1,2,\cdots,n$是一系列互不相容且穷举$(\bigcup\limits_{i&#x3D;1}^{n}F_i&#x3D;S)$的事件，则可得称为<strong>全概率公式</strong>的如下等式</p>
+<blockquote>
+<p>$$P(E)&#x3D;\sum\limits_{i&#x3D;1}^{n}P(EF_i)&#x3D;\sum\limits_{i&#x3D;1}^{n}P(E|F_i)P(F_i)$$</p>
+</blockquote>
+<p>由全概率公式可得如下<strong>贝叶斯公式</strong></p>
+<blockquote>
+<p>$$P(F_i|E)&#x3D;\frac{P(F_iE)}{P(E)}&#x3D;\frac{P(E|F_i)P(F_i)}{\sum\limits_{j&#x3D;1}^{n}P(E|F_j)P(F_j)}$$</p>
+</blockquote>
+<details>
+<summary><font color=#ffd111><strong><answer>$\nabla$例1</answer><strong></font></summary>
+
+<blockquote style="border-color:#ffd111">某种新冠病毒核酸检测试剂对患者检测出阳性的概率为$99.99\%$，对健康者检测出阴性的概率为$99.9\%$，即有$0.1\%$的“伪阳性”结果，若人群的实际患病率为$0.01\%$，现在某人核酸检测结果为阳性，则其患病的概率为多少？</blockquote>
+
+<summary><font color=#ffd111><strong><answer>$\nabla$解</answer><strong></font></summary>
+
+<blockquote style="border-color:#ffd111">
+$$
+\small记患病事件为Ill，健康为Healthy,检测出阳性为+，阴性为-\\\\
+\quad\\\\ \small 则由贝叶斯公式，所求概率为\\\\
+\quad\\\\
+P(Ill|+)=\frac{P(+|Ill)P(Ill)}{P(+|Ill)P(Ill)+P(+|Heathy)P(Healthy)}\\\\ \quad\\\\=\frac{99.99\% \times 0.01\%}{99.99\%\times 0.01\%+0.1\%\times 99.99\%}=\frac{1}{11}\\\\
+$$
+</blockquote>
+</details>
+
+<p>$\quad\\$</p>
+<h3 id="独立事件"><a href="#独立事件" class="headerlink" title="独立事件"></a><center><strong>独立事件</strong></center></h3><p>$\quad\\$</p>
+<p>如果事件$F$的发生不改变事件$E$发生的概率，即$P(E|F)&#x3D;P(E)$，则称事件$E$和$F$独立，此时有</p>
+<blockquote>
+<p>$$P(EF)&#x3D;P(E)P(F)$$</p>
+</blockquote>
+<p>公式关于$E$和$F$对称，即若$E$和$F$独立，则$F$和$E$也独立，当上式成立时称二者是 <strong>独立的(independent)</strong> ，否则是 <strong>相依的(dependent)</strong></p>
+<p>$\quad\\$</p>
+<h3 id="条件概率是概率"><a href="#条件概率是概率" class="headerlink" title="条件概率是概率"></a><center><strong>条件概率是概率</strong></center></h3><p>$\quad\\$</p>
+<p>要说明条件概率$P(\cdot|F)$是概率，只需验证其满足概率的三条公理</p>
+<blockquote>
+<p><strong>非负性</strong><br>$$P(E|F)&#x3D;\frac{P(EF)}{P(F)}\\<br>\quad\\<br>\small 因为P(EF)与P(F)均大于0，且EF\subset F即P(EF)&lt;P(F)，故有\\<br>\quad\\<br>0\leq P(E|F)\leq 1$$<br><strong>归一性</strong><br>$$P(S|F)&#x3D;\frac{P(SF)}{P(F)}&#x3D;\frac{P(F)}{P(F)}&#x3D;1$$<br><strong>可列可加性</strong><br>$$\small 对于一系列不相容的事件E_i\\<br>\quad\\<br>\begin{aligned} \;P(\bigcup\limits_{i&#x3D;1}^{\infty}E_i|F)&amp;&#x3D;P((\bigcup\limits_{i&#x3D;1}^{\infty}E_i)F)&#x2F;P(F)\\<br>&amp;&#x3D;P(\bigcup\limits_{i&#x3D;1}^{\infty}E_iF)&#x2F;P(F)\\<br>&amp;&#x3D;\sum\limits_{i&#x3D;1}^{\infty}P(E_iF)&#x2F;P(F)\\<br>&amp;&#x3D;\sum\limits_{i&#x3D;1}^{\infty}P(E_i|F)\end{aligned}$$</p>
+</blockquote>
+<details>
+<summary><font color=#ffd111><strong><answer>$\nabla$例2</answer><strong></font></summary>
+
+<blockquote style="border-color:#ffd111"><a href="/2021/11/30/%E7%AD%89%E5%8F%AF%E8%83%BD%E7%BB%93%E6%9E%9C%E7%9A%84%E6%A0%B7%E6%9C%AC%E7%A9%BA%E9%97%B4/" title="组合分析与概率论公理">接上次的例题</a>，一字不识的YJX不甘心，蒙了一整天的英语八选八选词填空，求他填对空的平均个数</blockquote>
+
+<summary><font color=#ffd111><strong><answer>$\nabla$解</answer><strong></font></summary>
+
+<blockquote style="border-color:#ffd111">
+$$\small 直接写出一般情况下k个空全填错的概率\\\\
+\quad\\\\
+P(\frac{\bar{k}}{k})=\sum\limits_{i=0}^{k}\frac{(-1)^i}{i!}\\\\
+\quad\\\\
+\small 则共有N个空填错k个空的概率为\\\\
+\quad\\\\
+\begin{aligned}P(\frac{\bar{k}}{N})&=P(\frac{\bar{k}}{k}\frac{N-k}{N})=P(\frac{\bar{k}}{k}|\frac{N-k}{N})P(\frac{N-k}{N})\\\\
+&=P(\frac{\bar{k}}{k})P(\frac{N-k}{N})=P(\frac{\bar{k}}{k})\left(\begin{array}&N\\\\k\end{array}\right)\frac{k!}{N!}\\\\
+&=\frac{\sum\limits_{i=0}^{k}\frac{(-1)^i}{i!}}{(N-k)!}\end{aligned}\\\\
+\quad\\\\
+\small 故填对个数的期望为\\\\
+\quad\\\\
+\begin{aligned}E[X]&=\sum\limits_{k=0}^N\frac{(N-k)\sum\limits_{i=0}^{k}\frac{(-1)^i}{i!}}{(N-k)!}\\\\
+&=\sum\limits_{k=0}^{N-1}\sum\limits_{i=0}^{k}\frac{(-1)^i}{(N-1-k)!i!}\\\\
+&=\sum\limits_{m=0}^{N-1}\sum\limits_{i=0}^{N-1-m}\frac{(-1)^i}{(N-1-(i+m))!i!}\\\\
+&=\sum\limits_{m=0}^{N-2}\frac{(1-1)^{N-1-m}}{(N-1-m)!}+1\\\\
+&=1\qquad \textbf{Solved By YZX}
+\end{aligned}
+$$
+</blockquote>
+</details>
+
+<p>$\quad\\$</p>
+<p>$\quad\\$</p>
+<h3 id="参考与引用来源"><a href="#参考与引用来源" class="headerlink" title="参考与引用来源"></a><strong><center>参考与引用来源</center></strong></h3><p>$\quad\\$</p>
+<blockquote>
+<p>Sheldon M.Ross概率论基础教程第九版</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>概率论</category>
+      </categories>
+  </entry>
+  <entry>
     <title>格林函数</title>
     <url>/2022/05/18/%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>$\quad\\$</p>
@@ -3127,35 +3127,6 @@ $$
       <categories>
         <category>数理方程</category>
       </categories>
-  </entry>
-  <entry>
-    <title>Euler-Lagrange方程</title>
-    <url>/2021/11/20/%E6%AC%A7%E6%8B%89-%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E6%96%B9%E7%A8%8B/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>$\quad\\$</p>
-<h3 id="单变量单函数泛函取驻值"><a href="#单变量单函数泛函取驻值" class="headerlink" title="单变量单函数泛函取驻值"></a><center><strong>单变量单函数泛函取驻值</strong></center></h3><p>$\quad\\$</p>
-<blockquote>
-<p>$$I(f)&#x3D;\int_{x_1}^{x_2}L(x,f,f’,f’’,\cdots,f^{(k)})dx\\<br>\quad\\<br>\begin{aligned}<br>\delta I(f)&amp;&#x3D;I(f+\delta f)-I(f)\\<br>\quad\\<br>&amp;&#x3D;\int_{x_1}^{x_2}(\frac{\partial L}{\partial f}\delta f+\frac{\partial L}{\partial f’}\delta f’<br>+\frac{\partial L}{\partial f’’}\delta f’’+\cdots+\frac{\partial L}{\partial f^{(k)}}\delta f^{(k)})dx\\<br>\quad\\<br>&amp;\qquad\qquad\qquad\qquad令\delta f(x)&#x3D;\epsilon \eta(x)\\<br>\quad\\<br>\end{aligned}<br>\quad\\<br>驻值条件\\<br>\quad\\<br>\left.\frac{\partial I(f+\epsilon \eta)}{\partial \epsilon}\right|_{\epsilon&#x3D;0}&#x3D;\left.\frac{I(f+\epsilon \eta)-I(f)}{\epsilon}\right|_{\epsilon\to 0}&#x3D;0\\<br>\quad\\<br>&#x3D;\int_{x_1}^{x_2}(\frac{\partial L}{\partial f}\delta \eta+\frac{\partial L}{\partial f’}\delta \eta’<br>+\frac{\partial L}{\partial f’’}\delta \eta’’+\cdots+\frac{\partial L}{\partial f^{(k)}}\delta \eta^{(k)})dx&#x3D;0\\<br>\quad\\<br>即\\<br>\quad\\<br>\int_{x_1}^{x_2}(\frac{\partial L}{\partial f}\delta f+\frac{\partial L}{\partial f’}\delta f’<br>+\frac{\partial L}{\partial f’’}\delta f’’+\cdots+\frac{\partial L}{\partial f^{(k)}}\delta f^{(k)})dx&#x3D;0\\<br>\quad\\<br>分部积分\\<br>\quad\\<br>\begin{aligned}\int_{x_1}^{x_2}\frac{\partial L}{\partial f^{(k)}}\delta f^{(k)}dx&amp;&#x3D;\int_{x_1}^{x_2}\frac{\partial L}{\partial f^{(k)}}d(\delta f^{(k-1)})\\ \quad\\&amp;&#x3D;\left.\frac{\partial L}{\partial f^{(k)}}\delta f^{(k-1)}\right|_{x_1}^{x_2}<br>-\int_{x_1}^{x_2}\frac{d}{dx}(\frac{\partial L}{\partial f^{(k)}})\delta f^{(k-1)}dx\\<br>\quad\\<br>\end{aligned}\\<br>边界条件\\<br>\quad\\<br>f的k-1阶及更低阶变分在端点处为0\\<br>\quad\\<br>\begin{aligned}\int_{x_1}^{x_2}\frac{\partial L}{\partial f^{(k)}}\delta f^{(k)}dx&amp;&#x3D;-\int_{x_1}^{x_2}\frac{d}{dx}(\frac{\partial L}{\partial f^{(k)}})\delta f^{(k-1)}dx\\ \quad\\<br>&amp;&#x3D;\int_{x_1}^{x_2}(-1)^k\frac{d^k}{dx^k}(\frac{\partial L}{\partial f^{(k)}})\delta f\;dx\end{aligned}\\<br>\quad\\<br>故有\\<br>\quad\\<br>\int_{x_1}^{x_2}[\frac{\partial L}{\partial f}-\frac{d}{dx}(\frac{\partial L}{\partial f’})<br>+\frac{d^2}{dx^2}(\frac{\partial L}{\partial f’’})+\cdots+(-1)^k\frac{d^k}{dx^k}(\frac{\partial L}{\partial f^{(k)}})]\delta f\;dx\\<br>\quad\\<br>&#x3D;0\\<br>\quad\\<br>因为\delta f任意\\<br>\quad\\<br>故有\\<br>\quad\\<br>\frac{\partial L}{\partial f}-\frac{d}{dx}(\frac{\partial L}{\partial f’})<br>+\frac{d^2}{dx^2}(\frac{\partial L}{\partial f’’})+\cdots+(-1)^k\frac{d^k}{dx^k}(\frac{\partial L}{\partial f^{(k)}})&#x3D;0<br>\quad\\<br>$$</p>
-</blockquote>
-<p>$\quad\\$</p>
-<h3 id="单变量多函数泛函取驻值"><a href="#单变量多函数泛函取驻值" class="headerlink" title="单变量多函数泛函取驻值"></a><center><strong>单变量多函数泛函取驻值</strong></center></h3><p>$\quad\\$</p>
-<blockquote>
-<p>$$<br>I(f)&#x3D;\int_{x_1}^{x_2}L(x,f_1,f_1’,f_1’’,\cdots,f_1^{(k)},\cdots,f_i,f_i’,f_i’’,\cdots,f_i^{(k)},\cdots)dx\\<br>\quad\\<br>\frac{\partial L}{\partial f_i}-\frac{d}{dx}(\frac{\partial L}{\partial f_i’})<br>+\frac{d^2}{dx^2}(\frac{\partial L}{\partial f_i’’})+\cdots+(-1)^k\frac{d^k}{dx^k}(\frac{\partial L}{\partial f_i^{(k)}})&#x3D;0\\<br>\quad\\<br>对所有i均成立<br>$$</p>
-</blockquote>
-<p>$\quad\\$</p>
-<h3 id="多变量单函数一阶微分泛函取驻值"><a href="#多变量单函数一阶微分泛函取驻值" class="headerlink" title="多变量单函数一阶微分泛函取驻值"></a><center><strong>多变量单函数一阶微分泛函取驻值</strong></center></h3><p>$\quad\\$</p>
-<blockquote>
-<p>$$<br>I(f)&#x3D;\int_{x_{k1}}^{x_{k2}}\cdots\int_{x_{11}}^{x_{12}}(x_1,x_2,\cdots,x_k,f,f_{x_1}’,f_{x_2}’,\cdots,f_{x_k}’)\\<br>\quad\\dx_1\;dx_2\;\cdots\;dx_k\\<br>\quad\\<br>\frac{\partial L}{\partial f}-\sum\limits_{i&#x3D;1}^{k}\frac{\partial}{\partial x_i}(\frac{\partial L}{\partial(\frac{\partial f}{\partial x_i})})&#x3D;0<br>$$</p>
-</blockquote>
-<h3 id="参考与引用来源"><a href="#参考与引用来源" class="headerlink" title="参考与引用来源"></a><strong><center>参考与引用来源</center></strong></h3><blockquote>
-<p>梁昆淼力学第四版</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>力学</category>
-      </categories>
-      <tags>
-        <tag>变分</tag>
-      </tags>
   </entry>
   <entry>
     <title>椭圆函数</title>
@@ -3465,6 +3436,35 @@ $$
       </categories>
   </entry>
   <entry>
+    <title>Euler-Lagrange方程</title>
+    <url>/2021/11/20/%E6%AC%A7%E6%8B%89-%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E6%96%B9%E7%A8%8B/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>$\quad\\$</p>
+<h3 id="单变量单函数泛函取驻值"><a href="#单变量单函数泛函取驻值" class="headerlink" title="单变量单函数泛函取驻值"></a><center><strong>单变量单函数泛函取驻值</strong></center></h3><p>$\quad\\$</p>
+<blockquote>
+<p>$$I(f)&#x3D;\int_{x_1}^{x_2}L(x,f,f’,f’’,\cdots,f^{(k)})dx\\<br>\quad\\<br>\begin{aligned}<br>\delta I(f)&amp;&#x3D;I(f+\delta f)-I(f)\\<br>\quad\\<br>&amp;&#x3D;\int_{x_1}^{x_2}(\frac{\partial L}{\partial f}\delta f+\frac{\partial L}{\partial f’}\delta f’<br>+\frac{\partial L}{\partial f’’}\delta f’’+\cdots+\frac{\partial L}{\partial f^{(k)}}\delta f^{(k)})dx\\<br>\quad\\<br>&amp;\qquad\qquad\qquad\qquad令\delta f(x)&#x3D;\epsilon \eta(x)\\<br>\quad\\<br>\end{aligned}<br>\quad\\<br>驻值条件\\<br>\quad\\<br>\left.\frac{\partial I(f+\epsilon \eta)}{\partial \epsilon}\right|_{\epsilon&#x3D;0}&#x3D;\left.\frac{I(f+\epsilon \eta)-I(f)}{\epsilon}\right|_{\epsilon\to 0}&#x3D;0\\<br>\quad\\<br>&#x3D;\int_{x_1}^{x_2}(\frac{\partial L}{\partial f}\delta \eta+\frac{\partial L}{\partial f’}\delta \eta’<br>+\frac{\partial L}{\partial f’’}\delta \eta’’+\cdots+\frac{\partial L}{\partial f^{(k)}}\delta \eta^{(k)})dx&#x3D;0\\<br>\quad\\<br>即\\<br>\quad\\<br>\int_{x_1}^{x_2}(\frac{\partial L}{\partial f}\delta f+\frac{\partial L}{\partial f’}\delta f’<br>+\frac{\partial L}{\partial f’’}\delta f’’+\cdots+\frac{\partial L}{\partial f^{(k)}}\delta f^{(k)})dx&#x3D;0\\<br>\quad\\<br>分部积分\\<br>\quad\\<br>\begin{aligned}\int_{x_1}^{x_2}\frac{\partial L}{\partial f^{(k)}}\delta f^{(k)}dx&amp;&#x3D;\int_{x_1}^{x_2}\frac{\partial L}{\partial f^{(k)}}d(\delta f^{(k-1)})\\ \quad\\&amp;&#x3D;\left.\frac{\partial L}{\partial f^{(k)}}\delta f^{(k-1)}\right|_{x_1}^{x_2}<br>-\int_{x_1}^{x_2}\frac{d}{dx}(\frac{\partial L}{\partial f^{(k)}})\delta f^{(k-1)}dx\\<br>\quad\\<br>\end{aligned}\\<br>边界条件\\<br>\quad\\<br>f的k-1阶及更低阶变分在端点处为0\\<br>\quad\\<br>\begin{aligned}\int_{x_1}^{x_2}\frac{\partial L}{\partial f^{(k)}}\delta f^{(k)}dx&amp;&#x3D;-\int_{x_1}^{x_2}\frac{d}{dx}(\frac{\partial L}{\partial f^{(k)}})\delta f^{(k-1)}dx\\ \quad\\<br>&amp;&#x3D;\int_{x_1}^{x_2}(-1)^k\frac{d^k}{dx^k}(\frac{\partial L}{\partial f^{(k)}})\delta f\;dx\end{aligned}\\<br>\quad\\<br>故有\\<br>\quad\\<br>\int_{x_1}^{x_2}[\frac{\partial L}{\partial f}-\frac{d}{dx}(\frac{\partial L}{\partial f’})<br>+\frac{d^2}{dx^2}(\frac{\partial L}{\partial f’’})+\cdots+(-1)^k\frac{d^k}{dx^k}(\frac{\partial L}{\partial f^{(k)}})]\delta f\;dx\\<br>\quad\\<br>&#x3D;0\\<br>\quad\\<br>因为\delta f任意\\<br>\quad\\<br>故有\\<br>\quad\\<br>\frac{\partial L}{\partial f}-\frac{d}{dx}(\frac{\partial L}{\partial f’})<br>+\frac{d^2}{dx^2}(\frac{\partial L}{\partial f’’})+\cdots+(-1)^k\frac{d^k}{dx^k}(\frac{\partial L}{\partial f^{(k)}})&#x3D;0<br>\quad\\<br>$$</p>
+</blockquote>
+<p>$\quad\\$</p>
+<h3 id="单变量多函数泛函取驻值"><a href="#单变量多函数泛函取驻值" class="headerlink" title="单变量多函数泛函取驻值"></a><center><strong>单变量多函数泛函取驻值</strong></center></h3><p>$\quad\\$</p>
+<blockquote>
+<p>$$<br>I(f)&#x3D;\int_{x_1}^{x_2}L(x,f_1,f_1’,f_1’’,\cdots,f_1^{(k)},\cdots,f_i,f_i’,f_i’’,\cdots,f_i^{(k)},\cdots)dx\\<br>\quad\\<br>\frac{\partial L}{\partial f_i}-\frac{d}{dx}(\frac{\partial L}{\partial f_i’})<br>+\frac{d^2}{dx^2}(\frac{\partial L}{\partial f_i’’})+\cdots+(-1)^k\frac{d^k}{dx^k}(\frac{\partial L}{\partial f_i^{(k)}})&#x3D;0\\<br>\quad\\<br>对所有i均成立<br>$$</p>
+</blockquote>
+<p>$\quad\\$</p>
+<h3 id="多变量单函数一阶微分泛函取驻值"><a href="#多变量单函数一阶微分泛函取驻值" class="headerlink" title="多变量单函数一阶微分泛函取驻值"></a><center><strong>多变量单函数一阶微分泛函取驻值</strong></center></h3><p>$\quad\\$</p>
+<blockquote>
+<p>$$<br>I(f)&#x3D;\int_{x_{k1}}^{x_{k2}}\cdots\int_{x_{11}}^{x_{12}}(x_1,x_2,\cdots,x_k,f,f_{x_1}’,f_{x_2}’,\cdots,f_{x_k}’)\\<br>\quad\\dx_1\;dx_2\;\cdots\;dx_k\\<br>\quad\\<br>\frac{\partial L}{\partial f}-\sum\limits_{i&#x3D;1}^{k}\frac{\partial}{\partial x_i}(\frac{\partial L}{\partial(\frac{\partial f}{\partial x_i})})&#x3D;0<br>$$</p>
+</blockquote>
+<h3 id="参考与引用来源"><a href="#参考与引用来源" class="headerlink" title="参考与引用来源"></a><strong><center>参考与引用来源</center></strong></h3><blockquote>
+<p>梁昆淼力学第四版</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>力学</category>
+      </categories>
+      <tags>
+        <tag>变分</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>正则变换</title>
     <url>/2021/11/20/%E6%AD%A3%E5%88%99%E5%8F%98%E6%8D%A2/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>$\quad\\$</p>
@@ -3740,6 +3740,14 @@ $$
       </categories>
   </entry>
   <entry>
+    <title>测地线与距离</title>
+    <url>/2022/03/21/%E6%B5%8B%E5%9C%B0%E7%BA%BF%E4%B8%8E%E8%B7%9D%E7%A6%BB/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+      <categories>
+        <category>微分几何</category>
+      </categories>
+  </entry>
+  <entry>
     <title>涂鸦</title>
     <url>/2021/11/28/%E6%B6%82%E9%B8%A6/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
@@ -3760,14 +3768,6 @@ $$
       <tags>
         <tag>初中</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>测地线与距离</title>
-    <url>/2022/03/21/%E6%B5%8B%E5%9C%B0%E7%BA%BF%E4%B8%8E%E8%B7%9D%E7%A6%BB/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
-      <categories>
-        <category>微分几何</category>
-      </categories>
   </entry>
   <entry>
     <title>渐近平直时空</title>
@@ -4022,50 +4022,6 @@ $$
       </categories>
   </entry>
   <entry>
-    <title>狄拉克方程</title>
-    <url>/2023/05/06/%E7%8B%84%E6%8B%89%E5%85%8B%E6%96%B9%E7%A8%8B/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><qg>克莱因-高登方程</qg></p>
-<p>薛定谔方程</p>
-<p>$$i\hbar\partial_t\psi&#x3D;[\frac{1}{2m}(-i\hbar\nabla-q\boldsymbol{A})^2+qV]\psi$$</p>
-<p>动能与机械动量关系</p>
-<p>$$E-qV&#x3D;\frac{1}{2m}(\boldsymbol{p}-q\boldsymbol{A})^2$$</p>
-<p>相对论关系</p>
-<p>$$(E-qV)^2&#x3D;p^2c^2+m^2c^4$$</p>
-<p>将薛定谔方程移项平方得克莱因-高等方程</p>
-<blockquote>
-<p>$$(i\hbar\partial_t-qV)^2\psi&#x3D;(-\hbar^2c^2\nabla^2+m^2c^4)\psi$$</p>
-</blockquote>
-<p>此方程存在以下缺陷</p>
-<p>$1$.$\psi^*\psi$非正定，无法解释为概率密度</p>
-<p>$2$.总能量本征值无下限</p>
-<p>$3$.为对时间的二阶微分方程，除初始波函数$\psi$外还需$\partial_t\psi$才能确定系统如何演化</p>
-<p>$4$.计算氢原子能级与实验偏差较大</p>
-<p>$5$.除$V&#x3D;0$的情况外无法写为$i\hbar\partial_t\psi&#x3D;H\psi$的形式</p>
-<p>虽然克莱因-高等方程具有以上缺陷，但也不能简单否定</p>
-<p>$1$.非相对论极限为薛定谔方程</p>
-<p>$2$.能导出连续性方程$\partial_t\rho+\nabla\cdot \boldsymbol{j}&#x3D;0$，其中$\rho&#x3D;\displaystyle\frac{1}{2m}(\psi^*\partial_t\psi-\partial_t\psi^*\psi)$，<br>$\boldsymbol{j}&#x3D;-\displaystyle\frac{1}{2m}(\psi^*\nabla\psi-\nabla\psi^*\psi)$，与经典方程相似</p>
-<p>由于克莱因-高等方程符合相对论要求，故猜测错误的并不是方程本身，而是态函数$\psi$，其应该满足更严格的要求</p>
-<p><qg>狄拉克方程</qg></p>
-<p>相对论要求时空的对等性，由于对时间应为一阶方程，故对空间也应为一阶方程，先考虑$\boldsymbol{A}&#x3D;0,V&#x3D;0$的情况，对克莱因-高登方程<the>开方</the>得狄拉克方程</p>
-<blockquote>
-<p>$$[i\hbar\partial_t-c\boldsymbol{\alpha}\cdot(-i\hbar\nabla)-\beta mc^2]\psi&#x3D;0$$</p>
-</blockquote>
-<p>与克莱因-高登方程比较，可知<br>$$(\alpha^i)^2&#x3D;\beta^2&#x3D;1\qquad i&#x3D;1,2,3\\<br>\qquad\\<br>\alpha^i\alpha^j+\alpha^j\alpha^i&#x3D;0\qquad i\neq j\\<br>\qquad\\<br>\alpha^i\beta+\beta\alpha^i&#x3D;0$$</p>
-<p>$\boldsymbol{\alpha}$与$\beta$显然不是普通的向量和数，将$\boldsymbol{A},V$纳入得</p>
-<p>$$[i\hbar\partial_t-qV-c\boldsymbol{\alpha}\cdot(\hat{\boldsymbol{P}}-q\boldsymbol{A})-\beta mc^2]\psi&#x3D;0$$</p>
-<p>按相对论，取四维矢量$x^\mu&#x3D;(ct,\boldsymbol{x})$，$p^\mu&#x3D;(E&#x2F;c,\boldsymbol{p})$，$A_\mu&#x3D;(-V&#x2F;c,\boldsymbol{A})$<br>定义算符$D_\mu&#x3D;\displaystyle\partial_\mu-\frac{iq}{\hbar}A_\mu$，$\gamma^0&#x3D;\beta$，$\gamma^i&#x3D;\beta\alpha^i\quad i&#x3D;1,2,3$，<br>$\gamma^4&#x3D;\gamma^0\gamma^1\gamma^2\gamma^3&#x3D;-\alpha^1\alpha^2\alpha^3$</p>
-<p>$\gamma$算符满足关系</p>
-<p>$$(\gamma^0)^2&#x3D;1\qquad(\gamma^i)^2&#x3D;-1\qquad i&#x3D;1,2,3\\<br>\qquad\\<br>\gamma^\mu\gamma^\nu+\gamma^\nu\gamma^\mu&#x3D;0\qquad \mu\neq \nu\\<br>\qquad\\<br>\gamma^\mu\gamma^4+\gamma^4\gamma^\mu&#x3D;0$$</p>
-<p>可得狄拉克方程协变形式</p>
-<blockquote>
-<p>$$(i\hbar\gamma^\mu D_\mu-mc)\psi&#x3D;0$$</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>量子力学</category>
-      </categories>
-  </entry>
-  <entry>
     <title>玻尔模型</title>
     <url>/2022/03/15/%E7%8E%BB%E5%B0%94%E6%A8%A1%E5%9E%8B/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>$\quad\\$</p>
@@ -4201,6 +4157,50 @@ $$
       </categories>
   </entry>
   <entry>
+    <title>狄拉克方程</title>
+    <url>/2023/05/06/%E7%8B%84%E6%8B%89%E5%85%8B%E6%96%B9%E7%A8%8B/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><qg>克莱因-高登方程</qg></p>
+<p>薛定谔方程</p>
+<p>$$i\hbar\partial_t\psi&#x3D;[\frac{1}{2m}(-i\hbar\nabla-q\boldsymbol{A})^2+qV]\psi$$</p>
+<p>动能与机械动量关系</p>
+<p>$$E-qV&#x3D;\frac{1}{2m}(\boldsymbol{p}-q\boldsymbol{A})^2$$</p>
+<p>相对论关系</p>
+<p>$$(E-qV)^2&#x3D;p^2c^2+m^2c^4$$</p>
+<p>将薛定谔方程移项平方得克莱因-高等方程</p>
+<blockquote>
+<p>$$(i\hbar\partial_t-qV)^2\psi&#x3D;(-\hbar^2c^2\nabla^2+m^2c^4)\psi$$</p>
+</blockquote>
+<p>此方程存在以下缺陷</p>
+<p>$1$.$\psi^*\psi$非正定，无法解释为概率密度</p>
+<p>$2$.总能量本征值无下限</p>
+<p>$3$.为对时间的二阶微分方程，除初始波函数$\psi$外还需$\partial_t\psi$才能确定系统如何演化</p>
+<p>$4$.计算氢原子能级与实验偏差较大</p>
+<p>$5$.除$V&#x3D;0$的情况外无法写为$i\hbar\partial_t\psi&#x3D;H\psi$的形式</p>
+<p>虽然克莱因-高等方程具有以上缺陷，但也不能简单否定</p>
+<p>$1$.非相对论极限为薛定谔方程</p>
+<p>$2$.能导出连续性方程$\partial_t\rho+\nabla\cdot \boldsymbol{j}&#x3D;0$，其中$\rho&#x3D;\displaystyle\frac{1}{2m}(\psi^*\partial_t\psi-\partial_t\psi^*\psi)$，<br>$\boldsymbol{j}&#x3D;-\displaystyle\frac{1}{2m}(\psi^*\nabla\psi-\nabla\psi^*\psi)$，与经典方程相似</p>
+<p>由于克莱因-高等方程符合相对论要求，故猜测错误的并不是方程本身，而是态函数$\psi$，其应该满足更严格的要求</p>
+<p><qg>狄拉克方程</qg></p>
+<p>相对论要求时空的对等性，由于对时间应为一阶方程，故对空间也应为一阶方程，先考虑$\boldsymbol{A}&#x3D;0,V&#x3D;0$的情况，对克莱因-高登方程<the>开方</the>得狄拉克方程</p>
+<blockquote>
+<p>$$[i\hbar\partial_t-c\boldsymbol{\alpha}\cdot(-i\hbar\nabla)-\beta mc^2]\psi&#x3D;0$$</p>
+</blockquote>
+<p>与克莱因-高登方程比较，可知<br>$$(\alpha^i)^2&#x3D;\beta^2&#x3D;1\qquad i&#x3D;1,2,3\\<br>\qquad\\<br>\alpha^i\alpha^j+\alpha^j\alpha^i&#x3D;0\qquad i\neq j\\<br>\qquad\\<br>\alpha^i\beta+\beta\alpha^i&#x3D;0$$</p>
+<p>$\boldsymbol{\alpha}$与$\beta$显然不是普通的向量和数，将$\boldsymbol{A},V$纳入得</p>
+<p>$$[i\hbar\partial_t-qV-c\boldsymbol{\alpha}\cdot(\hat{\boldsymbol{P}}-q\boldsymbol{A})-\beta mc^2]\psi&#x3D;0$$</p>
+<p>按相对论，取四维矢量$x^\mu&#x3D;(ct,\boldsymbol{x})$，$p^\mu&#x3D;(E&#x2F;c,\boldsymbol{p})$，$A_\mu&#x3D;(-V&#x2F;c,\boldsymbol{A})$<br>定义算符$D_\mu&#x3D;\displaystyle\partial_\mu-\frac{iq}{\hbar}A_\mu$，$\gamma^0&#x3D;\beta$，$\gamma^i&#x3D;\beta\alpha^i\quad i&#x3D;1,2,3$，<br>$\gamma^4&#x3D;\gamma^0\gamma^1\gamma^2\gamma^3&#x3D;-\alpha^1\alpha^2\alpha^3$</p>
+<p>$\gamma$算符满足关系</p>
+<p>$$(\gamma^0)^2&#x3D;1\qquad(\gamma^i)^2&#x3D;-1\qquad i&#x3D;1,2,3\\<br>\qquad\\<br>\gamma^\mu\gamma^\nu+\gamma^\nu\gamma^\mu&#x3D;0\qquad \mu\neq \nu\\<br>\qquad\\<br>\gamma^\mu\gamma^4+\gamma^4\gamma^\mu&#x3D;0$$</p>
+<p>可得狄拉克方程协变形式</p>
+<blockquote>
+<p>$$(i\hbar\gamma^\mu D_\mu-mc)\psi&#x3D;0$$</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>量子力学</category>
+      </categories>
+  </entry>
+  <entry>
     <title>电动力学复习</title>
     <url>/2023/02/11/%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6%E5%A4%8D%E4%B9%A0/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><qg>Drude</qg><br>$\tau&#x3D;\frac{m\sigma_c }{n_ee^2}$<br>$\omega_p^2&#x3D;\frac{n_ee^2}{\varepsilon_0m}$<br>$\varepsilon&#x3D;\varepsilon_0(1-\frac{\omega_p^2}{\omega(\omega+i&#x2F;\tau)})$<br>$\mathbf{B}&#x3D;\frac{\mathbf{k}\times\mathbf{E}}{\omega}$<br>良导体$GHz$以下，$\varepsilon_r\approx i\frac{\sigma_c}{\varepsilon_0\omega}$，良导体光波段$\varepsilon_r\approx 1-\frac{\omega_p^2}{\omega^2}$，磁能占主<br>非良导体$\tilde{\varepsilon_r}\approx \varepsilon_r+i\frac{\sigma_c}{\varepsilon_0\omega}$，虚部很小，$\tilde{k}\approx\frac{\omega}{c}(\sqrt{\varepsilon_r}+i\frac{\sigma_c}{2\sqrt{\varepsilon_r}\varepsilon_0\omega})$</p>
@@ -4264,38 +4264,6 @@ $$
       </categories>
   </entry>
   <entry>
-    <title>集合记号</title>
-    <url>/2021/12/14/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%9A%84%E9%9B%86%E5%90%88%E8%AE%B0%E5%8F%B7/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>$\quad\\$</p>
-<h3 id="示性函数"><a href="#示性函数" class="headerlink" title="示性函数"></a><center><strong>示性函数</strong></center></h3><p>$\quad\\$</p>
-<p>若$X$为一有限集，$A$为$X$的子集，定义集合$A$的<strong>示性函数</strong>$\chi_{A}$如下</p>
-<blockquote>
-<p>$$\chi_{A}:X\to\{0,1\},\chi_{A}(x)&#x3D;\left\lbrace\begin{array}&amp;1\quad x\in A\\0\quad x\notin A\end{array}\right.$$</p>
-</blockquote>
-<p>$\quad\\$</p>
-<h3 id="有限集的势"><a href="#有限集的势" class="headerlink" title="有限集的势"></a><center><strong>有限集的势</strong></center></h3><p>$\quad\\$</p>
-<p>若$X$为一有限集，$A$为$X$的子集，则记$A$中元素的个数为$|A|$，称为$A$的<strong>势</strong>，即</p>
-<blockquote>
-<p>$$|A|&#x3D;\sum\limits_{x\in X}\chi_A(x)$$</p>
-</blockquote>
-<p>$\quad\\$</p>
-<h3 id="有限集的子集"><a href="#有限集的子集" class="headerlink" title="有限集的子集"></a><center><strong>有限集的子集</strong></center></h3><p>$\quad\\$</p>
-<p>若$X$为一有限集，记$X$子集的集合为$\mathscr{P}(X)$，易知$\mathscr{P}(X)$的势为</p>
-<blockquote>
-<p>$$|\mathscr{P}(X)|&#x3D;2^{|X|}$$</p>
-</blockquote>
-<p>$\quad\\$</p>
-<h3 id="Cartesian-Product"><a href="#Cartesian-Product" class="headerlink" title="Cartesian Product"></a><center><strong>Cartesian Product</strong></center></h3><p>$\quad\\$</p>
-<p>任取$n$个集合$X_1,X_2,\cdots,X_n$，记它们的<strong>笛卡尔积</strong>$X_1\times X_2\times \cdots\times X_n$为如下有序元组的集合</p>
-<blockquote>
-<p>$$\{(x_1,x_2,x_3,\cdots,x_n)|x_i\in X_i\}$$</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>离散数学</category>
-      </categories>
-  </entry>
-  <entry>
     <title>矩阵的分解</title>
     <url>/2021/11/22/%E7%9F%A9%E9%98%B5%E7%9A%84%E5%88%86%E8%A7%A3/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>$\quad\\$</p>
@@ -4339,6 +4307,38 @@ $$
 ]]></content>
       <categories>
         <category>线性代数</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>集合记号</title>
+    <url>/2021/12/14/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%9A%84%E9%9B%86%E5%90%88%E8%AE%B0%E5%8F%B7/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>$\quad\\$</p>
+<h3 id="示性函数"><a href="#示性函数" class="headerlink" title="示性函数"></a><center><strong>示性函数</strong></center></h3><p>$\quad\\$</p>
+<p>若$X$为一有限集，$A$为$X$的子集，定义集合$A$的<strong>示性函数</strong>$\chi_{A}$如下</p>
+<blockquote>
+<p>$$\chi_{A}:X\to\{0,1\},\chi_{A}(x)&#x3D;\left\lbrace\begin{array}&amp;1\quad x\in A\\0\quad x\notin A\end{array}\right.$$</p>
+</blockquote>
+<p>$\quad\\$</p>
+<h3 id="有限集的势"><a href="#有限集的势" class="headerlink" title="有限集的势"></a><center><strong>有限集的势</strong></center></h3><p>$\quad\\$</p>
+<p>若$X$为一有限集，$A$为$X$的子集，则记$A$中元素的个数为$|A|$，称为$A$的<strong>势</strong>，即</p>
+<blockquote>
+<p>$$|A|&#x3D;\sum\limits_{x\in X}\chi_A(x)$$</p>
+</blockquote>
+<p>$\quad\\$</p>
+<h3 id="有限集的子集"><a href="#有限集的子集" class="headerlink" title="有限集的子集"></a><center><strong>有限集的子集</strong></center></h3><p>$\quad\\$</p>
+<p>若$X$为一有限集，记$X$子集的集合为$\mathscr{P}(X)$，易知$\mathscr{P}(X)$的势为</p>
+<blockquote>
+<p>$$|\mathscr{P}(X)|&#x3D;2^{|X|}$$</p>
+</blockquote>
+<p>$\quad\\$</p>
+<h3 id="Cartesian-Product"><a href="#Cartesian-Product" class="headerlink" title="Cartesian Product"></a><center><strong>Cartesian Product</strong></center></h3><p>$\quad\\$</p>
+<p>任取$n$个集合$X_1,X_2,\cdots,X_n$，记它们的<strong>笛卡尔积</strong>$X_1\times X_2\times \cdots\times X_n$为如下有序元组的集合</p>
+<blockquote>
+<p>$$\{(x_1,x_2,x_3,\cdots,x_n)|x_i\in X_i\}$$</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>离散数学</category>
       </categories>
   </entry>
   <entry>
@@ -4500,17 +4500,6 @@ $$
       </categories>
   </entry>
   <entry>
-    <title>群论</title>
-    <url>/2022/03/02/%E7%BE%A4%E8%AE%BA/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>$\quad\\$</p>
-<h3 id="群的概念"><a href="#群的概念" class="headerlink" title="群的概念"></a><center><strong>群的概念</strong></center></h3><p>$\quad\\$</p>
-<p><font face="微软雅黑" color=#2196f3><strong>定义1-1</strong></font>$\quad$设$S$为一非空集合，$S$上存在一个二元运算记为$“\;\cdot\;”$乘法，即对任意$x,y\in S$，总存在唯一元$x\cdot y\in S$，若该乘法符合结合律，则称$S$为一半群，<br>&amp;emsp;&amp;emsp;若半群$S$的乘法符合交换律，则称$S$为一交换半群<br>&amp;emsp;&amp;emsp;若半群$S$中存在一个元素$e$，$\forall a\in S$有$ea&#x3D;ae&#x3D;a$，则称$e$为$S$的幺元(恒等元、单位元)，称$S$为一幺半群<br>$\quad$<br><font face="微软雅黑" color=#2196f3><strong>定义1-2</strong></font>$\quad$设$G$为一幺半群($e$为幺元)，若$\forall a\in S$有$a’\in S$，使得$aa’&#x3D;a’a&#x3D;e$，则称$a’$为$a$的逆元，记为$a^{-1}$，称$G$为群<br>&amp;emsp;&amp;emsp;若群$G$的乘法符合交换律，则称$G$为一交换群或Abel群，交换群的运算有时用加法$“\;+\;”$表示，这时幺元记为$0$，$a$的逆元(负元)记为$-a$，这种群也称为加法群<br>&amp;emsp;&amp;emsp;一个群如果只含有有限个元素则称其为有限群，否则称其为无限群，通常用$|G|$表示群$G$的元素个数，若$|G|&#x3D;n$，则称$G$为$n$阶群<br>$\quad$<br><font face="微软雅黑" color=#ff5722><strong>幺元唯一</strong></font>$\quad$群的幺元唯一：设$e,e’$均为幺元，则$e&#x3D;ee’&#x3D;e’$<br>$\quad$<br><font face="微软雅黑" color=#ff5722><strong>逆元唯一</strong></font>$\quad$对群$G$中任一元$a$，其逆元唯一：设$a’,a’’$均为$a$逆元，则<br>$a’&#x3D;a’aa’’&#x3D;a’’$<br>$\quad$<br><font face="微软雅黑" color=#ff5722><strong>性质1-3</strong></font>$\quad$对群$G$中任一元$a$有$(a^{-1})^{-1}&#x3D;a$：$a&#x3D;aa^{-1}(a^{-1})^{-1}&#x3D;(a^{-1})^{-1}$<br>$\quad$<br><font face="微软雅黑" color=#ff5722><strong>性质1-4</strong></font>$\quad$设$a,b$为群$G$中元素，则$(ab)^{-1}&#x3D;b^{-1}a^{-1}$：<br>$b^{-1}a^{-1}ab&#x3D;e,abb^{-1}a^{-1}&#x3D;e$</p>
-]]></content>
-      <categories>
-        <category>抽象代数</category>
-      </categories>
-  </entry>
-  <entry>
     <title>组合分析的一些恒等式</title>
     <url>/2021/12/11/%E7%BB%84%E5%90%88%E5%88%86%E6%9E%90%E7%9A%84%E4%B8%80%E4%BA%9B%E6%81%92%E7%AD%89%E5%BC%8F/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -4522,6 +4511,17 @@ $$
 ]]></content>
       <categories>
         <category>离散数学</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>群论</title>
+    <url>/2022/03/02/%E7%BE%A4%E8%AE%BA/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>$\quad\\$</p>
+<h3 id="群的概念"><a href="#群的概念" class="headerlink" title="群的概念"></a><center><strong>群的概念</strong></center></h3><p>$\quad\\$</p>
+<p><font face="微软雅黑" color=#2196f3><strong>定义1-1</strong></font>$\quad$设$S$为一非空集合，$S$上存在一个二元运算记为$“\;\cdot\;”$乘法，即对任意$x,y\in S$，总存在唯一元$x\cdot y\in S$，若该乘法符合结合律，则称$S$为一半群，<br>&amp;emsp;&amp;emsp;若半群$S$的乘法符合交换律，则称$S$为一交换半群<br>&amp;emsp;&amp;emsp;若半群$S$中存在一个元素$e$，$\forall a\in S$有$ea&#x3D;ae&#x3D;a$，则称$e$为$S$的幺元(恒等元、单位元)，称$S$为一幺半群<br>$\quad$<br><font face="微软雅黑" color=#2196f3><strong>定义1-2</strong></font>$\quad$设$G$为一幺半群($e$为幺元)，若$\forall a\in S$有$a’\in S$，使得$aa’&#x3D;a’a&#x3D;e$，则称$a’$为$a$的逆元，记为$a^{-1}$，称$G$为群<br>&amp;emsp;&amp;emsp;若群$G$的乘法符合交换律，则称$G$为一交换群或Abel群，交换群的运算有时用加法$“\;+\;”$表示，这时幺元记为$0$，$a$的逆元(负元)记为$-a$，这种群也称为加法群<br>&amp;emsp;&amp;emsp;一个群如果只含有有限个元素则称其为有限群，否则称其为无限群，通常用$|G|$表示群$G$的元素个数，若$|G|&#x3D;n$，则称$G$为$n$阶群<br>$\quad$<br><font face="微软雅黑" color=#ff5722><strong>幺元唯一</strong></font>$\quad$群的幺元唯一：设$e,e’$均为幺元，则$e&#x3D;ee’&#x3D;e’$<br>$\quad$<br><font face="微软雅黑" color=#ff5722><strong>逆元唯一</strong></font>$\quad$对群$G$中任一元$a$，其逆元唯一：设$a’,a’’$均为$a$逆元，则<br>$a’&#x3D;a’aa’’&#x3D;a’’$<br>$\quad$<br><font face="微软雅黑" color=#ff5722><strong>性质1-3</strong></font>$\quad$对群$G$中任一元$a$有$(a^{-1})^{-1}&#x3D;a$：$a&#x3D;aa^{-1}(a^{-1})^{-1}&#x3D;(a^{-1})^{-1}$<br>$\quad$<br><font face="微软雅黑" color=#ff5722><strong>性质1-4</strong></font>$\quad$设$a,b$为群$G$中元素，则$(ab)^{-1}&#x3D;b^{-1}a^{-1}$：<br>$b^{-1}a^{-1}ab&#x3D;e,abb^{-1}a^{-1}&#x3D;e$</p>
+]]></content>
+      <categories>
+        <category>抽象代数</category>
       </categories>
   </entry>
   <entry>
@@ -5261,6 +5261,124 @@ $$
       </categories>
   </entry>
   <entry>
+    <title>计数规则</title>
+    <url>/2021/12/11/%E8%AE%A1%E6%95%B0%E8%A7%84%E5%88%99/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>$\quad\\$</p>
+<h3 id="序列-收集-分配-组成-划分-排列"><a href="#序列-收集-分配-组成-划分-排列" class="headerlink" title="序列|收集|分配|组成|划分|排列"></a><center><strong>序列|收集|分配|组成|划分|排列</strong></center></h3><p>$\quad\\$</p>
+<p>对于$n$元有限集$X$，即$|X|&#x3D;n$，将$X$的元素与如下$I_n$中的元素建立一个双射，称为$X$的一个<strong>标签</strong></p>
+<blockquote>
+<p>$$\forall n\in \mathbb{N_+}\qquad I_n&#x3D;\{1,2,\cdots,n\}\qquad I_0&#x3D;\varnothing$$</p>
+</blockquote>
+<p>将与$I_n$中$1$对应的元素称为$X$的第一个元素，与$2$对应的元素称为$X$的第二个元素，以此类推，按照约定，$I_n&#x3D;\{!,?,*,\#,\cdots,\&amp;\}$表示第一个元素为$!$，第二个元素为$?$，第$n$个元素为$\&amp;$等</p>
+<p>令$(\cdots)$表示有序元组，$[\cdots]$表示无序元组，$n,k\in \mathbb{N}$，现在来定义一些名词</p>
+<blockquote>
+<p><strong>序列(Sequence)</strong><br>$$\small k元组(x_1,x_2,\cdots,x_k)称为I_n的一个k序列\\<br>\small 其中x_i为I_n中元素(可以重复)，即(x_1,x_2,\cdots,x_k)为笛卡尔积I_n^k的元素$$<br><strong>分配(Sharing)</strong><br>$$\small k元组(X_1,X_2,\cdots,X_k)称为I_n的一个k分配\\<br>\small 其中X_i为I_n的两两不相交的子集(可以为空)且并为I_n$$<br><strong>组成(Composition)</strong><br>$$\small k元组(x_1,x_2,\cdots,x_k)称为I_n的一个k组成\\<br>\small 其中x_i为自然数(含0)且x_1+x_2+\cdots+x_k&#x3D;n$$<br><strong>收集(Collection)</strong><br>$$\small n元组[X_{1},X_{2},\cdots,X_{n}]称为I_n的一个k收集\\<br>\small 其中X_{i}为I_n中元素i的重集，且|X_1|+|X_2|+\cdots+|X_n|&#x3D;k$$<br><strong>划分(Partition)</strong><br>$$\small k元组[X_{1},X_{2},\cdots,X_{k}]称为I_n的一个k划分\\<br>\small 其中X_i为I_n的两两不相交的非空子集且并为I_n$$<br>$$\small k元组[x_{1},x_{2},\cdots,x_{k}]称为n的一个k划分\\<br>\small 其中x_i为自然数(不含0)且x_1+x_2+\cdots+x_k&#x3D;n$$<br><strong>排列(Permutation)</strong><br>$$\small 取I_n的一个k序列(x_1,x_2,\cdots,x_k)\\<br>\small 若有[y_1,y_2,\cdots,y_k]&#x3D;[x_1,x_2,\cdots,x_k]\\<br>\small 则称(y_1,y_2,\cdots,y_k)为(x_1,x_2,\cdots,x_k)的一个排列$$</p>
+</blockquote>
+<p>$\quad\\$</p>
+<h3 id="记号"><a href="#记号" class="headerlink" title="记号"></a><center><strong>记号</strong></center></h3><p>$\quad\\$</p>
+<p>记$S(n,k)$为$I_n$的<strong>没有重复元素的$k$序列个数</strong>，$n,k\in \mathbb{N}$，则有</p>
+<blockquote>
+<p>$$S(n,k)&#x3D;\left\lbrace\begin{array}{l}\frac{n!}{(n-k)!}&amp;k\leq n\\<br>0&amp;k&gt;n\end{array}\right.$$</p>
+</blockquote>
+<p>记$C(n,k)$为$I_n$的<strong>没有重复元素的$k$收集个数</strong>，$n,k\in \mathbb{N}$，则有</p>
+<blockquote>
+<p>$$C(n,k)&#x3D;\left\lbrace\begin{array}{l}\frac{S(n,k)}{k!}&#x3D;\left(\begin{array}.n\\k\end{array}\right)&amp;0\leq k\leq n\\<br>0&amp;\text{otherwise}\end{array}\right.$$</p>
+</blockquote>
+<p>记$S((n,k))$为<strong>$I_n$的$k$序列个数</strong>或<strong>$I_k$的$n$分配个数</strong>，$n,k\in \mathbb{N}$，则有</p>
+<blockquote>
+<p>$$S((n,k))&#x3D;n^k$$</p>
+</blockquote>
+<p>记$C((n,k))$为<strong>$I_n$的$k$收集个数</strong>或<strong>$I_k$的$n$组成个数</strong>，$n,k\in \mathbb{N}$，则有</p>
+<blockquote>
+<p>$$C((n,k))&#x3D;\left\lbrace\begin{array}{l}\left(\begin{array}.n+k-1\\k\end{array}\right)&amp;1\leq n+k\\<br>0&amp;n&#x3D;k&#x3D;0\end{array}\right.$$</p>
+</blockquote>
+<p>记$P(x_1,x_2,\cdots,x_k)$为<strong>$I_n$的$k$序列$(x_1,x_2,\cdots,x_k)$的排列个数</strong>，若序列$(x_1,x_2,\cdots,x_k)$具有占有列$(k_1,k_2,\cdots,k_n)$，即元素$i$恰好在序列中出现$k_i$次，$n,k\in \mathbb{N}$，则有</p>
+<blockquote>
+<p>$$P(x_1,x_2,\cdots,x_k)&#x3D;\left(\begin{array}.k\\k_1,k_2,\cdots,k_n\end{array}\right)$$</p>
+</blockquote>
+<p>记$S(n,k;(k_1,k_2,\cdots,k_n))$为<strong>具有占有列$(k_1,k_2,\cdots,k_n)$的$I_n$的$k$序列个数</strong>或<strong>具有占有列$(k_1,k_2,\cdots,k_n)$即$|X_i|&#x3D;k_i$的$I_k$的$n$分配个数</strong>，$n,k\in \mathbb{N}$，则有</p>
+<blockquote>
+<p>$$S(n,k;(k_1,k_2,\cdots,k_n))&#x3D;\left(\begin{array}.k\\k_1,k_2,\cdots,k_n\end{array}\right)$$</p>
+</blockquote>
+<p>记$S(n,k;[k_1,k_2,\cdots,k_n])$为<strong>具有占有列$[k_1,k_2,\cdots,k_n]$即元素$i$恰好出现$k_j$次，其中$i$到$j$为任意双射的$I_n$的$k$序列个数</strong>或<strong>具有占有列$[k_1,k_2,\cdots,k_n]$即$|X_i|&#x3D;k_j$，其中$i$到$j$为任意双射的$I_k$的$n$分配个数</strong>，$n,k\in \mathbb{N}$，则有</p>
+<blockquote>
+<p>$$S(n,k;[k_1,k_2,\cdots,k_n])&#x3D;\left(\begin{array}.k\\k_1,k_2,\cdots,k_n\end{array}\right)P(k_1,k_2,\cdots,k_n)$$</p>
+</blockquote>
+<p>记$C(n,k;[k_1,k_2,\cdots,k_n])$为<strong>具有占有列$[k_1,k_2,\cdots,k_n]$即元素$i$恰好出现$k_j$次，其中$i$到$j$为任意双射的$I_n$的$k$收集个数</strong>或<strong>具有占有列$[k_1,k_2,\cdots,k_n]$即$|X_i|&#x3D;k_j$，其中$i$到$j$为任意双射的$I_k$的$n$组成个数</strong>，$n,k\in \mathbb{N}$，则有</p>
+<blockquote>
+<p>$$C(n,k;[k_1,k_2,\cdots,k_n])&#x3D;P(k_1,k_2,\cdots,k_n)$$</p>
+</blockquote>
+<p>$\quad\\$</p>
+<h3 id="Leibniz求导法则"><a href="#Leibniz求导法则" class="headerlink" title="Leibniz求导法则"></a><center><strong>Leibniz求导法则</strong></center></h3><p>$\quad\\$</p>
+<p>令$f_1,f_2,\cdots,f_k$为$n$次可微函数，$n,k\in \mathbb{N}$，则有</p>
+<blockquote>
+<p>$$(f_1f_2\cdots f_k)^{(n)}&#x3D;\sum\limits_{\begin{array}&amp;(n_1,n_2,\cdots,n_k)\in \mathbb{N}^k\\n_1+n_2+\cdots+n_k&#x3D;n\end{array}}<br>\left(\begin{array}.n\\n_1,n_2,\cdots,n_k\end{array}\right)f_1^{(n_1)}f_2^{(n_2)}\cdots f_k^{(n_k)}$$</p>
+</blockquote>
+<p>$\quad\\$</p>
+<h3 id="Gilbreath-Principle"><a href="#Gilbreath-Principle" class="headerlink" title="Gilbreath Principle"></a><center><strong>Gilbreath Principle</strong></center></h3><p>$\quad\\$</p>
+<p>称一系列连续不断的自然数如$5,6,7,8,9$的集合为一个<strong>自然数区间</strong>，简称<strong>区间</strong>，对于$1$到$n$的自然数的一个排列$(x_1,x_2,\cdots,x_n)$，如果对于任意$0&lt;i\leq n$，$集合{x_1,x_2,\cdots,x_i}$均是一个区间，则称此排列为<strong>Glibreath排列</strong>，Glibreath排列具有如下性质</p>
+<blockquote>
+<p><strong>$1$到$n$的自然数的排列$(x_1,x_2,\cdots,x_n)$是Glibreath排列当且仅当此排列可以按顺序拆解为区间序列$[i,n]$和$[i-1,1]$</strong></p>
+</blockquote>
+<details>
+<summary><font color=#8076a3><strong><answer>$\nabla$证</answer><strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+$\textbf{充分性}$
+$$对于排列(x_1,x_2,\cdots,x_n)\\\\
+\quad\\\\
+易知若x_2属于增区间序列，则x_1=x_2-1，反之x_1=x_2+1\\\\
+\quad\\\\
+因此\{x_1,x_2\}为一个区间\\\\
+\quad\\\\
+假设X=\{x_1,x_2,\cdots,x_i\}为一个区间，则x_{i+1}=x_{max}+1或x_{min}-1\\\\
+\quad\\\\
+因此\{x_1,x_2,\cdots,x_{i+1}\}也是区间\\\\
+\quad\\\\
+由归纳法可知(x_1,x_2,\cdots,x_n)是Gilbreath排列
+$$
+$\textbf{必要性}$
+$$对于Gilbreath排列(x_1,x_2,\cdots,x_n)\\\\
+\quad\\\\
+令X_i={x_1,x_2,\cdots,x_i}\\\\
+\quad\\\\
+因为x_{i+1}=x_{min}-1或x_{max}+1\\\\
+\quad\\\\
+前一种情况将x_{i+1}归入减区间序列，反之归入增区间序列\\\\
+\quad\\\\
+对于所有1\leq i\leq n-1均这样操作\\\\
+\quad\\\\
+最后再将x_1归入任意区间即可完成拆解$$
+</blockquote>
+</details>
+
+<p>$\quad\\$</p>
+<p><strong>Gilbreath Principle</strong>出现于许多魔术中。事先将牌分为增区间序列和减区间序列两叠牌，保证最小牌与最大牌同时在各自牌堆的顶部或底部，对两叠牌进行<strong>Gilbreath Shuffle</strong>，即不改变每叠牌中牌的相对位置的洗牌法，常见的鸽尾式洗牌<strong>Riffle Shuffle</strong>即是一种，这样洗好的牌就是一个<strong>Gilbreath排列</strong></p>
+<p>$\quad\\$</p>
+<h3 id="一些基本等式"><a href="#一些基本等式" class="headerlink" title="一些基本等式"></a><center><strong>一些基本等式</strong></center></h3><p>$\quad\\$</p>
+<blockquote>
+<p>$$1+\sum\limits_{i&#x3D;1}^{n-1}i\;i!&#x3D;n!\quad\forall n\geq 2\;\&amp;\;n\in \mathbb{N}$$</p>
+</blockquote>
+<blockquote>
+<p>$$\sum\limits_{i&#x3D;0}^n\left(\begin{array}.n\\i\end{array}\right)&#x3D;2^n\qquad\sum\limits_{i&#x3D;0}^n(-1)^i\left(\begin{array}.n\\i\end{array}\right)&#x3D;0\\<br>\quad\\<br>\sum\limits_{\begin{array}&amp;0\leq i_1\leq n\\ \cdots \\0\leq i_k\leq n\end{array}}\left(\begin{array}.n_1\\i_1\end{array}\right)<br>\cdots\left(\begin{array}.n_k\\i_k\end{array}\right)&#x3D;2^{n_1+\cdots+n_k}$$</p>
+</blockquote>
+<blockquote>
+<p>$$\left(\begin{array}.n-1\\k-1\end{array}\right)+\left(\begin{array}.n-1\\k\end{array}\right)&#x3D;\left(\begin{array}.n\\k\end{array}\right)\quad \text{Stifel formula}$$</p>
+</blockquote>
+<blockquote>
+<p>$$C((n,k))&#x3D;C((n-1,k+1))\\<br>\quad\\<br>C((n,k-1))+C((n-1,k))&#x3D;C((n,k))\\<br>\quad\\<br>\sum\limits_{i&#x3D;0}^kC((n-1,i))&#x3D;C((n,k))$$</p>
+</blockquote>
+<p>$\quad\\$</p>
+<h3 id="参考与引用来源"><a href="#参考与引用来源" class="headerlink" title="参考与引用来源"></a><strong><center>参考与引用来源</center></strong></h3><p>$\quad\\$</p>
+<blockquote>
+<p><a href="https://b-ok.xyz/book/2848073/9a87bf">Discrete Calculus</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>离散数学</category>
+      </categories>
+  </entry>
+  <entry>
     <title>解析函数的级数展开</title>
     <url>/2022/01/19/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E7%BA%A7%E6%95%B0%E5%B1%95%E5%BC%80/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>$\quad\\$</p>
@@ -5698,124 +5816,6 @@ $$\sum\limits_{k_n=0}^{\infty}\cdots\sum\limits_{k_2=0}^{\infty}\sum\limits_{k_1
       </categories>
   </entry>
   <entry>
-    <title>计数规则</title>
-    <url>/2021/12/11/%E8%AE%A1%E6%95%B0%E8%A7%84%E5%88%99/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>$\quad\\$</p>
-<h3 id="序列-收集-分配-组成-划分-排列"><a href="#序列-收集-分配-组成-划分-排列" class="headerlink" title="序列|收集|分配|组成|划分|排列"></a><center><strong>序列|收集|分配|组成|划分|排列</strong></center></h3><p>$\quad\\$</p>
-<p>对于$n$元有限集$X$，即$|X|&#x3D;n$，将$X$的元素与如下$I_n$中的元素建立一个双射，称为$X$的一个<strong>标签</strong></p>
-<blockquote>
-<p>$$\forall n\in \mathbb{N_+}\qquad I_n&#x3D;\{1,2,\cdots,n\}\qquad I_0&#x3D;\varnothing$$</p>
-</blockquote>
-<p>将与$I_n$中$1$对应的元素称为$X$的第一个元素，与$2$对应的元素称为$X$的第二个元素，以此类推，按照约定，$I_n&#x3D;\{!,?,*,\#,\cdots,\&amp;\}$表示第一个元素为$!$，第二个元素为$?$，第$n$个元素为$\&amp;$等</p>
-<p>令$(\cdots)$表示有序元组，$[\cdots]$表示无序元组，$n,k\in \mathbb{N}$，现在来定义一些名词</p>
-<blockquote>
-<p><strong>序列(Sequence)</strong><br>$$\small k元组(x_1,x_2,\cdots,x_k)称为I_n的一个k序列\\<br>\small 其中x_i为I_n中元素(可以重复)，即(x_1,x_2,\cdots,x_k)为笛卡尔积I_n^k的元素$$<br><strong>分配(Sharing)</strong><br>$$\small k元组(X_1,X_2,\cdots,X_k)称为I_n的一个k分配\\<br>\small 其中X_i为I_n的两两不相交的子集(可以为空)且并为I_n$$<br><strong>组成(Composition)</strong><br>$$\small k元组(x_1,x_2,\cdots,x_k)称为I_n的一个k组成\\<br>\small 其中x_i为自然数(含0)且x_1+x_2+\cdots+x_k&#x3D;n$$<br><strong>收集(Collection)</strong><br>$$\small n元组[X_{1},X_{2},\cdots,X_{n}]称为I_n的一个k收集\\<br>\small 其中X_{i}为I_n中元素i的重集，且|X_1|+|X_2|+\cdots+|X_n|&#x3D;k$$<br><strong>划分(Partition)</strong><br>$$\small k元组[X_{1},X_{2},\cdots,X_{k}]称为I_n的一个k划分\\<br>\small 其中X_i为I_n的两两不相交的非空子集且并为I_n$$<br>$$\small k元组[x_{1},x_{2},\cdots,x_{k}]称为n的一个k划分\\<br>\small 其中x_i为自然数(不含0)且x_1+x_2+\cdots+x_k&#x3D;n$$<br><strong>排列(Permutation)</strong><br>$$\small 取I_n的一个k序列(x_1,x_2,\cdots,x_k)\\<br>\small 若有[y_1,y_2,\cdots,y_k]&#x3D;[x_1,x_2,\cdots,x_k]\\<br>\small 则称(y_1,y_2,\cdots,y_k)为(x_1,x_2,\cdots,x_k)的一个排列$$</p>
-</blockquote>
-<p>$\quad\\$</p>
-<h3 id="记号"><a href="#记号" class="headerlink" title="记号"></a><center><strong>记号</strong></center></h3><p>$\quad\\$</p>
-<p>记$S(n,k)$为$I_n$的<strong>没有重复元素的$k$序列个数</strong>，$n,k\in \mathbb{N}$，则有</p>
-<blockquote>
-<p>$$S(n,k)&#x3D;\left\lbrace\begin{array}{l}\frac{n!}{(n-k)!}&amp;k\leq n\\<br>0&amp;k&gt;n\end{array}\right.$$</p>
-</blockquote>
-<p>记$C(n,k)$为$I_n$的<strong>没有重复元素的$k$收集个数</strong>，$n,k\in \mathbb{N}$，则有</p>
-<blockquote>
-<p>$$C(n,k)&#x3D;\left\lbrace\begin{array}{l}\frac{S(n,k)}{k!}&#x3D;\left(\begin{array}.n\\k\end{array}\right)&amp;0\leq k\leq n\\<br>0&amp;\text{otherwise}\end{array}\right.$$</p>
-</blockquote>
-<p>记$S((n,k))$为<strong>$I_n$的$k$序列个数</strong>或<strong>$I_k$的$n$分配个数</strong>，$n,k\in \mathbb{N}$，则有</p>
-<blockquote>
-<p>$$S((n,k))&#x3D;n^k$$</p>
-</blockquote>
-<p>记$C((n,k))$为<strong>$I_n$的$k$收集个数</strong>或<strong>$I_k$的$n$组成个数</strong>，$n,k\in \mathbb{N}$，则有</p>
-<blockquote>
-<p>$$C((n,k))&#x3D;\left\lbrace\begin{array}{l}\left(\begin{array}.n+k-1\\k\end{array}\right)&amp;1\leq n+k\\<br>0&amp;n&#x3D;k&#x3D;0\end{array}\right.$$</p>
-</blockquote>
-<p>记$P(x_1,x_2,\cdots,x_k)$为<strong>$I_n$的$k$序列$(x_1,x_2,\cdots,x_k)$的排列个数</strong>，若序列$(x_1,x_2,\cdots,x_k)$具有占有列$(k_1,k_2,\cdots,k_n)$，即元素$i$恰好在序列中出现$k_i$次，$n,k\in \mathbb{N}$，则有</p>
-<blockquote>
-<p>$$P(x_1,x_2,\cdots,x_k)&#x3D;\left(\begin{array}.k\\k_1,k_2,\cdots,k_n\end{array}\right)$$</p>
-</blockquote>
-<p>记$S(n,k;(k_1,k_2,\cdots,k_n))$为<strong>具有占有列$(k_1,k_2,\cdots,k_n)$的$I_n$的$k$序列个数</strong>或<strong>具有占有列$(k_1,k_2,\cdots,k_n)$即$|X_i|&#x3D;k_i$的$I_k$的$n$分配个数</strong>，$n,k\in \mathbb{N}$，则有</p>
-<blockquote>
-<p>$$S(n,k;(k_1,k_2,\cdots,k_n))&#x3D;\left(\begin{array}.k\\k_1,k_2,\cdots,k_n\end{array}\right)$$</p>
-</blockquote>
-<p>记$S(n,k;[k_1,k_2,\cdots,k_n])$为<strong>具有占有列$[k_1,k_2,\cdots,k_n]$即元素$i$恰好出现$k_j$次，其中$i$到$j$为任意双射的$I_n$的$k$序列个数</strong>或<strong>具有占有列$[k_1,k_2,\cdots,k_n]$即$|X_i|&#x3D;k_j$，其中$i$到$j$为任意双射的$I_k$的$n$分配个数</strong>，$n,k\in \mathbb{N}$，则有</p>
-<blockquote>
-<p>$$S(n,k;[k_1,k_2,\cdots,k_n])&#x3D;\left(\begin{array}.k\\k_1,k_2,\cdots,k_n\end{array}\right)P(k_1,k_2,\cdots,k_n)$$</p>
-</blockquote>
-<p>记$C(n,k;[k_1,k_2,\cdots,k_n])$为<strong>具有占有列$[k_1,k_2,\cdots,k_n]$即元素$i$恰好出现$k_j$次，其中$i$到$j$为任意双射的$I_n$的$k$收集个数</strong>或<strong>具有占有列$[k_1,k_2,\cdots,k_n]$即$|X_i|&#x3D;k_j$，其中$i$到$j$为任意双射的$I_k$的$n$组成个数</strong>，$n,k\in \mathbb{N}$，则有</p>
-<blockquote>
-<p>$$C(n,k;[k_1,k_2,\cdots,k_n])&#x3D;P(k_1,k_2,\cdots,k_n)$$</p>
-</blockquote>
-<p>$\quad\\$</p>
-<h3 id="Leibniz求导法则"><a href="#Leibniz求导法则" class="headerlink" title="Leibniz求导法则"></a><center><strong>Leibniz求导法则</strong></center></h3><p>$\quad\\$</p>
-<p>令$f_1,f_2,\cdots,f_k$为$n$次可微函数，$n,k\in \mathbb{N}$，则有</p>
-<blockquote>
-<p>$$(f_1f_2\cdots f_k)^{(n)}&#x3D;\sum\limits_{\begin{array}&amp;(n_1,n_2,\cdots,n_k)\in \mathbb{N}^k\\n_1+n_2+\cdots+n_k&#x3D;n\end{array}}<br>\left(\begin{array}.n\\n_1,n_2,\cdots,n_k\end{array}\right)f_1^{(n_1)}f_2^{(n_2)}\cdots f_k^{(n_k)}$$</p>
-</blockquote>
-<p>$\quad\\$</p>
-<h3 id="Gilbreath-Principle"><a href="#Gilbreath-Principle" class="headerlink" title="Gilbreath Principle"></a><center><strong>Gilbreath Principle</strong></center></h3><p>$\quad\\$</p>
-<p>称一系列连续不断的自然数如$5,6,7,8,9$的集合为一个<strong>自然数区间</strong>，简称<strong>区间</strong>，对于$1$到$n$的自然数的一个排列$(x_1,x_2,\cdots,x_n)$，如果对于任意$0&lt;i\leq n$，$集合{x_1,x_2,\cdots,x_i}$均是一个区间，则称此排列为<strong>Glibreath排列</strong>，Glibreath排列具有如下性质</p>
-<blockquote>
-<p><strong>$1$到$n$的自然数的排列$(x_1,x_2,\cdots,x_n)$是Glibreath排列当且仅当此排列可以按顺序拆解为区间序列$[i,n]$和$[i-1,1]$</strong></p>
-</blockquote>
-<details>
-<summary><font color=#8076a3><strong><answer>$\nabla$证</answer><strong></font></summary>
-
-<blockquote style="border-color:#8076a3;color:#8076a3">
-$\textbf{充分性}$
-$$对于排列(x_1,x_2,\cdots,x_n)\\\\
-\quad\\\\
-易知若x_2属于增区间序列，则x_1=x_2-1，反之x_1=x_2+1\\\\
-\quad\\\\
-因此\{x_1,x_2\}为一个区间\\\\
-\quad\\\\
-假设X=\{x_1,x_2,\cdots,x_i\}为一个区间，则x_{i+1}=x_{max}+1或x_{min}-1\\\\
-\quad\\\\
-因此\{x_1,x_2,\cdots,x_{i+1}\}也是区间\\\\
-\quad\\\\
-由归纳法可知(x_1,x_2,\cdots,x_n)是Gilbreath排列
-$$
-$\textbf{必要性}$
-$$对于Gilbreath排列(x_1,x_2,\cdots,x_n)\\\\
-\quad\\\\
-令X_i={x_1,x_2,\cdots,x_i}\\\\
-\quad\\\\
-因为x_{i+1}=x_{min}-1或x_{max}+1\\\\
-\quad\\\\
-前一种情况将x_{i+1}归入减区间序列，反之归入增区间序列\\\\
-\quad\\\\
-对于所有1\leq i\leq n-1均这样操作\\\\
-\quad\\\\
-最后再将x_1归入任意区间即可完成拆解$$
-</blockquote>
-</details>
-
-<p>$\quad\\$</p>
-<p><strong>Gilbreath Principle</strong>出现于许多魔术中。事先将牌分为增区间序列和减区间序列两叠牌，保证最小牌与最大牌同时在各自牌堆的顶部或底部，对两叠牌进行<strong>Gilbreath Shuffle</strong>，即不改变每叠牌中牌的相对位置的洗牌法，常见的鸽尾式洗牌<strong>Riffle Shuffle</strong>即是一种，这样洗好的牌就是一个<strong>Gilbreath排列</strong></p>
-<p>$\quad\\$</p>
-<h3 id="一些基本等式"><a href="#一些基本等式" class="headerlink" title="一些基本等式"></a><center><strong>一些基本等式</strong></center></h3><p>$\quad\\$</p>
-<blockquote>
-<p>$$1+\sum\limits_{i&#x3D;1}^{n-1}i\;i!&#x3D;n!\quad\forall n\geq 2\;\&amp;\;n\in \mathbb{N}$$</p>
-</blockquote>
-<blockquote>
-<p>$$\sum\limits_{i&#x3D;0}^n\left(\begin{array}.n\\i\end{array}\right)&#x3D;2^n\qquad\sum\limits_{i&#x3D;0}^n(-1)^i\left(\begin{array}.n\\i\end{array}\right)&#x3D;0\\<br>\quad\\<br>\sum\limits_{\begin{array}&amp;0\leq i_1\leq n\\ \cdots \\0\leq i_k\leq n\end{array}}\left(\begin{array}.n_1\\i_1\end{array}\right)<br>\cdots\left(\begin{array}.n_k\\i_k\end{array}\right)&#x3D;2^{n_1+\cdots+n_k}$$</p>
-</blockquote>
-<blockquote>
-<p>$$\left(\begin{array}.n-1\\k-1\end{array}\right)+\left(\begin{array}.n-1\\k\end{array}\right)&#x3D;\left(\begin{array}.n\\k\end{array}\right)\quad \text{Stifel formula}$$</p>
-</blockquote>
-<blockquote>
-<p>$$C((n,k))&#x3D;C((n-1,k+1))\\<br>\quad\\<br>C((n,k-1))+C((n-1,k))&#x3D;C((n,k))\\<br>\quad\\<br>\sum\limits_{i&#x3D;0}^kC((n-1,i))&#x3D;C((n,k))$$</p>
-</blockquote>
-<p>$\quad\\$</p>
-<h3 id="参考与引用来源"><a href="#参考与引用来源" class="headerlink" title="参考与引用来源"></a><strong><center>参考与引用来源</center></strong></h3><p>$\quad\\$</p>
-<blockquote>
-<p><a href="https://b-ok.xyz/book/2848073/9a87bf">Discrete Calculus</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>离散数学</category>
-      </categories>
-  </entry>
-  <entry>
     <title>超导</title>
     <url>/2023/04/25/%E8%B6%85%E5%AF%BC/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><qg>Attractive interaction and Cooper pairs</qg></p>
@@ -6115,15 +6115,6 @@ $$</blockquote>
       </tags>
   </entry>
   <entry>
-    <title>量子力学基本方程</title>
-    <url>/2022/12/26/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E5%9F%BA%E6%9C%AC%E6%96%B9%E7%A8%8B/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><qg>薛定谔方程</qg><br>$$H\psi&#x3D;i\hbar\frac{\partial \psi}{\partial t}$$<br><qg>定态薛定谔方程</qg><br>$$H\psi&#x3D;E\psi\qquad \psi&#x3D;\psi e^{-\frac{iEt}{\hbar}}$$<br><qg>哈密顿算符</qg><br>$$H&#x3D;-\frac{\hbar^2}{2m}\nabla^2+V$$<br><qg>动量算符</qg><br>$$P&#x3D;-i\hbar\nabla$$<br><qg>内积</qg><br>$$\langle f|g\rangle&#x3D;\int f^* g\dd\boldsymbol{r}$$<br><qg>归一化</qg><br>$$\langle \psi|\psi\rangle&#x3D;1$$<br><qg>可观测量</qg><br>$$\langle f|Qg\rangle&#x3D;\langle Qf|g\rangle$$<br><qg>期望</qg><br>$$\langle Q\rangle&#x3D;\langle \psi|Q\psi\rangle$$</p>
-]]></content>
-      <categories>
-        <category>量子力学</category>
-      </categories>
-  </entry>
-  <entry>
     <title>量子力学基本原理</title>
     <url>/2022/09/09/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><qg>原理1</qg>&amp;emsp;描述微观系统状态的为希尔伯特空间中的矢量，相差一复数因子的矢量描述同一状态</p>
@@ -6164,6 +6155,15 @@ $$</blockquote>
 <p>$$$$</p>
 <p>&amp;emsp;&amp;emsp;上节的类比启发我们用复矢量空间来描述电子自旋的量子态，但这种描述方式的合理性终究还是建立在大量的观测和实验检验的基础之上的，故以下仅简略地介绍量子力学的数学语言</p>
 <p>&amp;emsp;&amp;emsp;考虑复矢量空间，其维数由所研究的物理系统所决定，一个物理态用复矢量空间中的<qg>右矢</qg>表示，例如$|\alpha\rangle$；可观测量由<qg>算符</qg>表示，例如$A$；</p>
+]]></content>
+      <categories>
+        <category>量子力学</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>量子力学基本方程</title>
+    <url>/2022/12/26/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E5%9F%BA%E6%9C%AC%E6%96%B9%E7%A8%8B/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><qg>薛定谔方程</qg><br>$$H\psi&#x3D;i\hbar\frac{\partial \psi}{\partial t}$$<br><qg>定态薛定谔方程</qg><br>$$H\psi&#x3D;E\psi\qquad \psi&#x3D;\psi e^{-\frac{iEt}{\hbar}}$$<br><qg>哈密顿算符</qg><br>$$H&#x3D;-\frac{\hbar^2}{2m}\nabla^2+V$$<br><qg>动量算符</qg><br>$$P&#x3D;-i\hbar\nabla$$<br><qg>内积</qg><br>$$\langle f|g\rangle&#x3D;\int f^* g\dd\boldsymbol{r}$$<br><qg>归一化</qg><br>$$\langle \psi|\psi\rangle&#x3D;1$$<br><qg>可观测量</qg><br>$$\langle f|Qg\rangle&#x3D;\langle Qf|g\rangle$$<br><qg>期望</qg><br>$$\langle Q\rangle&#x3D;\langle \psi|Q\psi\rangle$$</p>
 ]]></content>
       <categories>
         <category>量子力学</category>
@@ -6352,6 +6352,64 @@ $\quad\\\\$
       </categories>
   </entry>
   <entry>
+    <title>杜甫集</title>
+    <url>/2022/04/01/%E6%9D%9C%E7%94%AB%E9%9B%86/%E6%9D%9C%E7%94%AB%E9%9B%86/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><details>
+<summary><center><strong><answer><font size=5px>七律</font></answer></strong></center></summary>
+<font size=4px face="微软雅黑">
+<strong>
+<a href="#秋兴八首">秋兴八首</a>$\quad$<a href="#咏怀古迹五首">咏怀古迹五首</a>
+</strong>
+</font>
+</details>
+
+<details>
+<summary><center><strong><answer><font size=5px>古体</font></answer></strong></center></summary>
+<font size=4px face="微软雅黑">
+<strong>
+<a href="#题郑十八著作虔">题郑十八著作虔</a>$\quad$
+</strong>
+</font>
+</details>
+
+<strong>
+
+<hr>
+<p><a name="秋兴八首"></a><br>秋兴八首$$$$</p>
+<p>玉露凋伤枫树林，巫山巫峡气萧森。<br>江间波浪兼天涌，塞上风云接地阴。<br>丛菊两开他日泪，孤舟一系故园心。<br>寒衣处处催刀尺，白帝城高急暮砧。</p>
+<p>夔府孤城落日斜，每依北斗望京华。<br>听猿实下三声泪，奉使虚随八月槎。<br>画省香炉违伏枕，山楼粉堞隐悲笳。<br>请看石上藤萝月，已映洲前芦荻花。</p>
+<p>千家山郭静朝晖，日日江楼坐翠微。<br>信宿渔人还泛泛，清秋燕子故飞飞。<br>匡衡抗疏功名薄，刘向传经心事违。<br>同学少年多不贱，五陵衣马自轻肥。</p>
+<p>闻道长安似弈棋，百年世事不胜悲。<br>王侯第宅皆新主，文武衣冠异昔时。<br>直北关山金鼓振，征西车马羽书驰。<br>鱼龙寂寞秋江冷，故国平居有所思。</p>
+<p>蓬莱宫阙对南山，承露金茎霄汉间。<br>西望瑶池降王母，东来紫气满函关。<br>云移雉尾开宫扇，日绕龙鳞识圣颜。<br>一卧沧江惊岁晚，几回青琐点朝班。</p>
+<p>瞿塘峡口曲江头，万里风烟接素秋。<br>花萼夹城通御气，芙蓉小苑入边愁。<br>珠帘绣柱围黄鹄，锦缆牙樯起白鸥。<br>回首可怜歌舞地，秦中自古帝王州。</p>
+<p>昆明池水汉时功，武帝旌旗在眼中。<br>织女机丝虚夜月，石鲸鳞甲动秋风。<br>波漂菰米沉云黑，露冷莲房坠粉红。<br>关塞极天惟鸟道，江湖满地一渔翁。</p>
+<p>昆吾御宿自逶迤，紫阁峰阴入渼陂。<br>香稻啄馀鹦鹉粒，碧梧栖老凤凰枝。<br>佳人拾翠春相问，仙侣同舟晚更移。<br>彩笔昔曾干气象，白头吟望苦低垂。</p>
+<hr>
+<p><a name="咏怀古迹五首"></a><br>咏怀古迹五首$$$$</p>
+<p>支离东北风尘际，漂泊西南天地间。<br>三峡楼台淹日月，五溪衣服共云山。<br>羯胡事主终无赖，词客哀时且未还。<br>庾信平生最萧瑟，暮年诗赋动江关。</p>
+<p>摇落深知宋玉悲，风流儒雅亦吾师。<br>怅望千秋一洒泪，萧条异代不同时。<br>江山故宅空文藻，云雨荒台岂梦思。<br>最是楚宫俱泯灭，舟人指点到今疑。</p>
+<p>群山万壑赴荆门，生长明妃尚有村。<br>一去紫台连朔漠，独留青冢向黄昏。<br>画图省识春风面，环珮空归夜月魂。<br>千载琵琶作胡语，分明怨恨曲中论。</p>
+<p>蜀主窥吴幸三峡，崩年亦在永安宫。<br>翠华想像空山里，玉殿虚无野寺中。<br>古庙杉松巢水鹤，岁时伏腊走村翁。<br>武侯祠屋常邻近，一体君臣祭祀同。</p>
+<p>诸葛大名垂宇宙，宗臣遗像肃清高。<br>三分割据纡筹策，万古云霄一羽毛。<br>伯仲之间见伊吕，指挥若定失萧曹。<br>运移汉祚终难复，志决身歼军务劳。</p>
+<hr>
+<p><a name="题郑十八著作虔"></a><br>题郑十八著作虔$$$$</p>
+<p>台州地阔海冥冥，云水长和岛屿青。乱后故人双别泪，春深逐客一浮萍。<br>酒酣懒舞谁相拽，诗罢能吟不复听。第五桥东流恨水，皇陂岸北结愁亭。<br>贾生对鵩伤王傅，苏武看羊陷贼庭。可念此翁怀直道，也沾新国用轻刑。<br>祢衡实恐遭江夏，方朔虚传是岁星。穷巷悄然车马绝，案头干死读书萤。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>黎曼度规</title>
+    <url>/2022/03/08/%E9%BB%8E%E6%9B%BC%E5%BA%A6%E8%A7%84/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>$\quad\\$</p>
+<h3 id="黎曼度规"><a href="#黎曼度规" class="headerlink" title="黎曼度规"></a><center><strong>黎曼度规</strong></center></h3><p>$\quad\\$</p>
+<p><font face="微软雅黑" color=#2196f3><strong>定义1</strong></font>$\quad$光滑流形$M$上的一个<font face="微软雅黑"><strong>黎曼度规</strong></font>是指一个光滑协变二阶张量场<br>$g\in \mathcal{T}^2(M)$，其在点$p\in M$的值$g_p$为$T_pM$中的一个内积，若在$M$上选择了一个具体的度规$g$，则称$(M,g)$为一个<font face="微软雅黑"><strong>黎曼流形</strong></font></p>
+<p><font face="微软雅黑" color=#7aca08><strong>命题1</strong></font>$\quad$每个光滑流形都有一个黎曼度规</p>
+<p><font face="微软雅黑" color=#2196f3><strong>定义2</strong></font>$\quad$设$(M,g)$和$(\widetilde{M},\widetilde{g})$是两个黎曼流形，若存在微分同胚$\varphi:M\to \widetilde{M}$使得$\varphi^{*}\widetilde{g}&#x3D;g$，则称$(M,g)$与$(\widetilde{M},\widetilde{g})$<font face="微软雅黑"><strong>等距</strong></font></p>
+]]></content>
+      <categories>
+        <category>微分几何</category>
+      </categories>
+  </entry>
+  <entry>
     <title>常用不定积分</title>
     <url>/2022/02/19/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/%E5%B8%B8%E7%94%A8%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>$\require{\newcommand}$<br>$\def\ch{\text{ch}}$<br>$\def\sh{\text{sh}}$<br>$\def\tanh{\text{tanh}}$<br>$\def\coth{\text{coth}}$</p>
@@ -6457,62 +6515,16 @@ $\quad\\\\$
       </categories>
   </entry>
   <entry>
-    <title>黎曼度规</title>
-    <url>/2022/03/08/%E9%BB%8E%E6%9B%BC%E5%BA%A6%E8%A7%84/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>$\quad\\$</p>
-<h3 id="黎曼度规"><a href="#黎曼度规" class="headerlink" title="黎曼度规"></a><center><strong>黎曼度规</strong></center></h3><p>$\quad\\$</p>
-<p><font face="微软雅黑" color=#2196f3><strong>定义1</strong></font>$\quad$光滑流形$M$上的一个<font face="微软雅黑"><strong>黎曼度规</strong></font>是指一个光滑协变二阶张量场<br>$g\in \mathcal{T}^2(M)$，其在点$p\in M$的值$g_p$为$T_pM$中的一个内积，若在$M$上选择了一个具体的度规$g$，则称$(M,g)$为一个<font face="微软雅黑"><strong>黎曼流形</strong></font></p>
-<p><font face="微软雅黑" color=#7aca08><strong>命题1</strong></font>$\quad$每个光滑流形都有一个黎曼度规</p>
-<p><font face="微软雅黑" color=#2196f3><strong>定义2</strong></font>$\quad$设$(M,g)$和$(\widetilde{M},\widetilde{g})$是两个黎曼流形，若存在微分同胚$\varphi:M\to \widetilde{M}$使得$\varphi^{*}\widetilde{g}&#x3D;g$，则称$(M,g)$与$(\widetilde{M},\widetilde{g})$<font face="微软雅黑"><strong>等距</strong></font></p>
+    <title>三都赋</title>
+    <url>/2022/01/07/%E8%B5%8B/%E4%B8%89%E9%83%BD%E8%B5%8B/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="三都赋序一首-quad-左太冲"><a href="#三都赋序一首-quad-左太冲" class="headerlink" title="三都赋序一首$\quad$左太冲"></a><strong><center><font size=4>三都赋序一首$\quad$左太冲</font></center></strong></h1><p><strong>盖诗有<a href="javascript:void()"><font title="子夏《诗序》：“故诗有六义焉：一曰风，二曰赋，三曰比，四曰兴，五曰雅，六曰颂。”" style="color:#ffc107">六义</font></a>焉，其二曰赋。<br>杨雄曰：<a href="javascript:void()"><font title="杨雄《法言•吾子》：“或问：‘景差、唐勒、宋玉、枚乘之赋也，益乎?’曰：‘必也，淫。’‘淫则奈何?’曰：‘诗人之赋丽以则，辞人之赋丽以淫。如孔氏之门用赋也，则贾谊升堂，相如入室矣。如其不用何?”" style="color:#ffc107">诗人之赋丽以则</font></a>；班固曰：<a href="javascript:void()"><font title="班固《两都赋序》：“或曰：赋者，古诗之流也。”" style="color:#ffc107">赋者，古诗之流也</font></a>。<br>先王采焉以<a href="javascript:void()"><font title="《礼记•王制》：“命太师陈诗以观民风。”" style="color:#ffc107">观土风</font></a>。<br>见<a href="javascript:void()"><font title="《毛诗•卫风•淇奥》：“瞻彼淇澳，绿竹猗猗。”淇澳(yù)：淇水弯曲处内侧；猗⁓(yī)：美盛的样子" style="color:#ffc107">绿竹猗猗</font></a>，则知卫地淇澳之产；见<a href="javascript:void()"><font title="《毛诗•秦风•小戎》：“在其版屋，乱我心曲。”" style="color:#ffc107">在其版屋</font></a>，则知秦野西戎之宅，<br>故能<a href="javascript:void()"><font title="显然，自然" style="color:#ffc107">居然</font></a>而辨八方。<br>然相如赋上林而引<a href="javascript:void()"><font title="枇杷" style="color:#ffc107">卢橘</font></a>夏熟，杨雄赋甘泉而陈<a href="javascript:void()"><font title="《汉武故事》：“植玉树之法，葺珊瑚为枝，以碧玉为叶，花子或青或赤，悉以珠玉为之。”" style="color:#ffc107">玉树</font></a>青葱，<br>班固赋西都而叹以出<a href="javascript:void()"><font title="比目鱼" style="color:#ffc107">比目</font></a>，张衡赋西京而述以游<a href="javascript:void()"><font title="传说中的海神，与前三者皆非西京之所有" style="color:#ffc107">海若</font></a>。<br>假称珍怪，以为润色，若斯之类，匪啻于兹。<br>考之果木，则生非其壤；校之神物，则出非其所，<br>于辞则易为藻饰，于义则虚而无征。<br>且夫<a href="javascript:void()"><font title="《韩非子•外储说右上》：“一日，堂溪公见昭侯曰：‘今有白玉之卮而无当，有瓦卮而有当，君渴将何以饮？’君曰：‘以瓦卮。’”当：底。" style="color:#ffc107">玉卮无当</font></a>，虽宝非用；侈言无验，虽丽非经，<br>而论者莫不<a href="javascript:void()"><font title="诋毁攻击" style="color:#ffc107">诋讦</font></a>其<a href="javascript:void()"><font title="精心钻研" style="color:#ffc107">研精</font></a>，作者<a href="javascript:void()"><font title="大抵，大都" style="color:#ffc107">大氐</font></a>举为宪章，<br>积习生常，有自来矣。<br>余既思摹二京而赋三都，<br>其山川城邑，则稽之地图；其鸟兽草木，则验之方志。<br>风谣歌舞，各附其俗；魁梧长者，莫非其旧。<br>何则？发言为诗者，咏其所志也；升高能赋者，颂其所见也。<br>美物者贵依其本，赞事者宜本其实。匪本匪实，览者奚信？<br>且夫任土作贡，虞书所著；辩物居方，周易所慎。<br>聊举其一隅，摄其体统，归诸诂训焉。</strong></p>
+<h1 id="蜀都赋"><a href="#蜀都赋" class="headerlink" title="蜀都赋"></a><strong><center><font size=4>蜀都赋</font></center></strong></h1><p><strong>有西蜀公子者，言于东吴王孙，<br>曰：盖闻天以日月为<a href="javascript:void()"><font title="法度，秩序" style="color:#ffc107">纲</font></a>，地以四海为纪。九土星分，万国错跱。<br>崤函有帝皇之宅，河洛为王者之里。<br>吾子岂亦曾闻蜀都之事欤？请为左右扬搉而陈之。<br>夫蜀都者，盖兆基于上世，开国于中古。<br>廓灵关以为门，包玉垒而为宇。带二江之双流，抗峨眉之重阻。<br>水陆所凑，兼六合而交会焉；丰蔚所盛，茂八区而菴蔼焉。<br>于前则跨蹑犍牂，枕倚交趾，经途所亘，五千余里。<br>山阜相属，含溪怀谷，冈峦纠纷，触石吐云。<br>郁葐蒀以翠微，崛巍巍以峩峩。干青霄而秀出，舒丹气而为霞。<br>龙池𤀰瀑濆其隈，漏江伏流溃其阿。汩若汤谷之扬涛，沛若濛汜之涌波。<br>于是乎邛竹缘岭，菌桂临崖，旁挺龙目，侧生荔枝。<br>布绿叶之萋萋，结朱实之离离，迎隆冬而不凋，常晔晔以猗猗。<br>孔翠群翔，犀象竞驰。白雉朝雊，猩猩夜啼。<br>金马骋光而绝景，碧鸡倏忽而曜仪。<br>火井沉荧于幽泉，高焰飞煽于天垂。<br>其间则有虎珀丹青，江珠瑕英，金沙银砾，符采彪炳，晖丽灼烁。<br>于后则却背华容，北指昆仑，缘以剑阁，阻以石门。<br>流汉汤汤，惊浪雷奔，望之天回，即之云昏。<br>水物殊品，鳞介异族，或藏蛟螭，或隐碧玉。<br>嘉鱼出于丙穴，良木攒于褒谷。<br>其树则有木兰梫桂，杞楸椅桐，棕椰楔枞。<br>楩楠幽蔼于谷底，松柏蓊郁于山峰。<br>擢修干，竦长条，扇飞云，拂轻霄。<br>羲和假道于峻歧，阳乌回翼乎高标。<br>巢居栖翔，聿兼邓林，穴宅奇兽，窠宿异禽。<br>熊罴咆其阳，雕鹗𫛣其阴，猿狖腾希而竞捷，虎豹长啸而永吟。<br>于东则左绵巴中，百濮所充。<br>外负铜梁于宕渠，内函要害于膏腴。<br>其中则有巴菽巴戟，灵寿桃枝，樊以蒩圃，滨以盐池。<br>𧌽蛦山栖，元龟水处。潜龙蟠于沮泽，应鸣鼓而兴雨。<br>丹沙赩炽出其阪，蜜房郁毓被其阜。山图采而得道，赤斧服而不朽。<br>若乃刚悍生其方，风谣尚其武。<br>奋之则賨旅，玩之则渝舞。锐气剽于中叶，𫏋容世于乐府。<br>于西则右挟岷山，涌渎发川，陪以白狼，夷歌成章。<br>坰野草昧，林麓黝儵，交让所植，蹲鸱所伏。<br>百药灌丛，寒卉冬馥，异类众夥，于何不育？<br>其中则有青珠黄环，碧砮芒消，或丰绿荑，或蕃丹椒。<br>蘼芜布濩于中阿，风连莚蔓于兰皋。<br>红葩紫饰，柯叶渐苞，敷蕊葳蕤，落英飘飖。<br>神农是尝，卢跗是料，芳追气邪，味蠲疠痟。<br>其封域之内，则有原隰坟衍，通望弥博，演以潜沬，浸以绵雒。<br>沟洫脉散，疆里绮错，黍稷油油，稉稻莫莫。<br>指渠口以为云门，洒滮池而为陆泽。虽星毕之滂沱，尚未齐其膏液。<br>尔乃邑居隐赈，夹江傍山，栋宇相望，桑梓接连。<br>家有盐泉之井，户有橘柚之园。<br>其园则林檎枇杷，橙柿梬楟，榹桃函列，梅李罗生。<br>百果甲宅，异色同荣，朱樱春熟，素柰夏成。<br>若乃大火流，凉风厉，白露凝，微霜结。<br>紫梨津润，樼栗罅发，蒲陶乱溃，若榴竞裂。<br>甘至自零，芬芳酷烈。<br>其园则有蒟蒻茱萸，瓜畴芋区，甘蔗辛姜，阳蓲阴敷。<br>日往菲薇，月来扶疏，任土所丽，众献而储。<br>其沃瀛则有攒蒋丛蒲，绿菱红莲，杂以蕴藻，糅以苹蘩。<br>总茎柅柅，裛叶蓁蓁，蕡实时味，王公羞焉。<br>其中则有鸿俦鹄侣，振鹭鹈鹕。晨凫旦至，候雁衔芦。<br>木落南翔，冰泮北徂。云飞水宿，哢吭清渠。<br>其深则有白鼋命鳖，玄獭上祭。鳣鲔鳟鲂，鮷鳢鲨鲿。<br>差鳞次色，锦质报章。跃涛戏濑，中流相忘。<br>于是乎金城石郭，兼帀中区。既丽且崇，实号成都。<br>辟二九之通门，画方轨之广涂。营新宫于爽垲，拟承明而起庐。<br>结阳城之延阁，飞观榭乎云中。开高轩以临山，列绮窗而瞰江。<br>内则议殿爵堂，武义虎威。宣化之闼，崇礼之闱。<br>华阙双邈，重门洞开。金铺交映，玉题相晖。<br>外则轨躅八达，里闬对出。比屋连甍，千庑万室。<br>亦有甲第，当衢向术。坛宇显敞，高门纳驷。<br>庭扣钟磬，堂抚琴瑟。匪葛匪姜，畴能是恤？<br>亚以少城，接乎其西。市廛所会，万商之渊。<br>列隧百重，罗肆巨千。贿货山积，纤丽星繁。<br>都人士女，袨服靓妆。贾贸墆鬻，舛错纵横。<br>异物崛诡，奇于八方。布有橦华，面有桄榔。<br>邛杖传节于大夏之邑，蒟酱流味于番禺之乡。<br>舆辇杂沓，冠带混并。累毂叠迹，叛衍相倾。<br>喧哗鼎沸，则哤聒宇宙；嚣尘张天，则埃壒曜灵。<br>阛阓之里，伎巧之家。百室离房，机杼相和。<br>贝锦斐成，濯色江波。黄润比筒，籝金所过。<br>侈侈隆富，卓郑埒名。公擅山川，货殖私庭。<br>藏镪巨万，䤨摫兼呈。亦以财雄，翕习边城。<br>三蜀之豪，时来时往。养交都邑，结俦附党。<br>剧谈戏论，扼腕抵掌。出则连骑，归从百两。<br>若其旧俗，终冬始春。吉日良辰，置酒高堂，以御嘉宾。<br>金罍中坐，肴烟四陈。觞以清醥，鲜以紫鳞。<br>羽爵执竞，丝竹乃发。巴姬弹弦，汉女击节。<br>起西音于促柱，歌江上之飉厉。纡长袖而屡舞，翩跹跹以裔裔。<br>合樽促席，引满相罚。乐饮今夕，一醉累月。<br>若夫王孙之属，郤公之伦。从禽于外，巷无居人。<br>并乘骥子，俱服鱼文。玄黄异校，结驷缤纷。<br>西逾金堤，东越玉津。朔别期晦，匪日匪旬。<br>蹴蹈蒙笼，涉𨆍寥廓。鹰犬倏眒，罻罗络幕。<br>毛群陆离，羽族纷泊。翕响挥霍，中网林薄。<br>屠麖麋，翦旄麈。带文蛇，跨彫虎。<br>志未骋，时欲晚。追轻翼，赴绝远。<br>出彭门之阙，驰九折之阪。经三峡之峥嵘，蹑五屼之蹇产。<br>戟食铁之兽，射噬毒之鹿。皛䝙氓于葽草，弹言鸟于森木。<br>拔象齿，戾犀角。鸟铩翮，兽废足。<br>殆而朅来，相与弟如滇池，集于江洲。<br>试水客，舣轻舟。娉江婓，与神游。<br>罨翡翠，钓鰋鲉 。下高鹄，出潜虬。<br>吹洞箫，发棹讴。感鲟鱼，动阳侯。<br>腾波沸涌，珠贝泛浮。若云汉含星，而光耀洪流。<br>将飨獠者，张帟幕，会平原。酌清酤，割芳鲜。<br>饮御酣，宾旅旋。车马雷骇，轰轰阗阗。<br>若风流雨散，漫乎数百里间。<br>斯盖宅土之所安乐，观听之所踊跃也，焉独三川为世朝市？<br>若乃卓荦奇谲，倜傥罔已。一经神怪，一纬人理。<br>远则岷山之精，上为井络。天帝运期而会昌，景福肸飨而兴作。<br>碧出苌弘之血，鸟生杜宇之魄。妄变化而非常，羌见伟于畴昔。<br>近则江汉炳灵，世载其英。蔚若相如，皭若君平。<br>王褒韡晔而秀发，杨雄含章而挺生。幽思绚道德，摛藻掞天庭。<br>考四海而为俊，当中叶而擅名。<br>是故游谈者以为誉，造作者以为程也。<br>至乎临谷为塞，因山为障。峻岨塍埒长城，豁险吞若巨防。<br>一人守隘，万夫莫向。公孙跃马而称帝，刘宗下辇而自王。<br>由此言之，天下孰尚？故虽兼诸夏之富有，犹未若兹都之无量也。</strong></p>
+<h1 id="吴都赋"><a href="#吴都赋" class="headerlink" title="吴都赋"></a><strong><center><font size=4>吴都赋</font></center></strong></h1><p><strong>东吴王孙冁然而咍，<br>曰：夫上图景宿，辨于天文者也；下料物土，析于地理者也。<br>古先帝代，曾览八纮之洪绪，一六合而光宅。<br>翔集遐宇，鸟策篆素，玉牒石记，乌闻梁岷有陟方之馆、行宫之基欤？<br>而吾子言蜀都之富，禺同之有，玮其区域，美其林薮。<br>矜巴汉之阻，则以为袭险之右；徇蹲鸱之沃，则以为世济阳九。<br>龌龊而算，顾亦曲士之所叹也；旁魄而论，抑非大人之壮观也。<br>何则？土壤不足以摄生，山川不足以周卫。<br>公孙国之而破，诸葛家之而灭。<br>兹乃丧乱之丘墟，颠覆之轨辙，安可以俪王公而奢风烈也？<br>玩其碛砾而不窥玉渊者，未知骊龙之所蟠也；<br>习其弊邑而不睹上邦者，未知英雄之所躔也。<br>子独未闻大吴之巨丽乎？<br>且有吴之开国也，造自太伯，宣于延陵。<br>盖端委之所彰，高节之所兴，建至德以创洪业，世无得而显称。<br>由克让以立风俗，轻脱屣于千乘。<br>若率土而论都，则非列国之所觖望也。<br>故其经略，上当星纪，拓土画疆，卓荦兼并。<br>包括干越，跨蹑蛮荆。婺女寄其曜，翼轸寓其精。<br>指衡岳以镇野，目龙川而带坰。<br>尔其山泽，则嵬嶷峣屼，巊冥郁𡶒，溃渱泮汗，滇㴐淼漫。<br>或涌川而开渎，或吞江而纳汉。<br>磈磈𡾖𡾖，滮滮涆涆。䃢碒乎数州之间，灌注乎天下之半。<br>百川派别，归海而会，控清引浊，混涛并濑。<br>濆薄沸腾，寂寥长迈，濞焉汹汹，隐焉礚礚。<br>出乎大荒之中，行乎东极之外。经扶桑之中林，包汤谷之滂沛。<br>潮波汩起，回复万里，歊雾漨浡，云蒸昏昧。<br>泓澄奫潫，澒溶沆漾，莫测其深，莫究其广。<br>澶湉漠而无涯，㹅有流而为长，瑰异之所丛育，鳞甲之所集往。<br>于是乎长鲸吞航，修鲵吐浪，跃龙腾蛇，鲛鲻琵琶。<br>王鲔鯸鲐，鮣龟鱕䱜，乌贼拥剑，𪓟鼊鲭鳄，涵泳乎其中。<br>葺鳞镂甲，诡类舛错，溯洄顺流，噞喁沉浮。<br>鸟则鹍鸡鸀𩿱，鹴鹄鹭鸿，鶢鶋避风，候雁造江。<br>㶉鶒鷛𪆂，䴖鹤鹙鸧，鹳鸥鹢鸬，氾滥乎其上。<br>湛淡羽仪，随波参差，理翮整翰，容与自玩。<br>叼啄蔓藻，刷荡漪澜，鱼鸟聱耴，万物蠢生。<br>芒芒黖黖，慌罔奄欻，神化翕忽，函幽育明。<br>穷性极形，盈虚自然，蚌蛤珠胎，与月亏全。<br>巨鳌赑屃，首冠灵山，大鹏缤翻，翼若垂天。<br>振荡汪流，雷抃重渊，殷动宇宙，胡可胜原。<br>岛屿绵邈，洲渚冯隆，旷瞻迢递，迥眺冥蒙。<br>珍怪丽，奇隙充，径路绝，风云通。<br>洪桃屈盘，丹桂灌丛，琼枝抗茎而敷蕊，珊瑚幽茂而玲珑。<br>增冈重阻，列真之宇，玉堂对霤，石室相距。<br>蔼蔼翠幄，嫋嫋素女，江婓于是往来，海童于是宴语。<br>斯实神妙之响象，嗟难得而覙缕！<br>尔乃地势坱圠，卉木镺蔓，遭薮为圃，值林为苑。<br>异荂蓲蘛，夏晔冬蒨，方志所辨，中州所羡。<br>草则藿蒳豆蔻，姜汇非一，江蓠之属，海苔之类。<br>纶组紫绛，食葛香茅，石帆水松，东风扶留。<br>布濩皋泽，蝉联陵丘，夤缘山岳之岊，幂历江海之流。<br>扤白蒂，衔朱蕤，郁兮䓲茂，晔兮菲菲。<br>光色炫晃，芬馥肸蚃，职贡纳其包匦，离骚咏其宿莽。<br>木则枫柙豫章，栟榈枸桹，绵杬杶栌，文欀桢橿。<br>平仲君迁，松梓古度，楠榴之木，相思之树。<br>宗生高冈，族茂幽阜，擢本千寻，垂荫万亩。<br>攒柯挐茎，重葩殗叶，轮囷虬蟠，𡍪㙷鳞接。<br>荣色杂糅，绸缪缛绣，宵露霮䨴，旭日晻孛。<br>与风飖飏，䬀浏飕飗，鸣条律畅，飞音响亮。<br>盖象琴筑并奏，笙竽俱唱。<br>其上则有猿父哀吟，𤟤子长啸，狖鼯猓然，腾趠飞超。<br>争县接垂，竞游远枝，惊透沸乱，牢落翚散。<br>其下则有枭羊麡狼，猰㺄䝙象，乌菟之族，犀兕之党。<br>钩爪锯牙，自成锋颖，精若燿星，声若震霆。<br>名载于山经，形镂于夏鼎。<br>其竹则筼筜箖箊，桂箭射筒。柚梧有篁，篻簩有丛。<br>苞笋抽节，往往萦结，绿叶翠茎，冒霜停雪。<br>橚矗森萃，蓊茸萧瑟，檀栾蝉蜎，玉润碧鲜。<br>梢云无以逾，嶰谷弗能连，鸑鷟食其实，鹓雏扰其间。<br>其果则丹橘馀甘，荔枝之林，槟榔无柯，椰叶无阴。<br>龙眼橄榄，棎榴御霜，结根比景之阴，列挺衡山之阳。<br>素华斐，丹秀芳，临青壁，系紫房。<br>鹧鸪南翥而中留，孔雀綷羽以翱翔。<br>山鸡归飞而来栖，翡翠列巢以重行。<br>其琛赂则琨瑶之阜，铜锴之垠，火齐之宝，骇鸡之珍。<br>赪丹明玑，金华银朴，紫贝流黄，缥碧素玉。<br>隐赈崴㠢，杂插幽屏，精曜潜颖，硩陊山谷。<br>碕岸为之不枯，林木为之润黩。<br>隋侯于是鄙其夜光，宋王于是陋其结绿。<br>其荒陬谲诡，则有龙穴内蒸，云雨所储，陵鲤若兽，浮石若桴。<br>双则比目，片则王馀，穷陆饮木，极沉水居。<br>泉室潜织而卷绡，渊客慷慨而泣珠。<br>开北户以向日，齐南冥于幽都。<br>其四野则畛畷无数，膏腴兼倍，原隰殊品，窊隆异等。<br>象耕鸟耘，此之自与，穱秀菰穗，于是乎在。<br>煮海为盐，采山铸钱，国税再熟之稻，乡贡八蚕之绵。<br>徒观其郊隧之内奥，都邑之纲纪，霸王之所根柢，开国之所基趾。<br>郛郭周匝，重城结隅，通门二八，水道陆衢，<br>所以经始，用累千祀也；<br>宪紫宫以营室，廓广庭之漫漫，寒暑隔阂于邃宇，虹霓回带于云馆，<br>所以跨跱，焕炳万里也。<br>造姑苏之高台，临四远而特建，带朝夕之濬池，佩长洲之茂苑。<br>窥东山之府，则环宝溢目；䚕海陵之仓，则红粟流衍。<br>起寝庙于武昌，作离宫于建业，阐阖闾之所营，采夫差之遗法。<br>抗神龙之华殿，施荣楯而捷猎，崇临海之崔巍，饰赤乌之韡晔。<br>东西胶葛，南北峥嵘，房栊对櫎，连阁相经。<br>阍闼谲诡，异出奇名，左称弯碕，右号临硎。<br>雕栾镂楶，青琐丹楹，图以云气，画以仙灵。<br>虽兹宅之夸丽，曾未足以少宁，思比屋于倾宫，毕结瑶而构琼。<br>高闱有闶，洞门方轨，朱阙双立，驰道如砥。<br>树以青槐，亘以绿水，玄荫眈眈，清流亹亹。<br>列寺七里，侠栋阳路，屯营栉比，解署棋布。<br>横塘查下，邑屋隆夸，长干延属，飞甍舛互。<br>其居则高门鼎贵，魁岸豪杰，虞魏之昆，顾陆之裔。<br>歧嶷继体，老成奕世，跃马叠迹，朱轮累辙。<br>陈兵而归，兰锜内设，冠盖云荫，闾阎阗噎。<br>其邻则有任侠之靡，轻訬之客，缔交翩翩，傧从奕奕。<br>出蹑珠履，动以千百，里宴巷饮，飞觞举白。<br>翘关扛鼎，拚射壶博，鄱阳暴谑，中酒而作。<br>于是乐只衎而欢饫无匮，都辇殷而四奥来暨。<br>水浮陆行，方舟结驷，唱棹转毂，昧旦永日。<br>开市朝而并纳，横阛阓而流溢，混品物而同廛，并都鄙而为一。<br>士女伫眙，商贾骈坒，纻衣絺服，杂沓傱萃。<br>轻舆按辔以经隧，楼船举帆而过肆。<br>果布辐凑而常然，致远流离与珂珬。<br>𦈜贿纷纭，器用万端，金镒磊砢，珠琲阑干。<br>桃笙象簟，韬于筒中；蕉葛升越，弱于罗纨。<br>㒊譶泶㺒，交贸相竞，喧哗喤呷，芬葩荫映。<br>挥袖风飘而红尘昼昬；流汗霡霂而中逵泥泞。<br>富中之甿，货殖之选，乘时射利，财丰巨万。<br>竞其区宇，则并疆兼巷；矜其宴居，则珠服玉馔。<br>趫材悍壮，此焉比庐，捷若庆忌，勇若专诸。<br>危冠而出，竦剑而趋，扈带鲛函，扶揄属镂。<br>藏鍦于人，去𢧕自闾，家有鹤膝，户有犀渠。<br>军容蓄用，器械兼储，吴钩越棘，纯钧湛卢。<br>戎车盈于石城，戈船掩乎江湖。<br>露往霜来，日月其除，草木节解，鸟兽腯肤。<br>观鹰隼，诫征夫，坐组甲，建祀姑。<br>命官帅而拥铎，将校猎乎具区。<br>乌浒狼㬻，夫南西屠，儋耳黑齿之酋，金邻象郡之渠。<br>骉䮅飍裔，靸霅警捷，先驱前涂。<br>俞骑骋路，指南司方。出车槛槛，被练锵锵。<br>吴王乃巾玉辂，轺骕骦，旗鱼须，常重光。<br>摄乌号，佩干将，羽旄扬蕤，雄戟耀芒。<br>贝胄象弭，织文鸟章，六军袀服，四骐龙骧。<br>峭格周施，罿罻普张，罼罕琐结，罠蹏连纲。<br>阹以九疑，御以沅湘，輶轩蓼扰，彀骑炜煌。<br>袒裼徒搏，拔距投石之部，<br>猿臂骿胁，狂趭犷猤，鹰瞵鹗视，䟃𧽼翋𦑶，<br>若离若合者，相与腾跃乎莽䍚之野；<br>干卤殳鋋，旸夷勃卢之旅，<br>长𥍟短兵，直发驰骋，儇佻坌并，衔枚无声，<br>悠悠旆旌者，相与聊浪乎昧莫之坰。<br>钲鼓叠山，火烈熛林，飞爓浮烟，载霞载阴。<br>菈擸雷硠，崩峦阤岑，鸟不择木，兽不择音。<br>𧇭甝虪，𩓇麋麖，蓦六驳，追飞生。<br>弹鸾鶁，射猱㹶，白雉落，黑鸩零。<br>陵绝嶛嶕，聿越巉险，跇逾竹柏，𤣆猭杞楠。<br>封狶䓼，神螭掩，刚镞润，霜刃染。<br>于是弭节顿辔，齐镳驻跸。徘徊倘佯，寓目幽蔚。<br>览将帅之拳勇，与士卒之抑扬。<br>羽族以觜距为刀铍，毛群以齿角为矛铗，皆体著而应卒。<br>所以挂扢而为创痏，冲踤而断筋骨，莫不衂锐挫芒，拉捭摧藏。<br>虽有石林之岝崿，请攘臂而靡之；<br>虽有雄虺之九首，将抗足而跐之。<br>颠覆巢居，剖破窟宅，仰攀鵕鸃，俯蹴豺獏。<br>刦剞熊罴之室，剽掠虎豹之落。猩猩啼而就禽，狒狒笑而被格。<br>屠巴蛇，出象骼，斩鹏翼，掩广泽。<br>轻禽狡兽，周章夷犹，狼跋乎纮中，忘其所以睒睗，失其所以去就。<br>魂褫气慑而自踢䟮者，应弦饮羽形偾景僵者，累积而增益，杂袭错缪。<br>倾薮薄，倒岬岫，岩穴无豜豵，翳荟无𪋐鹨。<br>思假道于丰隆，披重霄而高狩，笼乌兔于日月，穷飞走之栖宿。<br>嶰涧阒，冈岵童，罾罘满，效获众。<br>回靶乎行睨，观鱼乎三江，泛舟航于彭蠡，浑万艘而既同。<br>弘舸连舳，巨槛接舻，飞云盖海，制非常模。<br>叠华楼而岛跱，时髣髴于方壶，比鹢首而有裕，迈馀皇于往初。<br>张组帏，构流苏，开轩幌，镜水区。<br>槁工楫师，选自闽禺，习御长风，狎玩灵胥。<br>责千里于寸阴，聊先期而须臾。<br>棹讴唱，箫籁鸣，洪流响，渚禽惊。<br>弋磻放，稽鹪䳟，虞机发，留䴔䴖。<br>钩铒纵横，网罟接绪，术兼詹公，巧倾任父。<br>筌䱎䲛，鲡鲿鲨，罩两魪，罺鰝虾。<br>乘鲎鼋鼍，同罛共罗，沉虎潜鹿，馽龓僒束。<br>鰴鲸辈中于群犗，搀抢暴出而相属。<br>虽复临河而钓鲤，无异射鲋于井谷。<br>结轻舟而竞逐，迎潮水而振缗，想萍实之复形，访灵夔于鲛人。<br>精卫衔石而遇缴，文鳐夜飞而触纶。<br>北山亡其翔翼，西海失其游鳞。<br>雕题之士，镂身之卒，比饰虬龙，蛟螭与对。<br>简其华质，则亄费锦缋，料其虓勇，则鵰悍狼戾。<br>相与昧潜险，搜瑰奇，摸蝳蝐，扪觜𧓈。<br>剖巨蚌于回渊，濯明月于涟漪。<br>毕天下之至异，讫无索而不臻，溪壑为之一罄，川渎为之中贫。<br>哂澹台之见谋，聊袭海而徇珍，载汉女于后舟，追晋贾而同尘。<br>汩乘流以砰宕，翼飔风之䬟䬟，直冲涛而上濑，常沛沛以悠悠。<br>汔可休而凯归，揖天吴与阳侯，指包山而为期，集洞庭而淹留。<br>数军实乎桂林之苑，飨戎旅乎落星之楼。<br>置酒若淮泗，积肴若山丘，飞轻轩而酌绿酃，方双辔而赋珍羞。<br>饮烽起，釂鼓震，士遗倦，众怀欣。<br>幸乎馆娃之宫，张女乐而娱群臣，罗金石与丝竹，若钧天之下陈。<br>登东歌，操南音，胤阳阿，咏韎任。<br>荆艳楚舞，吴歈越吟，翕习容裔，靡靡愔愔。<br>若此者，与夫唱和之隆响，动锺鼓之铿耾。<br>有殷坻颓于前，曲度难胜，皆与谣俗汁恊，律吕相应。<br>其奏乐也，则木石润色；其吐哀也，则凄风暴兴。<br>或超延露而驾辩，或逾绿水而采菱。<br>军马弭髦而仰秣，渊鱼竦鳞而上升。<br>酣湑半，八音并，欢情留，良辰征。<br>鲁阳挥戈而高麾，回曜灵于太清。<br>将转西日而再中，齐既往之精诚。<br>昔者夏后氏朝群臣于兹土，而执玉帛者以万国。<br>盖亦先王之所高会，而四方之所轨则。<br>春秋之际，要盟之主，阖闾信其威，夫差穷其武。<br>内果伍员之谋，外骋孙子之奇，胜强楚于柏举，栖劲越于会稽。<br>阙沟乎商鲁，争长于黄池。<br>徒以江湖嶮陂，物产殷充，绕霤未足言其固，郑白未足语其丰。<br>士有陷坚之锐，俗有节概之风，睚眦则挺剑，喑呜则弯弓。<br>拥之者龙腾，据之者虎视，麾城若振槁，搴旗若顾指。<br>虽带甲一朝，而元功远致；虽累叶百叠，而富强相继。<br>乐湑衎其方域，列仙集其土地，桂父练形而易色，赤须蝉蜕而附丽。<br>中夏比焉，毕世而罕见，丹青图其珍玮，贵其宝利也。<br>舜禹游焉，没齿而忘归，精灵留其山阿，玩其奇丽也。<br>剖判庶士，商搉万俗。国有郁鞅而显敞，邦有湫阨而踡跼。<br>伊兹都之函弘，倾神州而韫椟，仰南斗以斟酌，兼二仪之优渥。<br>繇此而揆之，西蜀之于东吴，<br>小大之相绝也，亦犹棘林萤燿，而与夫寻木龙烛也；<br>否泰之相背也，亦犹帝之悬解，而与夫桎梏疏属也。<br>庸可共世而论巨细，同年而议丰确乎？<br>暨其幽遐独邃，寥廓闲奥。耳目之所不该，足趾之所不蹈。<br>倜傥之极异，誳诡之殊事，藏理于终古，而未寤于前觉也。<br>若吾子之所传，孟浪之遗言，略举其梗概，而未得其要妙也。</strong></p>
+<h1 id="魏都赋"><a href="#魏都赋" class="headerlink" title="魏都赋"></a><strong><center><font size=4>魏都赋</font></center></strong></h1><p><strong>魏国先生有睟其容，乃盱衡而诰曰：异乎交益之士。<br>盖音有楚夏者，土风之乖也；情有险易者，习俗之殊也。<br>虽则生常，固非自得之谓也。<br>昔市南宜僚弄丸，而两家之难解，聊为吾子复玩德音，以释二客竞于辩囿者也。<br>夫泰极剖判，造化权舆，体兼昼夜，理包清浊。<br>流而为江海，结而为山岳，列宿分其野，荒裔带其隅。<br>岩冈潭渊，限蛮隔夷，峻危之窍也；<br>蛮陬夷落，译导而通，鸟兽之氓也。<br>正位居体者，以中夏为喉，不以边垂为襟也；<br>长世字甿者，以道德为藩，不以袭险为屏也。<br>而子大夫之贤者，尚弗曾庶翼等威，附丽皇极，思禀正朔，乐率贡职。<br>而徒务于诡随匪民，宴安于绝域，荣其文身，骄其险棘。<br>缪默语之常伦，牵胶言而逾侈，饰华离以矜然，假倔强而攘臂。<br>非醇粹之方壮，谋踳驳于王义，孰愈寻靡萍于中逵，造沐猴于棘刺。<br>剑阁虽嶛，凭之者蹶，非所以深根固蒂也；<br>洞庭虽濬，负之者北，非所以爱人治国也。<br>彼桑榆之末光，逾长庚之初辉，况河冀之爽垲，与江介之湫湄。<br>故将语子以神州之略，赤县之畿，魏都之卓荦，六合之枢机。<br>于时运距阳九，汉网绝维，奸回内赑，兵缠紫微。<br>翼翼京室，眈眈帝宇，巢焚原燎，变为煨烬，故荆棘旅庭也；<br>殷殷寰内，绳绳八区，锋镝纵横，化为战场，故麋鹿寓城也。<br>伊洛榛旷，崤函荒芜。临菑牢落，鄢郢丘墟。<br>而是有魏开国之日，缔构之初。<br>万邑譬焉，亦独犨麋之与子都，培塿之与方壶也。<br>且魏地者，毕昴之所应，虞夏之馀人，先王之桑梓，列圣之遗尘。<br>考之四隈，则八埏之中；测之寒暑，则霜露所均。<br>卜偃前识而赏其隆，吴札听歌而美其风。<br>虽则衰世，而盛德形于管弦；<br>虽逾千祀，而怀旧蕴于遐年。<br>尔其疆域，则旁极齐秦，结凑冀道，开胸殷卫，跨蹑燕赵。<br>山林幽岟，川泽回缭，恒碣碪<font size=4px>𥔲</font>于青霄，河汾浩涆而皓溔。<br>南瞻淇澳，则绿竹纯茂；北临漳滏，则冬夏异沼。<br>神钲迢递于高峦，灵响时惊于四表。<br>温泉毖涌而自浪，华清荡邪而难老。<br>墨井盐池，玄滋素液，厥田惟中，厥壤惟白，原隰畇畇，坟衍厈厈。<br>或嵬罍而复陆，或黋朗而拓落。<br>乾坤交泰而絪缊，嘉祥徽显而豫作。<br>是以兆朕振古，萌柢畴昔，藏气谶纬，閟象竹帛。<br>迥时世而渊默，应期运而光赫，暨圣武之龙飞，肇受命而光宅。<br>爰初自臻，言占其良，谋龟谋筮，亦既允臧。<br>修其郛郭，缮其城隍，经始之制，牢笼百王。<br>画雍豫之居，写八都之宇，鉴茅茨于陶唐，察卑宫于夏禹。<br>古公草创，而高门有闶；宣王中兴，而筑室百堵。<br>兼圣哲之轨，并文质之状，商丰约而折中，准当年而为量。<br>思重爻，摹大壮，览荀卿，采萧相。<br>𠊩拱木于林衡，授全模于梓匠。<br>遐迩悦豫而子来，工徒拟议而骋巧。<br>阐钩绳之筌绪，承二分之正要。<br>揆日晷，考星耀，建社稷，作清庙。<br>筑曾宫以回匝，比冈隒而无陂，造文昌之广殿，极栋宇之弘规。<br>崶若崇山崛起以崔嵬，髧若玄云舒蜺以高垂。<br>瑰材巨世，𡍪㙷参差，枌橑复结，栾栌叠施。<br>丹梁虹申以并亘，朱桷森布而支离。<br>绮井列疏以悬蒂，华莲重葩而倒披。<br>齐龙首而涌霤，时梗概于滮池。<br>旅楹闲列，晖鉴柍桭，榱题黮𪒡，阶𨺠嶙峋。<br>长庭砥平，钟虡夹陈，风无纤埃，雨无微津。<br>岩岩北阙，南端逌遵，竦峭双碣，方驾比轮。<br>西辟延秋，东启长春，用觐群后，观享颐宾。<br>左则中朝有赩，听政作寝，匪朴匪斵，去泰去甚。<br>木无雕锼，土无绨锦，玄化所甄，国风所禀。<br>于前则宣明显阳，顺德崇礼，重闱洞出，锵锵济济。<br>珍树猗猗，奇卉萋萋，蕙风如薰，甘露如醴。<br>禁台省中，连闼对廊，直事所繇，典刑所藏。<br>蔼蔼列侍，金蜩齐光，诘朝陪幄，纳言有章。<br>亚以柱后，执法内侍，符节谒者，典玺储吏。<br>膳夫有官，药剂有司，肴醳顺时，腠理则治。<br>于后则椒鹤文石，永巷壸术，楸梓木兰，次舍甲乙。<br>西南其户，成之匪日，丹青焕炳，特有温室。<br>仪形宇宙，历像贤圣，图以百瑞，綷以藻咏。<br>芒芒终古，此焉则镜，有虞作绘，兹亦等竞。<br>右则疏圃曲池，下畹高堂。兰渚莓莓，石濑汤汤。<br>弱葼系实，轻叶振芳，奔龟跃鱼，有𥉻吕梁。<br>驰道周屈于果下，延阁胤宇以经营。<br>飞陛方辇而径西，三台列峙以峥嵘。<br>亢阳台于阴基，拟华山之削成，上累栋而重霤，下冰室而冱冥。<br>周轩中天，丹墀临猋，增构峨峨，清尘彯彯。<br>云雀踶甍而矫首，壮翼摛镂于青霄。<br>雷雨窈冥而未半，皦日笼光于绮寮。<br>习步顿以升降，御春服而逍遥。<br>八极可围于寸眸，万物可齐于一朝。<br>长涂牟首，豪徼互经，晷漏肃唱，明宵有程。<br>附以兰锜，宿以禁兵，司卫闲邪，钩陈罔惊。<br>于是崇墉濬洫，婴堞带涘，四门䡾䡾，隆厦重起。<br>凭太清以混成，越埃壒而资始，藐藐标危，亭亭峻阯。<br>临焦原而不怳，谁劲捷而无𤟧？与冈岑而永固，非有期乎世祀。<br>阳灵停曜于其表，阴祇蒙雾于其里。<br>菀以玄武，陪以幽林，缭垣开囿，观宇相临。<br>硕果灌丛，围木竦寻，篁筱怀风，蒲陶结阴。<br>回渊漼，积水深，蒹葭贙，雚蒻森。<br>丹藕凌波而的皪，绿芰泛涛而浸潭。<br>羽翮颉颃，鳞介浮沉，栖者择木，雊者择音。<br>若咆渤澥与姑馀，常鸣鹤而在阴。<br>表清籞，勒虞箴，思国恤，忘从禽。<br>樵苏往而无忌，即鹿纵而匪禁。<br>腜腜坰野，奕奕菑亩，甘荼伊蠢，芒种斯阜。<br>西门溉其前，史起灌其後。<br>墱流十二，同源异口，畜为屯云，泄为行雨。<br>水澍粳稌，陆莳稷黍，黝黝桑柘，油油麻纻。<br>均田画畴，蕃庐错列，姜芋充茂，桃李荫翳。<br>家安其所，而服美自悦；邑屋相望，而隔逾奕世。<br>内则街冲辐辏，朱阙结隅，石杠飞梁，出控漳渠。<br>疏通沟以滨路，罗青槐以荫涂，比沧浪而可濯，方步櫩而有逾。<br>习习冠盖，莘莘蒸徒，斑白不提，行旅让衢。<br>设官分职，营处署居，夹之以府寺，班之以里闾。<br>其府寺则位副三事，官逾六卿，奉常之号，大理之名。<br>厦屋一揆，华屏齐荣，肃肃阶䦳，重门再扃，师尹爰止，毗代作桢。<br>其闾阎则长寿吉阳，永平思忠。<br>亦有戚里，寘宫之东，闬出长者，巷苞诸公。<br>都护之堂，殿居绮窗，舆骑朝猥，蹀攲其中。<br>营客馆以周坊，饬宾侣之所集，玮丰楼之闬闳，起建安而首立。<br>葺墙幂室，房庑杂袭，剞劂罔掇，匠斫积习。<br>广成之传无以畴，稾街之邸不能及。<br>廊三市而开廛，籍平逵而九达，班列肆以兼罗，设阛阓以襟带。<br>济有无之常偏，距日中而毕会，抗旗亭之峣薛，侈所覜之博大。<br>百隧毂击，连轸万贯，凭轼捶马，袖幕纷半。<br>壹八方而混同，极风采之异观，质剂平而交易，刀布贸而无算。<br>财以工化，贿以商通，难得之货，此则弗容。<br>器周用而长务，物背窳而就攻，不鬻邪而豫贾，著驯致之醇醲。<br>白藏之藏，富有无堤，同赈大内，控引世资，賨幏积墆，琛币充牣。<br>关石之所和钧，财赋之所底慎。<br>燕弧盈库而委劲，冀马填厩而驵骏。<br>至乎勍敌纠纷，庶土罔宁，圣武兴言，将曜威灵。<br>介胄重袭，旌旗跃茎，弓珧解檠，矛鋋飘英。<br>三属之甲，缦胡之缨，控弦简发，妙拟更嬴。<br>齐被练而铦戈，袭偏裻以䜋列，毕出征而中律，执奇正以四伐。<br>硕画精通，目无匪制，推锋积纪，铓气弥锐。<br>三接三捷，既昼亦月，克翦方命，吞灭咆烋。<br>云撤叛换，席卷虔刘，祲威八纮，荒阻率由。<br>洗兵海岛，刷马江洲，振旅䡘䡘，反旆悠悠。<br>凯归同饮，疏爵普畴，朝无刓印，国无费留。<br>丧乱既弭而能宴，武人归兽而去战。<br>萧斧戢柯以柙刃，虹旌摄麾以就卷。<br>斟洪范，酌典宪，观所恒，通其变。<br>上垂拱而司契，下缘督而自劝。<br>道来斯贵，利往则贱，囹圄寂寥，京庾流衍。<br>于时东鳀即序，西倾顺轨，荆南怀憓，朔北思韪。<br>绵绵迥涂，骤山骤水，襁负赆贽，重译贡篚。<br>髽首之豪，鐻耳之杰，服其荒服，敛衽魏阙。<br>置酒文昌，高张宿设，其夜未遽，庭燎晣晣。<br>有客祁祁，载华载裔，岌岌冠纵，累累辫发。<br>清酤如济，浊醪如河，冻醴流澌，温酎跃波。<br>丰肴衎衎，行庖皤皤，愔愔醧宴，酣湑无哗。<br>延广乐，奏九成，冠韶夏，冒英茎。<br>傮响起，疑震霆，天宇骇，地庐惊。<br>亿若大帝之所兴作，二嬴之所曾聆。<br>金石丝竹之恒韵，匏土革木之常调。<br>干戚羽旄之饰好，清讴微吟之要妙。<br>世业之所日用，耳目之所闻觉，杂糅纷错，兼该泛博。<br>鞮鞻所掌之音，韎昧任禁之曲，以娱四夷之君，以睦八荒之俗。<br>既苗既狩，爰游爰豫，藉田以礼动，大阅以义举。<br>备法驾，理秋御，显文武之壮观，迈梁驺之所著。<br>林不槎枿，泽不伐夭，斧斨以时，罾罔以道。<br>德连木理，仁挺芝草，皓兽为之育薮，丹鱼为之生沼。<br>矞云翔龙，泽马亍阜，山图其石，川形其宝。<br>莫黑匪乌，三趾而来仪；莫赤匪狐，九尾而自扰。<br>嘉颖离合以䔿䔿，醴泉涌流而浩浩。<br>显祯祥以曲成，固触物而兼造，盖亦明灵之所酬酢，休征之所伟兆。<br>旼旼率土，迁善罔匮，沐浴福应，宅心醰粹。<br>馀粮栖亩而弗收，颂声载路而洋溢。<br>河洛开奥，符命用出，翩翩黄鸟，衔书来讯。<br>人谋所尊，鬼谋所秩，刘宗委驭，巽其神器。<br>窥玉策于金縢，案图箓于石室，考历数之所在，察五德之所莅。<br>量寸旬，涓吉日，陟中坛，即帝位。<br>改正朔，易服色，继绝世，修废职。<br>徽帜以变，器械以革，显仁翌明，藏用玄默。<br>菲言厚行，陶化染学，雠校篆籀，篇章毕觌。<br>优贤著于扬历，匪孽形于亲戚。<br>本枝别干，蕃屏皇家，勇若任城，才若东阿。<br>抗旌则威噞秋霜，摛翰则华纵春葩。<br>英喆雄豪，佐命帝室，相兼二八，将猛四七。<br>赫赫震震，开务有谧，故令斯民睹泰阶之平，可比屋而为一。<br>算祀有纪，天禄有终，传业禅祚，高谢万邦。<br>皇恩绰矣，帝德冲矣，让其天下，臣至公矣。<br>荣操行之独得，超百王之庸庸。<br>追亘卷领与结绳，睠留重华而比踪。<br>尊卢赫胥，羲农有熊，<br>虽自以为道洪化隆，世笃玄同，奚遽不能与之踵武而齐其风？<br>是故料其建国，析其法度，谘其考室，议其举厝。<br>复之而无斁，申之而有裕。<br>非疏粝之士所能精，非鄙俚之言所能具。<br>至于山川之倬诡，物产之魁殊，或名奇而见称，或实异而可书。<br>生生之所常厚，洵美之所不渝。<br>其中则有鸳鸯交谷，虎涧龙山。<br>掘鲤之淀，盖节之渊，𦐊𦐊精卫，衔木偿怨。<br>常山平干，钜鹿河间，列真非一，往往出焉。<br>昌容练色，犊配眉连，玄俗无影，木羽偶仙。<br>琴高沉水而不濡，时乘赤鲤而周旋。<br>师门使火以验术，故将去而林燔。<br>易阳壮容，卫之稚质，邯郸躧步，赵之鸣瑟。<br>真定之梨，故安之栗，醇酎中山，流湎千日。<br>淇洹之笋，信都之枣，雍丘之粱，清流之稻。<br>锦绣襄邑，罗绮朝歌，绵纩房子，缣緫清河。<br>若此之属，繁富夥够，非可单究，是以抑而未罄也。<br>盖比物以错辞，述清都之闲丽，虽选言以简章，徒九复而遗旨。<br>览大易与春秋，判殊隐而一致，末上林之隤墙，本前修以作系。<br>其军容弗犯，信其果毅，纠华绥戎，以戴公室，<br>元勋配管敬之绩，歌钟析邦君之肆，则魏绛之贤有令闻也；<br>闲居隘巷，室迩心遐，富仁宠义，职竞弗罗，<br>千乘为之轼庐，诸侯为之止戈，则干木之德自解纷也；<br>贵非吾尊，重士逾山，亲御监门，嗛嗛同轩。<br>搦秦起赵，威振八蕃，则信陵之名若兰芬也；<br>英辩荣枯，能济其厄，位加将相，窒隙之策。<br>四海齐锋，一口所敌，则张仪张禄亦足云也。<br>搉惟庸蜀与鸲鹊同窠，句吴与蛙黾同穴。<br>一自以为禽鸟，一自以为鱼鳖。<br>山阜猥积而踦岖，泉流迸集而咉咽。<br>隰壤瀸漏而沮洳，林薮石留而芜秽。<br>穷岫泄云，日月恒翳，宅土熇暑，封疆障疠。<br>蔡莽螫刺，昆虫毒噬，汉罪流御，秦馀徙㡂。<br>宵貌蕞陋，禀质遳脆，巷无杼首，里罕耆耋。<br>或魋髻而左言，或镂肤而钻发，或明发而嬥歌，或浮泳而卒岁。<br>风俗以韰果为婳，人物以戕害为艺，威仪所不摄，宪章所不缀。<br>由重山之束厄，因长川之据势，距远关以闚𨵦，时高樔而陛制。<br>薄戍绵幂，无异蛛蝥之网；弱卒琐甲，无异螳螂之卫。<br>与先世而常然，虽信险而剿绝，揆既往之前迹，即将来之后辙。<br>成都迄已倾覆，建邺则亦颠沛，<br>顾非累卵于叠棋，焉至观形而怀怛！<br>权假日以馀荣，比朝华而菴蔼。览麦秀与黍离，可作谣于吴会。<br>先生之言未卒，吴蜀二客，𢥠焉相顾，𥉉焉失所。<br>有腼瞢容，神惢形茹，弛气离坐，㥏墨而谢。<br>曰：仆党清狂，怵迫闽濮，习蓼虫之忘辛，玩进退之惟谷。<br>非常寐而无觉，不睹皇舆之轨躅。<br>过以𠆩剽之单慧，历执古之醇听，兼重悂以䝯缪，偭辰光而罔定。<br>先生玄识，深颂靡测，得闻上德之至盛，匪同忧于有圣。<br>抑若春霆发响，而惊蛰飞竞；潜龙浮景，而幽泉高镜。<br>虽星有风雨之好，人有异同之性，庶觌蔀家与剥庐，非苏世而居正。<br>且夫寒谷丰黍，吹律暖之也；昏情爽曙，箴规显之也。<br>虽明珠兼寸，尺璧有盈，曜车二六，三倾五城，<br>未若申锡典章之为远也。<br>亮曰：日不双丽，世不两帝。天经地纬，理有大归。<br>安得齐给守其小辩也哉。</strong></p>
 ]]></content>
       <categories>
-        <category>微分几何</category>
+        <category>其他</category>
       </categories>
-  </entry>
-  <entry>
-    <title>杜甫集</title>
-    <url>/2022/04/01/%E6%9D%9C%E7%94%AB%E9%9B%86/%E6%9D%9C%E7%94%AB%E9%9B%86/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><details>
-<summary><center><strong><answer><font size=5px>七律</font></answer></strong></center></summary>
-<font size=4px face="微软雅黑">
-<strong>
-<a href="#秋兴八首">秋兴八首</a>$\quad$<a href="#咏怀古迹五首">咏怀古迹五首</a>
-</strong>
-</font>
-</details>
-
-<details>
-<summary><center><strong><answer><font size=5px>古体</font></answer></strong></center></summary>
-<font size=4px face="微软雅黑">
-<strong>
-<a href="#题郑十八著作虔">题郑十八著作虔</a>$\quad$
-</strong>
-</font>
-</details>
-
-<strong>
-
-<hr>
-<p><a name="秋兴八首"></a><br>秋兴八首$$$$</p>
-<p>玉露凋伤枫树林，巫山巫峡气萧森。<br>江间波浪兼天涌，塞上风云接地阴。<br>丛菊两开他日泪，孤舟一系故园心。<br>寒衣处处催刀尺，白帝城高急暮砧。</p>
-<p>夔府孤城落日斜，每依北斗望京华。<br>听猿实下三声泪，奉使虚随八月槎。<br>画省香炉违伏枕，山楼粉堞隐悲笳。<br>请看石上藤萝月，已映洲前芦荻花。</p>
-<p>千家山郭静朝晖，日日江楼坐翠微。<br>信宿渔人还泛泛，清秋燕子故飞飞。<br>匡衡抗疏功名薄，刘向传经心事违。<br>同学少年多不贱，五陵衣马自轻肥。</p>
-<p>闻道长安似弈棋，百年世事不胜悲。<br>王侯第宅皆新主，文武衣冠异昔时。<br>直北关山金鼓振，征西车马羽书驰。<br>鱼龙寂寞秋江冷，故国平居有所思。</p>
-<p>蓬莱宫阙对南山，承露金茎霄汉间。<br>西望瑶池降王母，东来紫气满函关。<br>云移雉尾开宫扇，日绕龙鳞识圣颜。<br>一卧沧江惊岁晚，几回青琐点朝班。</p>
-<p>瞿塘峡口曲江头，万里风烟接素秋。<br>花萼夹城通御气，芙蓉小苑入边愁。<br>珠帘绣柱围黄鹄，锦缆牙樯起白鸥。<br>回首可怜歌舞地，秦中自古帝王州。</p>
-<p>昆明池水汉时功，武帝旌旗在眼中。<br>织女机丝虚夜月，石鲸鳞甲动秋风。<br>波漂菰米沉云黑，露冷莲房坠粉红。<br>关塞极天惟鸟道，江湖满地一渔翁。</p>
-<p>昆吾御宿自逶迤，紫阁峰阴入渼陂。<br>香稻啄馀鹦鹉粒，碧梧栖老凤凰枝。<br>佳人拾翠春相问，仙侣同舟晚更移。<br>彩笔昔曾干气象，白头吟望苦低垂。</p>
-<hr>
-<p><a name="咏怀古迹五首"></a><br>咏怀古迹五首$$$$</p>
-<p>支离东北风尘际，漂泊西南天地间。<br>三峡楼台淹日月，五溪衣服共云山。<br>羯胡事主终无赖，词客哀时且未还。<br>庾信平生最萧瑟，暮年诗赋动江关。</p>
-<p>摇落深知宋玉悲，风流儒雅亦吾师。<br>怅望千秋一洒泪，萧条异代不同时。<br>江山故宅空文藻，云雨荒台岂梦思。<br>最是楚宫俱泯灭，舟人指点到今疑。</p>
-<p>群山万壑赴荆门，生长明妃尚有村。<br>一去紫台连朔漠，独留青冢向黄昏。<br>画图省识春风面，环珮空归夜月魂。<br>千载琵琶作胡语，分明怨恨曲中论。</p>
-<p>蜀主窥吴幸三峡，崩年亦在永安宫。<br>翠华想像空山里，玉殿虚无野寺中。<br>古庙杉松巢水鹤，岁时伏腊走村翁。<br>武侯祠屋常邻近，一体君臣祭祀同。</p>
-<p>诸葛大名垂宇宙，宗臣遗像肃清高。<br>三分割据纡筹策，万古云霄一羽毛。<br>伯仲之间见伊吕，指挥若定失萧曹。<br>运移汉祚终难复，志决身歼军务劳。</p>
-<hr>
-<p><a name="题郑十八著作虔"></a><br>题郑十八著作虔$$$$</p>
-<p>台州地阔海冥冥，云水长和岛屿青。乱后故人双别泪，春深逐客一浮萍。<br>酒酣懒舞谁相拽，诗罢能吟不复听。第五桥东流恨水，皇陂岸北结愁亭。<br>贾生对鵩伤王傅，苏武看羊陷贼庭。可念此翁怀直道，也沾新国用轻刑。<br>祢衡实恐遭江夏，方朔虚传是岁星。穷巷悄然车马绝，案头干死读书萤。</p>
-]]></content>
   </entry>
   <entry>
     <title>常用定积分</title>
@@ -6617,37 +6629,6 @@ $$
       </categories>
   </entry>
   <entry>
-    <title>三都赋</title>
-    <url>/2022/01/07/%E8%B5%8B/%E4%B8%89%E9%83%BD%E8%B5%8B/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="三都赋序一首-quad-左太冲"><a href="#三都赋序一首-quad-左太冲" class="headerlink" title="三都赋序一首$\quad$左太冲"></a><strong><center><font size=4>三都赋序一首$\quad$左太冲</font></center></strong></h1><p><strong>盖诗有<a href="javascript:void()"><font title="子夏《诗序》：“故诗有六义焉：一曰风，二曰赋，三曰比，四曰兴，五曰雅，六曰颂。”" style="color:#ffc107">六义</font></a>焉，其二曰赋。<br>杨雄曰：<a href="javascript:void()"><font title="杨雄《法言•吾子》：“或问：‘景差、唐勒、宋玉、枚乘之赋也，益乎?’曰：‘必也，淫。’‘淫则奈何?’曰：‘诗人之赋丽以则，辞人之赋丽以淫。如孔氏之门用赋也，则贾谊升堂，相如入室矣。如其不用何?”" style="color:#ffc107">诗人之赋丽以则</font></a>；班固曰：<a href="javascript:void()"><font title="班固《两都赋序》：“或曰：赋者，古诗之流也。”" style="color:#ffc107">赋者，古诗之流也</font></a>。<br>先王采焉以<a href="javascript:void()"><font title="《礼记•王制》：“命太师陈诗以观民风。”" style="color:#ffc107">观土风</font></a>。<br>见<a href="javascript:void()"><font title="《毛诗•卫风•淇奥》：“瞻彼淇澳，绿竹猗猗。”淇澳(yù)：淇水弯曲处内侧；猗⁓(yī)：美盛的样子" style="color:#ffc107">绿竹猗猗</font></a>，则知卫地淇澳之产；见<a href="javascript:void()"><font title="《毛诗•秦风•小戎》：“在其版屋，乱我心曲。”" style="color:#ffc107">在其版屋</font></a>，则知秦野西戎之宅，<br>故能<a href="javascript:void()"><font title="显然，自然" style="color:#ffc107">居然</font></a>而辨八方。<br>然相如赋上林而引<a href="javascript:void()"><font title="枇杷" style="color:#ffc107">卢橘</font></a>夏熟，杨雄赋甘泉而陈<a href="javascript:void()"><font title="《汉武故事》：“植玉树之法，葺珊瑚为枝，以碧玉为叶，花子或青或赤，悉以珠玉为之。”" style="color:#ffc107">玉树</font></a>青葱，<br>班固赋西都而叹以出<a href="javascript:void()"><font title="比目鱼" style="color:#ffc107">比目</font></a>，张衡赋西京而述以游<a href="javascript:void()"><font title="传说中的海神，与前三者皆非西京之所有" style="color:#ffc107">海若</font></a>。<br>假称珍怪，以为润色，若斯之类，匪啻于兹。<br>考之果木，则生非其壤；校之神物，则出非其所，<br>于辞则易为藻饰，于义则虚而无征。<br>且夫<a href="javascript:void()"><font title="《韩非子•外储说右上》：“一日，堂溪公见昭侯曰：‘今有白玉之卮而无当，有瓦卮而有当，君渴将何以饮？’君曰：‘以瓦卮。’”当：底。" style="color:#ffc107">玉卮无当</font></a>，虽宝非用；侈言无验，虽丽非经，<br>而论者莫不<a href="javascript:void()"><font title="诋毁攻击" style="color:#ffc107">诋讦</font></a>其<a href="javascript:void()"><font title="精心钻研" style="color:#ffc107">研精</font></a>，作者<a href="javascript:void()"><font title="大抵，大都" style="color:#ffc107">大氐</font></a>举为宪章，<br>积习生常，有自来矣。<br>余既思摹二京而赋三都，<br>其山川城邑，则稽之地图；其鸟兽草木，则验之方志。<br>风谣歌舞，各附其俗；魁梧长者，莫非其旧。<br>何则？发言为诗者，咏其所志也；升高能赋者，颂其所见也。<br>美物者贵依其本，赞事者宜本其实。匪本匪实，览者奚信？<br>且夫任土作贡，虞书所著；辩物居方，周易所慎。<br>聊举其一隅，摄其体统，归诸诂训焉。</strong></p>
-<h1 id="蜀都赋"><a href="#蜀都赋" class="headerlink" title="蜀都赋"></a><strong><center><font size=4>蜀都赋</font></center></strong></h1><p><strong>有西蜀公子者，言于东吴王孙，<br>曰：盖闻天以日月为<a href="javascript:void()"><font title="法度，秩序" style="color:#ffc107">纲</font></a>，地以四海为纪。九土星分，万国错跱。<br>崤函有帝皇之宅，河洛为王者之里。<br>吾子岂亦曾闻蜀都之事欤？请为左右扬搉而陈之。<br>夫蜀都者，盖兆基于上世，开国于中古。<br>廓灵关以为门，包玉垒而为宇。带二江之双流，抗峨眉之重阻。<br>水陆所凑，兼六合而交会焉；丰蔚所盛，茂八区而菴蔼焉。<br>于前则跨蹑犍牂，枕倚交趾，经途所亘，五千余里。<br>山阜相属，含溪怀谷，冈峦纠纷，触石吐云。<br>郁葐蒀以翠微，崛巍巍以峩峩。干青霄而秀出，舒丹气而为霞。<br>龙池𤀰瀑濆其隈，漏江伏流溃其阿。汩若汤谷之扬涛，沛若濛汜之涌波。<br>于是乎邛竹缘岭，菌桂临崖，旁挺龙目，侧生荔枝。<br>布绿叶之萋萋，结朱实之离离，迎隆冬而不凋，常晔晔以猗猗。<br>孔翠群翔，犀象竞驰。白雉朝雊，猩猩夜啼。<br>金马骋光而绝景，碧鸡倏忽而曜仪。<br>火井沉荧于幽泉，高焰飞煽于天垂。<br>其间则有虎珀丹青，江珠瑕英，金沙银砾，符采彪炳，晖丽灼烁。<br>于后则却背华容，北指昆仑，缘以剑阁，阻以石门。<br>流汉汤汤，惊浪雷奔，望之天回，即之云昏。<br>水物殊品，鳞介异族，或藏蛟螭，或隐碧玉。<br>嘉鱼出于丙穴，良木攒于褒谷。<br>其树则有木兰梫桂，杞楸椅桐，棕椰楔枞。<br>楩楠幽蔼于谷底，松柏蓊郁于山峰。<br>擢修干，竦长条，扇飞云，拂轻霄。<br>羲和假道于峻歧，阳乌回翼乎高标。<br>巢居栖翔，聿兼邓林，穴宅奇兽，窠宿异禽。<br>熊罴咆其阳，雕鹗𫛣其阴，猿狖腾希而竞捷，虎豹长啸而永吟。<br>于东则左绵巴中，百濮所充。<br>外负铜梁于宕渠，内函要害于膏腴。<br>其中则有巴菽巴戟，灵寿桃枝，樊以蒩圃，滨以盐池。<br>𧌽蛦山栖，元龟水处。潜龙蟠于沮泽，应鸣鼓而兴雨。<br>丹沙赩炽出其阪，蜜房郁毓被其阜。山图采而得道，赤斧服而不朽。<br>若乃刚悍生其方，风谣尚其武。<br>奋之则賨旅，玩之则渝舞。锐气剽于中叶，𫏋容世于乐府。<br>于西则右挟岷山，涌渎发川，陪以白狼，夷歌成章。<br>坰野草昧，林麓黝儵，交让所植，蹲鸱所伏。<br>百药灌丛，寒卉冬馥，异类众夥，于何不育？<br>其中则有青珠黄环，碧砮芒消，或丰绿荑，或蕃丹椒。<br>蘼芜布濩于中阿，风连莚蔓于兰皋。<br>红葩紫饰，柯叶渐苞，敷蕊葳蕤，落英飘飖。<br>神农是尝，卢跗是料，芳追气邪，味蠲疠痟。<br>其封域之内，则有原隰坟衍，通望弥博，演以潜沬，浸以绵雒。<br>沟洫脉散，疆里绮错，黍稷油油，稉稻莫莫。<br>指渠口以为云门，洒滮池而为陆泽。虽星毕之滂沱，尚未齐其膏液。<br>尔乃邑居隐赈，夹江傍山，栋宇相望，桑梓接连。<br>家有盐泉之井，户有橘柚之园。<br>其园则林檎枇杷，橙柿梬楟，榹桃函列，梅李罗生。<br>百果甲宅，异色同荣，朱樱春熟，素柰夏成。<br>若乃大火流，凉风厉，白露凝，微霜结。<br>紫梨津润，樼栗罅发，蒲陶乱溃，若榴竞裂。<br>甘至自零，芬芳酷烈。<br>其园则有蒟蒻茱萸，瓜畴芋区，甘蔗辛姜，阳蓲阴敷。<br>日往菲薇，月来扶疏，任土所丽，众献而储。<br>其沃瀛则有攒蒋丛蒲，绿菱红莲，杂以蕴藻，糅以苹蘩。<br>总茎柅柅，裛叶蓁蓁，蕡实时味，王公羞焉。<br>其中则有鸿俦鹄侣，振鹭鹈鹕。晨凫旦至，候雁衔芦。<br>木落南翔，冰泮北徂。云飞水宿，哢吭清渠。<br>其深则有白鼋命鳖，玄獭上祭。鳣鲔鳟鲂，鮷鳢鲨鲿。<br>差鳞次色，锦质报章。跃涛戏濑，中流相忘。<br>于是乎金城石郭，兼帀中区。既丽且崇，实号成都。<br>辟二九之通门，画方轨之广涂。营新宫于爽垲，拟承明而起庐。<br>结阳城之延阁，飞观榭乎云中。开高轩以临山，列绮窗而瞰江。<br>内则议殿爵堂，武义虎威。宣化之闼，崇礼之闱。<br>华阙双邈，重门洞开。金铺交映，玉题相晖。<br>外则轨躅八达，里闬对出。比屋连甍，千庑万室。<br>亦有甲第，当衢向术。坛宇显敞，高门纳驷。<br>庭扣钟磬，堂抚琴瑟。匪葛匪姜，畴能是恤？<br>亚以少城，接乎其西。市廛所会，万商之渊。<br>列隧百重，罗肆巨千。贿货山积，纤丽星繁。<br>都人士女，袨服靓妆。贾贸墆鬻，舛错纵横。<br>异物崛诡，奇于八方。布有橦华，面有桄榔。<br>邛杖传节于大夏之邑，蒟酱流味于番禺之乡。<br>舆辇杂沓，冠带混并。累毂叠迹，叛衍相倾。<br>喧哗鼎沸，则哤聒宇宙；嚣尘张天，则埃壒曜灵。<br>阛阓之里，伎巧之家。百室离房，机杼相和。<br>贝锦斐成，濯色江波。黄润比筒，籝金所过。<br>侈侈隆富，卓郑埒名。公擅山川，货殖私庭。<br>藏镪巨万，䤨摫兼呈。亦以财雄，翕习边城。<br>三蜀之豪，时来时往。养交都邑，结俦附党。<br>剧谈戏论，扼腕抵掌。出则连骑，归从百两。<br>若其旧俗，终冬始春。吉日良辰，置酒高堂，以御嘉宾。<br>金罍中坐，肴烟四陈。觞以清醥，鲜以紫鳞。<br>羽爵执竞，丝竹乃发。巴姬弹弦，汉女击节。<br>起西音于促柱，歌江上之飉厉。纡长袖而屡舞，翩跹跹以裔裔。<br>合樽促席，引满相罚。乐饮今夕，一醉累月。<br>若夫王孙之属，郤公之伦。从禽于外，巷无居人。<br>并乘骥子，俱服鱼文。玄黄异校，结驷缤纷。<br>西逾金堤，东越玉津。朔别期晦，匪日匪旬。<br>蹴蹈蒙笼，涉𨆍寥廓。鹰犬倏眒，罻罗络幕。<br>毛群陆离，羽族纷泊。翕响挥霍，中网林薄。<br>屠麖麋，翦旄麈。带文蛇，跨彫虎。<br>志未骋，时欲晚。追轻翼，赴绝远。<br>出彭门之阙，驰九折之阪。经三峡之峥嵘，蹑五屼之蹇产。<br>戟食铁之兽，射噬毒之鹿。皛䝙氓于葽草，弹言鸟于森木。<br>拔象齿，戾犀角。鸟铩翮，兽废足。<br>殆而朅来，相与弟如滇池，集于江洲。<br>试水客，舣轻舟。娉江婓，与神游。<br>罨翡翠，钓鰋鲉 。下高鹄，出潜虬。<br>吹洞箫，发棹讴。感鲟鱼，动阳侯。<br>腾波沸涌，珠贝泛浮。若云汉含星，而光耀洪流。<br>将飨獠者，张帟幕，会平原。酌清酤，割芳鲜。<br>饮御酣，宾旅旋。车马雷骇，轰轰阗阗。<br>若风流雨散，漫乎数百里间。<br>斯盖宅土之所安乐，观听之所踊跃也，焉独三川为世朝市？<br>若乃卓荦奇谲，倜傥罔已。一经神怪，一纬人理。<br>远则岷山之精，上为井络。天帝运期而会昌，景福肸飨而兴作。<br>碧出苌弘之血，鸟生杜宇之魄。妄变化而非常，羌见伟于畴昔。<br>近则江汉炳灵，世载其英。蔚若相如，皭若君平。<br>王褒韡晔而秀发，杨雄含章而挺生。幽思绚道德，摛藻掞天庭。<br>考四海而为俊，当中叶而擅名。<br>是故游谈者以为誉，造作者以为程也。<br>至乎临谷为塞，因山为障。峻岨塍埒长城，豁险吞若巨防。<br>一人守隘，万夫莫向。公孙跃马而称帝，刘宗下辇而自王。<br>由此言之，天下孰尚？故虽兼诸夏之富有，犹未若兹都之无量也。</strong></p>
-<h1 id="吴都赋"><a href="#吴都赋" class="headerlink" title="吴都赋"></a><strong><center><font size=4>吴都赋</font></center></strong></h1><p><strong>东吴王孙冁然而咍，<br>曰：夫上图景宿，辨于天文者也；下料物土，析于地理者也。<br>古先帝代，曾览八纮之洪绪，一六合而光宅。<br>翔集遐宇，鸟策篆素，玉牒石记，乌闻梁岷有陟方之馆、行宫之基欤？<br>而吾子言蜀都之富，禺同之有，玮其区域，美其林薮。<br>矜巴汉之阻，则以为袭险之右；徇蹲鸱之沃，则以为世济阳九。<br>龌龊而算，顾亦曲士之所叹也；旁魄而论，抑非大人之壮观也。<br>何则？土壤不足以摄生，山川不足以周卫。<br>公孙国之而破，诸葛家之而灭。<br>兹乃丧乱之丘墟，颠覆之轨辙，安可以俪王公而奢风烈也？<br>玩其碛砾而不窥玉渊者，未知骊龙之所蟠也；<br>习其弊邑而不睹上邦者，未知英雄之所躔也。<br>子独未闻大吴之巨丽乎？<br>且有吴之开国也，造自太伯，宣于延陵。<br>盖端委之所彰，高节之所兴，建至德以创洪业，世无得而显称。<br>由克让以立风俗，轻脱屣于千乘。<br>若率土而论都，则非列国之所觖望也。<br>故其经略，上当星纪，拓土画疆，卓荦兼并。<br>包括干越，跨蹑蛮荆。婺女寄其曜，翼轸寓其精。<br>指衡岳以镇野，目龙川而带坰。<br>尔其山泽，则嵬嶷峣屼，巊冥郁𡶒，溃渱泮汗，滇㴐淼漫。<br>或涌川而开渎，或吞江而纳汉。<br>磈磈𡾖𡾖，滮滮涆涆。䃢碒乎数州之间，灌注乎天下之半。<br>百川派别，归海而会，控清引浊，混涛并濑。<br>濆薄沸腾，寂寥长迈，濞焉汹汹，隐焉礚礚。<br>出乎大荒之中，行乎东极之外。经扶桑之中林，包汤谷之滂沛。<br>潮波汩起，回复万里，歊雾漨浡，云蒸昏昧。<br>泓澄奫潫，澒溶沆漾，莫测其深，莫究其广。<br>澶湉漠而无涯，㹅有流而为长，瑰异之所丛育，鳞甲之所集往。<br>于是乎长鲸吞航，修鲵吐浪，跃龙腾蛇，鲛鲻琵琶。<br>王鲔鯸鲐，鮣龟鱕䱜，乌贼拥剑，𪓟鼊鲭鳄，涵泳乎其中。<br>葺鳞镂甲，诡类舛错，溯洄顺流，噞喁沉浮。<br>鸟则鹍鸡鸀𩿱，鹴鹄鹭鸿，鶢鶋避风，候雁造江。<br>㶉鶒鷛𪆂，䴖鹤鹙鸧，鹳鸥鹢鸬，氾滥乎其上。<br>湛淡羽仪，随波参差，理翮整翰，容与自玩。<br>叼啄蔓藻，刷荡漪澜，鱼鸟聱耴，万物蠢生。<br>芒芒黖黖，慌罔奄欻，神化翕忽，函幽育明。<br>穷性极形，盈虚自然，蚌蛤珠胎，与月亏全。<br>巨鳌赑屃，首冠灵山，大鹏缤翻，翼若垂天。<br>振荡汪流，雷抃重渊，殷动宇宙，胡可胜原。<br>岛屿绵邈，洲渚冯隆，旷瞻迢递，迥眺冥蒙。<br>珍怪丽，奇隙充，径路绝，风云通。<br>洪桃屈盘，丹桂灌丛，琼枝抗茎而敷蕊，珊瑚幽茂而玲珑。<br>增冈重阻，列真之宇，玉堂对霤，石室相距。<br>蔼蔼翠幄，嫋嫋素女，江婓于是往来，海童于是宴语。<br>斯实神妙之响象，嗟难得而覙缕！<br>尔乃地势坱圠，卉木镺蔓，遭薮为圃，值林为苑。<br>异荂蓲蘛，夏晔冬蒨，方志所辨，中州所羡。<br>草则藿蒳豆蔻，姜汇非一，江蓠之属，海苔之类。<br>纶组紫绛，食葛香茅，石帆水松，东风扶留。<br>布濩皋泽，蝉联陵丘，夤缘山岳之岊，幂历江海之流。<br>扤白蒂，衔朱蕤，郁兮䓲茂，晔兮菲菲。<br>光色炫晃，芬馥肸蚃，职贡纳其包匦，离骚咏其宿莽。<br>木则枫柙豫章，栟榈枸桹，绵杬杶栌，文欀桢橿。<br>平仲君迁，松梓古度，楠榴之木，相思之树。<br>宗生高冈，族茂幽阜，擢本千寻，垂荫万亩。<br>攒柯挐茎，重葩殗叶，轮囷虬蟠，𡍪㙷鳞接。<br>荣色杂糅，绸缪缛绣，宵露霮䨴，旭日晻孛。<br>与风飖飏，䬀浏飕飗，鸣条律畅，飞音响亮。<br>盖象琴筑并奏，笙竽俱唱。<br>其上则有猿父哀吟，𤟤子长啸，狖鼯猓然，腾趠飞超。<br>争县接垂，竞游远枝，惊透沸乱，牢落翚散。<br>其下则有枭羊麡狼，猰㺄䝙象，乌菟之族，犀兕之党。<br>钩爪锯牙，自成锋颖，精若燿星，声若震霆。<br>名载于山经，形镂于夏鼎。<br>其竹则筼筜箖箊，桂箭射筒。柚梧有篁，篻簩有丛。<br>苞笋抽节，往往萦结，绿叶翠茎，冒霜停雪。<br>橚矗森萃，蓊茸萧瑟，檀栾蝉蜎，玉润碧鲜。<br>梢云无以逾，嶰谷弗能连，鸑鷟食其实，鹓雏扰其间。<br>其果则丹橘馀甘，荔枝之林，槟榔无柯，椰叶无阴。<br>龙眼橄榄，棎榴御霜，结根比景之阴，列挺衡山之阳。<br>素华斐，丹秀芳，临青壁，系紫房。<br>鹧鸪南翥而中留，孔雀綷羽以翱翔。<br>山鸡归飞而来栖，翡翠列巢以重行。<br>其琛赂则琨瑶之阜，铜锴之垠，火齐之宝，骇鸡之珍。<br>赪丹明玑，金华银朴，紫贝流黄，缥碧素玉。<br>隐赈崴㠢，杂插幽屏，精曜潜颖，硩陊山谷。<br>碕岸为之不枯，林木为之润黩。<br>隋侯于是鄙其夜光，宋王于是陋其结绿。<br>其荒陬谲诡，则有龙穴内蒸，云雨所储，陵鲤若兽，浮石若桴。<br>双则比目，片则王馀，穷陆饮木，极沉水居。<br>泉室潜织而卷绡，渊客慷慨而泣珠。<br>开北户以向日，齐南冥于幽都。<br>其四野则畛畷无数，膏腴兼倍，原隰殊品，窊隆异等。<br>象耕鸟耘，此之自与，穱秀菰穗，于是乎在。<br>煮海为盐，采山铸钱，国税再熟之稻，乡贡八蚕之绵。<br>徒观其郊隧之内奥，都邑之纲纪，霸王之所根柢，开国之所基趾。<br>郛郭周匝，重城结隅，通门二八，水道陆衢，<br>所以经始，用累千祀也；<br>宪紫宫以营室，廓广庭之漫漫，寒暑隔阂于邃宇，虹霓回带于云馆，<br>所以跨跱，焕炳万里也。<br>造姑苏之高台，临四远而特建，带朝夕之濬池，佩长洲之茂苑。<br>窥东山之府，则环宝溢目；䚕海陵之仓，则红粟流衍。<br>起寝庙于武昌，作离宫于建业，阐阖闾之所营，采夫差之遗法。<br>抗神龙之华殿，施荣楯而捷猎，崇临海之崔巍，饰赤乌之韡晔。<br>东西胶葛，南北峥嵘，房栊对櫎，连阁相经。<br>阍闼谲诡，异出奇名，左称弯碕，右号临硎。<br>雕栾镂楶，青琐丹楹，图以云气，画以仙灵。<br>虽兹宅之夸丽，曾未足以少宁，思比屋于倾宫，毕结瑶而构琼。<br>高闱有闶，洞门方轨，朱阙双立，驰道如砥。<br>树以青槐，亘以绿水，玄荫眈眈，清流亹亹。<br>列寺七里，侠栋阳路，屯营栉比，解署棋布。<br>横塘查下，邑屋隆夸，长干延属，飞甍舛互。<br>其居则高门鼎贵，魁岸豪杰，虞魏之昆，顾陆之裔。<br>歧嶷继体，老成奕世，跃马叠迹，朱轮累辙。<br>陈兵而归，兰锜内设，冠盖云荫，闾阎阗噎。<br>其邻则有任侠之靡，轻訬之客，缔交翩翩，傧从奕奕。<br>出蹑珠履，动以千百，里宴巷饮，飞觞举白。<br>翘关扛鼎，拚射壶博，鄱阳暴谑，中酒而作。<br>于是乐只衎而欢饫无匮，都辇殷而四奥来暨。<br>水浮陆行，方舟结驷，唱棹转毂，昧旦永日。<br>开市朝而并纳，横阛阓而流溢，混品物而同廛，并都鄙而为一。<br>士女伫眙，商贾骈坒，纻衣絺服，杂沓傱萃。<br>轻舆按辔以经隧，楼船举帆而过肆。<br>果布辐凑而常然，致远流离与珂珬。<br>𦈜贿纷纭，器用万端，金镒磊砢，珠琲阑干。<br>桃笙象簟，韬于筒中；蕉葛升越，弱于罗纨。<br>㒊譶泶㺒，交贸相竞，喧哗喤呷，芬葩荫映。<br>挥袖风飘而红尘昼昬；流汗霡霂而中逵泥泞。<br>富中之甿，货殖之选，乘时射利，财丰巨万。<br>竞其区宇，则并疆兼巷；矜其宴居，则珠服玉馔。<br>趫材悍壮，此焉比庐，捷若庆忌，勇若专诸。<br>危冠而出，竦剑而趋，扈带鲛函，扶揄属镂。<br>藏鍦于人，去𢧕自闾，家有鹤膝，户有犀渠。<br>军容蓄用，器械兼储，吴钩越棘，纯钧湛卢。<br>戎车盈于石城，戈船掩乎江湖。<br>露往霜来，日月其除，草木节解，鸟兽腯肤。<br>观鹰隼，诫征夫，坐组甲，建祀姑。<br>命官帅而拥铎，将校猎乎具区。<br>乌浒狼㬻，夫南西屠，儋耳黑齿之酋，金邻象郡之渠。<br>骉䮅飍裔，靸霅警捷，先驱前涂。<br>俞骑骋路，指南司方。出车槛槛，被练锵锵。<br>吴王乃巾玉辂，轺骕骦，旗鱼须，常重光。<br>摄乌号，佩干将，羽旄扬蕤，雄戟耀芒。<br>贝胄象弭，织文鸟章，六军袀服，四骐龙骧。<br>峭格周施，罿罻普张，罼罕琐结，罠蹏连纲。<br>阹以九疑，御以沅湘，輶轩蓼扰，彀骑炜煌。<br>袒裼徒搏，拔距投石之部，<br>猿臂骿胁，狂趭犷猤，鹰瞵鹗视，䟃𧽼翋𦑶，<br>若离若合者，相与腾跃乎莽䍚之野；<br>干卤殳鋋，旸夷勃卢之旅，<br>长𥍟短兵，直发驰骋，儇佻坌并，衔枚无声，<br>悠悠旆旌者，相与聊浪乎昧莫之坰。<br>钲鼓叠山，火烈熛林，飞爓浮烟，载霞载阴。<br>菈擸雷硠，崩峦阤岑，鸟不择木，兽不择音。<br>𧇭甝虪，𩓇麋麖，蓦六驳，追飞生。<br>弹鸾鶁，射猱㹶，白雉落，黑鸩零。<br>陵绝嶛嶕，聿越巉险，跇逾竹柏，𤣆猭杞楠。<br>封狶䓼，神螭掩，刚镞润，霜刃染。<br>于是弭节顿辔，齐镳驻跸。徘徊倘佯，寓目幽蔚。<br>览将帅之拳勇，与士卒之抑扬。<br>羽族以觜距为刀铍，毛群以齿角为矛铗，皆体著而应卒。<br>所以挂扢而为创痏，冲踤而断筋骨，莫不衂锐挫芒，拉捭摧藏。<br>虽有石林之岝崿，请攘臂而靡之；<br>虽有雄虺之九首，将抗足而跐之。<br>颠覆巢居，剖破窟宅，仰攀鵕鸃，俯蹴豺獏。<br>刦剞熊罴之室，剽掠虎豹之落。猩猩啼而就禽，狒狒笑而被格。<br>屠巴蛇，出象骼，斩鹏翼，掩广泽。<br>轻禽狡兽，周章夷犹，狼跋乎纮中，忘其所以睒睗，失其所以去就。<br>魂褫气慑而自踢䟮者，应弦饮羽形偾景僵者，累积而增益，杂袭错缪。<br>倾薮薄，倒岬岫，岩穴无豜豵，翳荟无𪋐鹨。<br>思假道于丰隆，披重霄而高狩，笼乌兔于日月，穷飞走之栖宿。<br>嶰涧阒，冈岵童，罾罘满，效获众。<br>回靶乎行睨，观鱼乎三江，泛舟航于彭蠡，浑万艘而既同。<br>弘舸连舳，巨槛接舻，飞云盖海，制非常模。<br>叠华楼而岛跱，时髣髴于方壶，比鹢首而有裕，迈馀皇于往初。<br>张组帏，构流苏，开轩幌，镜水区。<br>槁工楫师，选自闽禺，习御长风，狎玩灵胥。<br>责千里于寸阴，聊先期而须臾。<br>棹讴唱，箫籁鸣，洪流响，渚禽惊。<br>弋磻放，稽鹪䳟，虞机发，留䴔䴖。<br>钩铒纵横，网罟接绪，术兼詹公，巧倾任父。<br>筌䱎䲛，鲡鲿鲨，罩两魪，罺鰝虾。<br>乘鲎鼋鼍，同罛共罗，沉虎潜鹿，馽龓僒束。<br>鰴鲸辈中于群犗，搀抢暴出而相属。<br>虽复临河而钓鲤，无异射鲋于井谷。<br>结轻舟而竞逐，迎潮水而振缗，想萍实之复形，访灵夔于鲛人。<br>精卫衔石而遇缴，文鳐夜飞而触纶。<br>北山亡其翔翼，西海失其游鳞。<br>雕题之士，镂身之卒，比饰虬龙，蛟螭与对。<br>简其华质，则亄费锦缋，料其虓勇，则鵰悍狼戾。<br>相与昧潜险，搜瑰奇，摸蝳蝐，扪觜𧓈。<br>剖巨蚌于回渊，濯明月于涟漪。<br>毕天下之至异，讫无索而不臻，溪壑为之一罄，川渎为之中贫。<br>哂澹台之见谋，聊袭海而徇珍，载汉女于后舟，追晋贾而同尘。<br>汩乘流以砰宕，翼飔风之䬟䬟，直冲涛而上濑，常沛沛以悠悠。<br>汔可休而凯归，揖天吴与阳侯，指包山而为期，集洞庭而淹留。<br>数军实乎桂林之苑，飨戎旅乎落星之楼。<br>置酒若淮泗，积肴若山丘，飞轻轩而酌绿酃，方双辔而赋珍羞。<br>饮烽起，釂鼓震，士遗倦，众怀欣。<br>幸乎馆娃之宫，张女乐而娱群臣，罗金石与丝竹，若钧天之下陈。<br>登东歌，操南音，胤阳阿，咏韎任。<br>荆艳楚舞，吴歈越吟，翕习容裔，靡靡愔愔。<br>若此者，与夫唱和之隆响，动锺鼓之铿耾。<br>有殷坻颓于前，曲度难胜，皆与谣俗汁恊，律吕相应。<br>其奏乐也，则木石润色；其吐哀也，则凄风暴兴。<br>或超延露而驾辩，或逾绿水而采菱。<br>军马弭髦而仰秣，渊鱼竦鳞而上升。<br>酣湑半，八音并，欢情留，良辰征。<br>鲁阳挥戈而高麾，回曜灵于太清。<br>将转西日而再中，齐既往之精诚。<br>昔者夏后氏朝群臣于兹土，而执玉帛者以万国。<br>盖亦先王之所高会，而四方之所轨则。<br>春秋之际，要盟之主，阖闾信其威，夫差穷其武。<br>内果伍员之谋，外骋孙子之奇，胜强楚于柏举，栖劲越于会稽。<br>阙沟乎商鲁，争长于黄池。<br>徒以江湖嶮陂，物产殷充，绕霤未足言其固，郑白未足语其丰。<br>士有陷坚之锐，俗有节概之风，睚眦则挺剑，喑呜则弯弓。<br>拥之者龙腾，据之者虎视，麾城若振槁，搴旗若顾指。<br>虽带甲一朝，而元功远致；虽累叶百叠，而富强相继。<br>乐湑衎其方域，列仙集其土地，桂父练形而易色，赤须蝉蜕而附丽。<br>中夏比焉，毕世而罕见，丹青图其珍玮，贵其宝利也。<br>舜禹游焉，没齿而忘归，精灵留其山阿，玩其奇丽也。<br>剖判庶士，商搉万俗。国有郁鞅而显敞，邦有湫阨而踡跼。<br>伊兹都之函弘，倾神州而韫椟，仰南斗以斟酌，兼二仪之优渥。<br>繇此而揆之，西蜀之于东吴，<br>小大之相绝也，亦犹棘林萤燿，而与夫寻木龙烛也；<br>否泰之相背也，亦犹帝之悬解，而与夫桎梏疏属也。<br>庸可共世而论巨细，同年而议丰确乎？<br>暨其幽遐独邃，寥廓闲奥。耳目之所不该，足趾之所不蹈。<br>倜傥之极异，誳诡之殊事，藏理于终古，而未寤于前觉也。<br>若吾子之所传，孟浪之遗言，略举其梗概，而未得其要妙也。</strong></p>
-<h1 id="魏都赋"><a href="#魏都赋" class="headerlink" title="魏都赋"></a><strong><center><font size=4>魏都赋</font></center></strong></h1><p><strong>魏国先生有睟其容，乃盱衡而诰曰：异乎交益之士。<br>盖音有楚夏者，土风之乖也；情有险易者，习俗之殊也。<br>虽则生常，固非自得之谓也。<br>昔市南宜僚弄丸，而两家之难解，聊为吾子复玩德音，以释二客竞于辩囿者也。<br>夫泰极剖判，造化权舆，体兼昼夜，理包清浊。<br>流而为江海，结而为山岳，列宿分其野，荒裔带其隅。<br>岩冈潭渊，限蛮隔夷，峻危之窍也；<br>蛮陬夷落，译导而通，鸟兽之氓也。<br>正位居体者，以中夏为喉，不以边垂为襟也；<br>长世字甿者，以道德为藩，不以袭险为屏也。<br>而子大夫之贤者，尚弗曾庶翼等威，附丽皇极，思禀正朔，乐率贡职。<br>而徒务于诡随匪民，宴安于绝域，荣其文身，骄其险棘。<br>缪默语之常伦，牵胶言而逾侈，饰华离以矜然，假倔强而攘臂。<br>非醇粹之方壮，谋踳驳于王义，孰愈寻靡萍于中逵，造沐猴于棘刺。<br>剑阁虽嶛，凭之者蹶，非所以深根固蒂也；<br>洞庭虽濬，负之者北，非所以爱人治国也。<br>彼桑榆之末光，逾长庚之初辉，况河冀之爽垲，与江介之湫湄。<br>故将语子以神州之略，赤县之畿，魏都之卓荦，六合之枢机。<br>于时运距阳九，汉网绝维，奸回内赑，兵缠紫微。<br>翼翼京室，眈眈帝宇，巢焚原燎，变为煨烬，故荆棘旅庭也；<br>殷殷寰内，绳绳八区，锋镝纵横，化为战场，故麋鹿寓城也。<br>伊洛榛旷，崤函荒芜。临菑牢落，鄢郢丘墟。<br>而是有魏开国之日，缔构之初。<br>万邑譬焉，亦独犨麋之与子都，培塿之与方壶也。<br>且魏地者，毕昴之所应，虞夏之馀人，先王之桑梓，列圣之遗尘。<br>考之四隈，则八埏之中；测之寒暑，则霜露所均。<br>卜偃前识而赏其隆，吴札听歌而美其风。<br>虽则衰世，而盛德形于管弦；<br>虽逾千祀，而怀旧蕴于遐年。<br>尔其疆域，则旁极齐秦，结凑冀道，开胸殷卫，跨蹑燕赵。<br>山林幽岟，川泽回缭，恒碣碪<font size=4px>𥔲</font>于青霄，河汾浩涆而皓溔。<br>南瞻淇澳，则绿竹纯茂；北临漳滏，则冬夏异沼。<br>神钲迢递于高峦，灵响时惊于四表。<br>温泉毖涌而自浪，华清荡邪而难老。<br>墨井盐池，玄滋素液，厥田惟中，厥壤惟白，原隰畇畇，坟衍厈厈。<br>或嵬罍而复陆，或黋朗而拓落。<br>乾坤交泰而絪缊，嘉祥徽显而豫作。<br>是以兆朕振古，萌柢畴昔，藏气谶纬，閟象竹帛。<br>迥时世而渊默，应期运而光赫，暨圣武之龙飞，肇受命而光宅。<br>爰初自臻，言占其良，谋龟谋筮，亦既允臧。<br>修其郛郭，缮其城隍，经始之制，牢笼百王。<br>画雍豫之居，写八都之宇，鉴茅茨于陶唐，察卑宫于夏禹。<br>古公草创，而高门有闶；宣王中兴，而筑室百堵。<br>兼圣哲之轨，并文质之状，商丰约而折中，准当年而为量。<br>思重爻，摹大壮，览荀卿，采萧相。<br>𠊩拱木于林衡，授全模于梓匠。<br>遐迩悦豫而子来，工徒拟议而骋巧。<br>阐钩绳之筌绪，承二分之正要。<br>揆日晷，考星耀，建社稷，作清庙。<br>筑曾宫以回匝，比冈隒而无陂，造文昌之广殿，极栋宇之弘规。<br>崶若崇山崛起以崔嵬，髧若玄云舒蜺以高垂。<br>瑰材巨世，𡍪㙷参差，枌橑复结，栾栌叠施。<br>丹梁虹申以并亘，朱桷森布而支离。<br>绮井列疏以悬蒂，华莲重葩而倒披。<br>齐龙首而涌霤，时梗概于滮池。<br>旅楹闲列，晖鉴柍桭，榱题黮𪒡，阶𨺠嶙峋。<br>长庭砥平，钟虡夹陈，风无纤埃，雨无微津。<br>岩岩北阙，南端逌遵，竦峭双碣，方驾比轮。<br>西辟延秋，东启长春，用觐群后，观享颐宾。<br>左则中朝有赩，听政作寝，匪朴匪斵，去泰去甚。<br>木无雕锼，土无绨锦，玄化所甄，国风所禀。<br>于前则宣明显阳，顺德崇礼，重闱洞出，锵锵济济。<br>珍树猗猗，奇卉萋萋，蕙风如薰，甘露如醴。<br>禁台省中，连闼对廊，直事所繇，典刑所藏。<br>蔼蔼列侍，金蜩齐光，诘朝陪幄，纳言有章。<br>亚以柱后，执法内侍，符节谒者，典玺储吏。<br>膳夫有官，药剂有司，肴醳顺时，腠理则治。<br>于后则椒鹤文石，永巷壸术，楸梓木兰，次舍甲乙。<br>西南其户，成之匪日，丹青焕炳，特有温室。<br>仪形宇宙，历像贤圣，图以百瑞，綷以藻咏。<br>芒芒终古，此焉则镜，有虞作绘，兹亦等竞。<br>右则疏圃曲池，下畹高堂。兰渚莓莓，石濑汤汤。<br>弱葼系实，轻叶振芳，奔龟跃鱼，有𥉻吕梁。<br>驰道周屈于果下，延阁胤宇以经营。<br>飞陛方辇而径西，三台列峙以峥嵘。<br>亢阳台于阴基，拟华山之削成，上累栋而重霤，下冰室而冱冥。<br>周轩中天，丹墀临猋，增构峨峨，清尘彯彯。<br>云雀踶甍而矫首，壮翼摛镂于青霄。<br>雷雨窈冥而未半，皦日笼光于绮寮。<br>习步顿以升降，御春服而逍遥。<br>八极可围于寸眸，万物可齐于一朝。<br>长涂牟首，豪徼互经，晷漏肃唱，明宵有程。<br>附以兰锜，宿以禁兵，司卫闲邪，钩陈罔惊。<br>于是崇墉濬洫，婴堞带涘，四门䡾䡾，隆厦重起。<br>凭太清以混成，越埃壒而资始，藐藐标危，亭亭峻阯。<br>临焦原而不怳，谁劲捷而无𤟧？与冈岑而永固，非有期乎世祀。<br>阳灵停曜于其表，阴祇蒙雾于其里。<br>菀以玄武，陪以幽林，缭垣开囿，观宇相临。<br>硕果灌丛，围木竦寻，篁筱怀风，蒲陶结阴。<br>回渊漼，积水深，蒹葭贙，雚蒻森。<br>丹藕凌波而的皪，绿芰泛涛而浸潭。<br>羽翮颉颃，鳞介浮沉，栖者择木，雊者择音。<br>若咆渤澥与姑馀，常鸣鹤而在阴。<br>表清籞，勒虞箴，思国恤，忘从禽。<br>樵苏往而无忌，即鹿纵而匪禁。<br>腜腜坰野，奕奕菑亩，甘荼伊蠢，芒种斯阜。<br>西门溉其前，史起灌其後。<br>墱流十二，同源异口，畜为屯云，泄为行雨。<br>水澍粳稌，陆莳稷黍，黝黝桑柘，油油麻纻。<br>均田画畴，蕃庐错列，姜芋充茂，桃李荫翳。<br>家安其所，而服美自悦；邑屋相望，而隔逾奕世。<br>内则街冲辐辏，朱阙结隅，石杠飞梁，出控漳渠。<br>疏通沟以滨路，罗青槐以荫涂，比沧浪而可濯，方步櫩而有逾。<br>习习冠盖，莘莘蒸徒，斑白不提，行旅让衢。<br>设官分职，营处署居，夹之以府寺，班之以里闾。<br>其府寺则位副三事，官逾六卿，奉常之号，大理之名。<br>厦屋一揆，华屏齐荣，肃肃阶䦳，重门再扃，师尹爰止，毗代作桢。<br>其闾阎则长寿吉阳，永平思忠。<br>亦有戚里，寘宫之东，闬出长者，巷苞诸公。<br>都护之堂，殿居绮窗，舆骑朝猥，蹀攲其中。<br>营客馆以周坊，饬宾侣之所集，玮丰楼之闬闳，起建安而首立。<br>葺墙幂室，房庑杂袭，剞劂罔掇，匠斫积习。<br>广成之传无以畴，稾街之邸不能及。<br>廊三市而开廛，籍平逵而九达，班列肆以兼罗，设阛阓以襟带。<br>济有无之常偏，距日中而毕会，抗旗亭之峣薛，侈所覜之博大。<br>百隧毂击，连轸万贯，凭轼捶马，袖幕纷半。<br>壹八方而混同，极风采之异观，质剂平而交易，刀布贸而无算。<br>财以工化，贿以商通，难得之货，此则弗容。<br>器周用而长务，物背窳而就攻，不鬻邪而豫贾，著驯致之醇醲。<br>白藏之藏，富有无堤，同赈大内，控引世资，賨幏积墆，琛币充牣。<br>关石之所和钧，财赋之所底慎。<br>燕弧盈库而委劲，冀马填厩而驵骏。<br>至乎勍敌纠纷，庶土罔宁，圣武兴言，将曜威灵。<br>介胄重袭，旌旗跃茎，弓珧解檠，矛鋋飘英。<br>三属之甲，缦胡之缨，控弦简发，妙拟更嬴。<br>齐被练而铦戈，袭偏裻以䜋列，毕出征而中律，执奇正以四伐。<br>硕画精通，目无匪制，推锋积纪，铓气弥锐。<br>三接三捷，既昼亦月，克翦方命，吞灭咆烋。<br>云撤叛换，席卷虔刘，祲威八纮，荒阻率由。<br>洗兵海岛，刷马江洲，振旅䡘䡘，反旆悠悠。<br>凯归同饮，疏爵普畴，朝无刓印，国无费留。<br>丧乱既弭而能宴，武人归兽而去战。<br>萧斧戢柯以柙刃，虹旌摄麾以就卷。<br>斟洪范，酌典宪，观所恒，通其变。<br>上垂拱而司契，下缘督而自劝。<br>道来斯贵，利往则贱，囹圄寂寥，京庾流衍。<br>于时东鳀即序，西倾顺轨，荆南怀憓，朔北思韪。<br>绵绵迥涂，骤山骤水，襁负赆贽，重译贡篚。<br>髽首之豪，鐻耳之杰，服其荒服，敛衽魏阙。<br>置酒文昌，高张宿设，其夜未遽，庭燎晣晣。<br>有客祁祁，载华载裔，岌岌冠纵，累累辫发。<br>清酤如济，浊醪如河，冻醴流澌，温酎跃波。<br>丰肴衎衎，行庖皤皤，愔愔醧宴，酣湑无哗。<br>延广乐，奏九成，冠韶夏，冒英茎。<br>傮响起，疑震霆，天宇骇，地庐惊。<br>亿若大帝之所兴作，二嬴之所曾聆。<br>金石丝竹之恒韵，匏土革木之常调。<br>干戚羽旄之饰好，清讴微吟之要妙。<br>世业之所日用，耳目之所闻觉，杂糅纷错，兼该泛博。<br>鞮鞻所掌之音，韎昧任禁之曲，以娱四夷之君，以睦八荒之俗。<br>既苗既狩，爰游爰豫，藉田以礼动，大阅以义举。<br>备法驾，理秋御，显文武之壮观，迈梁驺之所著。<br>林不槎枿，泽不伐夭，斧斨以时，罾罔以道。<br>德连木理，仁挺芝草，皓兽为之育薮，丹鱼为之生沼。<br>矞云翔龙，泽马亍阜，山图其石，川形其宝。<br>莫黑匪乌，三趾而来仪；莫赤匪狐，九尾而自扰。<br>嘉颖离合以䔿䔿，醴泉涌流而浩浩。<br>显祯祥以曲成，固触物而兼造，盖亦明灵之所酬酢，休征之所伟兆。<br>旼旼率土，迁善罔匮，沐浴福应，宅心醰粹。<br>馀粮栖亩而弗收，颂声载路而洋溢。<br>河洛开奥，符命用出，翩翩黄鸟，衔书来讯。<br>人谋所尊，鬼谋所秩，刘宗委驭，巽其神器。<br>窥玉策于金縢，案图箓于石室，考历数之所在，察五德之所莅。<br>量寸旬，涓吉日，陟中坛，即帝位。<br>改正朔，易服色，继绝世，修废职。<br>徽帜以变，器械以革，显仁翌明，藏用玄默。<br>菲言厚行，陶化染学，雠校篆籀，篇章毕觌。<br>优贤著于扬历，匪孽形于亲戚。<br>本枝别干，蕃屏皇家，勇若任城，才若东阿。<br>抗旌则威噞秋霜，摛翰则华纵春葩。<br>英喆雄豪，佐命帝室，相兼二八，将猛四七。<br>赫赫震震，开务有谧，故令斯民睹泰阶之平，可比屋而为一。<br>算祀有纪，天禄有终，传业禅祚，高谢万邦。<br>皇恩绰矣，帝德冲矣，让其天下，臣至公矣。<br>荣操行之独得，超百王之庸庸。<br>追亘卷领与结绳，睠留重华而比踪。<br>尊卢赫胥，羲农有熊，<br>虽自以为道洪化隆，世笃玄同，奚遽不能与之踵武而齐其风？<br>是故料其建国，析其法度，谘其考室，议其举厝。<br>复之而无斁，申之而有裕。<br>非疏粝之士所能精，非鄙俚之言所能具。<br>至于山川之倬诡，物产之魁殊，或名奇而见称，或实异而可书。<br>生生之所常厚，洵美之所不渝。<br>其中则有鸳鸯交谷，虎涧龙山。<br>掘鲤之淀，盖节之渊，𦐊𦐊精卫，衔木偿怨。<br>常山平干，钜鹿河间，列真非一，往往出焉。<br>昌容练色，犊配眉连，玄俗无影，木羽偶仙。<br>琴高沉水而不濡，时乘赤鲤而周旋。<br>师门使火以验术，故将去而林燔。<br>易阳壮容，卫之稚质，邯郸躧步，赵之鸣瑟。<br>真定之梨，故安之栗，醇酎中山，流湎千日。<br>淇洹之笋，信都之枣，雍丘之粱，清流之稻。<br>锦绣襄邑，罗绮朝歌，绵纩房子，缣緫清河。<br>若此之属，繁富夥够，非可单究，是以抑而未罄也。<br>盖比物以错辞，述清都之闲丽，虽选言以简章，徒九复而遗旨。<br>览大易与春秋，判殊隐而一致，末上林之隤墙，本前修以作系。<br>其军容弗犯，信其果毅，纠华绥戎，以戴公室，<br>元勋配管敬之绩，歌钟析邦君之肆，则魏绛之贤有令闻也；<br>闲居隘巷，室迩心遐，富仁宠义，职竞弗罗，<br>千乘为之轼庐，诸侯为之止戈，则干木之德自解纷也；<br>贵非吾尊，重士逾山，亲御监门，嗛嗛同轩。<br>搦秦起赵，威振八蕃，则信陵之名若兰芬也；<br>英辩荣枯，能济其厄，位加将相，窒隙之策。<br>四海齐锋，一口所敌，则张仪张禄亦足云也。<br>搉惟庸蜀与鸲鹊同窠，句吴与蛙黾同穴。<br>一自以为禽鸟，一自以为鱼鳖。<br>山阜猥积而踦岖，泉流迸集而咉咽。<br>隰壤瀸漏而沮洳，林薮石留而芜秽。<br>穷岫泄云，日月恒翳，宅土熇暑，封疆障疠。<br>蔡莽螫刺，昆虫毒噬，汉罪流御，秦馀徙㡂。<br>宵貌蕞陋，禀质遳脆，巷无杼首，里罕耆耋。<br>或魋髻而左言，或镂肤而钻发，或明发而嬥歌，或浮泳而卒岁。<br>风俗以韰果为婳，人物以戕害为艺，威仪所不摄，宪章所不缀。<br>由重山之束厄，因长川之据势，距远关以闚𨵦，时高樔而陛制。<br>薄戍绵幂，无异蛛蝥之网；弱卒琐甲，无异螳螂之卫。<br>与先世而常然，虽信险而剿绝，揆既往之前迹，即将来之后辙。<br>成都迄已倾覆，建邺则亦颠沛，<br>顾非累卵于叠棋，焉至观形而怀怛！<br>权假日以馀荣，比朝华而菴蔼。览麦秀与黍离，可作谣于吴会。<br>先生之言未卒，吴蜀二客，𢥠焉相顾，𥉉焉失所。<br>有腼瞢容，神惢形茹，弛气离坐，㥏墨而谢。<br>曰：仆党清狂，怵迫闽濮，习蓼虫之忘辛，玩进退之惟谷。<br>非常寐而无觉，不睹皇舆之轨躅。<br>过以𠆩剽之单慧，历执古之醇听，兼重悂以䝯缪，偭辰光而罔定。<br>先生玄识，深颂靡测，得闻上德之至盛，匪同忧于有圣。<br>抑若春霆发响，而惊蛰飞竞；潜龙浮景，而幽泉高镜。<br>虽星有风雨之好，人有异同之性，庶觌蔀家与剥庐，非苏世而居正。<br>且夫寒谷丰黍，吹律暖之也；昏情爽曙，箴规显之也。<br>虽明珠兼寸，尺璧有盈，曜车二六，三倾五城，<br>未若申锡典章之为远也。<br>亮曰：日不双丽，世不两帝。天经地纬，理有大归。<br>安得齐给守其小辩也哉。</strong></p>
-]]></content>
-      <categories>
-        <category>其他</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>大鹏赋</title>
-    <url>/2022/01/07/%E8%B5%8B/%E5%A4%A7%E9%B9%8F%E8%B5%8B/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="大鹏赋并序-quad-李太白"><a href="#大鹏赋并序-quad-李太白" class="headerlink" title="大鹏赋并序$\quad$李太白"></a><strong><center><font size=4>大鹏赋并序$\quad$李太白</font></center></strong></h1><p><strong>余昔于江陵，见天台<a href="javascript:void()"><font title="《大唐新语》：司马承祯，字子微，隐于天台山，自号白云子，有服饵之术。则天、中宗朝，频征不起。睿宗雅尚道教，稍加尊异，承祯方赴召。无何，苦辞归，乃赐宝琴、花帔以遣之。" style="color:#ffc107">司马子微</font></a>，谓余有仙风道骨，可与神游八极之表。因著《大鹏遇希有鸟赋》以自广。此赋已传于世，往往人间见之。悔其少作，未穷宏达之旨，中年弃之。及读《晋书》，睹阮宣子<a href="javascript:void()"><font title="《晋书》：“(阮)修所著述甚寡，尝作大鹏赞曰：‘
-苍苍大鹏，诞自北溟。
-假精灵鳞，神化以生。
-如云之翼，如山之形。
-海运水击，扶摇上征。
-翕然层举，背负太清。
-志存天地，不屑唐庭。
-鸴鸠仰笑，尺鷃所轻。
-超世高逝，莫知其情。’”" style="color:#ffc107">《大鹏赞》</font></a>，鄙心陋之。遂更记忆，多将旧本不同。今复存手集，岂敢传诸作者？庶可示之子弟而已。其辞曰：</strong></p>
-<p><strong>南华老仙发天机于漆园，<br>吐峥嵘之高论，开浩荡之奇言，征至怪于齐谐，谈北溟之有鱼。<br>吾不知几千里，其名曰鲲，化成大鹏，质凝胚浑。<br>脱<a href="javascript:void()"><font title="鬐(qí)：鱼脊鳍;鬣(liè)：鱼颔旁之鳍" style="color:#ffc107">鬐鬣</font></a>于海岛，张羽毛于天门，刷<a href="javascript:void()"><font title="渤澥(xiè)：渤海" style="color:#ffc107">渤澥</font></a>之春流，晞扶桑之朝暾，<br><a href="javascript:void()"><font title="烜(xuǎn)赫：名声或威望盛大之状" style="color:#ffc107">烜赫</font></a>乎宇宙，<a href="javascript:void()"><font title="逾越，登临其上" style="color:#ffc107">凭陵</font></a>乎昆仑。<br>一鼓一舞，烟朦沙昏，五岳为之震落，百川为之崩奔。<br>尔乃<a href="javascript:void()"><font title="踏，踩" style="color:#ffc107">蹶</font></a>厚地，<a href="javascript:void()"><font title="高举" style="color:#ffc107">揭</font></a>太清，亘层霄，突重溟，激三千以崛起，向九万而迅征。<br>背<a href="javascript:void()"><font title="嶪(yè)：高耸之貌" style="color:#ffc107">嶪</font></a>大山之崔嵬，翼举长云之纵横。<br>左回右旋，倏阴忽明，历汗漫以<a href="javascript:void()"><font title="形容姿态的伸展屈曲而有气势" style="color:#ffc107">夭矫</font></a>，<a href="javascript:void()"><font title="羾(gòng)：飞至" style="color:#ffc107">羾</font></a>阊阖之峥嵘。<br>簸鸿蒙，扇雷霆，斗转而天动，山摇而海倾。<br>怒无所搏，雄无所争，固可想象其势，髣髴其形。<br>若乃足萦虹蜺，目耀日月，连轩沓拖，挥霍翕忽。<br>喷气则六合生云，洒毛则千里飞雪。<br>邈彼北荒，将穷南图，运逸翰以傍击，鼓奔飙而长驱，<br>烛龙衔光以照物，列缺施鞭而启途，块视三山，杯观五湖。<br>其动也神应，其行也道俱，任公见之而罢钓，有穷不敢以弯弧，<br>莫不投竿失镞，仰之长吁。<br>尔其雄姿壮观，<a href="javascript:void()"><font title="坱(yǎng)轧：漫无边际貌" style="color:#ffc107">坱轧</font></a>河汉，上摩苍苍，下覆漫漫，<br>盘古开天而直视，羲和倚日而旁叹，缤纷乎八荒之间，掩映乎四海之半。<br>当胸臆之掩昼，若混茫之未判，忽腾覆以回转，则霞廓而雾散。<br>然后六月一息，至于海湄，欻翳景以横翥，逆高天而下垂，<br>憩乎<a href="javascript:void()"><font title="泱漭(yāng mǎng)：广大无际之貌" style="color:#ffc107">泱漭</font></a>之野，入乎<a href="javascript:void()"><font title="汪湟(huáng)：深广" style="color:#ffc107">汪湟</font></a>之池，<br>猛势所射，馀风所吹，<a href="javascript:void()"><font title="溟涨皆海，沸渭为水翻腾奔涌貌" style="color:#ffc107">溟涨沸渭</font></a>，岩峦纷披，<br>天吴为之怵栗，海若为之<a href="javascript:void()"><font title="躨跜(kuí ní)：盘曲蠕动貌" style="color:#ffc107">躨跜</font></a>，巨鳌冠山而却走，长鲸腾海而下驰，<br>缩壳挫鬣，莫之敢窥。<br>吾亦不测其神怪之若此，盖乃造化之所为。<br>岂比夫蓬莱之黄鹄，夸金衣与菊裳。耻苍梧之玄凤，耀彩质与锦章，<br>既服御于灵仙，久驯扰于池隍。<br>精卫勤苦于衔木，鶢鶋悲愁乎荐觞，天鸡警曙于蟠桃，踆乌<a href="javascript:void()"><font title="晰(zhé)：光亮" style="color:#ffc107">晰</font></a>耀于太阳，<br>不旷荡而纵适，何拘挛而守常。<br>未若兹鹏之逍遥，无厥类乎比方，不矜大而暴猛，每顺时而行藏，<br>参玄根以比寿，饮元气以充肠，戏旸谷而徘徊，冯<a href="javascript:void()"><font title="传说中的南方炎热岛屿" style="color:#ffc107">炎洲</font></a>而抑扬。<br>俄而希有鸟见谓之曰：“伟哉鹏乎，此之乐也。<br>吾右翼掩乎西极，左翼蔽乎东荒，跨蹑地络，周旋天纲，<br>以恍惚为巢，以虚无为场，我呼尔游，尔同我翔。”<br>于是乎大鹏许之，欣然相随，<br>此二禽已登于寥廓，而尺鷃之辈空见笑于藩篱。</strong></p>
-<p><strong>据<br>缪本李太白集</strong></p>
-]]></content>
-      <categories>
-        <category>其他</category>
-      </categories>
-  </entry>
-  <entry>
     <title>哀江南赋</title>
     <url>/2022/01/07/%E8%B5%8B/%E5%93%80%E6%B1%9F%E5%8D%97%E8%B5%8B/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="哀江南赋并序-quad-庾子山"><a href="#哀江南赋并序-quad-庾子山" class="headerlink" title="哀江南赋并序$\quad$庾子山"></a><strong><center><font size=4>哀江南赋并序$\quad$庾子山</font></center></strong></h1><p><strong><a href="javascript:void()"><font title="助词，用于句首或句中" style="color:#ffc107">粤</font></a>以戊辰之年，<a href="javascript:void()"><font title="殷历以丑月为岁首(农历十二月)，称“建丑”，“建亥”当指农历十月" style="color:#ffc107">建亥</font></a>之月，大盗移国，金陵瓦解。<br>余乃窜身荒谷，公私涂炭，华阳奔命，有去无归，中兴道销，穷于甲戌。<br><a href="javascript:void()"><font title="《魏书•罗宪传》：“魏之伐蜀，宪守永安城。及成都败，知刘禅降，乃率所部临於都亭三日。”" style="color:#ffc107">三日哭于都亭</font></a>，三年囚于别馆，天道周星，物极不反。<br><a href="javascript:void()"><font title="《后汉书》：“傅燮字南容，北地灵州人也。为汉阳太守，贼王国、韩遂等进围汉阳，
@@ -6663,15 +6644,6 @@ $$
 鲁酒薄而赵酒厚。楚之主酒吏求酒於赵，赵弗予。吏怒，乃以赵厚酒易鲁薄酒。
 奏之楚王，以赵酒薄，故围邯郸也。”" style="color:#ffc107">鲁酒</font></a>无忘忧之用。<br>追为此赋，聊以记言，<a href="javascript:void()"><font title="嵇叔夜《琴赋序》：“称其才干，则以危苦为上；赋其声音，则以悲哀为主。”" style="color:#ffc107">不无危苦之辞，惟以悲哀为主</font></a>。</strong></p>
 <p><strong><a href="javascript:void()"><font title="《吴越春秋》：“子胥谢申包胥曰：‘吾日暮途远，吾故倒行而逆施之。’”又《汉书》：“主父偃曰：‘吾日暮，故倒行逆施之。’”" style="color:#ffc107">日暮涂远</font></a>，人间何世！<br><a href="javascript:void()"><font title="《后汉书•冯异传》：“每所止舍，诸将并坐论功，异常独屏树下，故军中号‘大树将军’。”" style="color:#ffc107">将军</font></a>一去，大树飘零；<a href="javascript:void()"><font title="指荆轲" style="color:#ffc107">壮士</font></a>不还，寒风萧瑟。<br><a href="javascript:void()"><font title="蔺相如完璧归赵" style="color:#ffc107">荆璧</font></a>睨柱，受连城而见欺；载书横阶，捧珠盘而不定。<br>钟仪君子，入就南冠之囚；季孙行人，留守西河之馆。<br>申包胥之顿地，碎之以首；蔡威公之泪尽，加之以血。<br>钓台移柳，非玉关之可望；华亭鹤唳，岂河桥之可闻！<br>孙策以天下为三分，众才一旅；项籍用江东之子弟，人惟八千。<br>遂乃分裂山河，宰割天下，岂有百万义师，一朝卷甲，芟夷斩伐，如草木焉？<br>江淮无涯岸之阻，亭壁无藩篱之固，<br>头会箕敛者，合从缔交；锄耰棘矜者，因利乘便。<br>将非江表王气，终于三百年乎！<br>是知并吞六合，不免轵道之灾；混一车书，无救平阳之祸。<br>呜呼！山岳崩颓，既履危亡之运；春秋迭代，必有去故之悲。<br>天意人事，可以凄怆伤心者矣！<br>况复舟楫路穷，星汉非乘槎可上；风飙道阻，蓬莱无可到之期。<br>穷者欲达其言，劳者须歌其事，<br>陆士衡闻而抚掌，是所甘心；张平子见而陋之，固其宜矣。<br>我之掌庾承周，以世功而为族；经邦佐汉，用论道而当官。<br>禀嵩华之玉石，润河洛之波澜，居负洛而重世，邑临河而宴安。<br>逮永嘉之艰虞，始中原之乏主，民枕倚于墙壁，路交横于豺虎。<br>值五马之南奔，逢三星之东聚，彼凌江而建国，始播迁于吾祖。<br>分南阳而赐田，裂东岳而胙土，诛茅宋玉之宅，穿径临江之府。<br>水木交运，山川崩竭，家有直道，人多全节。<br>训子见于纯深，事君彰于义烈，新野有生祠之庙，河南有胡书之碣。<br>况乃少微真人，天山逸民，阶庭空谷，门巷蒲轮。<br>移谈讲树，就简书筠，降生世德，载诞贞臣。<br>文词高于甲观，楷模盛于漳滨，嗟有道而无凤，叹非时而有麟，<br>既奸回之奰逆，终不悦于仁人。<br>王子滨洛之岁，兰成射策之年，始含香于建礼，仍矫翼于崇贤，<br>游洊雷之讲肆，齿明离之胄筵，既倾蠡而酌海，遂测管而窥天，<br>方塘水白，钓渚池圆，侍戎韬于武帐，听雅曲于文弦。<br>乃解悬而通籍，遂崇文而会武，居笠毂而掌兵，出兰池而典午，<br>论兵于江汉之君，拭玉于西河之主。<br>于时朝野欢娱，池台钟鼓，里为冠盖，门成邹鲁。<br>连茂苑于海陵，跨横塘于江浦，东门则鞭石成桥，南极则铸铜为柱，<br>橘则园植万株，竹则家封千户。<br>西赆浮玉，南琛没羽，吴歈越吟，荆艳楚舞。草木之遇阳春，鱼龙之逢风雨。<br>五十年中，江表无事，王歙为和亲之侯，班超为定远之使，<br>马武无预于甲兵，冯唐不论于将帅。<br>岂知山岳闇然，江湖潜沸，渔阳有闾左戍卒，离石有将兵都尉。<br>天子方删诗书，定礼乐，设重云之讲，开士林之学。<br>谈劫烬之灰飞，辨常星之夜落，地平鱼齿，城危兽角。<br>卧刁斗于荥阳，绊龙媒于平乐，宰衡以干戈为儿戏，缙绅以清谈为庙略。<br>乘渍水以胶船，驭奔驹以朽索，小人则将及水火，君子则方成猿鹤。<br>敝箄不能救盐池之咸，阿胶不能止黄河之浊。<br>既而鲂鱼赪尾，四郊多垒，殿狎江鸥，宫鸣野雉，湛卢去国，艅艎失水。<br>见被发于伊川，知百年而为戎矣。<br>彼奸逆之炽盛，久游魂而放命。大则有鲸有鲵，小则为枭为獍。<br>负其牛羊之力，肆其水草之性，非玉烛之能调，岂璇玑之可正。<br>值天下之无为，尚有欲于羁縻，饮其琉璃之酒，赏其虎豹之皮。<br>见胡柯于大夏，识鸟卵于条枝，<br>豺牙密厉，虺毒潜吹，轻九鼎而欲问，闻三川而遂窥。<br>始则王子召戎，奸臣介胄，既官政而离逷，遂师言而泄漏。<br>望廷尉之逋囚，反淮南之穷寇，出狄泉之苍鸟，起横江之困兽。<br>地则石鼓鸣山，天则金精动宿，北阙龙吟，东陵麟斗。<br>尔乃桀黠构扇，冯陵畿甸，拥狼望于黄图，填卢山于赤县。<br>青袍如草，白马如练。天子履端废朝，单于长围高宴。<br>两观当戟，千门受箭，白虹贯日，苍鹰击殿。<br>竟遭夏台之祸，终视尧城之变。<br>官守无奔问之人，干戚非平戎之战。陶侃空争米船，顾荣虚摇羽扇。<br>将军死绥，路绝重围，烽随星落，书逐鸢飞。<br>遂乃韩分赵裂，鼓卧旗折，失群班马，迷轮乱辙，猛士婴城，谋臣卷舌。<br>昆阳之战象走林，常山之阵蛇奔穴。五郡则兄弟相悲，三州则父子离别。<br>护军慷慨，忠能死节，三世为将，终于此灭。<br>济阳忠壮，身参末将，兄弟三人，义声俱唱，<br>主辱臣死，名存身丧，敌人归元，三军凄怆。<br>尚书多算，守备是长，云梯可拒，地道能防。<br>有齐将之闭壁，无燕师之卧墙，大事去矣，人之云亡！<br>申子奋发，勇气咆勃，实总元戎，身先士卒。<br>胄落鱼门，兵填马窟，屡犯通中，频遭刮骨，功业夭枉，身名埋没。<br>或以隼翼鷃披，虎威狐假，沾渍锋镝，脂膏原野，<br>兵弱虏强，城孤气寡，闻鹤唳而心惊，听胡笳而泪下。<br>拒神亭而亡戟，临横江而弃马，崩于钜鹿之沙，碎于长平之瓦。<br>于是桂林颠覆，长洲麋鹿，溃溃沸腾，茫茫墋黩。<br>天地离阻，神人惨酷，晋郑靡依，鲁卫不睦。<br>竞动天关，争回地轴，探雀鷇而未饱，待熊蹯而讵熟？<br>乃有车侧郭门，筋悬庙屋，鬼同曹社之谋，人有秦庭之哭。<br>尔乃假刻玺于关塞，称使者之酬对，逢鄂坂之讥嫌，值耏门之征税。<br>乘白马而不前，策青骡而转碍。<br>吹落叶之扁舟，飘长风于上游。彼锯牙而钩爪，又循江而习流。<br>排青龙之战舰，斗飞燕之船楼。张辽临于赤壁，王濬下于巴丘。<br>乍风惊而射火，或箭重而沉舟。未辨声于黄盖，已先沉于杜侯。<br>落帆黄鹤之浦，藏船鹦鹉之洲。路已分于湘汉，星犹看于斗牛。<br>若乃阴陵失路，钓台斜趣。望赤壁而沾衣，舣乌江而不渡。<br>雷池栅浦，鹊陵焚戍。旅舍无烟，巢禽无树。<br>谓荆衡之杞梓，庶江汉之可恃。淮海维扬，三千馀里。<br>过漂渚而寄食，托芦中而渡水。届于七泽，滨于十死。<br>嗟天保之未定，见殷忧之方始。<br>本不达于危行，又无情于禄仕。谬掌卫于中军，滥尸丞于御史。<br>信生世等于龙门，辞亲同于河洛。奉立身之遗训，受成书之顾托。<br>昔三世而无惭，今七叶而始落。泣风雨于梁山，惟枯鱼之衔索。<br>入欹斜之小径，掩蓬藋之荒扉。就汀洲之杜若，待芦苇之单衣。<br>于是西楚霸王，剑及繁阳。<br>鏖兵金匮，校战玉堂。苍鹰赤雀，铁舳牙樯。<br>沉白马而誓众，负黄龙而渡江，海潮迎舰，江萍送王。<br>戎军屯于石城，戈船掩于淮泗。诸侯则郑伯前驱，盟主则荀罃暮至。<br>剖巢熏穴，奔魑走魅。埋长狄于驹门，斩蚩尤于中冀。<br>燃腹为灯，饮头为器。直虹贯垒，长星属地。<br>昔之虎踞龙盘，加以黄旗紫气，莫不随狐兔而窟穴，与风尘而殄瘁。<br>西瞻博望，北临玄圃，月榭风台，池平树古。<br>倚弓于玉女窗扉，系马于凤皇楼柱。仁寿之镜徒悬，茂陵之书空聚。<br>若夫立德立言，谟明寅亮；声超于系表，道高于河上。<br>更不遇于浮丘，遂无言于师旷。以爱子而托人，知西陵而谁望？<br>非无北阙之兵，犹有云台之仗。<br>司徒之表里经纶，狐偃之惟王实勤。横琱戈而对霸主，执金鼓而问贼臣。<br>平吴之功，壮于杜元凯；王室是赖，深于温太真。<br>始则地名全节，终则山称枉人。<br>南阳校书，去之已远；上蔡逐猎，知之何晚？<br>镇北之负誉矜前，风飙凛然。水神遭箭，山灵见鞭。<br>是以蛰熊伤马，浮蛟没船。才子并命，俱非百年。<br>中宗之夷凶靖乱，大雪冤耻，去代邸而承基，迁唐郊而纂祀。<br>反旧章于司隶，归馀风于正始。<br>沈猜则方逞其欲，藏疾则自矜于己。天下之事没焉，诸侯之心摇矣。<br>既而齐交北绝，秦患西起。况背关而怀楚，异端委而开吴。<br>驱绿林之散卒，拒骊山之叛徒。营军梁溠，蒐乘巴渝。<br>问诸淫昏之鬼，求诸厌劾之符。荆门遭廪延之戮，夏口滥逵泉之诛。<br>蔑因亲以致爱，忍和乐于弯弧。既无谋于肉食，非所望于论都。<br>未深思于五难，先自擅于三端。登阳城而避险，卧砥柱而求安。<br>既言多于忌刻，实志勇而形残。但坐观于时变，本无情于急难。<br>地惟黑子，城犹弹丸。其怨则黩，其盟则寒。<br>岂冤禽之能塞海？非愚叟之可移山。<br>况以沴气朝浮，妖精夜陨。赤鸟则三朝夹日，苍云则七重围轸。<br>亡吴之岁既穷，入郢之年斯尽。<br>周含郑怒，楚结秦冤。有南风之不竞，值西邻之责言。<br>俄而梯冲乱舞，冀马云屯。俴秦车于畅毂，沓汉鼓于雷门。<br>下陈仓而连弩，渡临晋而横船。虽复楚有七泽，人称三户。<br>箭不丽于六麋，雷无惊于九虎。辞洞庭兮落木，去涔阳兮极浦。<br>炽火兮焚旗，贞风兮害蛊。乃使玉轴扬灰，龙文折柱。<br>下江余城，长林故营。徒思拑马之秣，未见烧牛之兵。<br>章曼支以毂走，宫之奇以族行。河无冰而马渡，关未晓而鸡鸣。<br>忠臣解骨，君子吞声。章华望祭之所，云梦伪游之地。<br>荒谷缢于莫敖，冶父囚于群帅。硎穽折拉，鹰鹯批㩌。<br>冤霜夏零，愤泉秋沸。城崩杞妇之哭，竹染湘妃之泪。<br>水毒秦泾，山高赵陉。十里五里，长亭短亭。<br>饥随蛰燕，暗逐流萤。秦中水黑，关上泥青。<br>于时瓦解冰泮，风飞雹散，浑然千里，淄渑一乱。<br>雪暗如沙，冰横似岸。逢赴洛之陆机，见离家之王粲，<br>莫不闻陇水而掩泣，向关山而长叹。<br>况复君在交河，妾在青波。石望夫而逾远，山望子而逾多。<br>才人之忆代郡，公主之去清河。栩阳亭有离别之赋，临江王有愁思之歌。<br>别有飘飖武威，羁旅金微。班超生而望返，温序死而思归。<br>李陵之双凫永去，苏武之一雁空飞。<br>若江陵之中否，乃金陵之祸始。虽借人之外力，实萧墙之内起。<br>拨乱之主忽焉，中兴之宗不祀。伯兮叔兮，同见戮于犹子。<br>荆山鹊飞而玉碎，隋岸蛇生而珠死。鬼火乱于平林，殇魂游于新市。<br>梁故丰徙，楚实秦亡。不有所废，其何以昌？<br>有妫之后，将育于姜。输我神器，居为让王。<br>天地之大德曰生，圣人之大宝曰位。<br>用无赖之子弟，举江东而全弃。惜天下之一家，遭东南之反气。<br>以鹑首而赐秦，天何为而此醉？<br>且夫天道回旋，生民预焉。余烈祖于西晋，始流播于东川。<br>洎余身而七叶，又遭时而北迁。提挈老幼，关河累年。死生契阔，不可问天。<br>况复零落将尽，灵光岿然！日穷于纪，岁将复始。逼切危虑，端忧暮齿。<br>践长乐之神皋，望宣平之贵里。渭水贯于天门，骊山回于地市。<br>幕府大将军之爱客，丞相平津侯之待士。见钟鼎于金张，闻弦歌于许史。<br>岂知灞陵夜猎，犹是故时将军；咸阳布衣，非独思归王子！</strong></p>
-]]></content>
-      <categories>
-        <category>其他</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>灯赋</title>
-    <url>/2022/01/07/%E8%B5%8B/%E7%81%AF%E8%B5%8B/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="灯赋-quad-庾子山"><a href="#灯赋-quad-庾子山" class="headerlink" title="灯赋$\quad$庾子山"></a><strong><center><font size=4>灯赋$\quad$庾子山</font></center></strong></h1><p><strong>九龙将暝，三爵行栖，琼钩半上，若木全低。<br>窗藏明于粉壁，柳助暗于兰闺。<br>翡翠珠被，流苏羽帐，舒屈膝之屏风，掩芙蓉之行障。<br>卷衣秦后之床，送枕荆台之上。<br>乃有百枝同树，四照连盘，香添然蜜，气杂烧兰，<br>烬长宵久，光青夜寒，秀华掩映，蚖膏照灼，<br>动鳞甲于鲸鱼，焰光芒于鸣鹤，<br>蛾飘则碎花乱下，风起则流星细落。<br>况复上兰深夜，中山醑清，楚妃留客，韩娥合声，低歌著节，《游弦》绝鸣。<br>辉辉朱烬，焰焰红荣，乍九光而连采，或双花而并明。<br>寄言苏季子，应知馀照情。</strong></p>
 ]]></content>
       <categories>
         <category>其他</category>
@@ -6697,19 +6669,47 @@ $$
       </categories>
   </entry>
   <entry>
+    <title>大鹏赋</title>
+    <url>/2022/01/07/%E8%B5%8B/%E5%A4%A7%E9%B9%8F%E8%B5%8B/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="大鹏赋并序-quad-李太白"><a href="#大鹏赋并序-quad-李太白" class="headerlink" title="大鹏赋并序$\quad$李太白"></a><strong><center><font size=4>大鹏赋并序$\quad$李太白</font></center></strong></h1><p><strong>余昔于江陵，见天台<a href="javascript:void()"><font title="《大唐新语》：司马承祯，字子微，隐于天台山，自号白云子，有服饵之术。则天、中宗朝，频征不起。睿宗雅尚道教，稍加尊异，承祯方赴召。无何，苦辞归，乃赐宝琴、花帔以遣之。" style="color:#ffc107">司马子微</font></a>，谓余有仙风道骨，可与神游八极之表。因著《大鹏遇希有鸟赋》以自广。此赋已传于世，往往人间见之。悔其少作，未穷宏达之旨，中年弃之。及读《晋书》，睹阮宣子<a href="javascript:void()"><font title="《晋书》：“(阮)修所著述甚寡，尝作大鹏赞曰：‘
+苍苍大鹏，诞自北溟。
+假精灵鳞，神化以生。
+如云之翼，如山之形。
+海运水击，扶摇上征。
+翕然层举，背负太清。
+志存天地，不屑唐庭。
+鸴鸠仰笑，尺鷃所轻。
+超世高逝，莫知其情。’”" style="color:#ffc107">《大鹏赞》</font></a>，鄙心陋之。遂更记忆，多将旧本不同。今复存手集，岂敢传诸作者？庶可示之子弟而已。其辞曰：</strong></p>
+<p><strong>南华老仙发天机于漆园，<br>吐峥嵘之高论，开浩荡之奇言，征至怪于齐谐，谈北溟之有鱼。<br>吾不知几千里，其名曰鲲，化成大鹏，质凝胚浑。<br>脱<a href="javascript:void()"><font title="鬐(qí)：鱼脊鳍;鬣(liè)：鱼颔旁之鳍" style="color:#ffc107">鬐鬣</font></a>于海岛，张羽毛于天门，刷<a href="javascript:void()"><font title="渤澥(xiè)：渤海" style="color:#ffc107">渤澥</font></a>之春流，晞扶桑之朝暾，<br><a href="javascript:void()"><font title="烜(xuǎn)赫：名声或威望盛大之状" style="color:#ffc107">烜赫</font></a>乎宇宙，<a href="javascript:void()"><font title="逾越，登临其上" style="color:#ffc107">凭陵</font></a>乎昆仑。<br>一鼓一舞，烟朦沙昏，五岳为之震落，百川为之崩奔。<br>尔乃<a href="javascript:void()"><font title="踏，踩" style="color:#ffc107">蹶</font></a>厚地，<a href="javascript:void()"><font title="高举" style="color:#ffc107">揭</font></a>太清，亘层霄，突重溟，激三千以崛起，向九万而迅征。<br>背<a href="javascript:void()"><font title="嶪(yè)：高耸之貌" style="color:#ffc107">嶪</font></a>大山之崔嵬，翼举长云之纵横。<br>左回右旋，倏阴忽明，历汗漫以<a href="javascript:void()"><font title="形容姿态的伸展屈曲而有气势" style="color:#ffc107">夭矫</font></a>，<a href="javascript:void()"><font title="羾(gòng)：飞至" style="color:#ffc107">羾</font></a>阊阖之峥嵘。<br>簸鸿蒙，扇雷霆，斗转而天动，山摇而海倾。<br>怒无所搏，雄无所争，固可想象其势，髣髴其形。<br>若乃足萦虹蜺，目耀日月，连轩沓拖，挥霍翕忽。<br>喷气则六合生云，洒毛则千里飞雪。<br>邈彼北荒，将穷南图，运逸翰以傍击，鼓奔飙而长驱，<br>烛龙衔光以照物，列缺施鞭而启途，块视三山，杯观五湖。<br>其动也神应，其行也道俱，任公见之而罢钓，有穷不敢以弯弧，<br>莫不投竿失镞，仰之长吁。<br>尔其雄姿壮观，<a href="javascript:void()"><font title="坱(yǎng)轧：漫无边际貌" style="color:#ffc107">坱轧</font></a>河汉，上摩苍苍，下覆漫漫，<br>盘古开天而直视，羲和倚日而旁叹，缤纷乎八荒之间，掩映乎四海之半。<br>当胸臆之掩昼，若混茫之未判，忽腾覆以回转，则霞廓而雾散。<br>然后六月一息，至于海湄，欻翳景以横翥，逆高天而下垂，<br>憩乎<a href="javascript:void()"><font title="泱漭(yāng mǎng)：广大无际之貌" style="color:#ffc107">泱漭</font></a>之野，入乎<a href="javascript:void()"><font title="汪湟(huáng)：深广" style="color:#ffc107">汪湟</font></a>之池，<br>猛势所射，馀风所吹，<a href="javascript:void()"><font title="溟涨皆海，沸渭为水翻腾奔涌貌" style="color:#ffc107">溟涨沸渭</font></a>，岩峦纷披，<br>天吴为之怵栗，海若为之<a href="javascript:void()"><font title="躨跜(kuí ní)：盘曲蠕动貌" style="color:#ffc107">躨跜</font></a>，巨鳌冠山而却走，长鲸腾海而下驰，<br>缩壳挫鬣，莫之敢窥。<br>吾亦不测其神怪之若此，盖乃造化之所为。<br>岂比夫蓬莱之黄鹄，夸金衣与菊裳。耻苍梧之玄凤，耀彩质与锦章，<br>既服御于灵仙，久驯扰于池隍。<br>精卫勤苦于衔木，鶢鶋悲愁乎荐觞，天鸡警曙于蟠桃，踆乌<a href="javascript:void()"><font title="晰(zhé)：光亮" style="color:#ffc107">晰</font></a>耀于太阳，<br>不旷荡而纵适，何拘挛而守常。<br>未若兹鹏之逍遥，无厥类乎比方，不矜大而暴猛，每顺时而行藏，<br>参玄根以比寿，饮元气以充肠，戏旸谷而徘徊，冯<a href="javascript:void()"><font title="传说中的南方炎热岛屿" style="color:#ffc107">炎洲</font></a>而抑扬。<br>俄而希有鸟见谓之曰：“伟哉鹏乎，此之乐也。<br>吾右翼掩乎西极，左翼蔽乎东荒，跨蹑地络，周旋天纲，<br>以恍惚为巢，以虚无为场，我呼尔游，尔同我翔。”<br>于是乎大鹏许之，欣然相随，<br>此二禽已登于寥廓，而尺鷃之辈空见笑于藩篱。</strong></p>
+<p><strong>据<br>缪本李太白集</strong></p>
+]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>灯赋</title>
+    <url>/2022/01/07/%E8%B5%8B/%E7%81%AF%E8%B5%8B/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="灯赋-quad-庾子山"><a href="#灯赋-quad-庾子山" class="headerlink" title="灯赋$\quad$庾子山"></a><strong><center><font size=4>灯赋$\quad$庾子山</font></center></strong></h1><p><strong>九龙将暝，三爵行栖，琼钩半上，若木全低。<br>窗藏明于粉壁，柳助暗于兰闺。<br>翡翠珠被，流苏羽帐，舒屈膝之屏风，掩芙蓉之行障。<br>卷衣秦后之床，送枕荆台之上。<br>乃有百枝同树，四照连盘，香添然蜜，气杂烧兰，<br>烬长宵久，光青夜寒，秀华掩映，蚖膏照灼，<br>动鳞甲于鲸鱼，焰光芒于鸣鹤，<br>蛾飘则碎花乱下，风起则流星细落。<br>况复上兰深夜，中山醑清，楚妃留客，韩娥合声，低歌著节，《游弦》绝鸣。<br>辉辉朱烬，焰焰红荣，乍九光而连采，或双花而并明。<br>寄言苏季子，应知馀照情。</strong></p>
+]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+  </entry>
+  <entry>
     <title>关于</title>
     <url>/about/index.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>本博客使用<a href="https://hexo.io/">HEXO</a>搭建,主题为<a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism">raytaylorism</a></p>
 ]]></content>
   </entry>
   <entry>
-    <title>categories</title>
-    <url>/categories/index.html</url>
+    <title>tags</title>
+    <url>/tags/index.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
   </entry>
   <entry>
-    <title>tags</title>
-    <url>/tags/index.html</url>
+    <title>categories</title>
+    <url>/categories/index.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
   </entry>
   <entry>
@@ -6735,90 +6735,6 @@ $$
 []: # ---
 []: # 本博客使用[HEXO](https://hexo.io/)搭建,主题为[raytaylorism](
 </code></pre>
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/%E6%B6%88%E6%B6%88%E4%B9%90/index.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><!DOCTYPE html>
-<html lang="en">
-  <meta charset="UTF-8">
-  <title>消消乐</title>
-  <style type="text/css">
-    .板class {
-      position: relative;
-      width: 404px;
-      height: 404px;
-      background: #9e9e9e;
-      margin: 40px auto;
-    }
-    .块class0 {
-      background: #81d4fa;
-      width: 36px;
-      height: 36px;
-    }
-    .块class1 {
-      background: #ffd111;
-      width: 36px;
-      height: 36px;
-    }
-    .块class2 {
-      background: #c6ff00;
-      width: 36px;
-      height: 36px;
-    }
-    .块class3 {
-      background: #ef9a9a;
-      width: 36px;
-      height: 36px;
-    }
-    .块class4 {
-      background: #bcaaa4;
-      width: 36px;
-      height: 36px;
-    }
-  </style>
-  <body>
-    <div class="板class" id='板id'></div>
-    <script>
-      var 板=document.getElementById('板id')
-      function card群(){
-        this.位置列表=[]
-        this.块=[]
-        this.点击位置=[]
-        for(var i=0;i<10;i++){
-          for(var j=0;j<10;j++){
-            var n=10*i+j
-            this.位置列表[n]=[40*j+4,40*i+4]}}
-        this.画块=function(){
-          var 点击次数=[]
-          for(var i in this.位置列表){
-            点击次数[i]=0
-            this.块[i]=document.createElement('div')
-            this.块[i].id=i
-            this.块[i].className='块class'+Math.floor(Math.random()*5)
-            this.块[i].style.position='absolute'
-            this.块[i].onclick=function(event){
-              点击物=event.target
-              if(点击次数[点击物.id]==0){
-                点击次数[点击物.id]=1
-                点击物.style.boxShadow='2px 2px 20px #000000'
-              }
-              else{点击次数[点击物.id]=0
-                点击物.style.boxShadow='0px 0px 0px #000000'}
-              }
-            this.块[i].style.left=this.位置列表[i][0]+'px'
-            this.块[i].style.top=this.位置列表[i][1]+'px'
-            板.appendChild(块[i])}
-          }
-        this.消除=function(){
-        }
-        this.画块()
-        }
-      card群()
-    </script>
-  </body>
-</html>
 ]]></content>
   </entry>
   <entry>
@@ -8593,6 +8509,90 @@ $$
     </a>
     <style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 </body>
+</html>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/%E6%B6%88%E6%B6%88%E4%B9%90/index.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <title>消消乐</title>
+  <style type="text/css">
+    .板class {
+      position: relative;
+      width: 404px;
+      height: 404px;
+      background: #9e9e9e;
+      margin: 40px auto;
+    }
+    .块class0 {
+      background: #81d4fa;
+      width: 36px;
+      height: 36px;
+    }
+    .块class1 {
+      background: #ffd111;
+      width: 36px;
+      height: 36px;
+    }
+    .块class2 {
+      background: #c6ff00;
+      width: 36px;
+      height: 36px;
+    }
+    .块class3 {
+      background: #ef9a9a;
+      width: 36px;
+      height: 36px;
+    }
+    .块class4 {
+      background: #bcaaa4;
+      width: 36px;
+      height: 36px;
+    }
+  </style>
+  <body>
+    <div class="板class" id='板id'></div>
+    <script>
+      var 板=document.getElementById('板id')
+      function card群(){
+        this.位置列表=[]
+        this.块=[]
+        this.点击位置=[]
+        for(var i=0;i<10;i++){
+          for(var j=0;j<10;j++){
+            var n=10*i+j
+            this.位置列表[n]=[40*j+4,40*i+4]}}
+        this.画块=function(){
+          var 点击次数=[]
+          for(var i in this.位置列表){
+            点击次数[i]=0
+            this.块[i]=document.createElement('div')
+            this.块[i].id=i
+            this.块[i].className='块class'+Math.floor(Math.random()*5)
+            this.块[i].style.position='absolute'
+            this.块[i].onclick=function(event){
+              点击物=event.target
+              if(点击次数[点击物.id]==0){
+                点击次数[点击物.id]=1
+                点击物.style.boxShadow='2px 2px 20px #000000'
+              }
+              else{点击次数[点击物.id]=0
+                点击物.style.boxShadow='0px 0px 0px #000000'}
+              }
+            this.块[i].style.left=this.位置列表[i][0]+'px'
+            this.块[i].style.top=this.位置列表[i][1]+'px'
+            板.appendChild(块[i])}
+          }
+        this.消除=function(){
+        }
+        this.画块()
+        }
+      card群()
+    </script>
+  </body>
 </html>
 ]]></content>
   </entry>
